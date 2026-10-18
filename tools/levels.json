@@ -1,0 +1,362 @@
+[
+{
+"lvl": 1,
+"sp": 0,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Mail, chat, party, map"
+},
+{
+"lvl": 2,
+"sp": 0,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Journal, customization, shop"
+},
+{
+"lvl": 3,
+"sp": 0,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 4,
+"sp": 1,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 5,
+"sp": 3,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Wings, 1st Ascension"
+},
+{
+"lvl": 6,
+"sp": 5,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Titles"
+},
+{
+"lvl": 7,
+"sp": 7,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 8,
+"sp": 10,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 9,
+"sp": 13,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Achievements, enhancement"
+},
+{
+"lvl": 10,
+"sp": 16,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": "Substance Morph, crafting, gathering, pets, Daeva Pass"
+},
+{
+"lvl": 11,
+"sp": 20,
+"dv": 0,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 12,
+"sp": 24,
+"dv": 4,
+"stg": 0,
+"slots": 0,
+"unlock": "Daevanion opens (Nezekan)"
+},
+{
+"lvl": 13,
+"sp": 28,
+"dv": 8,
+"stg": 0,
+"slots": 0,
+"unlock": "Shugo Festival"
+},
+{
+"lvl": 14,
+"sp": 32,
+"dv": 12,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 15,
+"sp": 36,
+"dv": 16,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 16,
+"sp": 41,
+"dv": 20,
+"stg": 0,
+"slots": 0,
+"unlock": "Legion"
+},
+{
+"lvl": 17,
+"sp": 46,
+"dv": 24,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 18,
+"sp": 51,
+"dv": 28,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 19,
+"sp": 56,
+"dv": 32,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 20,
+"sp": 61,
+"dv": 36,
+"stg": 0,
+"slots": 0,
+"unlock": "Zikel board"
+},
+{
+"lvl": 21,
+"sp": 66,
+"dv": 40,
+"stg": 0,
+"slots": 0,
+"unlock": ""
+},
+{
+"lvl": 22,
+"sp": 71,
+"dv": 44,
+"stg": 0,
+"slots": 1,
+"unlock": "Stigma slot 1 (after the Ascension quest), 2nd Ascension, Expedition: Krao Cave, Pantheon"
+},
+{
+"lvl": 23,
+"sp": 76,
+"dv": 48,
+"stg": 1,
+"slots": 1,
+"unlock": "First Stigma point"
+},
+{
+"lvl": 24,
+"sp": 81,
+"dv": 52,
+"stg": 2,
+"slots": 1,
+"unlock": ""
+},
+{
+"lvl": 25,
+"sp": 86,
+"dv": 56,
+"stg": 3,
+"slots": 1,
+"unlock": "Supply Request"
+},
+{
+"lvl": 26,
+"sp": 91,
+"dv": 60,
+"stg": 4,
+"slots": 1,
+"unlock": ""
+},
+{
+"lvl": 27,
+"sp": 96,
+"dv": 64,
+"stg": 5,
+"slots": 2,
+"unlock": "Stigma slot 2"
+},
+{
+"lvl": 28,
+"sp": 101,
+"dv": 68,
+"stg": 6,
+"slots": 2,
+"unlock": "Expedition: Urugugu Canyon"
+},
+{
+"lvl": 29,
+"sp": 106,
+"dv": 72,
+"stg": 7,
+"slots": 2,
+"unlock": ""
+},
+{
+"lvl": 30,
+"sp": 111,
+"dv": 76,
+"stg": 8,
+"slots": 2,
+"unlock": "Vaizel board, Daily Dungeon, Unknown Fissure"
+},
+{
+"lvl": 31,
+"sp": 117,
+"dv": 80,
+"stg": 9,
+"slots": 2,
+"unlock": ""
+},
+{
+"lvl": 32,
+"sp": 123,
+"dv": 84,
+"stg": 10,
+"slots": 3,
+"unlock": "Stigma slot 3, 3rd Ascension"
+},
+{
+"lvl": 33,
+"sp": 129,
+"dv": 88,
+"stg": 11,
+"slots": 3,
+"unlock": ""
+},
+{
+"lvl": 34,
+"sp": 135,
+"dv": 92,
+"stg": 12,
+"slots": 3,
+"unlock": ""
+},
+{
+"lvl": 35,
+"sp": 141,
+"dv": 96,
+"stg": 13,
+"slots": 3,
+"unlock": "Expedition: Fire Temple"
+},
+{
+"lvl": 36,
+"sp": 147,
+"dv": 100,
+"stg": 14,
+"slots": 3,
+"unlock": ""
+},
+{
+"lvl": 37,
+"sp": 153,
+"dv": 104,
+"stg": 15,
+"slots": 4,
+"unlock": "Stigma slot 4"
+},
+{
+"lvl": 38,
+"sp": 159,
+"dv": 108,
+"stg": 16,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 39,
+"sp": 165,
+"dv": 112,
+"stg": 17,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 40,
+"sp": 171,
+"dv": 116,
+"stg": 19,
+"slots": 4,
+"unlock": "Triniel board"
+},
+{
+"lvl": 41,
+"sp": 177,
+"dv": 120,
+"stg": 21,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 42,
+"sp": 183,
+"dv": 124,
+"stg": 23,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 43,
+"sp": 189,
+"dv": 128,
+"stg": 25,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 44,
+"sp": 196,
+"dv": 132,
+"stg": 27,
+"slots": 4,
+"unlock": ""
+},
+{
+"lvl": 45,
+"sp": 203,
+"dv": 136,
+"stg": 29,
+"slots": 4,
+"unlock": "Cap: Azphel board, Nightmare, Transcendence, Arcana, Abyss, Arena, 4th Ascension"
+}
+]
