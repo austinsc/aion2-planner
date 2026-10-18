@@ -227,7 +227,18 @@ def build(cls):
     if tb:
         for row in tb[0][1:]:
             order, sk, to, cum = row[0][0], row[1], row[2][0], row[3][0]
-            nm = [n for n in sources.skill_names(sk[1])]
+            # every class skill named in the cell, in order (some names are linked, some plain text)
+            found, taken = [], set()
+            for n in sorted(byname, key=len, reverse=True):
+                for m in re.finditer(r'(?<![\w\'])' + re.escape(n) + r'(?![\w\'])', sk[0]):
+                    span = set(range(m.start(), m.end()))
+                    if not span & taken:
+                        taken |= span
+                        found.append((m.start(), n))
+            nm = []
+            for _, n in sorted(found):
+                if n not in nm:
+                    nm.append(n)
             alt = ''
             if ', or ' in sk[0]:
                 alt = 'or ' + sk[0].split(', or ', 1)[1]

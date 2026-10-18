@@ -1,0 +1,675 @@
+{
+ "meta": {
+  "cls": "cleric",
+  "name": "Cleric",
+  "title": "Cleric Ascension Planner",
+  "sub": "AION 2 Global · PvE Condemnation build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Condemnation",
+  "brandIcon": "17350000",
+  "blurb": "Healer who deals damage between heals. Two held keys, Condemnation crits, Bolt charged by hand."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 366)",
+  "Festival Shop crystals (to 415)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). Each skill level waits at least 3 character levels after the one before it. Levels alone give 203 points by 45: the six damage skills reach 10, Debilitating Mark and the three heals 8, and Empyrean Lord's Grace 10. Heals stay at 1 until 34. Wisdom Stones from district quests and sealed dungeons add up to 180 more for the 45 build.",
+  "schedule": "Condemnation and Judgment Thunder first on each board as it opens, then Nezekan's two Combat Speed corners, Earth's Retribution and Divine Aura on Nezekan and Zikel, and Zikel's two Damage Boost corners. Heal, passive and Bolt nodes wait for the quest and dungeon crystals. Skip Heal Block, Empyrean Lords' Benediction, Radiant Benediction, Prayer of Concentration, Lightning Strike Scattershot, Defiance, Multi-Hit Resist, Critical Damage Tolerance, MP and Critical Hit Resist except where the board forces a step.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "At 45, reset (free) and spend in this order. Levels alone pay for rows 1–2 and most of row 3 (Empyrean Lord's Grace 10, Earth's Grace 4); the district quests' Wisdom Stones finish row 4 and sealed dungeons pay the rest. Leave at 1: Survival Willpower, Prayer of Concentration, Heal Block and Empyrean Lords' Benediction. 5 points stay spare. If stuns and knockdowns still stop you too often, move Defiance's 21 points into Survival Willpower: its Status Effect Resist is always on.",
+  "passives": "Empyrean Lord's Grace gives Critical Hit, a little Double Chance and a bonus hit once a second; Earth's Grace gives Critical Damage Boost and Accuracy. Healing Enhancement turns part of your Attack into Heal Boost, so you build Attack, not a healing stat. Prayer of Amplification at Stigma 10 and 15 makes the two Graces count ×1.5 while it lasts.",
+  "specs": "Each skill has two Specialty slots; the level-16 option takes one of them, and a third slot opens at 20. Levels past 10 come from Daevanion nodes (+1 each), Arcana cards and gear lines. Raise Judgment Thunder and Condemnation to 16 first, then Condemnation to 20, then Radiant Recovery, Bolt, Divine Aura, Healing Light and Light of Regeneration to 16.",
+  "stigmaSub": "30 points at 45: Light of Protection 10, the rest 5",
+  "stigma": "Take each to 5 as the next slot opens; from level 41 the new points take Light of Protection to 10. Swaps, each on its own skill preset: Power Burst in slot 4 for stagger checks; Summon Resurrection for Prayer of Amplification when the group dies a lot; Absolution or Benevolence for Light of Protection with a Chanter in the party, since only the higher of it and Undefeated Mantra applies. Levelling solo, leave Summon Resurrection out; Root helps on packs.",
+  "src": "Where guides disagree (the fourth Stigma, Light of Regeneration in the macro or by hand, a few Specialty picks, Defiance vs Survival Willpower) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Earth's Retribution": {
+   "role": "Basic attack chain, 110 MP a hit. Hold it on left click beside the macro.",
+   "spec": {
+    "8": "+20% MP restored",
+    "45": "+20% Discharge trigger chance, and −7s Bolt cooldown on landing Discharge",
+    "16": "Keep both"
+   }
+  },
+  "Judgment Thunder": {
+   "role": "Gap filler in the Mark line; with Divine Punishment about a third of your damage.",
+   "spec": {
+    "8": "Up to 12% more damage when fewer targets are hit (or −20% MP consumed if MP runs short)",
+    "45": "Up to 12% more damage when fewer targets are hit, and −20% MP consumed (at 12)",
+    "16": "Divine Punishment fires 1 extra time, in place of −20% MP"
+   }
+  },
+  "Debilitating Mark": {
+   "role": "DoT debuff that cuts the target's Defense and PvE Damage Boost. Starts the Mark line.",
+   "spec": {
+    "8": "−15% target Defense for the duration of the Damage over Time",
+    "45": "Keep −15% target Defense; at 12 (Nightmare shop crystals) add the PvE Damage Boost cut"
+   }
+  },
+  "Divine Aura": {
+   "role": "Stays where you cast it. Press by hand where the boss will stand.",
+   "spec": {
+    "8": "Changes to AoE Skill (or +50% attacking speed in dungeons)",
+    "45": "+50% Divine Aura attacking speed, and +3s duration",
+    "16": "−10s cooldown, in place of +3s duration"
+   }
+  },
+  "Chain of Torment": {
+   "role": "Condemnation needs it on the target. Up 13 s of every 20; cuts PvE Damage Tolerance.",
+   "spec": {
+    "8": "+3s Damage over Time",
+    "45": "+3s Damage over Time, and −10% PvE Damage Tolerance on the target (15% in all)",
+    "16": "No change"
+   }
+  },
+  "Lightning Strike Scattershot": {
+   "role": "Hits only a staggered target. Hold it on its own key during stagger windows.",
+   "spec": {
+    "45": "Changes to mobile skill",
+    "16": "Multi-Hit and −1s all skill cooldowns on hit, in place of the mobile change"
+   }
+  },
+  "Light of Regeneration": {
+   "role": "Heals the party in 40 m every 2 s for 30 s. The macro's Mark line keeps it up.",
+   "spec": {
+    "8": "+5% Defense while healing (or +20% amount healed at 50% HP or less)",
+    "45": "+5% Defense while healing, and +5% Move Speed during healing (at 12)",
+    "16": "+5% PvE Damage Tolerance during healing, in place of +5% Defense"
+   }
+  },
+  "Condemnation": {
+   "role": "Main damage, 3 s cooldown, only on a Chain of Torment target; each crit resets it.",
+   "spec": {
+    "8": "Up to +12% damage when fewer targets are hit (or restores 100 MP on hit if MP runs short)",
+    "45": "Up to +12% damage when fewer targets are hit, and resets cooldown on a Critical Hit (at 12)",
+    "16": "Multi-Hit on hit, in place of the +12% (some keep the +12% until 20)"
+   }
+  },
+  "Healing Light": {
+   "role": "Heals you and the lowest-HP party member in 40 m. 6 s cooldown.",
+   "spec": {
+    "8": "+2 consecutive uses",
+    "45": "+2 consecutive uses, and +2% HP restored",
+    "16": "−2s cooldown, in place of +2% HP restored"
+   }
+  },
+  "Radiant Recovery": {
+   "role": "Heals the party in 40 m and removes a debuff. 12 s cooldown.",
+   "spec": {
+    "8": "+1 consecutive use (or removes up to 2 debuffs)",
+    "45": "−3s cooldown, and +1 consecutive use",
+    "16": "+5% HP restored, in place of −3s cooldown"
+   }
+  },
+  "Bolt": {
+   "role": "Charged hit, 45 s. Own key, hold to full charge when nobody needs a heal.",
+   "spec": {
+    "8": "+30% Skill Speed",
+    "45": "+30% Skill Speed, and up to +20% damage when fewer targets are hit",
+    "16": "Critical Hit on hit, in place of the +20% damage"
+   }
+  },
+  "Defiance": {
+   "role": "Frees you from stun, knockdown, grab or fear; then 5 s status immunity.",
+   "spec": {
+    "45": "Restores 10% HP on using Defiance"
+   }
+  },
+  "Warm Benediction": {
+   "role": "Passive; raise to 10 after Healing Enhancement (row 6 of the 45 build).",
+   "spec": null
+  },
+  "Empyrean Lords' Benediction": {
+   "role": "Leave at 1.",
+   "spec": null
+  },
+  "Empyrean Lord's Grace": {
+   "role": "Critical Hit, a little Double Chance and a bonus hit once a second. Top passive.",
+   "spec": null
+  },
+  "Healing Enhancement": {
+   "role": "Turns part of your Attack into Heal Boost.",
+   "spec": null
+  },
+  "Immortal Veil": {
+   "role": "Passive; raise to 10 in row 8 of the 45 build, before Radiant Benediction.",
+   "spec": null
+  },
+  "Heal Block": {
+   "role": "Leave at 1.",
+   "spec": null
+  },
+  "Prayer of Concentration": {
+   "role": "Leave at 1.",
+   "spec": null
+  },
+  "Earth's Grace": {
+   "role": "Critical Damage Boost and Accuracy. Raise right after Empyrean Lord's Grace.",
+   "spec": null
+  },
+  "Survival Willpower": {
+   "role": "Always-on Status Effect Resist. Leave at 1, or give it Defiance's points.",
+   "spec": null
+  },
+  "Radiant Benediction": {
+   "role": "Passive; the last one raised to 10 (row 8 of the 45 build).",
+   "spec": null
+  },
+  "Voice of Doom": {
+   "role": "PvP: −60% Incoming Heal and HP potions on up to 4 enemies for 20 s.",
+   "spec": null
+  },
+  "Earth Punishment": {
+   "role": "Burns 10 s of every 30; at 5 Condemnation always crits on its target. Slot 2.",
+   "spec": null
+  },
+  "Power Burst": {
+   "role": "50 stagger damage, the most you have. Slot 4 for stagger checks.",
+   "spec": null
+  },
+  "Absolution": {
+   "role": "Party heal that removes up to 2 debuffs, 90 s. With a Chanter or for more healing.",
+   "spec": null
+  },
+  "Assault Mark": {
+   "role": "Not used in the PvE build.",
+   "spec": null
+  },
+  "Salvation": {
+   "role": "3 s immunity to damage and status effects. Emergency button, mostly PvP.",
+   "spec": null
+  },
+  "Noble Aura": {
+   "role": "Aura that follows you and hits your target every 2 s for 5 min. Slot 3.",
+   "spec": null
+  },
+  "Benevolence": {
+   "role": "Heals the party every 2 s for 20 s. In place of Light of Protection with a Chanter.",
+   "spec": null
+  },
+  "Root": {
+   "role": "Roots enemies, 15 stagger. Helps on packs while levelling solo.",
+   "spec": null
+  },
+  "Light of Protection": {
+   "role": "Always-on party PvE Damage Boost and Tolerance, 15% at 10. Core stigma, slot 1.",
+   "spec": null
+  },
+  "Prayer of Amplification": {
+   "role": "+20% Attack for 12 s every 60 s. Opens the macro's damage line. Slot 4.",
+   "spec": null
+  },
+  "Summon Resurrection": {
+   "role": "Raises up to 4 party members in 40 m. Swap in when your group dies a lot.",
+   "spec": null
+  },
+  "Yustiel's Power": {
+   "role": "Party +20% PvE Damage Tolerance for 10 s. Cast before a big hit you can see coming.",
+   "spec": null
+  }
+ },
+ "steps": {
+  "14": {
+   "note": "Put Bolt on its own key and hold it for the full charge."
+  },
+  "22": {
+   "note": "Stigma slot 1: Light of Protection (needs the Ascension quest The One Who Hears the Voice, which pays your first Stigma point). Switch it on and leave it on"
+  },
+  "27": {
+   "note": "Stigma slot 2: Earth Punishment. Add it to the macro's damage line"
+  },
+  "32": {
+   "note": "Stigma slot 3: Noble Aura. Condemnation reaches 12 with its Nezekan and Zikel nodes: add its crit-reset Specialty"
+  },
+  "34": {
+   "note": "Heals get their first points now that the damage skills are at 10 (Bolt at 38)"
+  },
+  "37": {
+   "note": "Stigma slot 4: Prayer of Amplification (Summon Resurrection if your group dies a lot)"
+  },
+  "40": {
+   "note": "Triniel board opens: start its levelling route. From 41 new Stigma points go to Light of Protection toward 10"
+  },
+  "45": {
+   "keep": "Keep 1 for Earth's Grace 5, then reset (free) into the 45 build",
+   "note": "Azphel (PvP) board opens on its own crystals. Equip the 45 Specialties and Stigma levels"
+  }
+ },
+ "stigmas": [
+  {
+   "name": "Light of Protection",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 10,
+   "why": "Always on: 15% PvE Damage Boost and PvE Damage Tolerance for you and the party near you; at 5 +10% Incoming Heal, at 10 +100 Accuracy. Absolution or Benevolence instead with a Chanter"
+  },
+  {
+   "name": "Earth Punishment",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 5,
+   "why": "Burns the target for 10 s, every 30 s; at 5 every Condemnation on a burning target crits, so it resets nonstop"
+  },
+  {
+   "name": "Noble Aura",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "Aura that follows you and hits your target every 2 s for 5 minutes, every 60 s; at 5 +200 Aura Critical Hit"
+  },
+  {
+   "name": "Prayer of Amplification",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "+20% Attack for 12 s, every 60 s; at 5 +20% PvE Damage Boost. Summon Resurrection instead for a group that dies a lot, Power Burst for stagger checks"
+  }
+ ],
+ "passives": [
+  "Empyrean Lord's Grace",
+  "Earth's Grace",
+  "Healing Enhancement",
+  "Warm Benediction",
+  "Immortal Veil",
+  "Radiant Benediction"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: two keys held",
+   "eyebrow": "hold these down for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "You hold two inputs: your basic attack and the macro key. Bolt has a key of its own that you charge yourself. Everything else you press by hand is listed further down."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Earth's Retribution",
+       "sub": "Your basic-attack chain and your MP: 110 a hit. The macro never fires it, so keep it held. Not in the macro."
+      },
+      {
+       "cap": "Hold · macro key",
+       "label": "The macro (2 entries, 7 skills)",
+       "sub": "One key that runs the damage line and the Mark line in the next box, in numbered order, 10 ms apart.",
+       "macro": true
+      },
+      {
+       "cap": "By hand · its own key",
+       "skill": "Bolt",
+       "sub": "Not in the macro: a macro fires it at the first charge stage. Hold its key to the last stage when nobody needs a heal."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 7",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Damage line",
+       "cells": [
+        {
+         "skill": "Prayer of Amplification",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Earth Punishment"
+        },
+        {
+         "skill": "Condemnation"
+        },
+        {
+         "skill": "Chain of Torment"
+        }
+       ]
+      },
+      {
+       "tag": "Entry 2 · Mark line",
+       "cells": [
+        {
+         "skill": "Debilitating Mark",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Light of Regeneration"
+        },
+        {
+         "skill": "Judgment Thunder"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Prayer of Amplification"
+      },
+      {
+       "skill": "Earth Punishment"
+      },
+      {
+       "skill": "Condemnation"
+      },
+      {
+       "skill": "Chain of Torment",
+       "arrow": "→ 10 ms →"
+      },
+      {
+       "skill": "Debilitating Mark"
+      },
+      {
+       "skill": "Light of Regeneration"
+      },
+      {
+       "skill": "Judgment Thunder"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The number is the priority: the macro fires the first skill that is ready. Condemnation only works on a target carrying Chain of Torment, so in practice the chain lands first and Condemnation then fires on every reset. Light of Regeneration lasts 30 s on a 30 s cooldown, so the Mark line keeps it on the party; Judgment Thunder fills every gap. Keep Skill Queue on, or the heals you press while holding the keys get eaten."
+    },
+    {
+     "t": "note",
+     "text": "With Summon Resurrection in Prayer of Amplification's slot, put Divine Aura at the start of the damage line instead. Other setups press Light of Regeneration by hand, put Divine Aura in the Mark line, or leave the Mark line out of the boss macro; the sources split on that."
+    }
+   ]
+  },
+  {
+   "title": "Not in any macro: press by hand",
+   "eyebrow": "stigmas and placed skills",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Light of Protection"
+       ],
+       "why": "A switch: turn it on before the pull and leave it on."
+      },
+      {
+       "skills": [
+        "Noble Aura"
+       ],
+       "why": "At the pull, then again when it ends after 5 minutes."
+      },
+      {
+       "skills": [
+        "Divine Aura"
+       ],
+       "why": "It does not move, so cast it where the boss will stay."
+      },
+      {
+       "skills": [
+        "Bolt"
+       ],
+       "why": "Charged on its own key between heals. Each Discharge from your basic attack takes 7 s off its cooldown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Healing Light"
+       ],
+       "why": "When you and one other party member are low."
+      },
+      {
+       "skills": [
+        "Radiant Recovery"
+       ],
+       "why": "When most of the party is hurt or carries a debuff."
+      },
+      {
+       "skills": [
+        "Lightning Strike Scattershot"
+       ],
+       "why": "While the boss is staggered: hold it on its own key beside the macro key. It only hits a staggered target."
+      },
+      {
+       "skills": [
+        "Power Burst"
+       ],
+       "why": "If you slotted it for a stagger check: press as the gauge opens, for its 50 stagger damage."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "When a stun, knockdown, grab or fear holds you. It frees you and makes you immune to status effects for 5 s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Your first 40 seconds",
+   "eyebrow": "order of presses",
+   "blocks": [
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Light of Protection",
+       "label": "Light of Protection (before the pull)"
+      },
+      {
+       "skill": "Noble Aura"
+      },
+      {
+       "skill": "Earth's Retribution",
+       "label": "Hold Earth's Retribution + macro key"
+      },
+      {
+       "skill": "Divine Aura"
+      },
+      {
+       "skill": "Bolt",
+       "label": "Bolt (charged)"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The macro opens with Prayer of Amplification and Earth Punishment, lands Chain of Torment, then Condemnation crits and resets nonstop while the burn lasts (10 s). After that it resets only on its own crits, and it stops when the chain runs out, 7 s of every 20. Both come back around 23 s and 32 s; between them you heal and charge Bolt."
+    }
+   ]
+  },
+  {
+   "title": "Healing in a party",
+   "eyebrow": "deal damage by default",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "In a group that knows the fight you spend about 90% of the time on damage and heal the small mistakes; a group still learning needs more healing. Your debuffs help the whole party too: Chain of Torment cuts the boss's PvE Damage Tolerance and Debilitating Mark its PvE Damage Boost. All heals reach the party within 40 m."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Light of Regeneration"
+       ],
+       "why": "Always: the Mark line fires it. Heals everyone every 2 s for 30 s."
+      },
+      {
+       "skills": [
+        "Healing Light"
+       ],
+       "why": "You and one other are low: heals you and the lowest-HP member. 6 s cooldown, +2 consecutive uses with its pick."
+      },
+      {
+       "skills": [
+        "Radiant Recovery"
+       ],
+       "why": "Most of the party is hurt or debuffed: heals everyone and removes a debuff. 12 s cooldown."
+      },
+      {
+       "skills": [
+        "Yustiel's Power"
+       ],
+       "why": "If slotted: just before a big hit you know is coming, +20% PvE Damage Tolerance for 10 s."
+      },
+      {
+       "skills": [
+        "Absolution",
+        "Benevolence"
+       ],
+       "why": "If slotted: Absolution when several are in danger or a debuff kills; Benevolence for damage that keeps coming."
+      },
+      {
+       "skills": [
+        "Salvation"
+       ],
+       "why": "If slotted: a hit you cannot heal through. 3 s immune to damage and status effects."
+      },
+      {
+       "skills": [
+        "Summon Resurrection"
+       ],
+       "why": "If slotted: raises up to four fallen party members within 40 m. 120 s cooldown."
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "With a Chanter: only the higher of Light of Protection and Undefeated Mantra applies (a tie goes to the Mantra), so slot Absolution or Benevolence instead, or ask the Chanter to switch the Mantra off. Two Clerics: only one Chain of Torment applies."
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {
+       "b": "Condemnation never starts.",
+       "text": "Chain of Torment sometimes goes on cooldown without landing, most often on the first cast. Give it a macro entry of its own."
+      },
+      {
+       "b": "Condemnation stops for long stretches.",
+       "text": "On a dummy it should pause only while Chain of Torment is down, 7 s of every 20 at 45. Longer gaps mean the chain is missing."
+      },
+      {
+       "b": "Out of MP.",
+       "text": "Keep Earth's Retribution held beside the macro with Skill Queue on. If MP still runs dry, let go of the macro for a moment: each left click hit gives back 110."
+      },
+      {
+       "b": "Bolt hits weakly.",
+       "text": "It is in the macro, which fires it at the first charge stage. Give it its own key and hold it."
+      },
+      {
+       "b": "Everything stops after a long hold.",
+       "text": "The game pauses a held key after a while. Release the keys and hold them again."
+      },
+      {
+       "b": "Judgment Thunder slows your other skills.",
+       "text": "Take it out of the boss macro and keep it for the trash preset."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Trash preset and levelling",
+   "eyebrow": "a second skill preset for packs",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Make a separate preset for packs. It keeps its own skill and Stigma levels and its own macro. Most of your attacks hit up to four enemies around the target, and all three heals heal you too while you level alone."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Debilitating Mark",
+        "Divine Aura",
+        "Bolt"
+       ],
+       "why": "Open on the pack with these. Divine Aura's Changes to AoE Skill pick suits this preset."
+      },
+      {
+       "skills": [
+        "Chain of Torment",
+        "Condemnation"
+       ],
+       "why": "Then the chain, and Condemnation on every target carrying it."
+      },
+      {
+       "skills": [
+        "Judgment Thunder"
+       ],
+       "why": "Filler between the rest. If you took it out of the boss macro, it lives here."
+      },
+      {
+       "skills": [
+        "Root"
+       ],
+       "why": "While levelling solo, a useful Stigma for packs; Power Burst for a solo boss whose stagger gauge will not break."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/cleric/",
+   "title": "Aion 2 Maps: Cleric",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, stigma plan, macro, healing priorities and the numbered Daevanion routes (computed from the game client, updated 16 Oct 2026)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/cleric/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}

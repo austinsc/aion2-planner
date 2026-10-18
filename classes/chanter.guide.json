@@ -1,0 +1,608 @@
+{
+ "meta": {
+  "cls": "chanter",
+  "name": "Chanter",
+  "title": "Chanter Ascension Planner",
+  "sub": "AION 2 Global · PvE Dark Crush build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Dark Crush",
+  "brandIcon": "18100000",
+  "blurb": "Melee support. A one-line Dark Crush macro, mantras always on, party heals and buffs by hand."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 366)",
+  "Festival Shop crystals (to 404)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). A skill level opens 3 character levels after the one before it. Levels alone give 203 points by 45; Wisdom Stones from district quests and sealed dungeons add 180 more for the 45 build. Points are tight until about 30 and spare from about 33, when they go to Attack Preparation, then Wind's Promise.",
+  "schedule": "Dark Crush and Onslaught first on each board as it opens, then the Combat Speed corners on Nezekan and the Damage Boost corners on Zikel, and Spinning Strike, Impactful Crush and Rushing Smash on both. That spends 115 of the 136 crystals; the other 21 start the quest and dungeon list at 45. The two Rushing Smash nodes (28 and 34 here) take it to 12, where it resets on each kill; buy them sooner if you farm a lot. Skip Gust Rampage, Wave Blow, Tremor Crush, Heat Wave Blow, Defiance, Crossguard, Multi-Hit Resist, Critical Damage Tolerance, MP and Critical Hit Resist except where the board forces a step.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "At 45, reset (free) and spend in this order. Levels alone pay for rows 1–4 and Impact Hit to 8; Wisdom Stones from district quests and sealed dungeons pay for the rest. Leave at 1: Crossguard, Survival Willpower, Raging Spell and Defiance (or Wave Blow, if you raise Defiance in its place against bosses that stun or knock you down). 5 points stay spare.",
+  "passives": "At 10, Wind's Promise gives +12% Critical Damage Boost, Attack Preparation +10% PvE Damage Boost and Impact Hit +3% Double Chance. Blessing of Life turns 15.3% of your Attack into Heal Boost (18% at 10), so your heals grow with Attack. Past 10 they grow from board nodes, Arcana lines and Soul Binding lines on armour and jewellery.",
+  "specs": "Skill levels past 10 come from Daevanion nodes (+1 each), Arcana cards and gear lines; with quests and dungeons done the six main skills sit at 14. At skill 16 a last option opens and takes one of your two slots; at 20 a third slot opens. First to chase: Dark Crush 16 for Removes [Dark Crush] cooldown, then Onslaught, Incandescent Blow and Spinning Strike to 16.",
+  "stigmaSub": "30 points at 45: Undefeated Mantra 10, the rest 5",
+  "stigma": "Take each to 5 as the next slot opens; from level 40 the new points take Undefeated Mantra to 10. Swaps: Marchutan's Wrath in slot 3 while levelling solo, until 37; Obliterate for Marchutan's Wrath on stagger checks (leave it at 1, and the 4 points take Undefeated Mantra to 11); Healing Touch for Marchutan's Wrath with no Cleric; Impeding Authority for known raid-wide hits; Focused Defense for your own survival. Past 45, Stigma Shards go to Undefeated Mantra 20, then Power of the Storm 20.",
+  "src": "Where guides disagree (Onslaught's and Incandescent Blow's picks, Power of the Storm in slot 3, Defiance or Wave Blow in the last row, core nodes before skill nodes) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Onslaught": {
+   "role": "Basic attack and its chain. Hold it on left click: restores MP, trims Spinning Strike.",
+   "spec": {
+    "8": "+20% MP restored (or Absorbs 0.7% HP if HP runs short)",
+    "16": "Adds [Storm Chain] Chain Skill, in place of +50% Multi-Hit on hit",
+    "45": "+50% Multi-Hit on hit, and -1s [Spinning Strike] cooldown on hit"
+   }
+  },
+  "Incandescent Blow": {
+   "role": "Filler hit with a Bursting Blow follow-up. Last in the macro line.",
+   "spec": {
+    "8": "No set pick: -20% MP consumed, or up to 12% more damage when fewer targets are hit",
+    "16": "Ignores Block and Evasion and lands as Multi-Hit, in place of -20% MP consumed",
+    "45": "Up to 12% more damage when fewer targets are hit, and -20% MP consumed"
+   }
+  },
+  "Rushing Smash": {
+   "role": "20 m dash. At skill 12 it resets on each kill: your farming dash between packs.",
+   "spec": {
+    "8": "50% chance to trigger [Heat Wave Blow] on hit (not the Charge pick)",
+    "16": "Ignores Block and Evasion and lands as Multi-Hit, in place of the Heat Wave Blow pick",
+    "45": "Keep the Heat Wave Blow pick, and Resets cooldown on defeating an enemy"
+   }
+  },
+  "Impactful Crush": {
+   "role": "20 m stun for 3 s that opens Dark Crush for 2 s. In the macro.",
+   "spec": {
+    "8": "Changes to AoE damage (stuns whole packs)",
+    "45": "Changes to mobile skill, and +30% Skill Speed"
+   }
+  },
+  "Dark Crush": {
+   "role": "Main hit, 5 s cooldown. Lands only in a window another skill opens. Fires first.",
+   "spec": {
+    "8": "Critical Hit on hit (solo: Absorbs 0.7% HP)",
+    "16": "Removes [Dark Crush] cooldown, in place of Piercing Strike",
+    "45": "Critical Hit on hit, and Adds [Piercing Strike] Chain Skill"
+   }
+  },
+  "Gust Rampage": {
+   "role": "Hits only a staggered target. Press in stagger windows.",
+   "spec": {
+    "45": "Changes to mobile skill; at 12 (a +2 Compass line) add Multi-Hit on hit"
+   }
+  },
+  "Heat Wave Blow": {
+   "role": "Fires from Rushing Smash hits; pressed, it works only after you Block.",
+   "spec": {
+    "45": "Up to +20% damage when more targets hit"
+   }
+  },
+  "Recuperation": {
+   "role": "Heals you and the party within 40 m and removes a debuff. Press by hand.",
+   "spec": {
+    "8": "+1 consecutive use and Heal over Time can stack up to 2 times",
+    "16": "Keep both",
+    "45": "Keep it, and +5% HP restored"
+   }
+  },
+  "Tremor Crush": {
+   "role": "Dash to a target after a Dodge or in flight, 50% stun. Mostly for PvP.",
+   "spec": {
+    "45": "+10m [Tremor Crush] range"
+   }
+  },
+  "Wave Blow": {
+   "role": "Knocks down a stunned target within 4 m; at 12 cuts its PvE Damage Boost 15%.",
+   "spec": {
+    "45": "+1s Knockdown duration"
+   }
+  },
+  "Spinning Strike": {
+   "role": "20 m opener: opens Dark Crush for 2 s, stacks Critical Damage. In the macro.",
+   "spec": {
+    "8": "-5s cooldown (as the group's healer: +10% Heal Boost, up to 20%)",
+    "16": "Ignores Block and Evasion and lands as a Critical Hit, in place of the fewer-targets pick",
+    "45": "-5s cooldown, and up to +20% damage when fewer targets hit"
+   }
+  },
+  "Defiance": {
+   "role": "Frees you from stun, knockdown and grabs, then 5 s immunity. At 1 in PvE.",
+   "spec": {
+    "45": "Only if you raise it in place of Wave Blow: Restores 10% HP on using [Defiance]"
+   }
+  },
+  "Blessing of Life": {
+   "role": "Heal Boost equal to 15.3% of your Attack (18% at 10)."
+  },
+  "Crossguard": {
+   "role": "Leave at 1."
+  },
+  "Protection Circle": {
+   "role": "Last passive row, with Earth's Promise."
+  },
+  "Inspiring Spell": {
+   "role": "To 10 with Blessing of Life after Impact Hit."
+  },
+  "Attack Preparation": {
+   "role": "+10% PvE Damage Boost at 10. Spare levelling points go here first."
+  },
+  "Impact Hit": {
+   "role": "+3% Double Chance at 10. Reaches 8 by 45, 10 with Wisdom Stones."
+  },
+  "Raging Spell": {
+   "role": "Leave at 1."
+  },
+  "Earth's Promise": {
+   "role": "Cuts enemy Damage Tolerance; does not apply alongside a Cleric's Chain of Torment."
+  },
+  "Survival Willpower": {
+   "role": "Leave at 1 in PvE. A PvP passive: +35% Status Effect Resist at 10."
+  },
+  "Wind's Promise": {
+   "role": "+12% Critical Damage Boost at 10. Takes spare points from 39."
+  },
+  "Obliterate": {
+   "role": "50 stagger damage at any level, your most. Swap in for stagger checks."
+  },
+  "Guardian Blessing": {
+   "role": "Past 45 in Sprint Mantra's slot: +11% Max HP for 120 s at 15, can't be removed."
+  },
+  "Marchutan's Wrath": {
+   "role": "Hits up to 4 around a target within 20 m and opens Dark Crush for 3 s. Slot 4."
+  },
+  "Assault Shock": {
+   "role": "Not used in the PvE build."
+  },
+  "Impeding Authority": {
+   "role": "Party shield of 20% Max HP within 40 m at 5, every 90 s. For raid-wide hits."
+  },
+  "Undefeated Mantra": {
+   "role": "Switch: +15% PvE Damage Boost and Damage Tolerance for you and the party. Slot 1."
+  },
+  "Ensnaring Mark": {
+   "role": "20 m area Seal (and a Root from 5), 50% chance each. A PvP option."
+  },
+  "Barrier Spell": {
+   "role": "Abyss bosses: the party within 40 m can't drop below 10% HP for 3 s."
+  },
+  "Focused Defense": {
+   "role": "Guarantees a Block, twice in a row from 5. For your own survival."
+  },
+  "Sprint Mantra": {
+   "role": "Switch: +12.5% Move Speed and a chance to heal on hit for the party. Slot 2."
+  },
+  "Healing Touch": {
+   "role": "Heals you and the party within 40 m every 30 s; at 15 removes 5 debuffs. No Cleric."
+  },
+  "Fracturing Blow": {
+   "role": "20 stagger. 20 m rush that takes 30% off Defense for 5 s; open-world PvP."
+  },
+  "Power of the Storm": {
+   "role": "12 s of Combat Speed and shorter cooldowns for you and the party. Slot 3."
+  }
+ },
+ "steps": {
+  "14": {
+   "keep": "Keep 3 for level 16: Onslaught 7, Incandescent Blow 7, Dark Crush 6 and Rushing Smash 7"
+  },
+  "19": {
+   "specs": [
+    {
+     "skill": "Onslaught",
+     "pick": "+20% MP restored (or Absorbs 0.7% HP if HP runs short)"
+    },
+    {
+     "skill": "Incandescent Blow",
+     "pick": "No set pick: -20% MP consumed, or up to 12% more damage when fewer targets are hit"
+    },
+    {
+     "skill": "Rushing Smash",
+     "pick": "50% chance to trigger [Heat Wave Blow] on hit"
+    }
+   ]
+  },
+  "22": {
+   "note": "Stigma slot 1: Undefeated Mantra (needs the Ascension quest The One Who Hears the Voice, which pays the first Stigma point). Switch it on and leave it on"
+  },
+  "23": {
+   "note": "First Stigma point from levels: Undefeated Mantra toward 5"
+  },
+  "27": {
+   "note": "Stigma slot 2: Sprint Mantra. Another switch: on and leave it on"
+  },
+  "32": {
+   "note": "Stigma slot 3: Power of the Storm (levelling solo, Marchutan's Wrath can sit here until 37)"
+  },
+  "34": {
+   "specs": [
+    {
+     "skill": "Rushing Smash",
+     "pick": "Reaches 12 with its second board node: add Resets cooldown on defeating an enemy"
+    }
+   ]
+  },
+  "37": {
+   "note": "Stigma slot 4: Marchutan's Wrath"
+  },
+  "40": {
+   "note": "Triniel board opens. All four Stigmas are at 5; new Stigma points go to Undefeated Mantra toward 10"
+  },
+  "45": {
+   "keep": "Keep 1 (Impact Hit 9 needs 4). Then reset (free) into the 45 build",
+   "note": "Azphel (PvP) board opens on its own crystals. Reset into the Build order and switch to the 45 Specialties"
+  }
+ },
+ "stigmas": [
+  {
+   "name": "Undefeated Mantra",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 10,
+   "why": "Switch you leave on: +15% PvE Damage Boost and Damage Tolerance for you and nearby party; at 5 +100 Critical Hit, at 10 +100 Accuracy"
+  },
+  {
+   "name": "Sprint Mantra",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 5,
+   "why": "Switch you leave on: +12.5% Move Speed and a 15% chance to heal on hit for you and nearby party; at 5 +10% Incoming Heal"
+  },
+  {
+   "name": "Power of the Storm",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "12 s of +20% Combat Speed and 20% shorter cooldowns for you, +20% and 10% for the party within 40 m; at 5 every 90 s instead of 120 s"
+  },
+  {
+   "name": "Marchutan's Wrath",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "Hits up to 4 around a target within 20 m and opens Dark Crush for 3 s, every 30 s; at 5 up to +20% on fewer targets. Obliterate instead for stagger checks, Healing Touch with no Cleric"
+  }
+ ],
+ "passives": [
+  "Wind's Promise",
+  "Attack Preparation",
+  "Impact Hit",
+  "Inspiring Spell",
+  "Blessing of Life",
+  "Earth's Promise",
+  "Protection Circle"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: two keys",
+   "eyebrow": "hold both for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "One key is your basic attack, the other runs the macro. Hold both with your own hands: mouse software only saves you holding the second one. Everything you press yourself is listed further down."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Onslaught",
+       "sub": "Basic attack and its chain, on quick slot 1. Restores MP, and with its 45 pick each hit takes 1 s off Spinning Strike. Not in the macro."
+      },
+      {
+       "cap": "Hold · right click",
+       "label": "The macro (1 entry, 4 skills)",
+       "sub": "One entry that runs the Dark Crush line in the next box, 10 ms per step. This is the only thing that is stacked.",
+       "macro": true
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Keep Skill Queue on (the game's default). Keep the basic attack beside the macro, not inside it: a macro step fires only about once per cycle."
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 4",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Dark Crush line",
+       "cells": [
+        {
+         "skill": "Dark Crush",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Spinning Strike"
+        },
+        {
+         "skill": "Impactful Crush"
+        },
+        {
+         "skill": "Incandescent Blow"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Dark Crush"
+      },
+      {
+       "skill": "Spinning Strike"
+      },
+      {
+       "skill": "Impactful Crush"
+      },
+      {
+       "skill": "Incandescent Blow"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The number is the firing order. The game draws the stack bottom first, so Dark Crush goes at the bottom. It is tried first but lands only inside a window: Spinning Strike and Impactful Crush open one for 2 s each, Marchutan's Wrath for 3 s. With no window open, Incandescent Blow fills. Some setups add a second entry (Gust Rampage, or Wave Blow and Heat Wave Blow), or put Marchutan's Wrath in the line right after Spinning Strike; the sources split on that."
+    }
+   ]
+  },
+  {
+   "title": "Not in any macro: press by hand",
+   "eyebrow": "stigmas",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Undefeated Mantra",
+        "Sprint Mantra"
+       ],
+       "why": "Switches with a 5 s cooldown. Turn them on and leave them on; they go off when you die, so turn them on again after a resurrection."
+      },
+      {
+       "skills": [
+        "Power of the Storm"
+       ],
+       "why": "On the pull, before anyone uses a skill: its cooldown cut only shortens cooldowns that start while it is up. Hold the next one for just before a stagger."
+      },
+      {
+       "skills": [
+        "Marchutan's Wrath"
+       ],
+       "why": "When no Dark Crush window is open: it opens one for 3 s, every 30 s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Party buffs and heals",
+   "eyebrow": "you are the support",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Your mantras and Power of the Storm cover the party, and Recuperation is a party heal. With a Cleric, some of your effects meet theirs."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Recuperation"
+       ],
+       "why": "When the party takes damage or carries a debuff: heals everyone within 40 m at once and over 8 s and removes a debuff. Two casts in a row, each back 15 s later. Healing Touch too, if you slot it."
+      },
+      {
+       "skills": [
+        "Undefeated Mantra"
+       ],
+       "why": "With a Cleric, only the higher of it and Light of Protection applies (a tie goes to yours). Keep yours on: Clerics swap theirs out when a Chanter is in the party."
+      },
+      {
+       "skills": [
+        "Power of the Storm"
+       ],
+       "why": "A party member with the Cleric's Earth's Blessing can't receive it, and the other way round, so agree who covers whom."
+      },
+      {
+       "skills": [
+        "Impeding Authority"
+       ],
+       "why": "If you slot it: just before a known raid-wide hit, a shield of 20% Max HP for the party within 40 m."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Gust Rampage"
+       ],
+       "why": "While the boss is staggered: it only hits a staggered target. On its own key as a second macro entry, it fires only then."
+      },
+      {
+       "skills": [
+        "Obliterate"
+       ],
+       "why": "If you took it in Marchutan's Wrath's slot for a stagger check: save it for when the stagger gauge opens, for 50 stagger damage."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "When you are stunned, knocked down or grabbed. It frees you, then makes you immune for 5 s."
+      },
+      {
+       "skills": [
+        "Guardian Blessing"
+       ],
+       "why": "Past 45, in Sprint Mantra's slot: on the pull and again each time it runs out. It lasts 120 s, as long as its cooldown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Your first 20 seconds",
+   "eyebrow": "order of presses",
+   "blocks": [
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Undefeated Mantra",
+       "label": "Undefeated Mantra + Sprint Mantra on"
+      },
+      {
+       "skill": "Power of the Storm"
+      },
+      {
+       "skill": "Onslaught",
+       "label": "Hold Onslaught + macro key"
+      },
+      {
+       "skill": "Spinning Strike",
+       "label": "Spinning Strike → Dark Crush"
+      },
+      {
+       "skill": "Impactful Crush",
+       "label": "Impactful Crush → Dark Crush"
+      },
+      {
+       "skill": "Marchutan's Wrath",
+       "label": "Marchutan's Wrath (by hand) → Dark Crush"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "After that the loop runs itself. Onslaught's hits bring Spinning Strike back about every 10 s (5 to 6 a minute on a boss). When Impactful Crush comes back inside Spinning Strike's window, Dark Crush is still cooling down and fires once for both; its level-16 pick removes that cooldown after 45. Your hands stay free for Recuperation."
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {
+       "b": "Dark Crush fires rarely.",
+       "text": "Keep it at the bottom of the line, at 10 ms. It waits for an opener and for its own 5 s cooldown."
+      },
+      {
+       "b": "The macro stops.",
+       "text": "It stops when you change skill preset. Let go and hold the key again."
+      },
+      {
+       "b": "Right click does nothing.",
+       "text": "A mouse-button macro key does not work in AION 1 Control Mode."
+      },
+      {
+       "b": "Spinning Strike comes back slowly.",
+       "text": "Keep holding Onslaught: with its 45 pick each hit takes 1 s off Spinning Strike's cooldown."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Packs and questing",
+   "eyebrow": "trash and between pulls",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "The boss macro works on packs too. A few skills matter only here."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Impactful Crush"
+       ],
+       "why": "While levelling, its AoE pick stuns the whole pack you gathered."
+      },
+      {
+       "skills": [
+        "Wave Blow"
+       ],
+       "why": "On a mob within 4 m that Impactful Crush has stunned: knocks it down for 3 s."
+      },
+      {
+       "skills": [
+        "Rushing Smash",
+        "Heat Wave Blow"
+       ],
+       "why": "Between packs: a 20 m dash that resets when it kills (from skill 12), and half its hits trigger Heat Wave Blow."
+      },
+      {
+       "skills": [
+        "Tremor Crush"
+       ],
+       "why": "After a Dodge or in flight, to close in on a target within 20 m with its range pick."
+      },
+      {
+       "skills": [
+        "Healing Touch",
+        "Spinning Strike"
+       ],
+       "why": "As the group's only healer: slot Healing Touch and take Spinning Strike's +10% Heal Boost pick."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/chanter/",
+   "title": "Aion 2 Maps: Chanter",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, stigma plan, support notes, macro and the numbered Daevanion routes (computed from the game client)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/chanter/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}

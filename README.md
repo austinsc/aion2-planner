@@ -1,24 +1,38 @@
 # aion2-planner
 
-Interactive levelling planners for AION 2 (Global). Exact skill point spends, Daevanion crystal routes and stigma plans, level by level, with the in-game icons and node frames.
+Interactive levelling planners for AION 2 (Global). Exact skill point spends, Daevanion crystal routes and stigma plans, level by level, with the in-game icons and node frames, for all eight classes. Also an Essence Extraction guide for levelling gathering proficiency.
 
 ## Planners
 
+Open [`index.html`](index.html) for the menu. Every page also has a menu bar along the top that links to the others.
+
 | Class | Path | Build |
 |---|---|---|
+| Gladiator | [`gladiator-planner/`](gladiator-planner/index.html) | PvE Overhead Slam, levels 1-45 |
+| Templar | [`templar-planner/`](templar-planner/index.html) | PvE Judgment tank, levels 1-45 |
+| Assassin | [`assassin-planner/`](assassin-planner/index.html) | PvE Heart Gore, levels 1-45 |
+| Ranger | [`ranger-planner/`](ranger-planner/index.html) | PvE Deadshot, levels 1-45 |
 | Sorcerer | [`sorcerer-planner/`](sorcerer-planner/index.html) | PvE Hellfire, levels 1-45 |
+| Spiritmaster | [`spiritmaster-planner/`](spiritmaster-planner/index.html) | PvE Elemental Fusion, levels 1-45 |
+| Cleric | [`cleric-planner/`](cleric-planner/index.html) | PvE Condemnation, levels 1-45 |
+| Chanter | [`chanter-planner/`](chanter-planner/index.html) | PvE Dark Crush, levels 1-45 |
+
+| Profession | Path | What |
+|---|---|---|
+| Essence Extraction | [`essence-extraction/`](essence-extraction/index.html) | Gathering proficiency 1-100: route, spots per faction, Professional test, skill points |
 
 ## Run it
 
-It is a static page with no build step. Open `sorcerer-planner/index.html` in a browser, or serve the folder:
+The site is static, with no build step to view it. Serve the repository root and open the menu:
 
 ```bash
-python -m http.server 8765 --directory sorcerer-planner
+python -m http.server 8765
+# then open http://localhost:8765/
 ```
 
-Progress (level, completed levels, owned Daevanion nodes, notes) is kept in the browser's local storage. The published Claude artifact version also saves it to your account.
+Opening `index.html` straight from disk also works. Progress (level, completed levels, owned Daevanion nodes, notes; proficiency, faction and main material on the gathering page) is kept in the browser's local storage, separately for each page. The published Claude artifact version also saves it to your account.
 
-## What is in the Sorcerer planner
+## What is in each class planner
 
 - **Now**: the current level's skill point spends, what to hold back, new skills, Specialty picks and Daevanion nodes to buy.
 - **Levels 1-45**: the whole route with per-level points, crystals and unlocks.
@@ -26,9 +40,21 @@ Progress (level, completed levels, owned Daevanion nodes, notes) is kept in the 
 - **Daevanion**: the five boards with numbered routes, a crystal schedule while levelling, and the route after 45.
 - **Build at 45**, **Stigmas**, **Macro**: the reset order for 383 points, stigma plan, and the boss and trash macro setups.
 
+## What is in the Essence Extraction planner
+
+- **Now**: your proficiency, XP to the next level, to 50 and to 100 (with a rough attempt count), what to gather and where for your faction, and the skill points to spend at this proficiency.
+- **Route**: the fastest route in three stages (Novice 1-50, the Professional test at 50, Professional 51-100), the densest spots for both factions, and mistakes that cost XP.
+- **Proficiency 1-100**: the XP table with the points each level gives and what to buy.
+- **Skill points**: the Common skills (Proficient Handling, Delicate Touch, Lady Luck) and the Specialty trees, with a plan for your main material.
+- **Materials**: every material on your faction's map, with gauge size, node count and what it crafts.
+
+## How it is built
+
+`shared/` holds the planner engine, styles, node frames and the site menu. Each class folder has a generated `data.js`, its icons and a page shell. The level steps, skill levels, Daevanion routes and crystal schedule are generated from the sources by the scripts in [`tools/`](tools/README.md). The written parts (skill roles, notes, Stigma plan, macro cards) are in `classes/<class>.guide.json`. The Essence Extraction data is compiled by hand in `essence-extraction/data.js`.
+
 ## Data and sources
 
-Compiled 18 Oct 2026 for the Global launch build. The levelling stepper, 45 build, stigma plan, macro and Daevanion routes follow [Aion 2 Maps](https://aion2maps.com/guides/sorcerer/). Skill data and icons come from [Metabot](https://metabot.gg/en/aion-2/skills), board layouts and node frames from [Wikily](https://wikily.gg/aion-2/daevanion/sorcerer/nezekan), and per-level point tables from [Fextralife](https://aion2.wiki.fextralife.com/Level_Progression) and [Questlog](https://questlog.gg/aion-2/en/table/character-levels). Numbers can change with patches; the in-game tooltip wins.
+Compiled 18 Oct 2026 for the Global launch build. The levelling steppers, 45 builds, stigma plans, macros and Daevanion routes follow the [Aion 2 Maps class guides](https://aion2maps.com/guides/classes/). Skill data and icons come from [Metabot](https://metabot.gg/en/aion-2/skills), board layouts and node frames from [Wikily](https://wikily.gg/aion-2/daevanion/sorcerer/nezekan), and per-level point tables from [Fextralife](https://aion2.wiki.fextralife.com/Level_Progression) and [Questlog](https://questlog.gg/aion-2/en/table/character-levels). Essence Extraction data comes from Questlog's client data, Wikily, Metabot, Aion 2 Maps, AION2 Vault and the guides listed on its Sources tab. Numbers can change with patches; the in-game tooltip wins.
 
 ## License and attribution
 

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Essence Extraction Planner</title>
+<meta name="description" content="Essence Extraction levelling for AION 2 Global: proficiency 1 to 100, the densest gathering spots for each faction, the Professional test and where every skill point goes.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../shared/planner.css">
+<style>
+.brand .gem{width:44px;height:44px;border-radius:8px;border:1px solid var(--gold-dim);box-shadow:0 0 0 2px var(--bg);display:grid;place-items:center;background:var(--panel2);color:var(--gold2);flex:none}
+.bar{position:relative;height:10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);overflow:visible}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+.bar b{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--warn)}
+.xpin{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.9rem;color:var(--muted)}
+.xpin input{width:6em;padding:5px 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2)}
+.steps li{cursor:default}
+</style>
+</head>
+<body>
+<nav class="site" id="site" aria-label="Planners"></nav>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <span class="gem" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>
+    <div><h1>Essence Extraction Planner</h1><p class="sub">AION 2 Global · gathering proficiency 1 to 100 · what to gather, where, and where every skill point goes</p></div>
+  </div>
+  <div class="lvl">
+    <button class="btn" id="lvDown" aria-label="Proficiency down">−</button>
+    <div class="read"><span class="eyebrow">Proficiency</span><output id="lvOut" for="lvRange">1</output></div>
+    <button class="btn" id="lvUp" aria-label="Proficiency up">+</button>
+    <input type="range" id="lvRange" min="1" max="100" value="1" aria-label="Current proficiency">
+    <span class="save" id="saveState">Loading…</span>
+  </div>
+</div></header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap" role="tablist">
+  <button class="tab" role="tab" data-tab="now" aria-selected="true">Now</button>
+  <button class="tab" role="tab" data-tab="route">Route</button>
+  <button class="tab" role="tab" data-tab="table">Proficiency 1–100</button>
+  <button class="tab" role="tab" data-tab="points">Skill points</button>
+  <button class="tab" role="tab" data-tab="mats">Materials</button>
+  <button class="tab" role="tab" data-tab="src">Sources</button>
+</div></nav>
+
+<main><div class="wrap">
+  <section class="panel on" id="p-now" role="tabpanel"></section>
+  <section class="panel" id="p-route" role="tabpanel"></section>
+  <section class="panel" id="p-table" role="tabpanel"></section>
+  <section class="panel" id="p-points" role="tabpanel"></section>
+  <section class="panel" id="p-mats" role="tabpanel"></section>
+  <section class="panel" id="p-src" role="tabpanel"></section>
+  <p class="foot">Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation. Data compiled 18 Oct 2026 for the Global launch build; see the Sources tab. Numbers can change with patches; the in-game window wins.</p>
+</div></main>
+<script src="../shared/site.js"></script>
+<script src="data.js"></script>
+<script src="essence.js"></script>
+</body>
+</html>

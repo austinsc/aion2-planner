@@ -1,0 +1,583 @@
+{
+ "meta": {
+  "cls": "spiritmaster",
+  "name": "Spiritmaster",
+  "title": "Spiritmaster Ascension Planner",
+  "sub": "AION 2 Global · PvE Elemental Fusion build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Elemental Fusion",
+  "brandIcon": "16100000",
+  "blurb": "Ranged pet caster. Three spirits and Elemental Fusion on a two-line macro, Cold Shock held."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 365)",
+  "Festival Shop crystals (to 396)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). A skill level opens 3 character levels after the one before it. Levels alone give 203 points by 45, and they run short until about 40, so the stepper raises one or two skills at a time. Wisdom Stones from district quests and sealed dungeons add 180 more for the 45 build.",
+  "schedule": "Spirit Strike, Elemental Fusion and Combustion first on Nezekan, then its Combat Speed corner and Cold Shock. On each later board Elemental Fusion and Combustion come first, with the Fire Spirit, Cold Shock and the two Damage Boost corners on Zikel. The 11 crystals left at 45 buy Nezekan's first Cooldown Reduction corner. Skip Soul's Cry, the Wind Spirit, Spirit Revitalization, the Damage Tolerance, Critical Damage Tolerance and Multi-Hit Resist corners, MP and Critical Hit Resist except where the board forces a step. The Water and Earth Spirits, Rapid Scattershot and Defiance wait until after the Nightmare shop.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "At 45, reset (free) and spend in this order. Levels alone pay for rows 1–4 and Summon: Water Spirit to 8; Wisdom Stones from district quests and sealed dungeons pay for the rest. Leave at 1: Soul's Cry, Summon: Wind Spirit, Spirit Communion and Revitalization Contract. 5 points stay spare. Defiance's place in the order is where guides split.",
+  "passives": "Spirit Strike at 10 gives you and your spirit +15% PvE Damage Boost and +4% Perfect Chance; Benediction at Stigma 10 makes that Damage Boost ×1.5 while it lasts. Mental Focus is your main Double Chance source (+3% at 10). Element Unification stacks Critical Damage Boost off your spirits' skills. Spirit Revitalization comes next: its cooldown cuts bring the Ancient Spirit back sooner too.",
+  "specs": "Skill levels past 10 come from Daevanion nodes (+1 each), Arcana cards and ring lines. Take Elemental Fusion and Combustion to 16 first (their board nodes make 14, a +1 line on each ring makes 16), then the Fire Spirit. Level-16 picks to chase: Elemental Fusion 25% chance to regain Four Elements, Combustion's [Ashy Call] chain skill. Skip Elemental Fusion's Changes to Charge Skill: the macro fires it at its first stage.",
+  "stigmaSub": "30 points at 45: Summon: Ancient Spirit 10, the rest 5",
+  "stigma": "Take each to 5 before the next slot opens; from level 41 the new points take the Ancient Spirit to 10. After 45, Stigma Shards go to Benediction 10 first, then the Ancient Spirit 15. Swaps: Jointstrike: Destructive Attack for Flame Blessing on stagger checks (own key, held). Nothing to change in parties: no Spiritmaster buff reaches the party.",
+  "src": "Where guides disagree (the second Stigma, Flame Blessing or Destructive Attack, three spirits or four, the Fire Spirit's levelling pick, Defiance's place in the build) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Cold Shock": {
+   "role": "Basic attack, a three-hit chain that restores MP. Hold it on left click.",
+   "spec": {
+    "8": "+20% MP restored",
+    "45": "+50% Multi-Hit on hit, and +2% Attack on landing [Earth Tremor] (up to 5 stacks)"
+   }
+  },
+  "Combustion": {
+   "role": "No-cooldown hit. Right click while levelling, last cell of the damage line at 45.",
+   "spec": {
+    "8": "-20% MP consumed",
+    "45": "Up to 12% more damage when fewer targets are hit, and +20% Skill Speed",
+    "16": "Adds [Ashy Call] Chain Skill, in place of the 12% pick"
+   }
+  },
+  "Summon: Fire Spirit": {
+   "role": "Main spirit; its skill hits up to 4 enemies. Last in the spirit line, so it stays out.",
+   "spec": {
+    "8": "10% chance to activate skill when Fire Spirit lands attack (or -50% MP Cost while MP runs short)",
+    "45": "+20% Fire Spirit Critical Hit damage, and keep the 10% chance",
+    "16": "+20% Fire Spirit Stats, in place of the 10% chance"
+   }
+  },
+  "Summon: Water Spirit": {
+   "role": "Each of its hits restores 20 MP. End on it when MP runs low.",
+   "spec": {
+    "8": "10% chance to activate skill when Water Spirit lands attack (or -50% MP Cost while MP runs short)",
+    "45": "+10% Water Spirit Attack; from skill 12 add the 10% chance",
+    "16": "+20% Water Spirit Stats, in place of the 10% chance (needs nodes past the route)"
+   }
+  },
+  "Jointstrike: Curse": {
+   "role": "Spirit joint attack, 10 s cooldown, 10 stagger. In the damage line.",
+   "spec": {
+    "8": "Changes to mobile skill",
+    "45": "Changes to mobile skill, and -2s cooldown"
+   }
+  },
+  "Rapid Scattershot": {
+   "role": "Hits only a staggered target. Own key, press in stagger windows.",
+   "spec": {
+    "45": "Restores 120 MP (or Absorbs 5% HP if you take hits)",
+    "16": "-1s all skill cooldowns on hit and Multi-Hit on hit (needs nodes past the route)"
+   }
+  },
+  "Summon: Earth Spirit": {
+   "role": "Tank spirit that draws the attacks. End on it against a tough enemy or in PvP.",
+   "spec": {
+    "45": "10% chance to activate skill when Earth Spirit lands attack",
+    "16": "+20% Earth Spirit Stats, beside the 10% chance"
+   }
+  },
+  "Dimensional Control": {
+   "role": "Slows up to 4 enemies by 40% for 3 s; keeps melee off you. In the damage line.",
+   "spec": {
+    "8": "Extra damage after 3s on hit",
+    "45": "Extra damage after 3s on hit, and +50% Multi-Hit chance on hit"
+   }
+  },
+  "Summon: Wind Spirit": {
+   "role": "Each of its hits heals you 1.5% HP. End on it when HP is low; left at 1 at 45.",
+   "spec": {
+    "45": "Left at 1. Four-spirit setups raise it to 12–14 for +20% Wind Spirit Critical Hit and the 10% chance"
+   }
+  },
+  "Soul's Cry": {
+   "role": "5 s Fear, 15 stagger. A PvP tool; left at 1 for PvE.",
+   "spec": {
+    "45": "Left at 1 in PvE (in PvP its pick adds a 5 s Root)"
+   }
+  },
+  "Elemental Fusion": {
+   "role": "Cast whenever Four Elements lights it up. Top of the build, first in the spirit line.",
+   "spec": {
+    "8": "Changes to AoE Skill for packs (or Extra damage after 3s on hit for bosses)",
+    "45": "Extra damage after 3s on hit, and +10 all Element Boost on hit",
+    "16": "25% chance to regain Four Elements, in place of +10 all Element Boost"
+   }
+  },
+  "Defiance": {
+   "role": "Breaks Stun, Knockdown, Airborne, Grab, Frost and Fear, then 5 s status immunity.",
+   "spec": {
+    "8": "Restores 20% HP on using [Defiance], if you raise it",
+    "45": "Restores 20% HP on using [Defiance]"
+   }
+  },
+  "Spirit Strike": {
+   "role": "+15% PvE Damage Boost and +4% Perfect Chance for you and your spirit at 10."
+  },
+  "Spirit Protection": {
+   "role": "Spirit passive. Raised late with Wisdom Stones (build row 11)."
+  },
+  "Spirit's Descent": {
+   "role": "Proc passive; the Ancient Spirit at Stigma 10 makes it ×1.5. Build row 10."
+  },
+  "Corrode": {
+   "role": "The passive, not the Jointstrike stigma. Raised late (build row 9)."
+  },
+  "Spirit Revitalization": {
+   "role": "20% on hit: -1 s off summon cooldowns, Ancient Spirit included; heals your spirit."
+  },
+  "Mental Focus": {
+   "role": "+3% Double Chance at 10. Second passive to raise."
+  },
+  "Consecutive Countercurrent": {
+   "role": "Passive; raised last with Wisdom Stones (build row 13)."
+  },
+  "Spirit Communion": {
+   "role": "Leave at 1. Benediction at Stigma 15 makes it ×1.5."
+  },
+  "Revitalization Contract": {
+   "role": "Leave at 1."
+  },
+  "Element Unification": {
+   "role": "Each spirit-skill hit stacks +2% Critical Damage Boost, up to 5 times, for 10 s."
+  },
+  "Jointstrike: Destructive Attack": {
+   "role": "50–65 stagger, your most. Swap in for Flame Blessing on stagger checks."
+  },
+  "Kaisinel's Power": {
+   "role": "Not used in the PvE build."
+  },
+  "Magic Block": {
+   "role": "Alternative stagger stigma (20 stagger)."
+  },
+  "Enhance: Spirit's Benediction": {
+   "role": "+20% PvE Damage Boost and Tolerance for you and your spirit for 10 s. Slot 2."
+  },
+  "Siphon": {
+   "role": "Not used in the PvE build."
+  },
+  "Assault Terror": {
+   "role": "Not used in the PvE build."
+  },
+  "Command: Proxy": {
+   "role": "PvP: your spirit shares the hits you take for 4 s. Use it against burst."
+  },
+  "Flame Blessing": {
+   "role": "12 s: hits that land may deal extra damage; +100 Accuracy at 5. Slot 4."
+  },
+  "Cry of Terror": {
+   "role": "Not used in the PvE build."
+  },
+  "Summon: Ancient Spirit": {
+   "role": "30 s spirit that feeds you Four Elements. Core stigma, slot 1, to 10."
+  },
+  "Cursed Cloud": {
+   "role": "Alternative stagger stigma (20 stagger)."
+  },
+  "Jointstrike: Corrode": {
+   "role": "Spirits deal 10% more to the target for 20 s, plus damage over time. Slot 3."
+  },
+  "Seize Magic": {
+   "role": "PvP: strips up to 3 buffs from up to 4 enemies at Stigma 5. 20 stagger."
+  }
+ },
+ "steps": {
+  "1": {
+   "note": "Hold Cold Shock on left click, press Combustion on right click, summon spirits as they come off cooldown"
+  },
+  "14": {
+   "note": "Cast Elemental Fusion whenever Four Elements lights it up"
+  },
+  "22": {
+   "note": "Stigma slot 1: Summon: Ancient Spirit (needs the Ascension quest The One Who Hears the Voice, which also pays your first Stigma point)"
+  },
+  "27": {
+   "note": "Stigma slot 2: Enhance: Spirit's Benediction"
+  },
+  "32": {
+   "note": "Stigma slot 3: Jointstrike: Corrode"
+  },
+  "37": {
+   "note": "Stigma slot 4: Flame Blessing (Jointstrike: Destructive Attack for stagger checks)"
+  },
+  "40": {
+   "note": "Triniel board opens. From about here, let the macro summon your spirits"
+  },
+  "41": {
+   "note": "New Stigma points go to Summon: Ancient Spirit toward 10"
+  },
+  "45": {
+   "keep": "1 point unspent. Then reset (free) into the 45 build and switch to the 45 Specialties"
+  }
+ },
+ "stigmas": [
+  {
+   "name": "Summon: Ancient Spirit",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 10,
+   "why": "Fights for 30 s every 90 s and gives you Four Elements every 7 of its basic attacks; at 5 +10% Ancient Spirit Attack; at 10 Spirit's Descent ×1.5 for 30 s"
+  },
+  {
+   "name": "Enhance: Spirit's Benediction",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 5,
+   "why": "+20% PvE Damage Boost and Damage Tolerance plus HP every second, for you and your spirit, 10 s every 60 s; at 5 restores 10% Max HP on cast"
+  },
+  {
+   "name": "Jointstrike: Corrode",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "20 s every 45 s: your spirits deal 10% more to the target, which also takes damage over time; 25% more at 5"
+  },
+  {
+   "name": "Flame Blessing",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "12 s every 60 s: each hit that lands has a 50% chance of extra damage (once a second); at 5 +100 Accuracy. Destructive Attack instead for stagger checks"
+  }
+ ],
+ "passives": [
+  "Spirit Strike",
+  "Mental Focus",
+  "Element Unification",
+  "Spirit Revitalization",
+  "Corrode",
+  "Spirit's Descent",
+  "Spirit Protection",
+  "Consecutive Countercurrent"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: two inputs",
+   "eyebrow": "hold these down for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "One held basic attack and one macro key. Everything else you press by hand is listed further down."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Cold Shock",
+       "sub": "Your basic attack, a three-hit chain that restores MP. Not in the macro."
+      },
+      {
+       "cap": "Hold · macro key",
+       "label": "The macro (2 entries, 8 skills)",
+       "sub": "One key that fires the damage line, then the spirit line, in numbered order, 10 ms apart.",
+       "macro": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 8",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Damage line",
+       "cells": [
+        {
+         "skill": "Jointstrike: Corrode",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Jointstrike: Curse"
+        },
+        {
+         "skill": "Dimensional Control"
+        },
+        {
+         "skill": "Combustion"
+        }
+       ]
+      },
+      {
+       "tag": "Entry 2 · Spirit line",
+       "cells": [
+        {
+         "skill": "Elemental Fusion"
+        },
+        {
+         "skill": "Summon: Water Spirit"
+        },
+        {
+         "skill": "Summon: Earth Spirit"
+        },
+        {
+         "skill": "Summon: Fire Spirit",
+         "extra": "the spirit that stays"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Jointstrike: Corrode"
+      },
+      {
+       "skill": "Jointstrike: Curse"
+      },
+      {
+       "skill": "Dimensional Control"
+      },
+      {
+       "skill": "Combustion",
+       "arrow": "→ 10 ms →"
+      },
+      {
+       "skill": "Elemental Fusion"
+      },
+      {
+       "skill": "Summon: Water Spirit"
+      },
+      {
+       "skill": "Summon: Earth Spirit"
+      },
+      {
+       "skill": "Summon: Fire Spirit"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The number is the firing order, so Corrode goes off first. Leave Skill Queue on, as it is by default. The sources split on two changes: some put Elemental Fusion in the damage line and press Corrode by hand after the Ancient Spirit; close to half of Global's top players add the Wind Spirit as a fourth spirit, at the cost of another 150 MP every 15 s."
+    }
+   ]
+  },
+  {
+   "title": "Not in any macro: press by hand",
+   "eyebrow": "stigmas, in this order",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Flame Blessing"
+       ],
+       "why": "Once the party's buffs are on you."
+      },
+      {
+       "skills": [
+        "Enhance: Spirit's Benediction"
+       ],
+       "why": "Right after Flame Blessing."
+      },
+      {
+       "skills": [
+        "Summon: Ancient Spirit"
+       ],
+       "why": "Right after Benediction: it takes your stats as it is summoned, so summon it buffed."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Rapid Scattershot"
+       ],
+       "why": "While the boss is staggered, on its own key. It only hits a staggered target."
+      },
+      {
+       "skills": [
+        "Jointstrike: Destructive Attack"
+       ],
+       "why": "If you slotted it instead of Flame Blessing: own key, held so it charges fully, once Corrode and Curse have gone out. Save it for when the stagger gauge opens."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "When a Stun, Knockdown, Airborne, Grab, Frost or Fear lands on you. It frees you and its pick restores 20% HP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Your opener",
+   "eyebrow": "order of presses",
+   "blocks": [
+    {
+     "t": "seq",
+     "items": [
+      {
+       "label": "Party buffs"
+      },
+      {
+       "skill": "Flame Blessing"
+      },
+      {
+       "skill": "Enhance: Spirit's Benediction"
+      },
+      {
+       "skill": "Summon: Ancient Spirit"
+      },
+      {
+       "skill": "Cold Shock",
+       "label": "Hold Cold Shock + macro key"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Your spirits",
+   "eyebrow": "which one stays out",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "The last spirit you summon is the one that stays, so end the spirit line on the one the fight needs. Until about level 40, summon spirits by hand as they come off cooldown; build the full macro from then."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Summon: Fire Spirit"
+       ],
+       "why": "Packs and the default boss setup: its skill hits up to 4 enemies."
+      },
+      {
+       "skills": [
+        "Summon: Earth Spirit"
+       ],
+       "why": "A tough enemy while questing, and PvP: it draws the attacks while you fight from range."
+      },
+      {
+       "skills": [
+        "Summon: Water Spirit"
+       ],
+       "why": "When MP runs low: each of its hits restores 20 MP."
+      },
+      {
+       "skills": [
+        "Summon: Wind Spirit"
+       ],
+       "why": "When HP runs low: each of its hits heals you 1.5% HP."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {
+       "b": "Held Cold Shock stops firing on trash or in corridors.",
+       "text": "Add a Cold Shock entry to the macro."
+      },
+      {
+       "b": "A Jointstrike loses its spirit's extra hit.",
+       "text": "The next Jointstrike overwrote it. Fire Destructive Attack after Corrode and Curse have gone out, or wait 2 s between Jointstrikes."
+      },
+      {
+       "b": "Destructive Attack comes out weak.",
+       "text": "A macro step fires a charge skill at its first stage. Give it its own key and hold it."
+      },
+      {
+       "b": "Out of MP.",
+       "text": "Let go of the macro and hold Cold Shock for a few casts, or end the spirit line on the Water Spirit."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Packs and trash",
+   "eyebrow": "trash-heavy content",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Jointstrike: Corrode"
+       ],
+       "why": "Take it out of the macro: it goes off on trash and its cooldown drifts away from the boss."
+      },
+      {
+       "skills": [
+        "Dimensional Control"
+       ],
+       "why": "Slows up to 4 enemies by 40% for 3 s, which keeps melee packs off you."
+      },
+      {
+       "skills": [
+        "Elemental Fusion"
+       ],
+       "why": "While levelling, its Changes to AoE Skill pick turns it into a pack skill."
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Keep the Fire Spirit as the one that stays: its skill hits up to four enemies."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/spiritmaster/",
+   "title": "Aion 2 Maps: Spiritmaster",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, stigma plan, macro and the numbered Daevanion routes (computed from the game client)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/spiritmaster/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}

@@ -261,3 +261,4 @@ textarea{width:100%;min-height:90px;background:var(--panel2);color:var(--fg);bor
 .site .sep{width:1px;height:16px;background:var(--line2);margin-inline:4px;flex:none}
 .ico.ph{display:inline-grid;place-items:center;font-family:var(--font-cond);font-weight:700;font-size:.7rem;color:var(--gold2);background:var(--panel2)}
 .nd .ph{position:absolute;left:22%;top:22%;width:56%;height:56%;border-radius:50%;display:grid;place-items:center;background:#000;color:var(--gold2);font-family:var(--font-cond);font-weight:700;font-size:.8em}
+@media (max-width:520px){ .lvl{flex-wrap:wrap;min-width:0} .lvl .save{flex-basis:100%;text-align:right;margin-top:-6px} }

@@ -1,0 +1,653 @@
+{
+ "meta": {
+  "cls": "gladiator",
+  "name": "Gladiator",
+  "title": "Gladiator Ascension Planner",
+  "sub": "AION 2 Global · PvE Overhead Slam build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Overhead Slam",
+  "brandIcon": "11170000",
+  "blurb": "Melee DPS and off-tank. Hold Keen Strike and a Rending Blow macro; Overhead Slam on its own key."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 365)",
+  "Festival Shop crystals (to 396)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). A skill level opens 3 character levels after the one before it. Levels alone give 203 points by 45, enough for the levelling plan with nothing left over; Wisdom Stones from district quests and sealed dungeons add up to 180 more for the 45 build.",
+  "schedule": "Overhead Slam and Rending Blow first on each board as it opens, then the Combat Speed and Damage Boost core nodes, Keen Strike on Nezekan and Ruinous Blow on Nezekan and Zikel. Zikel's first step is its Damage Boost core (26 crystals), and its Overhead Slam node sits at the end of that path, so Zikel waits until 24. The route spends 128 of your 136 crystals by 45; the other 8 start the Attack Preparation nodes. Skip Aerial Snare, Defiance, Rush Strike, Leaping Slam, Mocking Blade, Ankle Slice, Sword Aura Rampage, Multi-Hit Resist, Critical Damage Tolerance, MP and Critical Hit Resist except where the board forces a step.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "No reset needed at 45: the levelling plan ends with rows 1–3 done, Crushing Wave at 10, Sword Aura Rampage, Leaping Slam and Mocking Blade at 8 and Identify Weakness at 9. That is 77 points into row 4; district quest Wisdom Stones finish it with 4 to spare, and sealed dungeons pay for rows 5–9. Leave at 1: Protection Armor, Survival Willpower, Aerial Snare and Defiance (at 1 it still breaks control, every 60 s instead of 51 s). 5 points stay spare.",
+  "passives": "Experienced Counterstrike and Attack Preparation first, then Murderous Burst, Impact Hit and Identify Weakness. Experienced Counterstrike also gives 0.4% Front Attack Damage Boost a level, so fight from the boss's front. Survival Stance and Blood Absorption are your survival rows; Destructive Impulse comes last.",
+  "specs": "Skill levels past 10 come from Daevanion nodes (+1 each), Arcana cards and ring lines; the boards take Overhead Slam, Rending Blow and Ruinous Blow to 14. First level-16 picks to chase: Overhead Slam Remove cooldown, Rending Blow Restores 50 MP on a Critical Hit, Ruinous Blow Ignores Block and Evasion.",
+  "stigmaSub": "30 points at 45: Lunge Stance 10, the rest 5",
+  "stigma": "Take each to 5 as the next slot opens; all four are at 5 by level 40, and from 41 the new points take Lunge Stance to 10. Swaps: Wrath Wave (50 stagger) for Rage Burst on stagger checks; Lifestealing Blade for Focused Block with a Templar in the party (it needs Stigma 10, so Lunge Stance drops to 5); Wave Armor for Focused Block on the training dummy and Transcendence bosses.",
+  "src": "Where guides disagree (Lunge Stance or Focused Block first, Crushing Wave and Destructive Impulse in the build, a few Specialty picks, Focused Block vs Wave Armor) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Rending Blow": {
+   "role": "Main macro filler, hits up to 4 in front. Most of your damage on trash.",
+   "spec": {
+    "8": "Changes to mobile skill",
+    "45": "Keep, add Deals up to 12% more damage when less targets are hit (at 12)",
+    "16": "Restores 50 MP on landing a Critical Hit, in place of the 12% pick"
+   }
+  },
+  "Keen Strike": {
+   "role": "Basic attack on left click. Each hit restores MP; hold it all fight.",
+   "spec": {
+    "8": "+20% MP restored",
+    "45": "Keep, add -1s [Ruinous Blow] cooldown on hit (at 12)"
+   }
+  },
+  "Leaping Slam": {
+   "role": "20 m leap to engage; with its pick it resets on every kill.",
+   "spec": {
+    "8": "Resets cooldown on defeating an enemy",
+    "45": "Trash: keep the reset. Boss: Prepare for Battle effect on the caster for 3s instead"
+   }
+  },
+  "Mocking Blade": {
+   "role": "Grab and knock down. With its pick, your emergency heal.",
+   "spec": {
+    "8": "Absorbs 4% HP, absorbs 15% HP of target with Incapacitated Immunity",
+    "45": "Keep the level-8 pick"
+   }
+  },
+  "Overhead Slam": {
+   "role": "Your big hit, chains into Upward Strike. Own key; fires when switched on.",
+   "spec": {
+    "8": "Adds [Upward Strike] Chain Skill",
+    "45": "Keep, add Critical Hit on hit (at 12)",
+    "16": "Remove cooldown, in place of Critical Hit on hit"
+   }
+  },
+  "Sword Aura Rampage": {
+   "role": "Hits only a staggered target. Bottom of the macro so it fires first.",
+   "spec": {
+    "8": "Absorbs 5% HP (Restores 120 MP if MP runs short)",
+    "45": "Keep Absorbs 5% HP",
+    "16": "Multi-Hit on hit and -1s all skill cooldowns on hit"
+   }
+  },
+  "Ankle Slice": {
+   "role": "Gap closer: right after a Block, when the boss has moved away.",
+   "spec": {
+    "45": "+16m [Ankle Slice] range"
+   },
+   "t45": 10
+  },
+  "Crushing Wave": {
+   "role": "Spin that hits up to 4 around you; heals off a pack with its pick.",
+   "spec": {
+    "8": "Absorbs 2% HP",
+    "45": "Keep, add Resets cooldown on landing a Critical Hit"
+   }
+  },
+  "Rush Strike": {
+   "role": "Dash back to the boss right after a Dodge.",
+   "spec": {
+    "45": "+10m range"
+   },
+   "t45": 10
+  },
+  "Aerial Snare": {
+   "role": "Lifts a downed target into the air. PvP; leave at 1 in PvE."
+  },
+  "Ruinous Blow": {
+   "role": "Rushing hit, 25 stagger, 45 s. Give it priority in the macro.",
+   "spec": {
+    "8": "+12.5m Range",
+    "45": "+30% Skill Critical Hit and Extra damage on hit",
+    "16": "Ignores Block and Evasion and lands as Multi-Hit, in place of the level-8 pick"
+   }
+  },
+  "Defiance": {
+   "role": "Breaks stuns, knockdowns and grabs; 5 s status immunity. Leave at 1."
+  },
+  "Survival Stance": {
+   "role": "Max HP and PvE Damage Tolerance. Row 5 of the build."
+  },
+  "Protection Armor": {
+   "role": "Leave at 1; does little in PvE."
+  },
+  "Blood Absorption": {
+   "role": "35% Max HP back when you drop to 50%, once a minute (at 10)."
+  },
+  "Identify Weakness": {
+   "role": "Damage passive; counts x1.5 during Lunge Stance from Stigma 15."
+  },
+  "Attack Preparation": {
+   "role": "Core damage passive. Raise with Experienced Counterstrike first."
+  },
+  "Impact Hit": {
+   "role": "Damage passive; also 3% Double Chance at 10."
+  },
+  "Destructive Impulse": {
+   "role": "Extra damage to a staggered boss. Last row of the build.",
+   "t45": 10
+  },
+  "Experienced Counterstrike": {
+   "role": "Your Parries give the party a PvE Damage Boost; +0.4% Front Attack a level."
+  },
+  "Survival Willpower": {
+   "role": "Leave at 1 (PvP passive)."
+  },
+  "Murderous Burst": {
+   "role": "Damage passive; raise after the first two."
+  },
+  "Blade Toss": {
+   "role": "20 m throw: -30% Defense and -50% Incoming Heal. PvP."
+  },
+  "Forced Restraint": {
+   "role": "Alternative CC stigma (20 stagger). Not in the PvE build."
+  },
+  "Wrath Wave": {
+   "role": "50 stagger damage, your most. Swap in for Rage Burst on stagger checks."
+  },
+  "Tenaciousness": {
+   "role": "3 s immune to damage and status effects. PvP."
+  },
+  "Assault Strike": {
+   "role": "Not used in the PvE build."
+  },
+  "Lunge Stance": {
+   "role": "+20% Combat Speed for 14.5 s every 60 s. Core stigma, slot 1, to 10."
+  },
+  "Fracturing Rush": {
+   "role": "Alternative CC stigma (20 stagger). Not in the PvE build."
+  },
+  "Lifestealing Blade": {
+   "role": "Party Predation from Stigma 10. Use in Focused Block's slot with a Templar."
+  },
+  "Zikel's Blessing": {
+   "role": "+20% Attack and +100 Accuracy for 12 s; save it for burst and stagger."
+  },
+  "Focused Block": {
+   "role": "Guaranteed Parry every 20 s: stops a big hit and buffs the party."
+  },
+  "Rage Burst": {
+   "role": "Switches Overhead Slam on for 10 s, +10% PvE Damage Boost, Wounds the boss."
+  },
+  "Wave Armor": {
+   "role": "Damage over time around you. Focused Block's alternative on the dummy."
+  },
+  "Armor of Balance": {
+   "role": "Not used in the PvE build."
+  }
+ },
+ "steps": {
+  "4": {
+   "note": "Macro: one line, Overhead Slam at the bottom (fires first), Rending Blow above it. Hold Keen Strike with it"
+  },
+  "14": {
+   "note": "Ruinous Blow: add it low in the macro so it fires whenever it is ready"
+  },
+  "22": {
+   "note": "Stigma slot 1: Lunge Stance (needs the Ascension quest The One Who Hears the Voice, which also pays your first Stigma point)"
+  },
+  "27": {
+   "note": "Stigma slot 2: Focused Block"
+  },
+  "32": {
+   "note": "Stigma slot 3: Zikel's Blessing"
+  },
+  "37": {
+   "note": "Stigma slot 4: Rage Burst. From here it runs the macro: Sword Aura Rampage, Rage Burst, Ruinous Blow, Rending Blow; Overhead Slam on its own key"
+  },
+  "38": {
+   "specs": [
+    {
+     "skill": "Ruinous Blow",
+     "pick": "+12.5m Range"
+    }
+   ]
+  },
+  "40": {
+   "note": "Triniel board opens. All four Stigmas are at 5"
+  },
+  "41": {
+   "note": "New Stigma points go to Lunge Stance, toward 10 at 45"
+  },
+  "45": {
+   "note": "Azphel (PvP) board opens. No reset needed: put district quest Wisdom Stones into row 4 of the build"
+  }
+ },
+ "build45": [
+  {
+   "order": 1,
+   "skills": [
+    "Overhead Slam",
+    "Rending Blow",
+    "Ruinous Blow"
+   ],
+   "to": 10,
+   "cum": 63
+  },
+  {
+   "order": 2,
+   "skills": [
+    "Keen Strike"
+   ],
+   "to": 10,
+   "cum": 84
+  },
+  {
+   "order": 3,
+   "skills": [
+    "Experienced Counterstrike",
+    "Attack Preparation"
+   ],
+   "to": 10,
+   "cum": 126
+  },
+  {
+   "order": 4,
+   "skills": [
+    "Crushing Wave",
+    "Sword Aura Rampage",
+    "Identify Weakness",
+    "Murderous Burst",
+    "Impact Hit"
+   ],
+   "to": 10,
+   "cum": 257,
+   "alt": "+ Leaping Slam and Mocking Blade to 8"
+  },
+  {
+   "order": 5,
+   "skills": [
+    "Survival Stance"
+   ],
+   "to": 10,
+   "cum": 278
+  },
+  {
+   "order": 6,
+   "skills": [
+    "Leaping Slam",
+    "Mocking Blade"
+   ],
+   "to": 10,
+   "cum": 294
+  },
+  {
+   "order": 7,
+   "skills": [
+    "Blood Absorption"
+   ],
+   "to": 10,
+   "cum": 315
+  },
+  {
+   "order": 8,
+   "skills": [
+    "Rush Strike",
+    "Ankle Slice"
+   ],
+   "to": 10,
+   "cum": 357
+  },
+  {
+   "order": 9,
+   "skills": [
+    "Destructive Impulse"
+   ],
+   "to": 10,
+   "cum": 378
+  }
+ ],
+ "stigmas": [
+  {
+   "name": "Lunge Stance",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 10,
+   "why": "+20% Combat Speed for 14.5 s every 60 s; at 5 +5% Double Chance and at 10 +20% Move Speed while it lasts"
+  },
+  {
+   "name": "Focused Block",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 5,
+   "why": "Guaranteed Parry every 20 s: restores 150 MP and Stamina and gives the party Experienced Counterstrike's buff; at 5 two uses in a row. Lifestealing Blade with a Templar, Wave Armor on the dummy"
+  },
+  {
+   "name": "Zikel's Blessing",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "+20% Attack and +100 Accuracy for 12 s every 120 s; at 5 +50% to your own stagger damage while it lasts"
+  },
+  {
+   "name": "Rage Burst",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "Switches Overhead Slam on for 10 s, +10% PvE Damage Boost and Wounds the target (-10% Attack); at 5 a 30 s cooldown. Wrath Wave instead for stagger checks"
+  }
+ ],
+ "passives": [
+  "Experienced Counterstrike",
+  "Attack Preparation",
+  "Murderous Burst",
+  "Impact Hit",
+  "Identify Weakness",
+  "Survival Stance",
+  "Blood Absorption",
+  "Destructive Impulse"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: three inputs",
+   "eyebrow": "hold these down for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Only one of the three is a macro. Keen Strike and Overhead Slam are single skills, each on its own input. Leave Skill Queue on (the default). Everything you press by hand is listed further down."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Keen Strike",
+       "sub": "Your basic attack. Its hits are your MP until Rending Blow's MP pick at skill 16. Not in the macro."
+      },
+      {
+       "cap": "Hold · macro key",
+       "label": "The macro (1 entry, 4 skills)",
+       "sub": "One key that runs the Rending Blow line in the next box, in numbered order, 10 ms apart. This is the only thing that is stacked.",
+       "macro": true
+      },
+      {
+       "cap": "Hold · its own key",
+       "skill": "Overhead Slam",
+       "sub": "Not in the macro. On a boss it fires only while switched on (Rage Burst does that), so a key of its own catches every window."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 4",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Rending Blow line",
+       "cells": [
+        {
+         "skill": "Sword Aura Rampage",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Rage Burst"
+        },
+        {
+         "skill": "Ruinous Blow"
+        },
+        {
+         "skill": "Rending Blow"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Sword Aura Rampage"
+      },
+      {
+       "skill": "Rage Burst"
+      },
+      {
+       "skill": "Ruinous Blow"
+      },
+      {
+       "skill": "Rending Blow"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The number is the firing order. Sword Aura Rampage goes off only on a staggered boss, Rage Burst whenever it is ready, then Ruinous Blow, and Rending Blow the rest of the time. One line is best, two at most. Some setups press Rage Burst by hand, or put the buffs in a second line after this one."
+    }
+   ]
+  },
+  {
+   "title": "Not in any macro: press by hand",
+   "eyebrow": "stigmas",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Lunge Stance",
+        "Zikel's Blessing"
+       ],
+       "why": "Together, when the boss can be hit: not during a mechanic or on adds."
+      },
+      {
+       "skills": [
+        "Focused Block"
+       ],
+       "why": "Just before a big telegraphed hit: the Parry stops it, restores 150 MP and gives the party Experienced Counterstrike's buff for 20 s."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Leaping Slam"
+       ],
+       "why": "To reach a target up to 20 m away. On a boss, after your buffs as you engage: its pick gives Prepare for Battle for 3 s."
+      },
+      {
+       "skills": [
+        "Mocking Blade"
+       ],
+       "why": "When your HP runs low: against a boss its pick absorbs 15% HP."
+      },
+      {
+       "skills": [
+        "Rush Strike"
+       ],
+       "why": "Right after a Dodge, to get back to the boss (20 m with its pick)."
+      },
+      {
+       "skills": [
+        "Ankle Slice"
+       ],
+       "why": "Right after a Block, when the boss has moved away (16 m more range with its pick)."
+      },
+      {
+       "skills": [
+        "Wrath Wave"
+       ],
+       "why": "If you took it for a stagger check: keep it, and Zikel's Blessing, for when the gauge opens."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "When a boss stuns you or knocks you down."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {
+       "b": "Overhead Slam fires rarely.",
+       "text": "On a boss it fires only while switched on, and until skill level 16 it has a 5 s cooldown."
+      },
+      {
+       "b": "A held key stops firing.",
+       "text": "The game pauses a held skill after a long hold. Release the key and press it again."
+      },
+      {
+       "b": "Out of MP.",
+       "text": "Keep Keen Strike held; Focused Block's Parry gives 150 MP. If you are dry, let go of the macro and use Keen Strike alone for a moment."
+      },
+      {
+       "b": "Focused Block drops at once.",
+       "text": "Your held attack keys break it. Let go for a moment, or block just before the hit."
+      },
+      {
+       "b": "Fewer hits than you expect.",
+       "text": "Hide damage numbers and show only your own particle effects. With two macro entries, put the Rending Blow line first."
+      },
+      {
+       "b": "Ruinous Blow dashes you at a bad moment.",
+       "text": "Take it out of the line and press it yourself."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Trash and questing",
+   "eyebrow": "packs and ordinary monsters",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Keen Strike, Rending Blow and Crushing Wave each hit up to 4 enemies. On ordinary monsters Overhead Slam needs a knocked-down target, so Rending Blow does most of the work."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Leaping Slam"
+       ],
+       "why": "Dash from mob to mob: its pick resets it on every kill."
+      },
+      {
+       "skills": [
+        "Crushing Wave"
+       ],
+       "why": "Pull a pack and spin it: its pick heals you off every enemy hit."
+      },
+      {
+       "skills": [
+        "Mocking Blade",
+        "Rush Strike"
+       ],
+       "why": "Both knock a target down, so Overhead Slam can hit it. Mocking Blade is also your emergency heal."
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Keep the boss setup on its own skill preset with Leaping Slam's Prepare for Battle pick, and the reset pick on this one. You cannot switch presets while a Stigma is cooling down."
+    }
+   ]
+  },
+  {
+   "title": "Tanking",
+   "eyebrow": "off-tank or main tank",
+   "blocks": [
+    {
+     "t": "note",
+     "text": "You hold threat by hitting: Keen Strike, Rending Blow, Overhead Slam and their chain skills all raise Enmity. You have no taunt, so a boss that turns away stays turned. Stand at its front or front side, beside the Templar if there is one, where Front Attack Damage Boost applies."
+    },
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Focused Block"
+       ],
+       "why": "Just before a telegraphed hit. The party gets 9% PvE Damage Boost for 20 s (10.6% at skill 14); two uses from Stigma 5. Let it drop after the Parry."
+      },
+      {
+       "skills": [
+        "Rage Burst"
+       ],
+       "why": "Wounds the boss: -10% Attack for 10 s, -20% from Stigma 10."
+      },
+      {
+       "skills": [
+        "Blood Absorption"
+       ],
+       "why": "Passive: 35% Max HP back when you drop to 50%, once a minute."
+      },
+      {
+       "skills": [
+        "Mocking Blade"
+       ],
+       "why": "Emergency heal from its HP absorb."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "Clears stuns, knockdowns and other control, then 5 s of status immunity."
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "One buffer per party: a Templar's Fury replaces your block buff, and Wounded does not stack with the Templar's Shrink. With a Templar, swap Focused Block for Lifestealing Blade."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/gladiator/",
+   "title": "Aion 2 Maps: Gladiator",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, stigma plan, macro, tanking notes and the numbered Daevanion routes (computed from the game client)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/gladiator/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}

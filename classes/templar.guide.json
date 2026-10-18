@@ -1,0 +1,505 @@
+{
+ "meta": {
+  "cls": "templar",
+  "name": "Templar",
+  "title": "Templar Ascension Planner",
+  "sub": "AION 2 Global · PvE Judgment tank build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Judgment tank",
+  "brandIcon": "12240000",
+  "blurb": "Shield tank. Taunt holds the boss, a three-line Judgment macro does the work, Punishment charged by hand."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 366)",
+  "Festival Shop crystals (to 413)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). A skill level opens 3 character levels after the one before it. Vicious Strike, Pummel and Poach go to 8 first, then Judgment, Warding Strike, Punishment and Shield Smite; nothing reaches 10 before 28. Levels alone give 203 points by 45; Wisdom Stones from district quests and sealed dungeons add up to 180 more for the 45 build.",
+  "schedule": "Judgment's and Punishment's nodes first on each board as it opens, then Vicious Strike and Pummel on Nezekan and Zikel, the Combat Speed and Damage Boost corners, and Fury's four nodes (two on Zikel, one each on Vaizel and Triniel). Some guides buy Combat Speed and Damage Boost first. Skip Flash Rampage, Warding Shield, Poach, Debilitating Smash, Shield Rush, Multi-Hit Resist, Critical Damage Tolerance and MP except where the board forces a step.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "At 45, reset (free) and spend in this order. Levels alone pay for rows 1–5 and about a third of row 6; Wisdom Stones from district quests and sealed dungeons pay for the rest. Row 4 takes Poach to 8 for its boss pick, row 8 takes it on to 10. Leave at 1: Flash Rampage, Survival Willpower, Guarding Seal and Warding Shield. 5 points stay spare.",
+  "passives": "Fury first: every Block gives you and your party +10% PvE Damage Boost for 20 s (12% at Fury 14, which its four levelling nodes reach by 45). Insulting Roar's +100% Enmity Boost carries your threat. Past 10, passives grow from board nodes, the Bell and Mirror Arcana lines and passive Soul Binding lines on armour, earrings and the necklace.",
+  "specs": "Skill levels past 10 come from Daevanion nodes (+1 each), Arcana cards and gear lines. Judgment, Vicious Strike, Pummel and Punishment reach 14 from their nodes. First level-16 goal: Judgment for Remove cooldown (a +1 Judgment line on each ring), then Vicious Strike, Pummel and Punishment; Warding Strike's party pick at 16 comes last.",
+  "stigmaSub": "30 points at 45: Noble Armor 10, the rest 5",
+  "stigma": "While questing, take Doom Shield, Empyrean Lord's Punishment and Battlefield Banner to 5 as each next slot opens and leave Taunt at 1; from 38 Empyrean Lord's Punishment goes to 10. At 45 the last points take Taunt to 5, and Noble Armor takes Empyrean Lord's Punishment's slot and its 15 points. Swaps: Empyrean Lord's Punishment for Doom Shield on stagger checks; Shield of Protection for Taunt in harder group content; Nezekan's Shield or Comrade in Arms when the party takes the damage; Executing Blade for Taunt when another player holds the boss.",
+  "src": "Where guides disagree (Doom Shield or Empyrean Lord's Punishment first, the row 6 order, the Warding Strike and Shield Smite picks, which Stigma to swap) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Vicious Strike": {
+   "role": "Basic attack and its chain; restores MP. Hold it with the macro key.",
+   "spec": {
+    "8": "+20% MP restored",
+    "45": "−2s [Warding Strike] cooldown on hit, and +50% Multi-Hit on hit",
+    "16": "Adds Threatening Blow chain skill, in place of +50% Multi-Hit"
+   }
+  },
+  "Pummel": {
+   "role": "Top of the Judgment line: fires only when nothing below it is ready. Spends MP.",
+   "spec": {
+    "8": "[Punishing Strike] absorbs 3% HP (for solo play)",
+    "45": "Up to 12% more damage when fewer targets are hit, and −1s [Punishment] cooldown on hit",
+    "16": "[Punishing Strike] grants extra damage on hit, in place of the 12% pick"
+   }
+  },
+  "Poach": {
+   "role": "20 m pull and root. With its 45 pick it moves you to a boss instead.",
+   "spec": {
+    "8": "Resets cooldown on defeating an enemy",
+    "45": "Moves to the target if target has Incapacitated Immunity"
+   }
+  },
+  "Shield Smite": {
+   "role": "Stun that switches Judgment on; with its pick half its hits fire Debilitating Smash.",
+   "spec": {
+    "8": "50% chance to trigger [Debilitating Smash] on hit",
+    "12": "−2s cooldown (Shield Smite reaches 13 with the Nightmare shop nodes)",
+    "45": "Keep the level-8 pick"
+   }
+  },
+  "Judgment": {
+   "role": "Your main hit, 5 s cooldown. Shield Smite, Warding Strike and Doom Shield switch it on.",
+   "spec": {
+    "8": "Extra damage on hit",
+    "45": "Extra damage on hit, and Critical Hit on hit",
+    "16": "Remove cooldown, in place of Extra damage on hit"
+   }
+  },
+  "Flash Rampage": {
+   "role": "Hits only a staggered target and adds no stagger. Leave at 1.",
+   "spec": null
+  },
+  "Debilitating Smash": {
+   "role": "Debilitate: −25% Defense on the target. Shield Smite fires it for you.",
+   "t45": 10,
+   "spec": {
+    "45": "+3s Debilitate duration (Shield Smite's triggered hits use this level and pick)"
+   }
+  },
+  "Warding Strike": {
+   "role": "Hits up to 4, heals you and gives +20% PvE Damage Tolerance for 10 s.",
+   "spec": {
+    "8": "Heal over Time during Warding (or +100 Block during Warding)",
+    "45": "−5s cooldown (30 s to 25 s), and Heal over Time during Warding",
+    "16": "+10% PvE and +5% PvP Damage Tolerance to the party on use, in place of the second pick"
+   }
+  },
+  "Shield Rush": {
+   "role": "Rush back to the boss after a Dodge; switches Judgment on for 2 s.",
+   "t45": 10,
+   "spec": {
+    "45": "+10m range"
+   }
+  },
+  "Annihilate": {
+   "role": "Hits only a stunned or knocked-down target; on bosses a 5% proc opens it for 3 s.",
+   "spec": {
+    "45": "+100% damage to targets with Incapacitated Immunity, and −10s cooldown"
+   }
+  },
+  "Punishment": {
+   "role": "Charged hit on up to 4. Own key, charge it to full by hand.",
+   "spec": {
+    "8": "+30% Skill Speed (or Absorbs 10% HP when packs wear you down)",
+    "45": "+30% Skill Speed, and Inflicts Damage over Time to target on hit",
+    "16": "Ignores Block and Evasion and lands as a Critical Hit, in place of Damage over Time"
+   }
+  },
+  "Defiance": {
+   "role": "Breaks Stun, Knockdown, Airborne, Grab, Frost and Fear; then 5 s status immunity.",
+   "spec": {
+    "45": "Restores 20% HP on using [Defiance]"
+   }
+  },
+  "Enhance Health": {
+   "role": "Survival passive; row 7 with Ironclad Defense.",
+   "spec": null
+  },
+  "Warding Shield": {
+   "role": "Leave at 1.",
+   "spec": null
+  },
+  "Punishing Benediction": {
+   "role": "Row 6 passive with Insulting Roar and Impact Hit; the last raise while levelling.",
+   "spec": null
+  },
+  "Ironclad Defense": {
+   "role": "Survival passive; row 7 with Enhance Health.",
+   "spec": null
+  },
+  "Guarding Seal": {
+   "role": "Leave at 1.",
+   "spec": null
+  },
+  "Impact Hit": {
+   "role": "Row 6 passive; more levels from its Zikel, Vaizel and Triniel nodes.",
+   "spec": null
+  },
+  "Insulting Roar": {
+   "role": "+100% Enmity Boost: your threat passive. Counts ×1.5 under Noble Armor 10.",
+   "spec": null
+  },
+  "Fury": {
+   "role": "Each Block: party +10% PvE Damage Boost for 20 s (12% at 14). Top passive.",
+   "spec": null
+  },
+  "Survival Willpower": {
+   "role": "Status Effect Resist; a PvP passive. Leave at 1 in PvE.",
+   "spec": null
+  },
+  "Block Pain": {
+   "role": "Raised last, in row 8 of the 45 build.",
+   "t45": 10,
+   "spec": null
+  },
+  "Empyrean Lord's Punishment": {
+   "role": "50 stagger damage (100 at 10). Levelling Stigma; stagger-check swap at 45.",
+   "spec": null
+  },
+  "Second Skin": {
+   "role": "+15% PvP Damage Tolerance for 12 s. PvP preset.",
+   "spec": null
+  },
+  "Grapple": {
+   "role": "Pulls up to 4 near a target 20 m away and roots them. PvP swap.",
+   "spec": null
+  },
+  "Nezekan's Shield": {
+   "role": "Party shield of 45% Max HP for 3 s at 5. Swap in when the party takes the damage.",
+   "spec": null
+  },
+  "Doom Shield": {
+   "role": "20 m rush, Knockdown, small shield, Judgment window. From 5 resets Annihilate.",
+   "spec": null
+  },
+  "Assault Fury": {
+   "role": "Not used in the PvE build.",
+   "spec": null
+  },
+  "Noble Armor": {
+   "role": "+9% Max HP and a 9% heal every 120 s; can't be removed. Slot 2 at 45.",
+   "spec": null
+  },
+  "Battlefield Banner": {
+   "role": "Attack from your Defense for 12 s every 90 s. Opens the fight.",
+   "spec": null
+  },
+  "Shield of Protection": {
+   "role": "Sure Block for 2 s every 20 s, keeps Fury up. For harder group content.",
+   "spec": null
+  },
+  "Executing Blade": {
+   "role": "−30% Defense on the target for 5 s. Taunt swap when someone else tanks.",
+   "spec": null
+  },
+  "Taunt": {
+   "role": "Takes the boss back; its Shrink cuts the boss's Attack and PvE Damage Tolerance.",
+   "spec": null
+  },
+  "Armor of Balance": {
+   "role": "+50% Impact-type Resist for 10 s. PvP swap against Assassins.",
+   "spec": null
+  },
+  "Comrade in Arms": {
+   "role": "+20% PvE Damage Tolerance; splits party members' hits with you.",
+   "spec": null
+  }
+ },
+ "steps": {
+  "4": {
+   "note": "Macro: one line, Judgment and Shield Smite with Pummel on top. Hold it with Vicious Strike."
+  },
+  "8": {
+   "note": "Warding Strike joins the macro line"
+  },
+  "14": {
+   "keep": "Keep 1 for level 16: Vicious Strike 7, Pummel 7, Poach 7 and Judgment 6",
+   "note": "Put Punishment on its own key and charge it by hand"
+  },
+  "22": {
+   "note": "Stigma slot 1: Doom Shield (needs the Ascension quest The One Who Hears the Voice, which also gives your first Stigma point)"
+  },
+  "27": {
+   "note": "Stigma slot 2: Empyrean Lord's Punishment (Doom Shield at 5 by now). Noble Armor takes this slot at 45"
+  },
+  "32": {
+   "note": "Stigma slot 3: Battlefield Banner (Empyrean Lord's Punishment at 5)"
+  },
+  "37": {
+   "note": "Stigma slot 4: Taunt, left at 1 while questing (Battlefield Banner at 5)"
+  },
+  "38": {
+   "note": "New Stigma points take Empyrean Lord's Punishment toward 10"
+  },
+  "45": {
+   "keep": "4 points spare. Then reset (free) into the 45 build",
+   "note": "Azphel (PvP) board opens. Stigmas: Noble Armor to 10 in Empyrean Lord's Punishment's slot, the last points take Taunt to 5"
+  }
+ },
+ "build45": [
+  {"order": 1, "skills": ["Judgment", "Vicious Strike", "Pummel", "Punishment"], "to": 10, "cum": 84},
+  {"order": 2, "skills": ["Warding Strike"], "to": 10, "cum": 105},
+  {"order": 3, "skills": ["Fury"], "to": 10, "cum": 126},
+  {"order": 4, "skills": ["Poach"], "to": 8, "cum": 139, "alt": "for its boss pick"},
+  {"order": 5, "skills": ["Annihilate", "Shield Smite"], "to": 10, "cum": 181},
+  {"order": 6, "skills": ["Insulting Roar", "Impact Hit", "Punishing Benediction"], "to": 10, "cum": 244, "alt": "in any order"},
+  {"order": 7, "skills": ["Enhance Health", "Ironclad Defense"], "to": 10, "cum": 286},
+  {"order": 8, "skills": ["Poach", "Shield Rush", "Block Pain", "Debilitating Smash", "Defiance"], "to": 10, "cum": 378, "alt": "Poach, Shield Rush and Block Pain first, then Debilitating Smash, then Defiance"}
+ ],
+ "stigmas": [
+  {
+   "name": "Doom Shield",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 5,
+   "why": "Rush to a target 20 m away, Knockdown, a 5% Max HP shield for 5 s and Judgment on for 3 s, every 30 s; at 5 it resets Annihilate's cooldown on hit"
+  },
+  {
+   "name": "Noble Armor",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 10,
+   "why": "+9% Max HP for 120 s and a 9% heal, every 120 s, so it never drops and can't be removed; at 5 +5% Defense, at 10 Insulting Roar ×1.5. Takes Empyrean Lord's Punishment's slot at 45"
+  },
+  {
+   "name": "Battlefield Banner",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "Attack in proportion to your Defense for 12 s, every 90 s; at 5 +10% Multi-Hit Chance"
+  },
+  {
+   "name": "Taunt",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "Threat and Shrink on a target 20 m away, every 30 s: −200 Accuracy and −10% Attack for 15 s; at 5 also −10% PvE Damage Tolerance. Shield of Protection instead in harder group content"
+  }
+ ],
+ "passives": [
+  "Fury",
+  "Insulting Roar",
+  "Impact Hit",
+  "Punishing Benediction",
+  "Enhance Health",
+  "Ironclad Defense",
+  "Block Pain"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: two held inputs",
+   "eyebrow": "hold these down for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Only one of the two is a macro. Punishment goes on a key of its own that you charge by hand, and a few buttons stay off the macro; they are listed further down. Keep Skill Queue on (the default)."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Vicious Strike",
+       "sub": "Your basic attack and its chain. It refills the MP that Pummel spends. Not in the macro."
+      },
+      {
+       "cap": "Hold · macro key",
+       "label": "The macro (3 entries, 8 skills)",
+       "sub": "One key that runs the three lines in the next box, 10 ms per entry. Each line fires its first skill that is ready.",
+       "macro": true
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 8",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Judgment line",
+       "cells": [
+        {"skill": "Judgment", "extra": "fires first"},
+        {"skill": "Warding Strike"},
+        {"skill": "Shield Smite"},
+        {"skill": "Pummel"}
+       ]
+      },
+      {
+       "tag": "Entry 2 · Annihilate line",
+       "small": true,
+       "cells": [
+        {"skill": "Annihilate"},
+        {"skill": "Doom Shield"}
+       ]
+      },
+      {
+       "tag": "Entry 3 · Buff line",
+       "small": true,
+       "cells": [
+        {"skill": "Battlefield Banner"},
+        {"skill": "Noble Armor"}
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {"skill": "Judgment"},
+      {"skill": "Warding Strike"},
+      {"skill": "Shield Smite"},
+      {"skill": "Pummel", "arrow": "→ 10 ms →"},
+      {"skill": "Annihilate"},
+      {"skill": "Doom Shield", "arrow": "→ 10 ms →"},
+      {"skill": "Battlefield Banner"},
+      {"skill": "Noble Armor"}
+    ]
+    },
+    {
+     "t": "note",
+     "text": "Warding Strike and Shield Smite switch Judgment on; their order barely matters. Pummel is last, so it fires only when nothing before it is ready. Annihilate goes the moment it lights up; Doom Shield fires when it can't, and its reset gives you a second Annihilate. Some setups leave Pummel out, press Annihilate and Doom Shield by hand, or put Taunt in a line."
+    }
+   ]
+  },
+  {
+   "title": "Not in the macro: press by hand",
+   "eyebrow": "opener, charge and threat",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {"skills": ["Noble Armor"], "why": "To open, before Battlefield Banner. After that the buff line fires it each time it comes back, every 120 s."},
+      {"skills": ["Battlefield Banner"], "why": "To open, just before you close in. After that the buff line fires it."},
+      {"skills": ["Punishment"], "why": "On its own key, held until it fires at full charge, between Judgment windows. The macro would fire it at its first stage."},
+      {"skills": ["Taunt"], "why": "Each time it comes off cooldown, for threat and Shrink."}
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {"skills": ["Poach"], "why": "To get back to the boss after you move out of a pattern: with its 45 pick it moves you to the boss."},
+      {"skills": ["Shield Rush"], "why": "After a Dodge: it rushes you back, 20 m with its pick, and switches Judgment on for 2 s."},
+      {"skills": ["Defiance"], "why": "When a boss stuns, knocks down or grabs you. It frees you and its pick restores 20% HP."},
+      {"skills": ["Empyrean Lord's Punishment"], "why": "If you slotted it for a stagger check: save it for when the gauge opens, for its 50 stagger damage (100 at Stigma 10)."},
+      {"skills": ["Debilitating Smash"], "why": "No press needed: Shield Smite's pick fires it from half its hits."}
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Opening a boss",
+   "eyebrow": "order of presses",
+   "blocks": [
+    {
+     "t": "seq",
+     "items": [
+      {"skill": "Noble Armor"},
+      {"skill": "Battlefield Banner"},
+      {"skill": "Taunt"},
+      {"skill": "Vicious Strike", "label": "Hold Vicious Strike + macro key"},
+      {"skill": "Punishment", "label": "Punishment, fully charged"}
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Then Taunt whenever it is back and a full Punishment between Judgment windows. On a boss Annihilate opens about 4 times a minute; the macro catches each one."
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {"b": "Punishment never fires at full charge.", "text": "It is in the macro, which fires it uncharged. Give it its own key and hold it."},
+      {"b": "Judgment fires less than you'd expect.", "text": "Keep Doom Shield out of the Judgment line: its 3 s window drops to 2 s when Shield Smite or Warding Strike fires straight after it."},
+      {"b": "Damage feels low.", "text": "Try the Judgment line without Pummel; some setups do more damage that way."},
+      {"b": "Buffs go off on trash.", "text": "Take the buff line out of the macro for trash-heavy runs and press the two buffs yourself."}
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Trash and questing",
+   "eyebrow": "packs and solo play",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {"skills": ["Poach"], "why": "Pull, kill, pull again: its levelling pick resets the cooldown on a kill."},
+      {"skills": ["Warding Strike", "Punishment"], "why": "Or gather a pack, open with Warding Strike, then release a fully charged Punishment. Both hit up to 4 enemies."},
+      {"skills": ["Pummel", "Punishment"], "why": "Solo, take an HP-absorb pick: Pummel's 3%, or Punishment's 10% when packs wear you down."}
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The early dungeons go fine without a healer. Drop the buff line from the macro if it keeps firing on trash."
+    }
+   ]
+  },
+  {
+   "title": "Tanking",
+   "eyebrow": "threat, mitigation, position",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {"skills": ["Taunt"], "why": "Takes the boss back. Its hit carries about 50 times an ordinary hit's threat and scales with its damage, so damage gear is threat gear. It holds the boss against a second Templar doing up to about twice your damage."},
+      {"skills": ["Insulting Roar", "Judgment", "Pummel"], "why": "Keep hitting: Insulting Roar adds +100% Enmity Boost, Judgment carries about 3.5 times an ordinary hit's threat and Pummel 2.5 times."},
+      {"skills": ["Fury", "Shield of Protection"], "why": "Every Block gives the party +10% PvE Damage Boost for 20 s (12% at Fury 14) and you +3% Front Attack Damage Boost. Shield of Protection, if slotted, guarantees a Block every 20 s."},
+      {"skills": ["Taunt"], "why": "Shrink, its debuff, cuts the boss's Attack by 10% and, from Stigma 5, its PvE Damage Tolerance by 10%, so the whole party hits harder."},
+      {"skills": ["Warding Strike", "Doom Shield", "Noble Armor"], "why": "Your mitigation: Warding Strike (from the macro) heals and gives +20% PvE Damage Tolerance for 10 s, Doom Shield's hit shields 5% Max HP, Noble Armor keeps +9% Max HP up."},
+      {"skills": ["Defiance"], "why": "Breaks Stun, Knockdown, Airborne, Grab, Frost and Fear, then 5 s of status immunity, about every 50 s."},
+      {"skills": ["Poach", "Shield Rush"], "why": "Position: close in with Poach's 45 pick and Shield Rush back after a Dodge. About 63% of your boss damage lands from the front, where Fury's Front Attack bonus counts."}
+     ]
+    },
+    {
+     "t": "note",
+     "text": "One Fury and one Shrink per party: Fury doesn't stack with the Gladiator's Experienced Counterstrike, and Shrink doesn't stack with the Gladiator's Rage Burst. When both of you block, Fury is the buff that stays."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/templar/",
+   "title": "Aion 2 Maps: Templar",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, Stigma plan, macro, tanking notes and the numbered Daevanion routes (computed from the game client, updated 17 Oct 2026)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/templar/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    ["https://aion2.wiki.fextralife.com/Level_Progression", "Fextralife level progression"],
+    ["https://questlog.gg/aion-2/en/table/character-levels", "Questlog character levels"]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}

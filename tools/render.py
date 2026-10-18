@@ -28,6 +28,10 @@ def merge(cls):
                          'nodes': byref[(k, n)]['nodes']} for lvl, k, n in g['plan']]
     if 'build45' in g:
         auto['build45'] = g['build45']
+        for s in auto['skills']:
+            rows = [r['to'] for r in g['build45'] if s['name'] in r['skills']]
+            if rows and 't45' not in g.get('skills', {}).get(s['name'], {}):
+                s['t45'] = max(rows)
     for r in auto['build45']:
         r.pop('raw', None)
     for b in auto['boards']:

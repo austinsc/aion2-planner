@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chanter Ascension Planner</title>
+<meta name="description" content="Chanter levelling planner for AION 2 Global: PvE Dark Crush build, skill points, Specialties, Daevanion crystals and Stigmas for every level from 1 to 45.">
+<link rel="icon" href="icons/18100000.webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../shared/planner.css">
+</head>
+<body>
+<nav class="site" id="site" aria-label="Planners"></nav>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <img src="icons/18100000.webp" alt="">
+    <div><h1>Chanter Ascension Planner</h1><p class="sub">AION 2 Global · PvE Dark Crush build · exact skill points and Daevanion crystals, level by level</p></div>
+  </div>
+  <div class="lvl">
+    <button class="btn" id="lvDown" aria-label="Level down">−</button>
+    <div class="read"><span class="eyebrow">Level</span><output id="lvOut" for="lvRange">1</output></div>
+    <button class="btn" id="lvUp" aria-label="Level up">+</button>
+    <input type="range" id="lvRange" min="1" max="45" value="1" aria-label="Current level">
+    <span class="save" id="saveState">Loading…</span>
+  </div>
+</div></header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap" role="tablist">
+  <button class="tab" role="tab" data-tab="now" aria-selected="true">Now</button>
+  <button class="tab" role="tab" data-tab="levels">Levels 1–45</button>
+  <button class="tab" role="tab" data-tab="skills">Skills</button>
+  <button class="tab" role="tab" data-tab="daev">Daevanion</button>
+  <button class="tab" role="tab" data-tab="build">Build at 45</button>
+  <button class="tab" role="tab" data-tab="stig">Stigmas</button>
+  <button class="tab" role="tab" data-tab="macro">Macro</button>
+  <button class="tab" role="tab" data-tab="src">Sources</button>
+</div></nav>
+
+<main><div class="wrap">
+  <section class="panel on" id="p-now" role="tabpanel"></section>
+  <section class="panel" id="p-levels" role="tabpanel"></section>
+  <section class="panel" id="p-skills" role="tabpanel"></section>
+  <section class="panel" id="p-daev" role="tabpanel"></section>
+  <section class="panel" id="p-build" role="tabpanel"></section>
+  <section class="panel" id="p-stig" role="tabpanel"></section>
+  <section class="panel" id="p-macro" role="tabpanel"></section>
+  <section class="panel" id="p-src" role="tabpanel"></section>
+  <p class="foot">Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation. Skill icons and Daevanion node frames are game art &copy; NCSOFT Corporation, sourced via Metabot and Wikily (see the Sources tab). Data compiled 18 Oct 2026 for the Global launch build. Skill and Stigma resets are free in game, so nothing here is permanent.</p>
+</div></main>
+<div class="tip" id="tip" hidden></div>
+<script src="../shared/site.js"></script>
+<script src="data.js"></script>
+<script src="../shared/planner.js"></script>
+</body>
+</html>

@@ -25,9 +25,9 @@ def main():
       <h2>{e(m['name'])}</h2><span class="role">{e(ROLE[c])}</span>
       <span class="build">{e(m['build'])}</span><p>{e(m.get('blurb', ''))}</p><span class="prog" data-store="{store}"></span></a>''')
         site.append({'key': c, 'name': m['name'], 'href': f'{c}-planner/', 'icon': f"{c}-planner/icons/{m['brandIcon']}.webp"})
-    gath = [f'''    <a class="cc wide" href="{g['href']}index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l3 6 6 1-4.5 4 1 6-5.5-3-5.5 3 1-6L3 10l6-1z"/></svg></span>
+    gath = [f'''    <a class="cc wide" href="{g['href']}index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>
       <h2>{e(g['name'])}</h2><span class="role">{e(g['role'])}</span>
-      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p><span class="prog" data-store="{g['store']}"></span></a>''' for g in GATHERING]
+      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p><span class="prog" data-store="{g['store']}" data-kind="prof"></span></a>''' for g in GATHERING]
     page = open(os.path.join(HERE, 'templates', 'home.html'), encoding='utf-8').read()
     page = page.replace('{cards}', '\n'.join(cards)).replace('{gathering}', '\n'.join(gath)).replace('{compiled}', '18 Oct 2026')
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(page)

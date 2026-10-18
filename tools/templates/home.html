@@ -60,7 +60,7 @@ siteMenu('home', '');
 document.querySelectorAll('[data-store]').forEach(el => {
   try {
     const s = JSON.parse(localStorage.getItem(el.dataset.store) || 'null');
-    if (s && s.level) el.textContent = `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
+    if (s && s.level) el.textContent = el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
   } catch (e) {}
 });
 </script>

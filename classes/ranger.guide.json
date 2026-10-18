@@ -1,0 +1,519 @@
+{
+ "meta": {
+  "cls": "ranger",
+  "name": "Ranger",
+  "title": "Ranger Ascension Planner",
+  "sub": "AION 2 Global · PvE Deadshot build · exact skill points and Daevanion crystals, level by level",
+  "build": "PvE Deadshot",
+  "brandIcon": "14010000",
+  "blurb": "Ranged bow DPS from 20 m. Charged Deadshot on its own key, a two-line arrow macro."
+ },
+ "phases": [
+  "While levelling (136 crystals by 45)",
+  "District quests and sealed dungeons (to 316)",
+  "Nightmare shop crystals (to 366)",
+  "Festival Shop crystals (to 414)"
+ ],
+ "text": {
+  "levels": "Cost to raise a skill one level: 1 point each for levels 2–4, 2 each for 5–7, 4 each for 8–10 (13 to reach 8, 21 to reach 10). Each skill level also waits for a character-level gate, so Snipe and Tempest Shot reach 10 at 25 at the earliest and Deadshot, learned at 14, reaches 10 at 38. Levels alone give 203 points by 45; Wisdom Stones from district quests and sealed dungeons add up to 180 more for the 45 build.",
+  "schedule": "Snipe's and Deadshot's nodes first on every board as it opens, Drill Dart, Gale Arrow and Tempest Shot on Nezekan and Zikel, and the Combat Speed and Damage Boost corners. Zikel's Snipe and Gale Arrow go ahead of Nezekan's last three steps; Vaizel and Triniel only get Snipe and Deadshot before 45. Skip Arrow Scattershot, Suppressing Arrow, Explosion Trap, Defiance, Melee Fire, Snare Shot, Concentrated Fire, Rooting Eye, Damage Tolerance, Multi-Hit Resist, Critical Damage Tolerance and MP except where the board forces a step.",
+  "buildSub": "383 points: 203 from levels + 180 Wisdom Stones",
+  "build": "At 45, reset (free) and spend in this order. Levels alone pay for rows 1–2 and most of row 3; Wisdom Stones from district quests and sealed dungeons pay for the rest. In row 3, take Marking Shot and Burst Arrow to 8 first for their Specialties. Leave at 1: Defiance, Unyielding Resolve, Revitalization Contract and Suppressing Arrow. 5 points stay spare. Some players raise Suppressing Arrow for bosses in Wind Vigor's place; it only works while you have Precision.",
+  "passives": "Focused Eye, then Hunter's Resolve, then Hunter's Soul, each to 10. Past 10 they grow from board nodes (4 each by 316 crystals), Arcana lines and Soul Binding lines on armour and jewellery. Focused Eye counts ×1.5 while Vaizel's Authority (Stigma 10 or more) is up, and Hunter's Soul too once it reaches 15.",
+  "specs": "Skill levels past 10 come from Daevanion nodes (+1 each), Arcana cards and gear lines; the boards put Snipe, Deadshot, Drill Dart, Gale Arrow and Tempest Shot at 14 by 316 crystals. A level-16 pick costs one of your two slots; a third slot opens at 20. First 16 to chase: Deadshot, with a +1 Deadshot line on each ring.",
+  "stigmaSub": "30 points at 45: Vaizel's Authority 10, the rest 5",
+  "stigma": "Take each to 5 as the next slot opens; from level 41 the new points take Vaizel's Authority to 10. Swaps: Arrow Storm in slot 4 for stagger checks (50 stagger at any level). From 180 Stigma points, reset Explosive Arrow (its 5 points come back) and take Griffon Arrow to 15 in its place; unslotting alone keeps the points locked. Some players run both arrows instead of Supporting Fire.",
+  "src": "Where guides disagree (Explosive Arrow or Griffon Arrow, a few Specialty picks, raising Suppressing Arrow, buying Combat Speed and Damage Boost before the skill nodes) this planner follows Aion 2 Maps, whose stepper is computed from the client's level gates and point curve. Numbers can change with patches; the in-game tooltip wins."
+ },
+ "skills": {
+  "Snipe": {
+   "role": "Basic attack and its chain; each hit restores MP. Hold it between skills.",
+   "spec": {
+    "8": "+20% MP restored (or Absorbs 0.7% HP if HP runs short)",
+    "12": "-1s [Deadshot] cooldown on hit (about level 25, with two board nodes)",
+    "16": "Adds Tempest Arrow Chain Skill, in place of +50% Multi-Hit",
+    "45": "-1s Deadshot cooldown on hit, and +50% Multi-Hit on hit"
+   }
+  },
+  "Snare Shot": {
+   "role": "Slows 40% for 5 s, which lets Burst Arrow hit. In the damage line.",
+   "spec": {
+    "45": "+20% Skill Speed"
+   }
+  },
+  "Tempest Shot": {
+   "role": "No-cooldown shot on up to 4 enemies; fires on the move. Your pack skill.",
+   "spec": {
+    "8": "-20% MP consumed",
+    "16": "+20% Skill Speed, in place of the Critical Hit pick",
+    "45": "Up to 12% more damage when fewer targets are hit, and +10% skill Critical Hit"
+   }
+  },
+  "Marking Shot": {
+   "role": "Gives Precision (+300 Critical Hit, +35% Deadshot) and moves you. By hand.",
+   "spec": {
+    "8": "+5s duration",
+    "45": "Keep +5s duration (Precision lasts 15 s), add +5% Perfect Chance"
+   }
+  },
+  "Drill Dart": {
+   "role": "Fires only within 3 s of a crit; its Bleed cuts healing 60%. First in line 2.",
+   "spec": {
+    "8": "Absorbs 3% HP",
+    "16": "Activates Drill Dart 1 extra time, in place of Multi-Hit on hit",
+    "45": "Multi-Hit on hit, and +20% Skill Speed (Absorbs 3% HP solo)"
+   }
+  },
+  "Arrow Scattershot": {
+   "role": "Hits only a staggered target. Hold it instead of Snipe in stagger windows.",
+   "spec": {
+    "16": "-1s all cooldowns on hit (the reason to raise it)",
+    "45": "Changes to mobile skill"
+   }
+  },
+  "Gale Arrow": {
+   "role": "Core 20 s arrow; fires first in the macro's damage line.",
+   "spec": {
+    "8": "+5s duration",
+    "16": "-10s cooldown, in place of Changes to mobile skill",
+    "45": "Combat Speed and PvE Damage Boost when fewer targets are hit, and Changes to mobile skill"
+   }
+  },
+  "Explosion Trap": {
+   "role": "Trap set where you stand; its pick pulls a pack together. Raised last.",
+   "spec": {
+    "8": "Pulls enemies on explosion (only if you raise it)",
+    "45": "Pulls enemies on explosion"
+   }
+  },
+  "Burst Arrow": {
+   "role": "Hits only a slowed or rooted target, so it follows Snare Shot. 15 stagger.",
+   "spec": {
+    "8": "Absorbs 10% HP",
+    "16": "25% chance to reset cooldown on hit, in place of Changes to mobile skill",
+    "45": "Changes to mobile skill, and up to +20% damage when fewer targets are hit (solo: keep the absorb)"
+   }
+  },
+  "Suppressing Arrow": {
+   "role": "Works only under Precision. Left at 1: few top Rangers cast it on bosses.",
+   "spec": {
+    "12": "Only if you raise it in Wind Vigor's place: +20% Skill Speed, then +50% Multi-Hit on hit at 12"
+   }
+  },
+  "Deadshot": {
+   "role": "Your biggest hit. Own key, hold for full charge (3 steps), 20 s.",
+   "spec": {
+    "8": "+30% Skill Speed",
+    "16": "Extra hit worth half the first, in place of Changes to mobile skill",
+    "45": "Keep +30% Skill Speed, add Changes to mobile skill (charging included)"
+   }
+  },
+  "Defiance": {
+   "role": "Breaks Stun, Knockdown, Grab, Frost and Fear. Left at 1 in PvE."
+  },
+  "Vigilant Eye": {
+   "role": "Survival passive; raised late with Wisdom Stones."
+  },
+  "Concentrated Fire": {
+   "role": "Raised with Wisdom Stones after Snare Shot."
+  },
+  "Wind Vigor": {
+   "role": "Last row of the build; Suppressing Arrow can take its points instead."
+  },
+  "Focused Eye": {
+   "role": "Top passive and a Double Chance source; ×1.5 under Vaizel's Authority."
+  },
+  "Hunter's Resolve": {
+   "role": "Second passive; raise right after Focused Eye."
+  },
+  "Unyielding Resolve": {
+   "role": "Leave at 1 (PvP resist passive)."
+  },
+  "Rooting Eye": {
+   "role": "Raised with Wisdom Stones after Concentrated Fire."
+  },
+  "Melee Fire": {
+   "role": "Raised with Wisdom Stones, before Vigilant Eye."
+  },
+  "Revitalization Contract": {
+   "role": "Leave at 1."
+  },
+  "Hunter's Soul": {
+   "role": "Third passive; ×1.5 under Vaizel's Authority from Stigma 15."
+  },
+  "Arrow Storm": {
+   "role": "50 stagger damage, the most a Ranger has. Swap into slot 4 for stagger checks."
+  },
+  "Illusory Arrow": {
+   "role": "Blinds for 3 s (15 stagger). Not used in the PvE build."
+  },
+  "Explosive Arrow": {
+   "role": "Fire hit on up to 4, 20% more on slowed or rooted targets. Slot 4, in the macro."
+  },
+  "Vaizel's Authority": {
+   "role": "+20% Attack for 14.5 s every 60 s. Core stigma, slot 1."
+  },
+  "Assault Smite": {
+   "role": "Not used in the PvE build."
+  },
+  "Stealth": {
+   "role": "Not used in the PvE build."
+  },
+  "Bow of Blessing": {
+   "role": "+200 Critical Hit and +100 Accuracy for 12 s every 120 s. Slot 2."
+  },
+  "Supporting Fire": {
+   "role": "An orb fires with you for 15 s every 90 s. Slot 3."
+  },
+  "Sealing Arrow": {
+   "role": "Alternative stagger stigma (20 stagger)."
+  },
+  "Mother Nature's Breath": {
+   "role": "PvP defence buff: damage tolerance and HP back on hits. Not used in PvE."
+  },
+  "Ambush Kick": {
+   "role": "PvP gap-maker: kicks a target back and jumps you away. Not used in PvE."
+  },
+  "Griffon Arrow": {
+   "role": "Burn arrow. Replaces Explosive Arrow once you can take it to 15 (180 Stigma points)."
+  },
+  "Ensnaring Trap": {
+   "role": "Alternative stagger stigma (20 stagger)."
+  }
+ },
+ "steps": {
+  "7": {
+   "note": "Start the macro: Gale Arrow in the damage line, Drill Dart in the second line"
+  },
+  "13": {
+   "keep": "Keep 1; it carries over to level 16"
+  },
+  "14": {
+   "note": "Put Deadshot on its own key and hold it"
+  },
+  "16": {
+   "keep": "Keep 3 for level 19: Snipe 8, Tempest Shot 8, Drill Dart 7 and Gale Arrow 6"
+  },
+  "22": {
+   "note": "Stigma slot 1: Vaizel's Authority (needs the Ascension quest The One Who Hears the Voice, which also pays your first Stigma point)"
+  },
+  "25": {
+   "note": "Snipe reaches 12 with its two board nodes: add −1s Deadshot cooldown on hit"
+  },
+  "27": {
+   "keep": "Keep 1 for level 28: Burst Arrow 8",
+   "note": "Stigma slot 2: Bow of Blessing"
+  },
+  "32": {
+   "note": "Stigma slot 3: Supporting Fire"
+  },
+  "37": {
+   "note": "Stigma slot 4: Explosive Arrow. Add it to the macro's damage line, after Snare Shot"
+  },
+  "40": {
+   "note": "Triniel board opens: start its levelling route. All four Stigmas are at 5; new Stigma points go to Vaizel's Authority toward 10"
+  },
+  "45": {
+   "keep": "1 unspent. Then reset (free) into the 45 build",
+   "note": "Azphel (PvP) board opens. Reset skills into the Build order and switch to the 45 Specialties"
+  }
+ },
+ "stigmas": [
+  {
+   "name": "Vaizel's Authority",
+   "slot": 1,
+   "lvl": 22,
+   "t45": 10,
+   "why": "+20% Attack for 14.5 s every 60 s; at 5 +10% Perfect Chance; at 10 Focused Eye counts ×1.5 while it lasts"
+  },
+  {
+   "name": "Bow of Blessing",
+   "slot": 2,
+   "lvl": 27,
+   "t45": 5,
+   "why": "+200 Critical Hit and +100 Accuracy for 12 s every 120 s; at 5 +50% Multi-Hit Chance"
+  },
+  {
+   "name": "Supporting Fire",
+   "slot": 3,
+   "lvl": 32,
+   "t45": 5,
+   "why": "An orb that fires with you for 15 s every 90 s; at 5 +25% activation chance"
+  },
+  {
+   "name": "Explosive Arrow",
+   "slot": 4,
+   "lvl": 37,
+   "t45": 5,
+   "why": "Fire damage to up to 4, 20% more on slowed or rooted targets; at 5 a 30 s cooldown. Arrow Storm instead for stagger checks, Griffon Arrow from 180 Stigma points"
+  }
+ ],
+ "passives": [
+  "Focused Eye",
+  "Hunter's Resolve",
+  "Hunter's Soul",
+  "Concentrated Fire",
+  "Rooting Eye",
+  "Melee Fire",
+  "Vigilant Eye",
+  "Wind Vigor"
+ ],
+ "macro": [
+  {
+   "title": "Boss setup: three inputs",
+   "eyebrow": "hold these down for the whole fight",
+   "h": 2,
+   "gold": true,
+   "blocks": [
+    {
+     "t": "note",
+     "text": "Only one of the three is a macro. The other two are single skills, each on its own input. Hold the keys yourself: no mouse software is needed. Everything you press by hand is listed further down."
+    },
+    {
+     "t": "keys",
+     "items": [
+      {
+       "cap": "Hold · left click",
+       "skill": "Snipe",
+       "sub": "Your basic attack and its chain. Each hit restores MP. Not in the macro."
+      },
+      {
+       "cap": "Hold · macro key",
+       "label": "The macro (2 entries, 6 skills)",
+       "sub": "One key that runs both lines in the next box, 10 ms per entry. This is the only thing that is stacked.",
+       "macro": true
+      },
+      {
+       "cap": "Hold · its own key",
+       "skill": "Deadshot",
+       "sub": "Not in the macro. Alone on its own key so it fires at full charge the moment it is ready. Hold it, do not tap it."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Inside the macro key",
+   "eyebrow": "fires 1 → 6",
+   "blocks": [
+    {
+     "t": "stacks",
+     "items": [
+      {
+       "tag": "Entry 1 · Damage line",
+       "cells": [
+        {
+         "skill": "Gale Arrow",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Snare Shot"
+        },
+        {
+         "skill": "Explosive Arrow",
+         "extra": "from slot 4 at 37"
+        }
+       ]
+      },
+      {
+       "tag": "Entry 2 · Drill Dart line",
+       "cells": [
+        {
+         "skill": "Drill Dart",
+         "extra": "fires first in its line"
+        },
+        {
+         "skill": "Burst Arrow"
+        },
+        {
+         "skill": "Tempest Shot"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "t": "seq",
+     "items": [
+      {
+       "skill": "Gale Arrow"
+      },
+      {
+       "skill": "Snare Shot"
+      },
+      {
+       "skill": "Explosive Arrow",
+       "arrow": "→ 10 ms →"
+      },
+      {
+       "skill": "Drill Dart"
+      },
+      {
+       "skill": "Burst Arrow"
+      },
+      {
+       "skill": "Tempest Shot"
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "The number is the firing order. Burst Arrow hits only a slowed or rooted target, so it waits in its line until Snare Shot lands. Tempest Shot always fires last in its line, never before Drill Dart. Some setups put Snare Shot and Burst Arrow together in the damage line instead, Snare Shot first. Keep skill queuing on, or Marking Shot and charged Deadshots get eaten."
+    }
+   ]
+  },
+  {
+   "title": "Not in any macro: press by hand",
+   "eyebrow": "Precision and stigma buffs",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Marking Shot"
+       ],
+       "why": "About 2 s before Precision runs out, with no direction key held: it moves you the way you press."
+      },
+      {
+       "skills": [
+        "Vaizel's Authority",
+        "Bow of Blessing",
+        "Supporting Fire"
+       ],
+       "why": "Together, for a burst window. By hand, or as a third macro entry."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Only when the moment comes",
+   "eyebrow": "single presses, not in the macro",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Arrow Scattershot"
+       ],
+       "why": "While the boss is staggered: hold it instead of Snipe, since it only hits a staggered target. From skill 16 it goes in the Drill Dart line, just before Tempest Shot."
+      },
+      {
+       "skills": [
+        "Arrow Storm"
+       ],
+       "why": "If you slotted it for a stagger check: save it for when the gauge opens, for its 50 stagger damage."
+      },
+      {
+       "skills": [
+        "Griffon Arrow"
+       ],
+       "why": "From 180 Stigma points, once it is at 15: it takes Explosive Arrow's place in the damage line."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "If it is not working",
+   "blocks": [
+    {
+     "t": "fix",
+     "items": [
+      {
+       "b": "Drill Dart does not fire.",
+       "text": "It works only within 3 s of one of your critical hits, so it waits for your first crit."
+      },
+      {
+       "b": "Deadshot stops firing in a long fight.",
+       "text": "The game pauses a held key's repeats after a long hold and says so in a system message. Release the keys and hold them again."
+      },
+      {
+       "b": "Marking Shot or a charged Deadshot goes missing.",
+       "text": "Skill queuing is off. Turn it on."
+      },
+      {
+       "b": "Burst Arrow never goes off.",
+       "text": "It needs a slowed or rooted target. Check that Snare Shot lands before it."
+      },
+      {
+       "b": "Holding Deadshot does not suit you.",
+       "text": "Press it yourself, right after Marking Shot."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "title": "Trash packs",
+   "eyebrow": "while questing and on dungeon trash",
+   "blocks": [
+    {
+     "t": "hand",
+     "items": [
+      {
+       "skills": [
+        "Explosion Trap"
+       ],
+       "why": "Gather the pack first: with its Specialty it pulls them together when it goes off."
+      },
+      {
+       "skills": [
+        "Tempest Shot"
+       ],
+       "why": "Then shoot into the pack: it hits up to 4 enemies and has no cooldown."
+      },
+      {
+       "skills": [
+        "Snare Shot",
+        "Burst Arrow"
+      ],
+       "why": "Slow the pack so Burst Arrow can hit; solo, its Absorbs 10% HP pick (from 28) keeps you up."
+      }
+     ]
+    },
+    {
+     "t": "note",
+     "text": "Keep moving: a Ranger caught by a pack dies. Solo, the HP-absorb picks on Drill Dart and Snipe carry your sustain. On story bosses that hit hard, fight with Snipe and Tempest Shot, which both fire on the move."
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "url": "https://aion2maps.com/guides/ranger/",
+   "title": "Aion 2 Maps: Ranger",
+   "what": "the level-by-level skill point stepper, Specialties, the 45 build, stigma plan, macro and the numbered Daevanion routes (computed from the game client, updated 16 Oct 2026)."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/skills",
+   "title": "Metabot skills database",
+   "what": "skill unlock levels, cooldowns, MP, ranges and the icons."
+  },
+  {
+   "url": "https://wikily.gg/aion-2/daevanion/ranger/nezekan",
+   "title": "Wikily Daevanion boards",
+   "what": "node grid layout, node grades and the in-game node frames."
+  },
+  {
+   "links": [
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
+   ],
+   "what": "skill points, Daevanion points, Stigma points and slots per level."
+  },
+  {
+   "url": "https://metabot.gg/en/aion-2/guides/daevanion-guide",
+   "title": "Metabot Daevanion guide",
+   "what": "board rules, node costs, corner stats."
+  }
+ ]
+}
