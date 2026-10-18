@@ -6,10 +6,14 @@ ROOT = os.path.dirname(HERE)
 ORDER = ['gladiator', 'templar', 'assassin', 'ranger', 'sorcerer', 'spiritmaster', 'cleric', 'chanter']
 ROLE = {'gladiator': 'Melee DPS', 'templar': 'Tank', 'assassin': 'Melee DPS', 'ranger': 'Ranged DPS',
         'sorcerer': 'Magic DPS', 'spiritmaster': 'Magic DPS · spirits', 'cleric': 'Healer', 'chanter': 'Support'}
-GATHERING = [{'key': 'essence', 'name': 'Essence Extraction', 'href': 'essence-extraction/', 'role': 'Gathering profession',
-              'build': 'Proficiency 1 to 100, fastest route',
-              'blurb': 'Which ore, plants and gems to gather at each proficiency, where they grow, and how to get past each gate.',
-              'store': 'essence-planner'}]
+GUIDES = [{'key': 'macros', 'name': 'Macro Guide', 'href': 'macros/', 'role': 'Combat',
+           'build': 'Set up the in-game skill macro',
+           'blurb': 'How the macro and basic-attack cancelling work, the setup in game step by step, what goes in it, and every class at a glance.',
+           'store': None, 'svg': '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/>'},
+          {'key': 'essence', 'name': 'Essence Extraction', 'href': 'essence-extraction/', 'role': 'Gathering profession',
+           'build': 'Proficiency 1 to 100, fastest route',
+           'blurb': 'Which ore, plants and gems to gather at each proficiency, where they grow, and how to get past each gate.',
+           'store': 'essence-planner', 'svg': '<path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/>'}]
 
 
 def main():
@@ -25,11 +29,11 @@ def main():
       <h2>{e(m['name'])}</h2><span class="role">{e(ROLE[c])}</span>
       <span class="build">{e(m['build'])}</span><p>{e(m.get('blurb', ''))}</p><span class="prog" data-store="{store}"></span></a>''')
         site.append({'key': c, 'name': m['name'], 'href': f'{c}-planner/', 'icon': f"{c}-planner/icons/{m['brandIcon']}.webp"})
-    gath = [f'''    <a class="cc wide" href="{g['href']}index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>
+    gath = [f'''    <a class="cc" href="{g['href']}index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{g['svg']}</svg></span>
       <h2>{e(g['name'])}</h2><span class="role">{e(g['role'])}</span>
-      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p><span class="prog" data-store="{g['store']}" data-kind="prof"></span></a>''' for g in GATHERING]
+      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p>{f'<span class="prog" data-store="{g["store"]}" data-kind="prof"></span>' if g['store'] else ''}</a>''' for g in GUIDES]
     page = open(os.path.join(HERE, 'templates', 'home.html'), encoding='utf-8').read()
-    page = page.replace('{cards}', '\n'.join(cards)).replace('{gathering}', '\n'.join(gath)).replace('{compiled}', '18 Oct 2026')
+    page = page.replace('{cards}', '\n'.join(cards)).replace('{guides}', '\n'.join(gath)).replace('{compiled}', '18 Oct 2026')
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(page)
     s = open(os.path.join(ROOT, 'shared', 'site.js'), encoding='utf-8').read()
     start, end = s.index('const SITE = ['), s.index('];', s.index('const SITE = [')) + 2

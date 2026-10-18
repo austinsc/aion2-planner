@@ -8,6 +8,8 @@ python3 tools/notes_dump.py <class>    # optional: source sections as text -> to
 python3 tools/render.py <class>        # merge with classes/<class>.guide.json -> <class>-planner/data.js and index.html
 ```
 
+After changing a class's macro cards, also run `python3 tools/render_macros.py` to refresh the Macro Guide's class summaries, and `python3 tools/render_home.py` after changing a class's name, build or icon.
+
 Fetched pages are cached in `tools/cache/` (git-ignored); delete a file there to refetch it.
 
 ## What is generated

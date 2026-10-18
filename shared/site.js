@@ -10,6 +10,7 @@ const SITE = [
   {"key": "chanter", "name": "Chanter", "href": "chanter-planner/", "icon": "chanter-planner/icons/18100000.webp"},
 ];
 const SITE_EXTRA = [
+  { key: 'macros', name: 'Macros', href: 'macros/' },
   { key: 'essence', name: 'Essence Extraction', href: 'essence-extraction/' },
 ];
 
