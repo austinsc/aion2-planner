@@ -2,6 +2,8 @@
 
 Interactive levelling planners for AION 2 (Global). Exact skill point spends, Daevanion crystal routes and stigma plans, level by level, with the in-game icons and node frames, for all eight classes. Also an Essence Extraction guide for levelling gathering proficiency.
 
+**Live site: https://austinsc.github.io/aion2-planner/**
+
 ## Planners
 
 Open [`index.html`](index.html) for the menu. Every page also has a menu bar along the top that links to the others.
@@ -47,6 +49,10 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 - **Proficiency 1-100**: the XP table with the points each level gives and what to buy.
 - **Skill points**: the Common skills (Proficient Handling, Delicate Touch, Lady Luck) and the Specialty trees, with a plan for your main material.
 - **Materials**: every material on your faction's map, with gauge size, node count and what it crafts.
+
+## Hosting
+
+The site is published on GitHub Pages from the `gh-pages` branch. [`.github/workflows/pages.yml`](.github/workflows/pages.yml) rebuilds that branch on every push to `main`: `tools/build_site.sh` copies the menu, `shared/`, every planner folder and `essence-extraction/` into `_site/` and adds `.nojekyll`, and the workflow pushes it to `gh-pages`. You can also run it by hand from the Actions tab.
 
 ## How it is built
 
