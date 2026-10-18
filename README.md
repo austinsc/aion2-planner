@@ -30,6 +30,10 @@ Progress (level, completed levels, owned Daevanion nodes, notes) is kept in the 
 
 Compiled 18 Oct 2026 for the Global launch build. The levelling stepper, 45 build, stigma plan, macro and Daevanion routes follow [Aion 2 Maps](https://aion2maps.com/guides/sorcerer/). Skill data and icons come from [Metabot](https://metabot.gg/en/aion-2/skills), board layouts and node frames from [Wikily](https://wikily.gg/aion-2/daevanion/sorcerer/nezekan), and per-level point tables from [Fextralife](https://aion2.wiki.fextralife.com/Level_Progression) and [Questlog](https://questlog.gg/aion-2/en/table/character-levels). Numbers can change with patches; the in-game tooltip wins.
 
-## Notes
+## License and attribution
 
-Unofficial fan tool, not affiliated with NCSOFT. The icons and node frames are game art owned by NCSOFT, so keep this repository private unless you have cleared that.
+The code and text are [MIT licensed](LICENSE).
+
+The skill icons and Daevanion node frames are game art owned by NCSOFT Corporation and are not covered by the MIT license. [NOTICE.md](NOTICE.md) lists each asset, who owns it and where it came from (Metabot and Wikily), along with the data sources.
+
+Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation.
