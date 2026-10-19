@@ -9,7 +9,7 @@ const PHASES = DATA.phases;
 const STORE = META.storageKey || (META.cls + '-planner');
 
 /* ---------------- state ---------------- */
-const state = { level: 1, done: {}, nodes: {}, notes: '', board: DATA.boards[0].key };
+const state = { level: 1, done: {}, nodes: {}, notes: '', board: DATA.boards[0].key, dmode: 'plan' };
 let db = null, docRef = null, saving = false, pending = false;
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,7 +24,7 @@ function persist(){
   clearTimeout(saveTimer);
   saveTimer = setTimeout(flush, 500);
 }
-const snapshot = () => ({ level: state.level, done: state.done, nodes: state.nodes, notes: state.notes, board: state.board, updatedAt: new Date().toISOString() });
+const snapshot = () => ({ level: state.level, done: state.done, nodes: state.nodes, notes: state.notes, board: state.board, dmode: state.dmode, updatedAt: new Date().toISOString() });
 async function flush(){
   if (!docRef) return;
   if (saving) { pending = true; return; }
@@ -53,7 +53,7 @@ async function connect(){
 function applyRemote(d){
   if (!d) return;
   state.level = Math.min(45, Math.max(1, +d.level || 1));
-  state.done = d.done || {}; state.nodes = d.nodes || {}; state.notes = d.notes || ''; state.board = BOARDS[d.board] ? d.board : state.board;
+  state.done = d.done || {}; state.nodes = d.nodes || {}; state.notes = d.notes || ''; state.board = BOARDS[d.board] ? d.board : state.board; state.dmode = d.dmode === 'owned' ? 'owned' : 'plan';
   saveLocal(); renderAll();
 }
 
@@ -70,6 +70,31 @@ function boardName(k){ return BOARDS[k].name; }
 function nodeTitle(n){ return n.label + (n.cost ? ` (${n.cost} crystal${n.cost>1?'s':''})` : ''); }
 const firstBoard = DATA.boards[0];
 const levelBoards = DATA.boards.filter(b => b.key !== 'azphel');
+
+/* ---------------- skill level = points you assign + Daevanion skill nodes ---------------- */
+const skillOfNode = id => { const n = NODES[id]; return n && n.type === 'skill' ? n.skill : null; };
+function daevPlanned(name, L){ let c = 0; DATA.plan.forEach(p => { if (p.lvl <= L) p.nodes.forEach(id => { if (skillOfNode(id) === name) c++; }); }); return c; }
+function daevOwned(name){ let c = 0; for (const id in state.nodes) if (state.nodes[id] && skillOfNode(id) === name) c++; return c; }
+function daevRoute(name, maxPhase){ let c = 0; levelBoards.forEach(b => b.steps.forEach(s => { if (s.phase <= maxPhase) s.nodes.forEach(id => { if (skillOfNode(id) === name) c++; }); })); return c; }
+function daevNow(name, L){ return state.dmode === 'owned' ? daevOwned(name) : daevPlanned(name, L); }
+const crystalsAt = i => ((PHASES[i] || '').match(/to (\d+)/) || (PHASES[i] || '').match(/(\d+) crystals/) || [])[1] || '';
+function gainChips(ids){
+  const m = {}; ids.forEach(id => { const s = skillOfNode(id); if (s) m[s] = (m[s] || 0) + 1; });
+  const g = Object.entries(m);
+  return g.length ? `<span class="chips" style="gap:6px">${g.map(([s, n]) => `<span class="gain">${icon(s, 'sm')}<b>+${n}</b> ${esc(s)}</span>`).join('')}</span>` : '';
+}
+function pips(total){ return `<span class="pips" title="Specialty picks open at skill level 8, 12, 16 and 20">${[8, 12, 16, 20].map(v => `<span class="pip ${total >= v ? 'on' : ''}">${v}</span>`).join('')}</span>`; }
+function daevTag(name){ const d = daevRoute(name, 1); return d ? `<span class="gain"><span class="dv">+${d} Daev</span></span>` : ''; }
+function levelChip(name, pts, L){ const d = daevNow(name, L); return `<span class="chip"><b class="num">${pts + d}</b> now <span class="muted">= ${pts} pts${d ? ` + ${d} Daev` : ''}</span></span>`; }
+function lvTable(s){
+  const rows = [
+    ['Levelling, level 45', step(45).levels[s.name] || 1, daevPlanned(s.name, 45)],
+    [`45 build, ${crystalsAt(1)} crystals`, s.t45, daevRoute(s.name, 1)],
+    [`Full route, ${crystalsAt(3)} crystals`, s.t45, daevRoute(s.name, 3)]
+  ];
+  if (s.t45 === 1 && !rows.some(r => r[2])) return `<p class="note">Leave at 1. No Daevanion node raises it.</p>`;
+  return `<div class="lvt">${rows.map(([lab, p, d]) => `<div class="r"><span class="lab">${lab}</span><span class="num">${p} pts${d ? ` <span class="dv">+ ${d} Daev</span>` : ''}</span><b class="num tot">= ${p + d}</b>${pips(p + d)}</div>`).join('')}</div>`;
+}
 
 /* ---------------- NOW ---------------- */
 function renderNow(){
@@ -95,7 +120,7 @@ function renderNow(){
   // skill points
   h += `<div class="card"><header><h3>Spend skill points</h3><span class="eyebrow">${st.spend} point${st.spend===1?'':'s'}</span></header>`;
   if (st.alloc.length) {
-    h += `<ul class="list">` + st.alloc.map(a => `<li>${skTag(a.skill)}<span class="arrow num">${a.a} → ${a.b}</span><span class="cost num">${a.cost} pt${a.cost>1?'s':''}</span></li>`).join('') + `</ul>`;
+    h += `<ul class="list">` + st.alloc.map(a => `<li>${skTag(a.skill)}<span class="arrow num">${a.a} → ${a.b}</span>${daevNow(a.skill, L) ? `<span class="muted num" style="font-size:.85rem">+ ${daevNow(a.skill, L)} <span class="dv">Daev</span> = <b>${a.b + daevNow(a.skill, L)}</b> in game</span>` : ''}<span class="cost num">${a.cost} pt${a.cost>1?'s':''}</span></li>`).join('') + `</ul>`;
   } else h += `<p class="empty">${st.gained ? 'No spending this level.' : 'No skill points yet. Skill points start at level 4.'}</p>`;
   if (st.keep) h += `<p class="keep">${esc(st.keep)}</p>`;
   h += `</div>`;
@@ -119,7 +144,7 @@ function renderNow(){
     h += `<ul class="list">` + plan.map(p => {
       const own = p.nodes.every(id => state.nodes[id]);
       const target = NODES[p.nodes[p.nodes.length-1]];
-      return `<li><span class="lvbadge">${boardName(p.board)}</span>${target && target.type==='skill' && target.skill === p.label.replace(/ \+\d+$/, '') ? skTag(target.skill) : `<b>${esc(p.label)}</b>`}<span class="muted" style="font-size:.85rem">step ${p.n} · ${p.nodes.length} node${p.nodes.length>1?'s':''}</span><span class="cost num">${p.cost} cr${own ? ' · ✓ owned' : ''}</span></li>`;
+      return `<li><span class="lvbadge">${boardName(p.board)}</span>${target && target.type==='skill' && target.skill === p.label.replace(/ \+\d+$/, '') ? skTag(target.skill) : `<b>${esc(p.label)}</b>`}<span class="muted" style="font-size:.85rem">step ${p.n} · ${p.nodes.length} node${p.nodes.length>1?'s':''}</span>${gainChips(p.nodes)}<span class="cost num">${p.cost} cr${own ? ' · ✓ owned' : ''}</span></li>`;
     }).join('') + `</ul>
     <div class="act"><button class="pill" id="ownPlan">Mark these nodes owned</button><button class="pill ghost" id="goBoard">Open the board</button></div>`;
   } else if (row.dv) h += `<p class="empty">Nothing to buy yet: save your crystals for the next step in the route.</p>`;
@@ -127,12 +152,18 @@ function renderNow(){
   h += `</div>`;
   h += `</div>`; // grid2
 
-  // skill wall
+  // skill levels: points + Daevanion
   const learned = DATA.skills.filter(s => s.kind !== 'stigma' && s.learn <= L);
-  h += `<div class="card"><header><h3>Your skill levels at ${L}</h3><span class="eyebrow">from skill points · Daevanion nodes add +1 each</span></header><div class="wall">` +
-    learned.map(s => { const v = lv[s.name] || 1; return `<div class="cell ${v>=10?'max':''} ${v===1?'one':''}">${icon(s.name)}<span class="lv num">${v}</span><span>${esc(s.name)}</span></div>`; }).join('') + `</div></div>`;
+  h += `<div class="card"><header><h3>Skill levels at ${L}</h3><span class="eyebrow">points you assign + Daevanion nodes = the level the game shows</span></header>
+    <div class="act" style="align-items:center"><span class="seg" role="group" aria-label="Count Daevanion levels from"><button data-dmode="plan" aria-pressed="${state.dmode !== 'owned'}">Planned nodes</button><button data-dmode="owned" aria-pressed="${state.dmode === 'owned'}">Nodes I marked owned</button></span>
+    <span class="legendnote"><b>Gold</b> = total in game · points you spend · <span class="dv">Daev</span> = +1 per owned skill node. Pips light up as the total reaches the Specialty levels 8, 12, 16, 20.</span></div>
+    <div class="lvgrid">` + learned.map(s => {
+      const p = lv[s.name] || 1, d = daevNow(s.name, L), tot = p + d;
+      return `<div class="lvrow">${icon(s.name, 'lg')}<div class="mid"><span class="sk ${s.elem || ''}"><span class="nm">${esc(s.name)}</span></span><span class="brk num"><b>${p}</b> pts${d ? ` <span class="dv">+ ${d} Daev</span>` : ''}</span>${pips(tot)}</div><b class="big num">${tot}</b></div>`;
+    }).join('') + `</div></div>`;
   h += `<div class="card"><header><h3>Notes</h3><span class="eyebrow">saved with your progress</span></header><textarea id="notes" placeholder="Where you are, what you need to buy, gear to fish for…">${esc(state.notes)}</textarea></div>`;
   $('#p-now').innerHTML = h;
+  document.querySelectorAll('[data-dmode]').forEach(x => x.onclick = () => { state.dmode = x.dataset.dmode; persist(); renderAll(); });
   $('#markDone').onclick = () => { if (state.done[L]) delete state.done[L]; else { state.done[L] = true; planAt(L).forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); } persist(); renderAll(); };
   const nx = $('#nextLvl'); if (nx) nx.onclick = () => { state.done[L] = true; planAt(L).forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); state.level = L + 1; persist(); renderAll(); window.scrollTo({top:0,behavior:'smooth'}); };
   const op = $('#ownPlan'); if (op) op.onclick = () => { plan.forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); persist(); renderAll(); };
@@ -143,7 +174,7 @@ function renderNow(){
 function renderLevels(){
   const doneCount = Object.keys(state.done).length;
   let h = `<div class="card"><header><h2>Levels 1–45</h2><span class="eyebrow">${doneCount} of 45 done · click a row to jump</span></header>
-  <p class="note">${esc(TXT.levels || '')}</p>
+  <p class="note">${esc(TXT.levels || '')} The levels in this table are the points you assign. Daevanion skill nodes add +1 level each on top of that, so the in-game level is higher: see the Now and Skills tabs for the totals.</p>
   <div class="tscroll"><table><thead><tr><th></th><th>Lv</th><th>Pts</th><th>Spend</th><th>Keep / specialty</th><th>Daevanion</th><th>Notes</th></tr></thead><tbody>`;
   for (let L = 1; L <= 45; L++) {
     const st = step(L), row = lvlRow(L), plan = planAt(L);
@@ -168,7 +199,7 @@ function renderSkills(){
   const groups = [['active','Active skills',`${count('active')} skills raised with skill points; Specialties open at skill level 8, 12, 16 and 20`],['passive','Passive skills','Raised with the same skill points; no Specialties'],['stigma','Stigma skills','Slots at 22, 27, 32 and 37; raised with Stigma points only']];
   let h = '';
   for (const [k, title, sub] of groups) {
-    h += `<div class="card"><header><h2>${title}</h2><span class="eyebrow">${sub}</span></header><div>`;
+    h += `<div class="card"><header><h2>${title}</h2><span class="eyebrow">${sub}</span></header>${k !== 'stigma' ? '<p class="note">Every skill shows the points you assign plus Daevanion skill nodes. The rows under each skill give the in-game level at level 45 while levelling, at the 45 build, and after the full route.</p>' : ''}<div>`;
     for (const s of DATA.skills.filter(x => x.kind === k)) {
       const cur = s.kind === 'stigma' ? null : (s.learn <= L ? (lv[s.name] || 1) : null);
       const stg = DATA.stigmas.find(x => x.name === s.name);
@@ -176,11 +207,12 @@ function renderSkills(){
       h += `<div class="skillrow">${icon(s.name,'lg')}<div>
         <div class="head"><span class="sk ${s.elem||''}"><span class="nm">${esc(s.name)}</span></span>
           <span class="lvbadge">Lv ${s.learn}</span>
-          ${cur !== null ? `<span class="chip">now <b class="num">${cur}</b></span>` : s.kind!=='stigma' ? `<span class="chip muted">not yet learned</span>` : ''}
-          ${s.kind !== 'stigma' ? `<span class="chip">at 45 <b class="num">${s.t45}</b></span>` : stg ? `<span class="chip">slot ${stg.slot} · to <b class="num">${stg.t45}</b></span>` : ''}
+          ${cur !== null ? levelChip(s.name, cur, L) : s.kind!=='stigma' ? `<span class="chip muted">not yet learned</span>` : ''}
+          ${s.kind !== 'stigma' ? '' : stg ? `<span class="chip">slot ${stg.slot} · to <b class="num">${stg.t45}</b></span>` : ''}
         </div>
         <div class="meta">${s.cd ? `<span>Cooldown <b>${esc(s.cd)}</b></span>` : ''}${s.mp && s.mp !== '—' ? `<span>MP <b>${esc(s.mp)}</b></span>` : ''}${s.range && s.range !== '—' ? `<span>Range <b>${esc(s.range)}</b></span>` : ''}</div>
         ${s.role ? `<p class="role">${esc(s.role)}</p>` : ''}
+        ${s.kind !== 'stigma' ? lvTable(s) : ''}
         ${sp['8'] || sp['45'] || sp['12'] || sp['16'] ? `<div class="specs">${sp['8'] ? `<span><b>Skill 8 while levelling</b> ${esc(sp['8'])}</span>` : ''}${sp['45'] ? `<span><b>Pick at 45</b> ${esc(sp['45'])}</span>` : ''}${sp['12'] ? `<span><b>Skill 12</b> ${esc(sp['12'])}</span>` : ''}${sp['16'] ? `<span><b>Skill 16</b> ${esc(sp['16'])}</span>` : ''}</div>` : ''}
       </div></div>`;
     }
@@ -248,8 +280,8 @@ function hideTip(){ tip.hidden = true; }
 /* ---------------- BUILD ---------------- */
 function renderBuild(){
   let h = `<div class="card gold"><header><h2>Skill points at 45</h2><span class="eyebrow">${esc(TXT.buildSub || '')}</span></header>
-    <p class="note">${esc(TXT.build || '')}</p>
-    <ol class="order">` + DATA.build45.map(r => `<li><span class="o">${r.order}</span><span class="skills">${r.skills.map(s => skTag(s)).join('')}${r.alt ? `<span class="muted">${esc(r.alt)}</span>` : ''}</span><span class="to">to level<b class="num">${r.to}</b><span class="num">${r.cum} used</span></span></li>`).join('') + `</ol></div>`;
+    <p class="note">${esc(TXT.build || '')} The purple +N Daev tags show Daevanion skill nodes that add on top once you have ${crystalsAt(1)} crystals, so a skill at 10 points shows as 14 in game when four of its nodes are bought.</p>
+    <ol class="order">` + DATA.build45.map(r => `<li><span class="o">${r.order}</span><span class="skills">${r.skills.map(s => skTag(s) + daevTag(s)).join('')}${r.alt ? `<span class="muted">${esc(r.alt)}</span>` : ''}</span><span class="to">to level<b class="num">${r.to}</b><span class="num">${r.cum} used</span></span></li>`).join('') + `</ol></div>`;
   h += `<div class="grid2"><div class="card"><header><h3>Passives, in order</h3></header><ol class="order">` +
     DATA.passives.map((p,i) => `<li><span class="o">${i+1}</span><span class="skills">${skTag(p)}</span><span class="to muted" style="max-width:220px;white-space:normal;font-weight:500">${esc((SK[p]||{}).role||'')}</span></li>`).join('') +
     `</ol><p class="note">${esc(TXT.passives || '')}</p></div>`;

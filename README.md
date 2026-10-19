@@ -37,7 +37,7 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 
 ## What is in each class planner
 
-- **Now**: the current level's skill point spends, what to hold back, new skills, Specialty picks and Daevanion nodes to buy.
+- **Now**: the current level's skill point spends, what to hold back, new skills, Specialty picks and Daevanion nodes to buy. Every skill's level is shown as the points you assign plus the Daevanion skill nodes, which is the level the game displays, with a switch between the planned nodes and the ones you marked owned.
 - **Levels 1-45**: the whole route with per-level points, crystals and unlocks.
 - **Skills**: every active, passive and stigma skill with cooldowns, MP and Specialty picks.
 - **Daevanion**: the five boards with numbered routes, a crystal schedule while levelling, and the route after 45.
