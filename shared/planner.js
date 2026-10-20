@@ -313,6 +313,129 @@ function renderMacro(){
   $('#p-macro').innerHTML = DATA.macro.map(c => `<div class="card ${c.gold ? 'gold' : ''}"><header><h${c.h || 3}>${esc(c.title)}</h${c.h || 3}>${c.eyebrow ? `<span class="eyebrow">${esc(c.eyebrow)}</span>` : ''}</header>` +
     c.blocks.map(b => BLOCK[b.t](b)).join('\n') + `</div>`).join('');
 }
+/* ---------------- STONES ---------------- */
+// Manastones, Soulstones and Theostones. STONES (shared/stones.js) holds the facts; DATA.stones (<class>-planner/stones.js) the class advice.
+const calcState = { stat: 'dmg', minTier: 0, lines: 1 };
+function renderStones(){
+  const el = $('#p-stones'); if (!el) return;
+  const S = DATA.stones;
+  if (typeof STONES === 'undefined' || !S) { el.innerHTML = '<div class="card"><p class="empty">Stone advice is not available for this class yet.</p></div>'; return; }
+  const GR = ['rare', 'epic', 'unique'], R = STONES.rarity;
+  const EFF = Object.fromEntries(STONES.effects.map(e => [e.k, e]));
+  const byName = {}; STONES.effects.forEach(e => GR.forEach(g => { byName[e.grades[g].name] = { e, g }; }));
+  const cap = s => s[0].toUpperCase() + s.slice(1);
+  const img = (f, c = '') => `<img class="sico ${c}" src="../shared/stone-icons/${f}.webp" alt="">`;
+  const gtag = g => `<span class="gr" style="--gr:${R[g]}">${cap(g)}</span>`;
+  const isDmg = e => e.kind === 'damage' || e.kind === 'aoe';
+  const cdText = e => `${e.cd} s cooldown${e.grades.rare.cd ? ` (Rare: ${e.grades.rare.cd} s)` : ''}`;
+  const picks = {};
+  [['pve', 'PvE'], ['pvp', 'PvP'], ['alt', 'Alt']].forEach(([k, lab]) => ((S.theo[k] || {}).effects || []).forEach(x => { (picks[x] = picks[x] || []).push(lab); }));
+  const topShare = {}; S.theo.top.forEach(([n, s]) => { topShare[n] = s; });
+
+  const tile = (capText, body, sub, cls = '') => `<div class="keytile ${cls}"><span class="kcap">${esc(capText)}</span><div class="kbody">${body}</div><small>${esc(sub)}</small></div>`;
+  const stoneCard = (key, label) => {
+    const e = EFF[key];
+    return `<div class="stonecard"><div class="sc-head">${img(e.icon, 'lg')}<div><span class="eyebrow">${esc(label)}</span><b>${esc(e.label)}</b><small>${e.chance}% chance on attack · ${cdText(e)}</small></div></div>
+      <div class="sc-grades">${GR.map(g => `<div class="sc-g" style="--gr:${R[g]}"><b>${esc(e.grades[g].name)}</b><small>${cap(g)} · ${esc(e.grades[g].val)}${isDmg(e) ? ` · about ${e.grades[g].avg} per attack` : ''}</small></div>`).join('')}</div></div>`;
+  };
+  const pickBlock = (sect, title, sub) => {
+    const p = S.theo[sect]; if (!p) return '';
+    return `<div class="pickblock"><h3>${esc(title)}</h3><p class="note">${esc(p.why)}</p><div class="stonecards">${p.effects.map((k, i) => stoneCard(k, i === 0 ? sub : 'Also good')).join('')}</div></div>`;
+  };
+  const first = key => { const e = EFF[key]; return `${img(e.icon, 'sm')}<b>${esc(e.grades.unique.name)}</b>`; };
+  const firstSent = t => (t.match(/^.*?[.!?](?=\s|$)/) || [t])[0];
+
+  let h = '';
+  // ---- at a glance
+  const M = S.mana, T = S.theo;
+  h += `<div class="card gold"><header><h2>${esc(META.name)} stones</h2><span class="eyebrow">weapon: ${esc(S.weapon)} · ${esc(T.role)}</span></header>
+    <p class="note">Manastones add one rolled stat per slot to weapons, guards and armor; Soulstones do the same for accessories. A Theostone is a separate weapon engraving with a chance to proc on attack. The class guides below say what to keep, what to fill the rest with and which Theostone to engrave.</p>
+    <div class="keys">
+      ${tile('Manastones · keep', `<b>${esc(M.lines.filter(l => l.tag === 'First' || l.tag === 'Keep').map(l => l.line).slice(0, 2).join(', ') || M.lines[0].line)}</b>`, M.headline)}
+      ${tile('Manastones · the rest', `<b>${esc(M.fillShort || firstSent(M.fill))}</b>`, 'Superior stones roll damage lines at only 0.5% each per roll, so most slots end up as these.')}
+      ${tile('Theostone · dungeons', first(T.pve.effects[0]), T.role)}
+      ${tile('Theostone · PvP', first(T.pvp.effects[0]), EFF[T.pvp.effects[0]].label + ', ' + EFF[T.pvp.effects[0]].chance + '% chance')}
+    </div></div>`;
+
+  // ---- manastones for this class
+  h += `<div class="card"><header><h2>Manastones for ${esc(META.name)}</h2><span class="eyebrow">lines worth keeping, in order</span></header>
+    <p class="note">${esc(M.headline)}</p>
+    <ol class="order">` + M.lines.map((l, i) => `<li><span class="o">${i + 1}</span><span class="skills" style="display:grid;gap:2px"><b>${esc(l.line)}</b><small class="muted">${esc(l.note)}</small></span><span class="to">${esc(l.tag)}</span></li>`).join('') + `</ol>
+    <p class="note"><b>The other slots.</b> ${esc(M.fill)}</p>
+    <p class="note"><b>PvP set.</b> ${esc(M.pvp)}</p>` +
+    (M.extra && M.extra.length ? `<ul class="fix">${M.extra.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '') + `</div>`;
+
+  // ---- odds calculator
+  const C = STONES.mana.calc;
+  h += `<div class="card"><header><h2>How many stones will it take?</h2><span class="eyebrow">Superior Manastone or Soulstone</span></header>
+    <p class="note">Each slot picks a stat by weight, then a tier: Rare 50%, Epic 35%, Unique 15%. Pick what you are chasing.</p>
+    <div class="calc">
+      <label>Stat<select id="cStat">${C.stats.map(s => `<option value="${s.k}" ${s.k === calcState.stat ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
+      <label>Minimum tier<select id="cTier">${C.tierNames.map((n, i) => `<option value="${i}" ${i === calcState.minTier ? 'selected' : ''}>${i === 0 ? 'Any tier' : n + ' or better'}</option>`).join('')}</select></label>
+      <label>Slots to fill with it<select id="cLines">${[1, 2, 3, 4].map(n => `<option value="${n}" ${n === calcState.lines ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+    </div>
+    <div class="calcout" id="cOut"></div>
+    <p class="note">Abyssal stones keep the damage lines at the same odds but give core stats such as Attack only 6% instead of 10%, and about a third of every roll to PvP lines. Use regular stones for PvE.</p></div>`;
+
+  // ---- slots, sizes, pool
+  const MS = STONES.mana, ic = STONES.stoneIcons;
+  h += `<div class="card"><header><h2>Slots, sizes and where stones come from</h2><span class="eyebrow">weapons, guards and armor take Manastones · accessories take Soulstones</span></header>
+    <div class="grid2"><div><h3>Slots by gear grade</h3><div class="tscroll"><table><thead><tr><th>Gear grade</th><th>Slots</th><th>Kinah per engrave</th></tr></thead><tbody>` +
+    MS.slots.map(s => `<tr><td>${esc(s.grade)}</td><td class="num">${s.n}</td><td class="num">${s.kina.toLocaleString('en-US')}</td></tr>`).join('') + `</tbody></table></div>
+      <p class="note">Amulets, belts and the rune have no slots. Slot count is fixed by grade, which is a big part of why a Unique piece beats an Epic one.</p></div>
+    <div><h3>Stone sizes</h3><div class="tscroll"><table><thead><tr><th>Size</th><th>Tier odds</th><th>Attack</th><th>Crit. Hit</th><th>Defense</th><th>HP</th></tr></thead><tbody>` +
+    MS.sizes.map((z, i) => `<tr><td><span class="sk">${img(ic.manastone[i], 'sm')}${img(ic.soulstone[i], 'sm')}<b>${esc(z.name)}</b></span></td><td class="muted">${esc(z.tiers)}</td><td class="num">${esc(z.attack)}</td><td class="num">${esc(z.crit)}</td><td class="num">${esc(z.defense)}</td><td class="num">${esc(z.hp)}</td></tr>`).join('') + `</tbody></table></div></div></div>
+    <h3>What each stone can roll</h3><div class="tscroll"><table><thead><tr><th>Stat</th><th>Lesser and Intermediate</th><th>Superior</th><th>Abyssal Lesser and Intermediate</th><th>Superior Abyssal</th></tr></thead><tbody>` +
+    MS.pool.map(r => `<tr><td>${esc(r.stat)}</td><td>${esc(r.regular)}</td><td>${esc(r.superior)}</td><td>${esc(r.abyssal)}</td><td>${esc(r.sabyssal)}</td></tr>`).join('') + `</tbody></table></div>
+    <h3>Where to get them</h3><ul class="when">` + MS.sources.map(s => `<li><span class="who"><b>${esc(s[0])}</b></span><span class="why">${esc(s[1])}</span></li>`).join('') + `</ul>
+    <div class="chips">${[['Manastone', ic.manastone[2]], ['Soulstone', ic.soulstone[2]], ['Abyssal Manastone', ic.abyssalManastone[2]], ['Abyssal Soulstone', ic.abyssalSoulstone[2]]].map(([n, f]) => `<span class="chip">${img(f, 'sm')}Superior ${esc(n)}</span>`).join('')}</div></div>`;
+
+  // ---- theostones for this class
+  h += `<div class="card gold"><header><h2>Theostones for ${esc(META.name)}</h2><span class="eyebrow">${esc(T.role)}</span></header>
+    <p class="note">A Theostone is an engraving with a chance to proc when you attack. Only Epic and Unique weapons have the slot, identical stones do not stack, and even a Unique stone adds under 1% of your damage in PvE. Damage stones deal a flat amount. Within one grade, every single-target damage stone averages the same, and every area stone averages half of that per target. What separates them is the one-second cooldown and how many enemies you hit.</p>` +
+    pickBlock('pve', 'For dungeons and levelling', 'Best for you') + pickBlock('alt', 'If you tank', 'Alternative') + pickBlock('pvp', 'For PvP', 'Control stone') +
+    `<div class="pickblock"><h3>What the top players of your class run</h3><p class="note">The share of the 100 strongest ${esc(META.name)}s that have each stone on their weapon or guard, from the official character pages (Global, 20 Oct 2026). ${esc(T.note)}</p><ul class="bars">` +
+    T.top.map(([n, s]) => { const x = byName[n]; return `<li><span class="bn">${img(x.e.icon, 'sm')}<b>${esc(n)}</b> ${gtag(x.g)}</span><span class="be">${esc(x.e.label)}</span><span class="bt"><i style="width:${Math.min(100, s * 100 / 35)}%"></i></span><b class="num">${s}%</b></li>`; }).join('') + `</ul></div></div>`;
+
+  // ---- all 17
+  h += `<div class="card"><header><h2>All 17 Theostones</h2><span class="eyebrow">51 stones: each effect in three grades</span></header>
+    <p class="note">Tags mark your class's picks. The proc chance is the same at every grade; the grade changes the duration or the damage. Rare stones are tradeable, Epic and Unique are not.</p>
+    <div class="tscroll"><table class="theo"><thead><tr><th>Effect</th><th>Chance</th><th>Cooldown</th><th>Rare</th><th>Epic</th><th>Unique</th></tr></thead><tbody>` +
+    STONES.effects.map(e => `<tr class="${picks[e.k] ? 'rec' : ''}"><td><span class="sk">${img(e.icon, 'sm')}<b>${esc(e.label)}</b></span>${(picks[e.k] || []).map(t => `<span class="gain">${t} pick</span>`).join('')}</td><td class="num">${e.chance}%</td><td class="num">${e.cd} s${e.grades.rare.cd ? ` <span class="muted">(Rare ${e.grades.rare.cd} s)</span>` : ''}</td>` +
+      GR.map(g => `<td><span class="nm" style="color:${R[g]}">${esc(e.grades[g].name)}</span>${topShare[e.grades[g].name] ? ` <span class="gain">${topShare[e.grades[g].name]}% of top ${esc(META.name)}s</span>` : ''}<br><small class="muted">${esc(e.grades[g].val)}${isDmg(e) ? ` · ~${e.grades[g].avg}/attack` : ''}</small></td>`).join('') + `</tr>`).join('') + `</tbody></table></div></div>`;
+
+  // ---- getting and combining
+  const TH = STONES.theo;
+  h += `<div class="card"><header><h2>Getting and combining Theostones</h2><span class="eyebrow">engrave from the Enhancement menu</span></header>
+    <div class="grid2"><div><h3>Where they come from</h3><ul class="when">` + TH.sources.map(s => `<li><span class="who"><b>${esc(s[0])}</b></span><span class="why">${esc(s[1])}</span></li>`).join('') + `</ul></div>
+    <div><h3>Combining</h3><p class="note">Register stones of one grade in the Combine window. The result is a random stone from a fixed pool, and the pool includes the same grade, so most combines do not upgrade. Identical stones do not stack, so every Rare stone you will not engrave is combine fodder.</p>
+      <div class="tscroll"><table><thead><tr><th>Combine</th><th>Same grade</th><th>Upgrade</th></tr></thead><tbody>` + TH.combine.map(c => `<tr><td>${esc(c.from)}</td><td>${esc(c.same)}</td><td>${esc(c.up)}</td></tr>`).join('') + `</tbody></table></div>
+      <p class="note">Before engraving, read the popup: removing a stone either returns it or destroys it. Do not swap a Unique stone back and forth without checking which.</p></div></div></div>`;
+
+  // ---- levelling, rules, caveats, sources
+  h += `<div class="card"><header><h2>While levelling</h2></header><ul class="fix">` + STONES.levelling.map(x => `<li>${esc(x)}</li>`).join('') + `</ul></div>`;
+  h += `<div class="card"><header><h2>Rules that apply to every stone</h2></header><ul class="when">` + STONES.rules.map(r => `<li><span class="who"><b>${esc(r[0])}</b></span><span class="why">${esc(r[1])}</span></li>`).join('') + `</ul></div>`;
+  h += `<div class="card"><header><h2>Where sources disagree</h2><span class="eyebrow">compiled ${esc(STONES.compiled)}</span></header><ul class="fix">` + STONES.caveats.map(x => `<li>${esc(x)}</li>`).join('') + `</ul>
+    <h3>Sources</h3><ol class="src">` + STONES.sources.map(s => `<li><a href="${esc(s[0])}" target="_blank" rel="noopener">${esc(s[1])}</a>: ${esc(s[2])}</li>`).join('') + `</ol></div>`;
+  el.innerHTML = h;
+
+  // ---- calculator wiring
+  const fmtPct = p => (p >= 1 ? p.toFixed(1) : p >= 0.1 ? p.toFixed(2) : p.toFixed(3)) + '%';
+  const fmtN = n => n >= 100 ? Math.round(n).toLocaleString('en-US') : n >= 10 ? n.toFixed(0) : n.toFixed(1);
+  function updateCalc(){
+    const st = C.stats.find(s => s.k === calcState.stat) || C.stats[0];
+    const pTier = C.tiers.slice(calcState.minTier).reduce((a, b) => a + b, 0) / 100;
+    const chance = st.w / 100 * pTier, one = 1 / chance, k = calcState.lines;
+    $('#cOut').innerHTML = `<div class="cbox"><span class="eyebrow">Chance per stone</span><b class="num">${fmtPct(chance * 100)}</b><small>${esc(st.name)}${calcState.minTier ? ', ' + C.tierNames[calcState.minTier] + ' or better' : ', any tier'}</small></div>
+      <div class="cbox"><span class="eyebrow">Stones for one slot</span><b class="num">about ${fmtN(one)}</b><small>on average</small></div>
+      ${k > 1 ? `<div class="cbox"><span class="eyebrow">Stones for ${k} slots</span><b class="num">about ${fmtN(one * k)}</b><small>each slot is rolled separately</small></div>` : ''}
+      <div class="cbox"><span class="eyebrow">Value at each tier</span><b class="num" style="font-size:1rem">${C.tierNames.map((n, i) => `${st.vals[i]}`).join(' / ')}${esc(st.unit)}</b><small>${C.tierNames.join(' / ')}${st.unit ? ' · 100 Boost = 1%' : ''}</small></div>`;
+  }
+  $('#cStat').onchange = e => { calcState.stat = e.target.value; updateCalc(); };
+  $('#cTier').onchange = e => { calcState.minTier = +e.target.value; updateCalc(); };
+  $('#cLines').onchange = e => { calcState.lines = +e.target.value; updateCalc(); };
+  updateCalc();
+}
 /* ---------------- SOURCES ---------------- */
 function renderSrc(){
   const a = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
@@ -324,7 +447,7 @@ function renderSrc(){
   <p class="note">${esc(TXT.src || '')}</p></div>`;
 }
 /* ---------------- tabs & level ---------------- */
-const TABS = ['now','levels','skills','daev','build','stig','macro','src'];
+const TABS = ['now','levels','skills','daev','build','stig','macro','stones','src'];
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + id));
@@ -337,7 +460,7 @@ $('#lvUp').onclick = () => setLevel(state.level + 1);
 $('#lvRange').oninput = e => setLevel(+e.target.value);
 function renderAll(){
   $('#lvOut').value = state.level; $('#lvRange').value = state.level;
-  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderMacro();
+  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderMacro(); renderStones();
 }
 if (typeof siteMenu === 'function') siteMenu(META.cls, '../');
 loadLocal();

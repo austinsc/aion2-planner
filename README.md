@@ -42,6 +42,7 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 - **Skills**: every active, passive and stigma skill with cooldowns, MP and Specialty picks.
 - **Daevanion**: the five boards with numbered routes, a crystal schedule while levelling, and the route after 45.
 - **Build at 45**, **Stigmas**, **Macro**: the reset order for 383 points, stigma plan, and the boss and trash macro setups.
+- **Stones**: which Manastone lines to keep and what to fill the rest with, which Theostone to engrave for dungeons and for PvP, what the top 100 players of the class run, all 51 Theostones with their chances and damage, an odds calculator for Manastone rolls, and how to get and combine stones.
 
 ## What is in the Essence Extraction planner
 

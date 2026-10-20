@@ -1,0 +1,76 @@
+{
+ "weapon": "Dual daggers",
+ "mana": {
+  "headline": "Back Attack Damage Boost first, then Weapon Damage Boost, Critical Damage Boost and Damage Boost.",
+  "lines": [
+   {
+    "line": "Back Attack Damage Boost",
+    "tag": "First",
+    "note": "A multiplier of its own that starts at zero. Only Superior and Superior Abyssal Manastones and Soulstones roll it, about one stone in 200. Lock the slot the moment it appears."
+   },
+   {
+    "line": "Weapon Damage Boost",
+    "tag": "Then",
+    "note": "Next, in this order."
+   },
+   {
+    "line": "Critical Damage Boost",
+    "tag": "Then",
+    "note": "Next, in this order."
+   },
+   {
+    "line": "Damage Boost",
+    "tag": "Then",
+    "note": "Next, in this order."
+   }
+  ],
+  "fill": "Until you have those lines, a gold (Unique) Attack line is the best filler. Then Critical Hit, and Accuracy if you miss bosses.",
+  "pvp": "Abyssal Manastones roll PvP lines. PvP Damage Boost first, which only Superior Abyssal stones roll. Builds split on PvP Evasion or PvP Accuracy beside it.",
+  "extra": [
+   "Double Chance cannot be rolled by any stone. Put it on gear through Soul Binding wherever it rolls."
+  ],
+  "fillShort": "A gold Attack line, then Critical Hit"
+ },
+ "theo": {
+  "role": "Fast single-target DPS",
+  "pve": {
+   "effects": [
+    "fire"
+   ],
+   "why": "Fast hits waste the fewest procs on a 1% stone, because it almost never fires twice inside its one-second cooldown. Tiamat's Rage is the Unique: 15,000 Fire damage at a 1% chance."
+  },
+  "pvp": {
+   "effects": [
+    "paralyze"
+   ],
+   "why": "A 2% chance to paralyze, up to 4 s at Unique, once every 5 s at most. Ereshkigal's Honor."
+  },
+  "top": [
+   [
+    "Perion's Tragedy",
+    17
+   ],
+   [
+    "Vidar's Dignity",
+    16
+   ],
+   [
+    "Khrudgelmir's Silence",
+    16
+   ],
+   [
+    "Nua's Scheme",
+    13
+   ],
+   [
+    "Feruk's Instinct",
+    12
+   ],
+   [
+    "Traufnir's Courage",
+    9
+   ]
+  ],
+  "note": "Zikel's Vestige is the most engraved damage stone for Assassins, with Traufnir's Courage, its Epic form, next."
+ }
+}

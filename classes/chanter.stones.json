@@ -1,0 +1,68 @@
+{
+ "weapon": "Staff",
+ "mana": {
+  "headline": "Back Attack Damage Boost first, then Weapon Damage Boost.",
+  "lines": [
+   {
+    "line": "Back Attack Damage Boost",
+    "tag": "First",
+    "note": "Taken from global logs. Only Superior and Superior Abyssal Manastones roll the damage lines."
+   },
+   {
+    "line": "Weapon Damage Boost",
+    "tag": "Then",
+    "note": "Next."
+   }
+  ],
+  "fill": "Fill the other slots with Attack first, then Critical Hit, then Accuracy if you are missing bosses. Each of those is a 10% roll on a stone, so they are what most slots will become. If you play the healing build, one source suggests HP and Defense instead.",
+  "pvp": "Abyssal Manastones swap about a third of every roll for PvP lines such as PvP Attack. Use them only on a PvP set. Builds split on which PvP line to take first, so check what your Abyss gear already has.",
+  "extra": [
+   "Double Chance is your top stat and no stone rolls it."
+  ],
+  "fillShort": "Attack, then Critical Hit, then Accuracy"
+ },
+ "theo": {
+  "role": "Support and DPS",
+  "pve": {
+   "effects": [
+    "earth-aoe",
+    "fire-aoe"
+   ],
+   "why": "Area stones pay out once for every enemy hit, and every damage stone of one grade averages the same damage against a single target. So an area stone is never worse and gets better with each extra enemy. Against one enemy it is worth half as much. On the healing build, Beritra's Selfishness (20% Wind area) is the steadier pick."
+  },
+  "pvp": {
+   "effects": [
+    "seal",
+    "stun"
+   ],
+   "why": "Seal (3%, up to 5 s at Unique) shuts down skills; Stun (3%, up to 3 s) stops a player. Either fires once every 5 s at most."
+  },
+  "top": [
+   [
+    "Perion's Tragedy",
+    15
+   ],
+   [
+    "Nua's Scheme",
+    14
+   ],
+   [
+    "Aultross's Promise",
+    13
+   ],
+   [
+    "Khrudgelmir's Silence",
+    10
+   ],
+   [
+    "Zikel's Vestige",
+    9
+   ],
+   [
+    "Tassin's Command",
+    8
+   ]
+  ],
+  "note": "Chanters are the one class whose most engraved damage stone is Tassin's Command (Water)."
+ }
+}

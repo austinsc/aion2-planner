@@ -12,6 +12,8 @@ After changing a class's macro cards, also run `python3 tools/render_macros.py` 
 
 Fetched pages are cached in `tools/cache/` (git-ignored); delete a file there to refetch it.
 
+The Stones tab has its own small step: `python3 tools/render_stones.py` writes `shared/stones.js` from `tools/stones_base.json` (all 51 Theostones with exact tooltips, the Manastone tables, the odds calculator inputs, general rules and sources) and each `<class>-planner/stones.js` from `classes/<class>.stones.json` (the class's Manastone priority, Theostone picks and the top players' stones). It checks that every stone name and effect key exists. The icons are in `shared/stone-icons/`. Edit the JSON and re-run; the engine in `shared/planner.js` renders the tab.
+
 ## What is generated
 
 `build_class.py` reads the class guide on [Aion 2 Maps](https://aion2maps.com/guides/) and the [Metabot skill list](https://metabot.gg/en/aion-2/skills):
