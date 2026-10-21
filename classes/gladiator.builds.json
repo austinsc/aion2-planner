@@ -1,0 +1,786 @@
+{
+ "intro": "The PvP preset and the three Gladiator variants players actually run beside the main boss build: a Blade Toss group-damage setup, a solo farming setup and an off-tank setup. Each keeps the main build's core where it can; skill presets keep their own points, so none of these costs the PvE build anything.",
+ "crosscheck": "Other sources back the main build's core. Aion2 Guides (aion2-guides.info), GamerBlurb, Aion2Data, Aion2 Meta and ExpCarry all build around Overhead Slam, Rending Blow and Ruinous Blow, with Lunge Stance, Zikel's Blessing, Rage Burst and Focused Block as stigmas. Aion2 Tier List's top 100 Global Gladiators run Lunge Stance and Rage Burst 100%, Zikel's Blessing 98% and Focused Block 78%. ExpCarry's sample of 200 has the first three at about 83% but Focused Block at only 43.5%, so the fourth slot is the least settled. Lunge Stance first after 45 (to 20), then Zikel's Blessing to 10, matches Aion2 Guides and Aion2Data. The passive order (Attack Preparation and Experienced Counterstrike, then Murderous Burst and Impact Hit) matches Aion2 Guides and what Aion2 Meta's Korean data shows on gear. They differ in four places. (1) Crushing Wave and Sword Aura Rampage: the main build takes both to 10, while Aion2 Meta says Sword Aura Rampage isn't worth points and that 35–38% of top Global players leave both below 8; Aion2 Guides calls Crushing Wave too slow for bosses but keeps Sword Aura Rampage on the Ruinous line for its level-16 cooldown pick (Arthars). (2) Destructive Impulse: Aion2 Guides (aLuckyRO, Sen) and Vortex's Korean guide level it, which backs keeping it in the build, though last. (3) Keen Strike: Aion2 Guides (Grobs) stops holding it once Overhead Slam and Rending Blow reach 16; Aion2Data and Ulfhednar keep holding it. (4) The macro: Aion2 Guides and Aion2 Meta put Rage Burst in Overhead Slam's stacked line and keep Rending Blow on a separate line; the main build gives Overhead Slam its own key. Both keep Overhead Slam from being cut off by Rending Blow. Aion2 Atlas is the outlier: Blade Toss and Wrath Wave in the burst macro, and Cooldown Reduction as the second stat, which Aion2 Guides says a Gladiator never needs.",
+ "builds": [
+  {
+   "id": "pvp",
+   "name": "PvP Bruiser",
+   "mode": "PvP",
+   "role": "Melee duelist and Abyss skirmisher",
+   "summary": "Close in, knock the target down with Mocking Blade, punish with Overhead Slam while they're down, and outlast the counter-burst with Tenaciousness. Points move from boss damage into control (Mocking Blade, Aerial Snare, Rush Strike) and anti-control (Defiance, Survival Willpower).",
+   "when": "Arena of Solitude, roaming and 1v1 or small fights in the Abyss. Weakest in big Abyss battles against organised ranged groups (Aion2 Tier List, ExpCarry, Aion2 Builds).",
+   "popularity": "Rated S for PvP by Aion2 Tier List, Aion2 Meta and Aion2 Atlas. ExpCarry gives it S for roaming, A in the Arena and B in organised Abyss fights. Among the top 100 Global Gladiators, Tenaciousness is slotted by 58%, Blade Toss by 35% and Armor of Balance by 18%: more picks than four slots hold, which points to a second, PvP preset (Aion2 Tier List). Korean PvP players run Tenaciousness 98.5% and Armor of Balance 90.9% (Aion2 Meta, KR). Every guide says there is no settled Global PvP meta yet.",
+   "vsMain": "A second skill preset. Crushing Wave, Sword Aura Rampage and Destructive Impulse drop to 1. Defiance, Aerial Snare and Survival Willpower go to 10. Stigmas: Lunge Stance stays; Tenaciousness, Blade Toss and Armor of Balance (or Focused Block) replace Zikel's Blessing, Rage Burst and Focused Block.",
+   "skills": [
+    {
+     "skill": "Overhead Slam",
+     "to": 10
+    },
+    {
+     "skill": "Mocking Blade",
+     "to": 10
+    },
+    {
+     "skill": "Defiance",
+     "to": 10,
+     "note": "63"
+    },
+    {
+     "skill": "Aerial Snare",
+     "to": 10
+    },
+    {
+     "skill": "Rush Strike",
+     "to": 10
+    },
+    {
+     "skill": "Survival Willpower",
+     "to": 10,
+     "note": "126"
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Ruinous Blow",
+     "to": 10,
+     "note": "189"
+    },
+    {
+     "skill": "Rending Blow",
+     "to": 10
+    },
+    {
+     "skill": "Keen Strike",
+     "to": 10
+    },
+    {
+     "skill": "Leaping Slam",
+     "to": 10,
+     "note": "252"
+    },
+    {
+     "skill": "Ankle Slice",
+     "to": 10
+    },
+    {
+     "skill": "Survival Stance",
+     "to": 10
+    },
+    {
+     "skill": "Blood Absorption",
+     "to": 10,
+     "note": "315"
+    },
+    {
+     "skill": "Experienced Counterstrike",
+     "to": 10
+    },
+    {
+     "skill": "Murderous Burst",
+     "to": 10
+    },
+    {
+     "skill": "Identify Weakness",
+     "to": 10,
+     "note": "378 of 383; 5 spare. Crushing Wave, Sword Aura Rampage, Destructive Impulse and Protection Armor stay at 1. No source gives a full PvP point order: this is the aion2maps PvP preset's 18 skills, ordered by the PvP priorities of Aion2 Guides, Aion2 Builds and GamerBlurb"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Overhead Slam",
+     "picks": "Adds [Upward Strike] Chain Skill, and Critical Hit on hit (12); Remove cooldown at 16. Korean players take Absorbs 0.7% HP in place of Upward Strike; at 20, Changes to AoE Skill for the Abyss or Critical Hit for the Arena"
+    },
+    {
+     "skill": "Mocking Blade",
+     "picks": "Adds 2 additional strikes, then +1s Knockdown duration (12); Ignores Block and Evasion and lands as Multi-Hit at 16. Aion2maps keeps the PvE heal pick (Absorbs 4% HP...)"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 20% HP on using [Defiance]; +2s Tenacity duration (12) and +50% PvE Damage Tolerance and +25% PvP Damage Tolerance for Tenacity duration (16)"
+    },
+    {
+     "skill": "Aerial Snare",
+     "picks": "+25% [Aerial Snare] Airborne Chance; Adds [Forced Fall] Chain Skill (12); -50% [Aerial Snare] cooldown (16)"
+    },
+    {
+     "skill": "Rush Strike",
+     "picks": "+10m range; -10s cooldown (12); +25% Knockdown Chance at 16"
+    },
+    {
+     "skill": "Ankle Slice",
+     "picks": "30% chance to inflict Knockdown for 3s on landing [Ankle Slice] in place of the PvE range pick"
+    },
+    {
+     "skill": "Ruinous Blow",
+     "picks": "+12.5m Range; Ignores Block and Evasion and lands as Multi-Hit at 16 (good against Templars)"
+    },
+    {
+     "skill": "Leaping Slam",
+     "picks": "50% chance to trigger [Ankle Slice] on hit, and +20% PvE Damage Tolerance and +10 PvP Damage Tolerance for 3s (12). Korean players and Abyss group fights take Resets cooldown on defeating an enemy"
+    },
+    {
+     "skill": "Rending Blow",
+     "picks": "Changes to mobile skill; Restores 50 MP on landing a Critical Hit at 16"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Tenaciousness",
+     "lvl": 10,
+     "why": "3 s immune to damage and status effects, then +25% PvP Damage Tolerance; +100% Incoming Heal at 5, 20% Max HP back when it ends at 10"
+    },
+    {
+     "name": "Lunge Stance",
+     "lvl": 5,
+     "why": "Combat Speed and +5% Double Chance; at 10, +20% Move Speed for chasing (aion2maps). Take it to 20 with Stigma Shards for the crit cooldown cuts, which also bring Tenaciousness and Defiance back faster"
+    },
+    {
+     "name": "Blade Toss",
+     "lvl": 5,
+     "why": "20 m opener on healers and runners: -30% Defense and -70% Incoming Heal for 10 s at 5. It breaks Protective Shields from 15"
+    },
+    {
+     "name": "Armor of Balance",
+     "lvl": 5,
+     "why": "+20% Ailment-type and Mental-type Resist; pop it before you dive. In the Arena, Focused Block takes this slot to parry a burst combo"
+    }
+   ],
+   "passives": [
+    "Attack Preparation",
+    "Survival Willpower",
+    "Impact Hit",
+    "Survival Stance",
+    "Blood Absorption"
+   ],
+   "daevanion": "Azphel, the PvP board, runs on its own crystals: 36 from Ereshkigal's Monolith and 110 from the Abyss Shop in Season 1. Take its core nodes first (4 PvP Damage Boost and 4 PvP Damage Tolerance, +1.5% each), then the Status Effect Resist nodes. Whether Boost or Tolerance comes first is split. On the other boards, Aion2 Guides' PvP route takes Overhead Slam, Mocking Blade, Defiance and Aerial Snare skill nodes first, then the orange core nodes. Triniel's Multi-Hit nodes count in PvP too.",
+   "gear": "Keep your PvE gear in Season 1 (Aion2 Guides). Swap Revelation Amulet for Fierce Battle Amulet (PvP Damage Boost). Title: Saint of Ereshkigal (PvP Damage Boost 4%). Status Effect Resist on armour lines, and PvP lines on Abyssal Manastones. Stat order: Accuracy first, since players Block and Evade far more than bosses; then PvP Damage Boost, Critical Hit and Combat Speed, then HP, PvP Damage Tolerance and Status Effect Resist. Arcana: Overhead Slam to 20, then Mocking Blade, Defiance and Aerial Snare to 16. Keep a separate PvP Genus preset.",
+   "play": [
+    "Open from range with Blade Toss; don't burn Leaping Slam and Rush Strike on the first engage. Keep one to catch a runner or to get out.",
+    "Bait Defiance first: its 5 s of immunity wastes a Mocking Blade thrown into it.",
+    "Mocking Blade, then Overhead Slam until they stand up, then Aerial Snare and Forced Fall to extend it.",
+    "No knockdown? Ankle Slice or Rush Strike after a Dodge can land one.",
+    "Armor of Balance goes up before you dive. Use Defiance on the first hard control that would kill you, and save Tenaciousness for the follow-up chain or their burst.",
+    "Don't spend your burst into Hibernation, Salvation or another Gladiator's Tenaciousness: wait it out.",
+    "Pick duels and skirmishes; stay with your frontline in big Abyss fights."
+   ],
+   "pros": [
+    "Guaranteed knockdown and a long control chain on one target",
+    "Sustain and two defensive cooldowns make it forgiving in long fights",
+    "Anti-heal on demand against healers"
+   ],
+   "cons": [
+    "Melee only: kiting classes and Roots (which Defiance doesn't clear) shut it down",
+    "Weak in large group fights against ranged players",
+    "Gear-dependent: mediocre in PvP for low spenders (Aion2 Tier List)",
+    "Korea cut PvP damage by 30% on 14 Oct (KR only so far)"
+   ],
+   "sources": [
+    {
+     "title": "Aion 2 Maps: Gladiator (PvP tab)",
+     "url": "https://aion2maps.com/guides/gladiator/",
+     "note": "PvP preset skill points (Survival Willpower, Aerial Snare and Defiance up; Sword Aura Rampage, Crushing Wave and Destructive Impulse down), Specialty swaps, stigma level effects, Azphel route and crystal sources, PvP gear and Genus preset, how it fights and what to watch for"
+    },
+    {
+     "title": "Aion2 Guides: Gladiator (PvP mode)",
+     "url": "https://aion2-guides.info/en/gladiator/",
+     "note": "Abyss and Arena stigma sets (from Korean builds), target skill levels, PvP Specialty picks, passive values, PvP Daevanion skill nodes, gear advice and combos"
+    },
+    {
+     "title": "GamerBlurb: Gladiator Build Guide, PvE and PvP",
+     "url": "https://gamerblurb.com/guides/aion-2-gladiator-build-guide-pve-and-pvp",
+     "note": "Blade Toss, Lunge Stance, Armor of Balance and Tenaciousness; Rage Burst as the aggressive swap; PvP skill priority, Specialty directions, stat order, and keeping a gap closer in reserve"
+    },
+    {
+     "title": "Aion2 Builds: Gladiator PvP Build",
+     "url": "https://aion2builds.org/builds/gladiator-pvp/",
+     "note": "Same Abyss and Arena loadouts and levels (Tenaciousness 10), PvP passives and Azphel first. Largely mirrors Aion2 Guides"
+    },
+    {
+     "title": "Aion2Data: Gladiator PvP duelist",
+     "url": "https://aion2data.com/guides/gladiator/pvp",
+     "note": "Korean Abyss duelist setup (Rush Strike, Defiance, Overhead Slam with its HP absorb), Armor of Balance as the stigma never dropped, Accuracy-first stats, Fierce Battle Amulet, and the 14 Oct KR PvP cut"
+    },
+    {
+     "title": "Aion2 Meta: Gladiator",
+     "url": "https://aion2-meta.com/guides/gladiator/",
+     "note": "Korean PvP stigma rates (1,197 players) and skill/Specialty picks, Global stigma rates, PvP kill combo and Defiance timing"
+    },
+    {
+     "title": "Aion2 Tier List: Gladiator guide",
+     "url": "https://aion2tierlist.com/guides/aion-2-gladiator-guide",
+     "note": "S-tier PvP rating, and stigma pick rates of the top 100 Global Gladiators (Tenaciousness 58%, Blade Toss 35%, Armor of Balance 18%)"
+    },
+    {
+     "title": "MetaBot: Arena PvP guide",
+     "url": "https://metabot.gg/en/aion-2/guides/arena-pvp-guide",
+     "note": "Its Arena preset (Zikel's Blessing, Lunge Stance, Tenaciousness, Wrath Wave), and that player control is a chance roll"
+    },
+    {
+     "title": "Inven (KR): Gladiator board, PvP stigma thread",
+     "url": "https://www.inven.co.kr/board/aion2/6448/31781",
+     "note": "Korean PvP bar of Armor of Balance, Rage Burst and Focused Block with Tenaciousness or Blade Toss (KR only)"
+    },
+    {
+     "title": "ExpCarry: AION 2 PvP tier list",
+     "url": "https://expcarry.com/aion-2-pvp-tier-list",
+     "note": "Gladiator S for roaming, A in the Arena, B in organised Abyss fights"
+    }
+   ],
+   "disagree": "The fourth stigma splits. Armor of Balance is the pick of Aion2 Guides (Abyss), GamerBlurb, Aion2Data and Korean players. Focused Block is the pick of Aion2 Maps and Aion2 Guides (Arena). Rage Burst is GamerBlurb's aggressive option and appears on Korean Inven bars. MetaBot's preset keeps Zikel's Blessing and Wrath Wave, and Aion2Data's Korean source runs Lifestealing Blade. This build follows the majority (Armor of Balance, with Focused Block for the Arena). Stigma levels at 45: Tenaciousness 10 follows Aion2 Guides and Aion2 Builds; Aion2 Maps values Lunge Stance 10 for its Move Speed. Crushing Wave: Aion2 Guides raises it for its pull on healers and Korean data takes it to 20, but Aion2 Maps and AOEAH drop it. AOEAH's cooldown figures for Tenaciousness and Defiance don't match the client, so they're not used here."
+  },
+  {
+   "id": "pve-alt-bladetoss",
+   "name": "Group DPS (Blade Toss)",
+   "mode": "PvE",
+   "role": "Damage dealer in an organised group",
+   "summary": "The main build with Blade Toss in Focused Block's slot. Blade Toss takes 30% off the boss's Defense for 10 s every 20 s, so the whole party hits harder, at the cost of Focused Block's guaranteed Parry and its party buff.",
+   "when": "Organised groups where someone else holds the boss and parries (a Templar, or another Gladiator on Focused Block), on long single-target fights.",
+   "popularity": "Blade Toss is the most common fourth-slot swap: 35% of the top 100 Global Gladiators (Aion2 Tier List), 41.5% of top Global players (Aion2 Meta) and 14% of ExpCarry's sample of 200. Ulfhednar, a Global creator, runs it in his macro (Aion2 Guides).",
+   "vsMain": "Stigmas only: Blade Toss replaces Focused Block. Skill points, Specialties and Daevanion stay the same. aLuckyRO's version drops Zikel's Blessing instead and keeps Focused Block for semi-tanking.",
+   "skills": [
+    {
+     "skill": "Overhead Slam",
+     "to": 10,
+     "note": "Unchanged from the main build: 378 of 383"
+    },
+    {
+     "skill": "Rending Blow",
+     "to": 10
+    },
+    {
+     "skill": "Ruinous Blow",
+     "to": 10
+    },
+    {
+     "skill": "Keen Strike",
+     "to": 10
+    },
+    {
+     "skill": "Experienced Counterstrike",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Crushing Wave",
+     "to": 10
+    },
+    {
+     "skill": "Sword Aura Rampage",
+     "to": 10
+    },
+    {
+     "skill": "Identify Weakness",
+     "to": 10
+    },
+    {
+     "skill": "Murderous Burst",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Survival Stance",
+     "to": 10
+    },
+    {
+     "skill": "Leaping Slam",
+     "to": 10
+    },
+    {
+     "skill": "Mocking Blade",
+     "to": 10
+    },
+    {
+     "skill": "Blood Absorption",
+     "to": 10
+    },
+    {
+     "skill": "Rush Strike",
+     "to": 10
+    },
+    {
+     "skill": "Ankle Slice",
+     "to": 10
+    },
+    {
+     "skill": "Destructive Impulse",
+     "to": 10
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Keen Strike",
+     "picks": "+20% MP restored, and -1s [Ruinous Blow] cooldown on hit (12); Ulfhednar holds Keen Strike all fight"
+    },
+    {
+     "skill": "Rending Blow",
+     "picks": "Changes to mobile skill; Restores 50 MP on landing a Critical Hit at 16"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Lunge Stance",
+     "lvl": 10,
+     "why": "As in the main build"
+    },
+    {
+     "name": "Zikel's Blessing",
+     "lvl": 5,
+     "why": "As in the main build"
+    },
+    {
+     "name": "Rage Burst",
+     "lvl": 5,
+     "why": "As in the main build"
+    },
+    {
+     "name": "Blade Toss",
+     "lvl": 5,
+     "why": "-30% Defense on the target for 10 s, every 20 s; its higher levels only add PvP effects. Put it in the buff line so it stays up"
+    }
+   ],
+   "passives": [
+    "Experienced Counterstrike",
+    "Attack Preparation",
+    "Murderous Burst",
+    "Impact Hit",
+    "Identify Weakness"
+   ],
+   "daevanion": "Same as the main build.",
+   "gear": "Same as the main build. Ulfhednar's stat notes: damage lines (Critical Hit, Damage Boost) on gear; soul binds on weapon and guard in the order Weapon Damage Boost, Combat Speed, Damage Boost, Might; some Accuracy so the boss doesn't parry you.",
+   "play": [
+    "Ulfhednar's bar: buff line Zikel's Blessing, Lunge Stance, Blade Toss, Ruinous Blow; main line Rage Burst then Overhead Slam; stagger line Sword Aura Rampage then Rending Blow. Macro the three lines at 10 ms and hold Keen Strike.",
+    "Without Focused Block your party buff comes only from your own Blocks, so let the tank take the frontal hits.",
+    "Check that no one else in the group already brings a Defense debuff: sources don't say whether two stack."
+   ],
+   "pros": [
+    "Raises the whole party's damage, not only yours",
+    "No new points or presets needed: one stigma swap"
+   ],
+   "cons": [
+    "Loses Focused Block's guaranteed Parry, its MP refund and the Experienced Counterstrike party buff",
+    "Only worth it in a group that can use the Defense shred"
+   ],
+   "sources": [
+    {
+     "title": "Aion2 Guides: Gladiator (PvE)",
+     "url": "https://aion2-guides.info/en/gladiator/",
+     "note": "Ulfhednar's Global macro with Blade Toss in place of Focused Block, and aLuckyRO's group pick (in place of Zikel's Blessing)"
+    },
+    {
+     "title": "ExpCarry: Gladiator Build Guide",
+     "url": "https://expcarry.com/aion-2-gladiator-guide",
+     "note": "Blade Toss as the fourth stigma for organised group damage; usage in a 200-character sample"
+    },
+    {
+     "title": "Aion2 Tier List: Gladiator guide",
+     "url": "https://aion2tierlist.com/guides/aion-2-gladiator-guide",
+     "note": "Blade Toss on 35% of the top 100 Global Gladiators"
+    },
+    {
+     "title": "Aion2 Meta: Gladiator",
+     "url": "https://aion2-meta.com/guides/gladiator/",
+     "note": "Blade Toss on 41.5% of top Global players and 43% of Korean PvE players"
+    },
+    {
+     "title": "AOEAH: Best Gladiator Builds",
+     "url": "https://www.aoeah.com/news/4855--best-aion-2-gladiator-builds--skills-2026-pvp--pve",
+     "note": "Swap Focused Block for Blade Toss when you play pure damage rather than off-tank"
+    },
+    {
+     "title": "Aion2 Atlas: Gladiator build",
+     "url": "https://aion2atlas.app/builds/gladiator/",
+     "note": "Blade Toss in its PvE burst macro for the Defense shred"
+    }
+   ],
+   "disagree": "Which stigma Blade Toss replaces is split. Ulfhednar, ExpCarry and AOEAH drop Focused Block; aLuckyRO drops Zikel's Blessing and keeps blocking. This build follows the first, since Zikel's Blessing is on 98% of top Global bars. Aion2Data's levelling notes report players calling Blade Toss useless later on; the top-player pick rates above disagree."
+  },
+  {
+   "id": "solo",
+   "name": "Solo Farming",
+   "mode": "PvE",
+   "role": "Open-world farming and solo content",
+   "summary": "Pull what you can hit, cleave it down and heal off it. Lifestealing Blade replaces Focused Block for sustain and multi-target damage, and the skill points move Crushing Wave and Leaping Slam (with its reset on kill) to the front.",
+   "when": "Open-world farming, questing, Hidden Cubes and solo dungeons; Korean players use a similar setup in the Abyss corridors.",
+   "popularity": "Gladiator is rated S for solo and farming by Aion2 Tier List and Aion2 Meta. Lifestealing Blade is the usual solo swap: 33% of the top 100 Global Gladiators (Aion2 Tier List), 26.5% of ExpCarry's sample, and GamerBlurb's first swap for solo farming.",
+   "vsMain": "Lifestealing Blade replaces Focused Block. The same 18 skills are raised, reordered so Crushing Wave, Leaping Slam and Blood Absorption come early. Leaping Slam keeps its reset pick (the main build's trash preset already does this).",
+   "skills": [
+    {
+     "skill": "Overhead Slam",
+     "to": 10
+    },
+    {
+     "skill": "Rending Blow",
+     "to": 10
+    },
+    {
+     "skill": "Ruinous Blow",
+     "to": 10,
+     "note": "63"
+    },
+    {
+     "skill": "Crushing Wave",
+     "to": 10
+    },
+    {
+     "skill": "Leaping Slam",
+     "to": 10,
+     "note": "105"
+    },
+    {
+     "skill": "Keen Strike",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Blood Absorption",
+     "to": 10,
+     "note": "168"
+    },
+    {
+     "skill": "Mocking Blade",
+     "to": 10
+    },
+    {
+     "skill": "Murderous Burst",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Identify Weakness",
+     "to": 10,
+     "note": "252"
+    },
+    {
+     "skill": "Survival Stance",
+     "to": 10
+    },
+    {
+     "skill": "Experienced Counterstrike",
+     "to": 10
+    },
+    {
+     "skill": "Rush Strike",
+     "to": 10
+    },
+    {
+     "skill": "Ankle Slice",
+     "to": 10,
+     "note": "336"
+    },
+    {
+     "skill": "Sword Aura Rampage",
+     "to": 10
+    },
+    {
+     "skill": "Destructive Impulse",
+     "to": 10,
+     "note": "378 of 383. No source gives a farming point order: this reorders the main build's skills by the farming priorities of ExpCarry, Aion2 Meta and Aion2 Guides. The last two pay only on staggered targets, so on trash Defiance is a fair alternative"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Leaping Slam",
+     "picks": "Resets cooldown on defeating an enemy: leap pack to pack"
+    },
+    {
+     "skill": "Crushing Wave",
+     "picks": "Absorbs 2% HP, and Resets cooldown on landing a Critical Hit (12); 50% chance to pull at 16 to gather packs"
+    },
+    {
+     "skill": "Rending Blow",
+     "picks": "Changes to mobile skill"
+    },
+    {
+     "skill": "Mocking Blade",
+     "picks": "Absorbs 4% HP, absorbs 15% HP of target with Incapacitated Immunity"
+    },
+    {
+     "skill": "Keen Strike",
+     "picks": "+20% MP restored while MP is short"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Lunge Stance",
+     "lvl": 10,
+     "why": "Combat Speed, and +20% Move Speed at 10 between packs; Korean corridor players keep it up all the time"
+    },
+    {
+     "name": "Lifestealing Blade",
+     "lvl": 5,
+     "why": "Hits up to 4 and heals you; at 5, up to +20% damage when more targets are hit"
+    },
+    {
+     "name": "Rage Burst",
+     "lvl": 5,
+     "why": "Opens Overhead Slam on elites and bosses that won't stay down"
+    },
+    {
+     "name": "Zikel's Blessing",
+     "lvl": 5,
+     "why": "Attack for big pulls. Aion2 Meta opens packs with Wrath Wave instead: it knocks down all 4 nearby monsters, so Overhead Slam can hit them"
+    }
+   ],
+   "passives": [
+    "Attack Preparation",
+    "Blood Absorption",
+    "Murderous Burst",
+    "Impact Hit",
+    "Survival Stance"
+   ],
+   "daevanion": "The main build's route; its Crushing Wave nodes on Nezekan and Zikel come with district quests and sealed dungeons. No source gives a separate farming route.",
+   "gear": "Attack and sustain, with enough defence to keep pulling without stopping (ExpCarry). If MP runs dry, Aion2 Guides suggests Max MP and MP regen lines or the 2-piece Magic Arcana set.",
+   "play": [
+    "Every Gladiator area skill stops at 4 targets: pull what you can hit, not the whole room (Aion2 Meta).",
+    "Leaping Slam in, Crushing Wave the pack, Rending Blow while moving; the reset pick sends you to the next pack on each kill.",
+    "Overhead Slam needs a knocked-down target on trash: Mocking Blade, Rush Strike after a Dodge, or Wrath Wave if you slot it.",
+    "Keep this on its own preset with the reset picks and your boss preset separate; presets can't switch while a Stigma is cooling down."
+   ],
+   "pros": [
+    "Little downtime: lifesteal and Blood Absorption keep you topped up",
+    "Fast pack-to-pack movement",
+    "Simple to play"
+   ],
+   "cons": [
+    "Gives up Focused Block's Parry, a loss on solo bosses",
+    "4-target cap on every area skill"
+   ],
+   "sources": [
+    {
+     "title": "ExpCarry: Gladiator Build Guide",
+     "url": "https://expcarry.com/aion-2-gladiator-guide",
+     "note": "Solo and farming setup with Lifestealing Blade as the fourth stigma, plus its usage rate and the levelling and solo priorities"
+    },
+    {
+     "title": "GamerBlurb: Gladiator Build Guide, PvE and PvP",
+     "url": "https://gamerblurb.com/guides/aion-2-gladiator-build-guide-pve-and-pvp",
+     "note": "Lifestealing Blade as the first swap for solo farming, for its area damage and HP absorb"
+    },
+    {
+     "title": "Aion2 Meta: Gladiator",
+     "url": "https://aion2-meta.com/guides/gladiator/",
+     "note": "Farming advice (4-target cap, Wrath Wave knockdown opener, then Overhead Slam and Crushing Wave) and the S farming rating"
+    },
+    {
+     "title": "Aion2 Tier List: Gladiator guide",
+     "url": "https://aion2tierlist.com/guides/aion-2-gladiator-guide",
+     "note": "S solo rating, 'pull wide' levelling tips, Lifestealing Blade on 33% of the top 100"
+    },
+    {
+     "title": "Vortex Gaming: Gladiator PvE/PvP stigma build (KR)",
+     "url": "https://vortexgaming.io/en/postdetail/728097",
+     "note": "Korean corridor setup: Lunge Stance always up, gap closers, lifesteal picks (KR, April 2026)"
+    },
+    {
+     "title": "Aion2 Guides: Gladiator (Levelling)",
+     "url": "https://aion2-guides.info/en/gladiator/",
+     "note": "Leaping Slam reset and Crushing Wave Absorbs 2% HP for packs; MP fixes"
+    }
+   ],
+   "disagree": "Which stigma Lifestealing Blade replaces isn't settled. ExpCarry keeps Lunge Stance, Rage Burst and Zikel's Blessing and drops Focused Block. GamerBlurb doesn't say which slot it takes. Aion2 Meta favours Wrath Wave for knocking packs down, and this build lists it as the option for Zikel's slot."
+  },
+  {
+   "id": "tank",
+   "name": "Off-tank",
+   "mode": "PvE",
+   "role": "Off-tank or main tank without a Templar",
+   "summary": "The damage build with more parrying and survival. A Gladiator has no taunt and holds the boss by out-damaging the party, so the damage core stays; Focused Block keeps the boss facing you and refreshes the party buff, and Tenaciousness covers the one hit you can't block.",
+   "when": "Parties without a Templar, or as the second tank. Players say to wait until Overhead Slam reaches 16 before tanking: with low damage you also have low aggro.",
+   "popularity": "Korean parties bring the Gladiator as off-tank (Aion2 Tier List, Aion2 Meta), and on Global it often ends up holding the boss anyway. Evidence for a set tank build is thin: Aion2Data's comes from four Reddit threads.",
+   "vsMain": "Tenaciousness replaces Zikel's Blessing. Survival Stance and Blood Absorption move up the point order, and Defiance takes Destructive Impulse's 21 points.",
+   "skills": [
+    {
+     "skill": "Overhead Slam",
+     "to": 10
+    },
+    {
+     "skill": "Rending Blow",
+     "to": 10
+    },
+    {
+     "skill": "Ruinous Blow",
+     "to": 10,
+     "note": "63"
+    },
+    {
+     "skill": "Keen Strike",
+     "to": 10
+    },
+    {
+     "skill": "Experienced Counterstrike",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10,
+     "note": "126"
+    },
+    {
+     "skill": "Survival Stance",
+     "to": 10
+    },
+    {
+     "skill": "Blood Absorption",
+     "to": 10
+    },
+    {
+     "skill": "Mocking Blade",
+     "to": 10,
+     "note": "189"
+    },
+    {
+     "skill": "Murderous Burst",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Identify Weakness",
+     "to": 10,
+     "note": "252"
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Leaping Slam",
+     "to": 10
+    },
+    {
+     "skill": "Crushing Wave",
+     "to": 10,
+     "note": "315"
+    },
+    {
+     "skill": "Rush Strike",
+     "to": 10
+    },
+    {
+     "skill": "Ankle Slice",
+     "to": 10
+    },
+    {
+     "skill": "Sword Aura Rampage",
+     "to": 10,
+     "note": "378 of 383. No source gives a tank point order: this is the main build with the survival rows moved up and Defiance in Destructive Impulse's place (Aion2 Guides: Defiance is useful in raids if points are spare)"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Defiance",
+     "picks": "Restores 20% HP on using [Defiance]; +50% PvE Damage Tolerance and +25% PvP Damage Tolerance for Tenacity duration at 16"
+    },
+    {
+     "skill": "Mocking Blade",
+     "picks": "Absorbs 4% HP, absorbs 15% HP of target with Incapacitated Immunity: your emergency heal on a boss"
+    },
+    {
+     "skill": "Leaping Slam",
+     "picks": "Prepare for Battle effect on the caster for 3s to open the pull; +20% PvE Damage Tolerance and +10 PvP Damage Tolerance for 3s at 12"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Lunge Stance",
+     "lvl": 10,
+     "why": "Faster cooldowns mean more blocks and more damage, so more threat"
+    },
+    {
+     "name": "Focused Block",
+     "lvl": 5,
+     "why": "Two guaranteed Parries for telegraphed hits; each one refreshes the Experienced Counterstrike party buff"
+    },
+    {
+     "name": "Rage Burst",
+     "lvl": 5,
+     "why": "Wounds the boss (-10% Attack) and keeps Overhead Slam, your threat, going"
+    },
+    {
+     "name": "Tenaciousness",
+     "lvl": 5,
+     "why": "3 s immune to damage for the hit you can't block. Aion2Data's Reddit tanks keep Zikel's Blessing here, or run Lifestealing Blade"
+    }
+   ],
+   "passives": [
+    "Experienced Counterstrike",
+    "Attack Preparation",
+    "Survival Stance",
+    "Blood Absorption",
+    "Murderous Burst"
+   ],
+   "daevanion": "The main build's route. No source gives a tank route; the main route's later Damage Tolerance and HP nodes are the obvious ones to take earlier.",
+   "gear": "Same damage stats as the main build (Aion2Data: Critical Hit, then Combat Speed), since threat comes from damage. Block on gear makes the party buff trigger more often (Aion2 Meta); about one weapon socket in ten on top Global Gladiators is Block (Aion2 Tier List).",
+   "play": [
+    "Open the pull yourself with Leaping Slam, then the normal macro.",
+    "Stand at the boss's front; turn it away from the group and don't dodge every mechanic, or the boss turns and the party loses its rear attacks.",
+    "Focused Block just before each big telegraphed hit; Tenaciousness for the one you can't block.",
+    "A second preset with more threat skills helps when ranged players keep pulling the boss off you (Aion2Data).",
+    "With a Templar tanking, agree before the pull and give them a couple of seconds before your Ruinous Blow."
+   ],
+   "pros": [
+    "Holds bosses without a taunt once geared",
+    "Party buff from every Parry",
+    "Lots of self-heal: Blood Absorption, Mocking Blade, Defiance's HP pick"
+   ],
+   "cons": [
+    "No taunt: a boss that turns away stays turned",
+    "Needs Overhead Slam 16 and good gear first",
+    "Less personal damage than the main build"
+   ],
+   "sources": [
+    {
+     "title": "Aion2Data: Gladiator Party tank",
+     "url": "https://aion2data.com/guides/gladiator/tank",
+     "note": "Tank stigma set from Reddit threads, the Overhead Slam 16 and about 95k CP threshold, the extra-threat preset, and common mistakes"
+    },
+    {
+     "title": "Aion 2 Maps: Gladiator (Tanking)",
+     "url": "https://aion2maps.com/guides/gladiator/",
+     "note": "Threat from damage, front positioning, Focused Block party buff values, Rage Burst's Wounded, Blood Absorption, Mocking Blade and Defiance as tank tools, Lifestealing Blade with a Templar"
+    },
+    {
+     "title": "GamerBlurb: Gladiator Build Guide, PvE and PvP",
+     "url": "https://gamerblurb.com/guides/aion-2-gladiator-build-guide-pve-and-pvp",
+     "note": "Tenaciousness in Zikel's Blessing's slot when surviving a mechanic matters more than damage"
+    },
+    {
+     "title": "ExpCarry: Gladiator Build Guide",
+     "url": "https://expcarry.com/aion-2-gladiator-guide",
+     "note": "Defensive and off-tank direction: damage core plus Focused Block or Wave Armor; not a full Templar replacement"
+    },
+    {
+     "title": "Aion2 Meta: Gladiator",
+     "url": "https://aion2-meta.com/guides/gladiator/",
+     "note": "Tank-or-damage section: Enmity from Keen Strike, Rending Blow and Overhead Slam, survival cooldowns, Block on gear"
+    },
+    {
+     "title": "Aion2 Tier List: Gladiator guide",
+     "url": "https://aion2tierlist.com/guides/aion-2-gladiator-guide",
+     "note": "Off-tank role in Korean parties, Block manastones on top Global Gladiators"
+    }
+   ],
+   "disagree": "The tank's last two stigmas split. Aion2Data keeps Zikel's Blessing and adds Lifestealing Blade, dropping Rage Burst. GamerBlurb swaps Zikel's Blessing for Tenaciousness. ExpCarry offers Wave Armor beside Focused Block. This build keeps Rage Burst for its Wounded debuff and its Overhead Slam threat (Aion2 Maps, Aion2 Meta) and takes GamerBlurb's Tenaciousness swap. Korean groups mostly run the class as damage, so a Global tank build is still thinly sourced."
+  }
+ ]
+}
