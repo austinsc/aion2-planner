@@ -1,0 +1,2113 @@
+{
+"_source": "Aion2 Atlas Daevanion planner (https://aion2atlas.app/daevanion-board/), Ariel board from the Korean/Taiwanese client, read 2026-10-21. Same board for every class; its Nezekan and Azphel layouts match this repo's exactly.",
+"name": "Ariel",
+"cols": 15,
+"rows": 15,
+"opens": 45,
+"cells": [
+{
+"c": 0,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Boost +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 2,
+"r": 0,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 6,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Boost +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 8,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 10,
+"r": 0,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 12,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 14,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 0,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 5,
+"r": 1,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 8,
+"r": 1,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 10,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 12,
+"r": 1,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 14,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 0,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 1,
+"r": 2,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 3,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 6,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 7,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 10,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 11,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 1,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 3,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 5,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 6,
+"r": 3,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 3,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 3,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 4,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 1,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 2,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 3,
+"r": 4,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 9,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 11,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 4,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 0,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 5,
+"r": 5,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 8,
+"r": 5,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 9,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 11,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 13,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 0,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Max MP +50",
+"effects": [
+{
+"stat": "Max MP",
+"value": 50
+}
+]
+},
+{
+"c": 1,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 2,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 4,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 5,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 7,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 9,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 10,
+"r": 6,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 0,
+"r": 7,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 2,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 5,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 7,
+"type": "start",
+"cost": 0,
+"label": "Start",
+"effects": []
+},
+{
+"c": 8,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 9,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Max MP +50",
+"effects": [
+{
+"stat": "Max MP",
+"value": 50
+}
+]
+},
+{
+"c": 14,
+"r": 7,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 0,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 1,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 8,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 5,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 9,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 10,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 11,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 12,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 14,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 1,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 3,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 5,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 6,
+"r": 9,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Max MP +50",
+"effects": [
+{
+"stat": "Max MP",
+"value": 50
+}
+]
+},
+{
+"c": 8,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 9,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 1,
+"r": 10,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 2,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 5,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 8,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 11,
+"r": 10,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 12,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 13,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 14,
+"r": 10,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 1,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 11,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 5,
+"r": 11,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 8,
+"r": 11,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 10,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 11,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 0,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 1,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 5,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 6,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 11,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 12,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 14,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 0,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 2,
+"r": 13,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Boost +1%",
+"effects": [
+{
+"stat": "Boss Damage Boost",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 4,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 6,
+"r": 13,
+"type": "major",
+"cost": 2,
+"label": "PvE Attack +5, PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+},
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 8,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 9,
+"r": 13,
+"type": "rare",
+"cost": 3,
+"label": "Boss Damage Tolerance +1%",
+"effects": [
+{
+"stat": "Boss Damage Tolerance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 10,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "PvE Defense +50",
+"effects": [
+{
+"stat": "PvE Defense",
+"value": 50
+}
+]
+},
+{
+"c": 11,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 14,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "PvE Attack +5",
+"effects": [
+{
+"stat": "PvE Attack",
+"value": 5
+}
+]
+},
+{
+"c": 2,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 4,
+"r": 14,
+"type": "major",
+"cost": 2,
+"label": "PvE Accuracy +10, PvE Evasion +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+},
+{
+"stat": "PvE Evasion",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Max MP +50",
+"effects": [
+{
+"stat": "Max MP",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Boost +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 8,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "PvE Accuracy +10",
+"effects": [
+{
+"stat": "PvE Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 14,
+"type": "major",
+"cost": 2,
+"label": "Boss Attack +5, Boss Defense +50",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+},
+{
+"stat": "Boss Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Boss Attack +5",
+"effects": [
+{
+"stat": "Boss Attack",
+"value": 5
+}
+]
+},
+{
+"c": 14,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "PvE Damage Boost +2.5%",
+"effects": [
+{
+"stat": "PvE Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+}
+]
+}

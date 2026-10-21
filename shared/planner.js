@@ -69,7 +69,7 @@ function ownedCost(key){ return BOARDS[key].nodes.filter(n => state.nodes[n.id])
 function boardName(k){ return BOARDS[k].name; }
 function nodeTitle(n){ return n.label + (n.cost ? ` (${n.cost} crystal${n.cost>1?'s':''})` : ''); }
 const firstBoard = DATA.boards[0];
-const levelBoards = DATA.boards.filter(b => b.key !== 'azphel');
+const levelBoards = DATA.boards.filter(b => b.key !== 'azphel' && !b.own);
 
 /* ---------------- skill level = points you assign + Daevanion skill nodes ---------------- */
 const skillOfNode = id => { const n = NODES[id]; return n && n.type === 'skill' ? n.skill : null; };
@@ -226,12 +226,12 @@ function renderDaev(){
   const nowIds = new Set(planAt(L).filter(p => p.board === b.key).flatMap(p => p.nodes));
   const routeIds = new Set(b.steps.flatMap(s => s.nodes));
   const totalCr = lvlRow(L).dv, spent = DATA.boards.reduce((a,bb)=>a+ownedCost(bb.key),0);
-  const opensLine = DATA.boards.map(x => `${x.name} ${x.opens}${x.key === 'azphel' ? ' (PvP, its own crystals)' : ''}`).join(' · ');
+  const opensLine = DATA.boards.map(x => `${x.name} ${x.opens}${x.own ? ` (${x.own})` : x.key === 'azphel' ? ' (PvP, its own crystals)' : ''}`).join(' · ');
   let h = `<div class="card">
     <header><h2>Daevanion boards</h2><span class="eyebrow">${totalCr} crystals by level ${L} · ${spent} marked spent</span></header>
     <p class="note">Numbers are the order to buy the targets on each board; the ringed nodes are the cheapest path to them. Click a node to mark it owned. Marking a level done marks that level's nodes for you. ${esc(opensLine)}.</p>
     <div class="btabs">${DATA.boards.map(x => `<button class="btab" data-board="${x.key}" aria-selected="${x.key===b.key}">${x.name}<small>opens ${x.opens} · ${ownedCost(x.key)} / ${x.nodes.reduce((a,n)=>a+n.cost,0)} cr</small></button>`).join('')}</div>
-    <div class="legend">${PHASES.map((p, i) => `<span><i style="background:var(--p${i})"></i>${esc(p.split(' (')[0].replace('District quests and sealed dungeons', 'Quest & dungeon crystals'))}</span>`).join('')}<span><i style="background:var(--ok)"></i>Owned</span><span>Dim: not on the route</span></div>
+    <div class="legend">${(b.phases || PHASES).map((p, i) => `<span><i style="background:var(--p${i})"></i>${esc(p.split(' (')[0].replace('District quests and sealed dungeons', 'Quest & dungeon crystals'))}</span>`).join('')}<span><i style="background:var(--ok)"></i>Owned</span><span>Dim: not on the route</span></div>
     <div class="boardwrap">
       <div class="board" style="--cols:${b.cols};grid-template-columns:repeat(${b.cols},1fr)">` +
       b.nodes.map(n => {
@@ -240,11 +240,11 @@ function renderDaev(){
         return `<button class="${cls}" style="grid-column:${n.c+1};grid-row:${n.r+1}" data-node="${n.id}" aria-label="${esc(nodeTitle(n))}" ${n.type==='start'?'disabled':''}><span class="frame"></span>${inner}<span class="ring"></span>${n.n ? `<span class="n">${n.n}</span>` : ''}</button>`;
       }).join('') + `</div>
       <div>
-        <p class="note" style="margin-bottom:8px"><b>${b.name}</b> opens at level ${b.opens}. Corners: ${esc(b.corners)}.${b.way ? ` On the way, as steps only: ${esc(b.way)}.` : ''}</p>
+        <p class="note" style="margin-bottom:8px"><b>${b.name}</b> opens at level ${b.opens}. Corners: ${esc(b.corners)}.${b.way ? ` On the way, as steps only: ${esc(b.way)}.` : ''}</p>${b.note ? `<p class="note" style="margin-bottom:8px">${esc(b.note)}</p>` : ''}
         <ol class="steps">` + b.steps.map(s => {
           const own = s.nodes.every(id => state.nodes[id]);
           const when = DATA.plan.find(p => p.board===b.key && p.n===s.n);
-          return `<li class="ph${s.phase} ${own?'owned':''}" data-step="${b.key}:${s.n}"><span class="n ${s.n?'':'none'}">${s.n||'+'}</span><span>${esc(s.label)}<small>${s.nodes.length} node${s.nodes.length>1?'s':''}${when ? ` · <span class="lv">level ${when.lvl}</span>` : ` · ${esc((b.key === 'azphel' ? (DATA.azphelPhases || ['Core nodes', 'Status Effect nodes'])[s.phase] : PHASES[s.phase]) || '').split(' (')[0]}`}</small></span><span class="cost num">${s.cost} cr ${own?'✓':''}</span></li>`;
+          return `<li class="ph${s.phase} ${own?'owned':''}" data-step="${b.key}:${s.n}"><span class="n ${s.n?'':'none'}">${s.n||'+'}</span><span>${esc(s.label)}<small>${s.nodes.length} node${s.nodes.length>1?'s':''}${when ? ` · <span class="lv">level ${when.lvl}</span>` : ` · ${esc((b.phases || (b.key === 'azphel' ? (DATA.azphelPhases || ['Core nodes', 'Status Effect nodes']) : PHASES))[s.phase] || '').split(' (')[0]}`}</small></span><span class="cost num">${s.cost} cr ${own?'✓':''}</span></li>`;
         }).join('') + `</ol>
         <div class="act" style="margin-top:10px"><button class="pill ghost" id="clearBoard">Clear owned on ${b.name}</button></div>
       </div>
@@ -498,6 +498,7 @@ function renderSrc(){
   $('#p-src').innerHTML = `<div class="card"><header><h2>Sources</h2><span class="eyebrow">compiled ${esc(META.compiled || '18 Oct 2026')}</span></header>
   <ol class="src">` + DATA.sources.map(s => `<li>${s.url ? a(s.url, s.title) : s.links.map(l => a(l[0], l[1])).join(' and ')}: ${esc(s.what)}</li>`).join('') +
     `<li>${a('https://aion2maps.com/guides/' + cls + '/#arcana', 'Aion 2 Maps: ' + META.name + ' Arcana')}, ${a('https://aion2maps.com/guides/arcana/', 'Arcana')} and ${a('https://aion2maps.com/guides/pantheon-stats/', 'Pantheon stats')}: the cards and lines to keep, set bonuses, card pools and crafting costs, and what each Pantheon stat does.</li>
+    ${BOARDS.ariel ? `<li>${a('https://aion2atlas.app/daevanion-board/', 'Aion2 Atlas Daevanion planner')} (its Korean and Taiwanese client data) and ${a('https://aion2.plaync.com/en-us/board/update/view?articleId=6ad85be86cfe4756db5b8e92', "NC's 21 October 2026 patch notes")}: the Ariel board's layout and how its crystals are earned. The Ariel route is computed by this planner from value per crystal; no guide had published one for Global yet.</li>` : ''}
     <li>Game art: skill icons and Daevanion node frames are &copy; NCSOFT Corporation, all rights reserved. Icons were taken from ${a('https://metabot.gg/en/aion-2/skills', 'Metabot')} and node frames from ${a(`https://wikily.gg/aion-2/daevanion/${cls}/nezekan`, 'Wikily')}. They identify skills and nodes in this unofficial fan tool, which NCSOFT does not endorse. AION is a trademark of NCSOFT Corporation.</li>
   </ol>
   <p class="note">${esc(TXT.src || '')}</p></div>`;
