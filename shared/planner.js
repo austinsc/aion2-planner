@@ -308,7 +308,7 @@ function renderBuilds(){
   const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch(e) { return ''; } };
   const list = (arr, f) => arr && arr.length ? `<ul class="list">${arr.map(f).join('')}</ul>` : '<p class="empty">—</p>';
   const tag = r => `<span class="nonglobal-tag">${esc(String(r).toUpperCase())}</span>`;
-  const rt = s => esc(s || '').replace(/\[(kr|tw)\]([\s\S]*?)\[\/\1\]/g, (m, r, t) => `<span class="nonglobal">${t.match(/^\s*/)[0]}${tag(r)}${t.trimStart()}</span>`);
+  const rt = s => esc(s || '').replace(/\[(kr|tw)\]([\s\S]*?)\[\/\1\]/g, (m, r, t) => `<span class="nonglobal">${t.match(/^[\s,;:]*/)[0]}${tag(r)}${t.replace(/^[\s,;:]*/, '')}</span>`);
   const whole = s => /^\[(kr|tw)\][\s\S]*\[\/\1\]$/.test((s || '').trim());
   const ng = on => on ? ' class="nonglobal"' : '';
   let h = `<div class="card gold"><header><h2>PvP and alternate builds</h2><span class="eyebrow">${B.builds.length} builds · pick one</span></header>
