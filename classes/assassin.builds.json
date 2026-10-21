@@ -1,0 +1,333 @@
+{
+ "intro": "The Assassin's PvP builds and the alternate PvE presets players run on Global, checked against Global-era guides (Sep–Oct 2026) and Korean player data. Each one spends the same 383 skill points and 30 Stigma points at 45. Skill presets keep their own levels and resets are free, so give each build its own preset.",
+ "crosscheck": "The core matches everywhere. Heart Gore, Insignia Explosion and Quick Slice get points first, Illusive Clone sits at the centre of the burst, and Rear Smite is the top passive. Metaroad, aion2-guides.info, GuideMMO, aion2-meta (Korean top players) and Metabot's top-150 Global data all agree on those. The Stigma set (Illusive Clone, Swift Contract, Triniel's Dagger, Savage Fang) is the most common one: Metabot's top players run it at 95/90/71/77%, and Metaroad, aion2-guides, AOEAH, Gamers Together and aion2atlas list the same four. GuideMMO is the exception: it pairs Savage Fang with Evasion Stance and makes the Dagger optional. Wakayashi swaps Savage Fang for Evasion Stance in hard content, as the planner does. The Specialties split on three points. For Heart Gore, the planner takes Multi-Hit and the +20% Critical Hit pick, Metaroad and Arthars (via aion2-guides) keep the 0.7% HP absorb, and GuideMMO and the Korean data take the Insignia pick. For Savage Roar, the planner raises it to 10 like Metaroad (18 later) and GuideMMO, while aion2-guides stops at 12 and pushes Ambush and Storm Rampage to 16 instead. For Skill Queue, the planner, XifanGG (via aion2-guides) and AOEAH keep it on, and Wakayashi turns it off. After 45, the planner's first Stigma Shards go into Triniel's Dagger 10. GuideMMO and AOEAH raise Swift Contract to 10 first, and aion2-guides raises Illusive Clone to 20 first. Passive order also varies a little: aion2-guides ranks Determination above Impact Hit for gear lines. Nothing found contradicts the planner's skill-point totals or level gates. Only aion2maps publishes a full 383-point order, so no other site gives one to compare against.",
+ "builds": [
+  {
+   "id": "pvp",
+   "name": "PvP Stun-lock Burst",
+   "mode": "PvP",
+   "role": "Burst DPS for Arena, duels and small Abyss fights",
+   "summary": "This keeps the PvE burst (Illusive Clone, Swift Contract, Triniel's Dagger) and builds a stun chain around it. Shadowstrike stuns, Shadow Fall knocks the target down, and Insignia Explosion stuns again. Picks that break shields take the place of the PvE damage picks. Evasion Contract replaces Savage Fang because only monsters have a stagger gauge.",
+   "when": "Arena, Battlefield and the Abyss, in its own skill preset.",
+   "popularity": "This is the most common PvP setup. The PvP presets on aion2maps and Metabot both keep Illusive Clone, Swift Contract and Triniel's Dagger. Korean PvP Assassins run all three on 96–99% of characters (AION2CAL data via aion2-meta), but Korea has more Stigma slots than Global. Game8 and MetaBot rate the class S for PvP (as cited by aion2atlas and Gamers Together).",
+   "vsMain": "Storm Rampage drops to 1. Shadowstrike goes to 10, Shadow Fall to 8, and Apply Poison and Revitalization Contract to 10. Determination and Ambush Stance stay at 1. The Specialties switch to Stun, Blind and shield-break picks. Evasion Contract takes Savage Fang's slot, and you also fill the Azphel board and a PvP Genus preset.",
+   "skills": [
+    {"skill": "Heart Gore", "to": 10},
+    {"skill": "Insignia Explosion", "to": 10},
+    {"skill": "Quick Slice", "to": 10, "note": "63 points"},
+    {"skill": "Shadowstrike", "to": 10, "note": "Opener and first stun; 84"},
+    {"skill": "Rear Smite", "to": 10},
+    {"skill": "Exploit Weakness", "to": 10, "note": "126"},
+    {"skill": "Defiance", "to": 10, "note": "aion2maps moves it up for PvP; 147"},
+    {"skill": "Shadow Fall", "to": 8, "note": "For its −5s cooldown pick; 160"},
+    {"skill": "Savage Roar", "to": 10, "note": "181"},
+    {"skill": "Ambush", "to": 10, "note": "Breaks shields; 202"},
+    {"skill": "Apply Poison", "to": 10, "note": "Keyba's first PvP passive (cuts healing); 223"},
+    {"skill": "Revitalization Contract", "to": 10, "note": "Status Effect Resist and an emergency heal; 244"},
+    {"skill": "Assault Stance", "to": 10},
+    {"skill": "Impact Hit", "to": 10, "note": "Impact-type Chance for your Stuns; 286"},
+    {"skill": "Flash Slice", "to": 10},
+    {"skill": "Infiltrate", "to": 10, "note": "328"},
+    {"skill": "Whirlwind Slice", "to": 10, "note": "Long gap-closer with a Stun; 349"},
+    {"skill": "Defense Break", "to": 10, "note": "370"},
+    {"skill": "Heightened Sixth Sense", "to": 8, "note": "Last 13 points, or Determination; 383. No source gives a full 383-point PvP order: this is assembled from aion2maps' PvP changes and AlanStriker's and Keyba's priorities"}
+   ],
+   "specialties": [
+    {"skill": "Shadowstrike", "picks": "+1s Stun duration; from 12 add 50% chance to inflict Root for 5s on hit (AlanStriker). aion2maps keeps +20% caster Critical Damage Boost for 10s on hit with the Seal pick"},
+    {"skill": "Heart Gore", "picks": "Up to +20% Critical Hit when less targets hit, and Absorbs 0.7% HP; at 16, Resets [Heart Gore] cooldown on landing a Critical Hit replaces the absorb"},
+    {"skill": "Insignia Explosion", "picks": "Adds rotate effect (they turn their back to you) and +1s Stun duration; at 16, -3s cooldown replaces the rotate"},
+    {"skill": "Quick Slice", "picks": "+50% Multi-Hit on hit and -1s [Insignia Explosion] cooldown on hit, so the stun comes back every few seconds; Keyba takes +20% MP restored, then Ignores Block and Evasion at 16"},
+    {"skill": "Ambush", "picks": "Breaks Protective Shields on hit; from 12 add 50% chance to trigger [Whirlwind Slice] on hit"},
+    {"skill": "Shadow Fall", "picks": "-5s cooldown, so it is ready for every stun (or Absorbs 10% HP)"},
+    {"skill": "Savage Roar", "picks": "+20% Skill Speed and Deals up to 12% more damage when less targets are hit; against kiters, -1s [Shadowstrike] cooldown on hit in place of the damage"},
+    {"skill": "Flash Slice", "picks": "+2s Blind duration; from 12 add +6m Range"},
+    {"skill": "Infiltrate", "picks": "+10m [Infiltrate] range; from 12 add Breaks Protective Shields on landing [Infiltrate]"},
+    {"skill": "Whirlwind Slice", "picks": "+16m range; from 12 add +20% Stun Chance"},
+    {"skill": "Defiance", "picks": "Restores 20% HP on using [Defiance]; from 12 add +2s Tenacity duration"}
+   ],
+   "stigmas": [
+    {"name": "Illusive Clone", "lvl": 10, "why": "The burst: no Heart Gore cooldown, +10% Status Effect Chance (5) and +20% Critical Damage Boost (10). AlanStriker and Keyba take it to 15 next"},
+    {"name": "Swift Contract", "lvl": 5, "why": "+20% Combat Speed for the burst; aion2maps and Metabot keep it"},
+    {"name": "Triniel's Dagger", "lvl": 5, "why": "Hits 30% harder from behind and adds 5% to the target's cooldowns; usable on the move at 5. Raise to 10 next"},
+    {"name": "Evasion Contract", "lvl": 5, "why": "Frees you from Root and Slow and keeps you immune; 25% Projectile Immunity at 5. Flex slot: Shadow Walk for open-world openers, Spiral Slice against buff-reliant classes"}
+   ],
+   "passives": ["Rear Smite", "Exploit Weakness", "Apply Poison", "Revitalization Contract", "Assault Stance", "Impact Hit", "Defense Break", "Heightened Sixth Sense"],
+   "daevanion": "The four PvE boards stay as in the main build. Azphel has its own crystals: take its four PvP Damage Boost nodes and four PvP Damage Tolerance nodes first, then Status Effect Resist. Which comes first, Boost or Tolerance, is a split.",
+   "gear": "Keep your PvE gear; a separate PvP set isn't worth breaking it for (Keyba). Use Abyssal Manastones with PvP Damage Boost, the Fierce Battle Amulet, Status Effect Resist on armour, and the Saint of Ereshkigal title. For wings, take Talisra or Brawler Wings. A Courage Theostone (1% chance of 10,000 damage) helps finish a stunned target. Stat order after Accuracy: HP and PvP Damage Tolerance, then Status Effect Resist, then Critical Hit (GamerBlurb). Keep a PvP Genus preset with Weapon Damage Boost and Tolerance, and Back Attack Damage Boost.",
+   "play": [
+    "Press Swift Contract, then Illusive Clone, before you engage. Wait out Tenaciousness or Salvation before you spend them.",
+    "Shadowstrike from up to 20 m puts you behind the target and stuns it. Then Triniel's Dagger from behind, and Shadow Fall on the stunned target. A stun plus Shadow Fall keeps a player down for about 9 s (AlanStriker).",
+    "Hold Quick Slice and the macro (Insignia Explosion, Heart Gore, Savage Roar). With 5 Insignias, Insignia Explosion has a 50% chance to stun, and each new stun lets you use Shadow Fall again.",
+    "Use Ambush or Infiltrate on Gladiators, Templars and Sorcerers to break their Protective Shields.",
+    "After they use Defiance, no control lands for 5 s: back off, then open again with Shadowstrike.",
+    "Defiance doesn't remove Root, Slow, Seal or Blind; use Evasion Contract for Root and Slow. Expect a Spiritmaster's Seize Magic to strip your Clone and Contract."
+   ],
+   "pros": ["The highest single-target burst in the game, from behind", "Stun into knockdown into stun keeps a lone target locked", "Shadowstrike's stun chance isn't lowered against players"],
+   "cons": ["Very fragile once caught; struggles in large fights (AOEAH)", "Buff-dependent: buff strips and immunity windows waste the burst", "Korea cut PvP damage 30% in July 2026, which hurts burst classes; whether Global has that patch is not documented (Gamers Together)"],
+   "sources": [
+    {"title": "Aion 2 Maps: Assassin, PvP tab", "url": "https://aion2maps.com/guides/assassin/", "note": "PvP preset (Clone, Swift, Dagger, Evasion Contract), Storm Rampage to 1 and Revitalization Contract and Defiance up, passive effects in PvP, counters, gear, Genus and Azphel order."},
+    {"title": "aion2-guides.info: Assassin, PvP mode", "url": "https://aion2-guides.info/en/assassin/", "note": "AlanStriker's (9 Oct, Global) and Keyba's (8 Oct) PvP picks for Shadowstrike, Insignia Explosion, Shadow Fall, Ambush, Flash Slice, Infiltrate and Whirlwind Slice; Apply Poison first; Courage Theostone."},
+    {"title": "Metabot: Assassin build planner (PvP preset)", "url": "https://metabot.gg/en/aion-2/classes/assassin/build", "note": "PvP preset with Clone, Swift Contract, Triniel's Dagger and Shadow Walk; top-player Stigma rates."},
+    {"title": "aion2-meta: Assassin guide", "url": "https://aion2-meta.com/guides/assassin/", "note": "Korean PvP pick rates (Stigmas, Specialties, wings, Defiance at 20+ for 41%); Korean PvP Specialties for Heart Gore, Insignia Explosion, Quick Slice and Ambush."},
+    {"title": "GamerBlurb: Assassin build guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-assassin-build-guide-pve-pvp-leveling-global", "note": "Evasion Contract for Root and Slow, Defiance Specialties, PvP stat order."},
+    {"title": "AOEAH: Assassin builds", "url": "https://www.aoeah.com/news/4885--best-aion-2-assassin-builds-skills-macros--daevanion-pvp--pve", "note": "PvP passive order (Apply Poison, Rear Smite, Exploit Weakness), Storm Rampage unused, Insignia Explosion rotate and Stun picks."},
+    {"title": "Gamers Together: Assassin build", "url": "https://gamerstogether.cz/en/aion-2-assassin-build-guide/", "note": "Korea's July 2026 PvP damage cut and Game8's S rating for PvP."}
+   ],
+   "disagree": "The fourth Stigma is the main split. aion2maps and GamerBlurb take Evasion Contract, Metabot takes Shadow Walk, and Keyba (via aion2-guides, MMOExp and AOEAH) drops Swift Contract for Spiral Slice and Shadowstep. AlanStriker drops both Swift Contract and the Dagger for a stealth set; that is the Abyss Stealth Hunter build. For Shadowstrike, aion2maps and the Korean data take +20% Critical Damage and Seal, and AlanStriker takes +1s Stun and Root. MMOExp and AOEAH list a Shadowstrike 'cooldown on hit' pick, but that pick is Savage Roar's. On Azphel, Game8 (via Gamers Together) gives it the lowest priority, while AlanStriker buys extra crystals for it. This build keeps aion2maps' and Metabot's buffs and uses AlanStriker's control picks."
+  },
+  {
+   "id": "pvp-stealth",
+   "name": "Abyss Stealth Hunter",
+   "mode": "PvP",
+   "role": "Stealth opener and control for open-world and Abyss PvP",
+   "summary": "This drops Swift Contract and Triniel's Dagger for a stealth approach (Shadow Walk), an airborne (Aerial Bind) and a way out (Shadowstep). You pick the fight, chain Stun, knockdown and Airborne under Illusive Clone, then vanish.",
+   "when": "Roaming the Abyss and open-world PvP, picking off players who stray from a group. AlanStriker uses Smoke Bomb instead of Shadow Walk in duels.",
+   "popularity": "This is the creator PvP build on Global. AlanStriker's 100k-CP setup (9 Oct, read by aion2-guides), GamerBlurb's PvP Stigmas and Gamers Together's combo all centre on Shadow Walk. Korean PvP Assassins run Shadow Walk on 94% (aion2-meta). Among Metabot's top 150 Global Assassins, whose presets are mostly PvE, 17% have Shadow Walk slotted.",
+   "vsMain": "Same changes as the PvP Stun-lock Burst, plus Shadow Fall and Whirlwind Slice to 10 for their Knockdown and Stun picks. Savage Fang, Swift Contract and Triniel's Dagger give way to Shadow Walk, Shadowstep and Aerial Bind.",
+   "skills": [
+    {"skill": "Heart Gore", "to": 10},
+    {"skill": "Insignia Explosion", "to": 10},
+    {"skill": "Quick Slice", "to": 10, "note": "63"},
+    {"skill": "Shadowstrike", "to": 10, "note": "84"},
+    {"skill": "Shadow Fall", "to": 10, "note": "AlanStriker runs it at 12 with board nodes; 105"},
+    {"skill": "Ambush", "to": 10, "note": "126"},
+    {"skill": "Savage Roar", "to": 10, "note": "147"},
+    {"skill": "Whirlwind Slice", "to": 10, "note": "168"},
+    {"skill": "Flash Slice", "to": 10},
+    {"skill": "Infiltrate", "to": 10, "note": "210"},
+    {"skill": "Rear Smite", "to": 10},
+    {"skill": "Exploit Weakness", "to": 10, "note": "252"},
+    {"skill": "Apply Poison", "to": 10, "note": "273"},
+    {"skill": "Revitalization Contract", "to": 10, "note": "294"},
+    {"skill": "Defiance", "to": 10, "note": "315"},
+    {"skill": "Impact Hit", "to": 10},
+    {"skill": "Defense Break", "to": 10, "note": "357"},
+    {"skill": "Assault Stance", "to": 8},
+    {"skill": "Heightened Sixth Sense", "to": 8, "note": "383. The sources give skill levels (actives at 12–16) and passive priority, not a point order; Storm Rampage, Determination and Ambush Stance stay at 1"}
+   ],
+   "specialties": [
+    {"skill": "Shadowstrike", "picks": "+1s Stun duration; from 12 add 50% chance to inflict Root for 5s on hit"},
+    {"skill": "Shadow Fall", "picks": "-5s cooldown; from 12 add +1s Knockdown duration"},
+    {"skill": "Whirlwind Slice", "picks": "+16m range; from 12 add +20% Stun Chance"},
+    {"skill": "Insignia Explosion", "picks": "+1s Stun duration with Adds rotate effect; at 16 -3s cooldown"},
+    {"skill": "Heart Gore", "picks": "Up to +20% Critical Hit when less targets hit, plus Absorbs 0.7% HP until 16 brings the cooldown reset"},
+    {"skill": "Ambush", "picks": "Breaks Protective Shields on hit; from 12 add 50% chance to trigger [Whirlwind Slice] on hit"},
+    {"skill": "Flash Slice", "picks": "+2s Blind duration; from 12 add +6m Range"},
+    {"skill": "Infiltrate", "picks": "+10m [Infiltrate] range; from 12 add Breaks Protective Shields on landing [Infiltrate]"}
+   ],
+   "stigmas": [
+    {"name": "Illusive Clone", "lvl": 10, "why": "Burst inside the lock; AlanStriker takes it to 15 to finish tanky classes inside one stun"},
+    {"name": "Shadow Walk", "lvl": 5, "why": "20 s of Stealth out of combat to pick your angle; Critical Hit on attack during Stealth at 5, usable in combat at 15"},
+    {"name": "Shadowstep", "lvl": 5, "why": "Your exit: jump back into 3 s of Stealth, with a 40% chance to rotate and stun at 5"},
+    {"name": "Aerial Bind", "lvl": 5, "why": "A 3 s Airborne that also dashes (+16m range at 5); on a target with five Insignias it lands far more often"}
+   ],
+   "passives": ["Apply Poison", "Rear Smite", "Exploit Weakness", "Revitalization Contract", "Impact Hit", "Defense Break"],
+   "daevanion": "Same as the PvP Stun-lock Burst: Azphel's PvP Damage Boost and Tolerance nodes, then Status Effect Resist. AlanStriker buys extra Azphel crystals, which is why his PvP preset shows more Combat Power.",
+   "gear": "Same as the PvP Stun-lock Burst. Korean advice (Inven, Season 2) is to spend Abyss Points on Stigma Shards before buying Abyss accessories. Global's Abyss shop sells 50 shards per step (aion2-guides).",
+   "play": [
+    "Press Illusive Clone nearby, then go in from Shadow Walk. Players carry Seeds of Detection, so don't rely on Stealth to escape.",
+    "Shadowstrike behind the target for the Stun, then Shadow Fall at once. Hold Quick Slice and the macro (Ambush first for shields, then Insignia Explosion, Heart Gore, Savage Roar).",
+    "Every Stun from Insignia Explosion, Whirlwind Slice or Aerial Bind lets you use Shadow Fall again.",
+    "In groups, target whoever is cut off from the rest. Once Insignias are stacked, Aerial Bind on the healer.",
+    "When low or out-burst, Shadowstep away, wait for a potion, then come back with Flash Slice or Shadowstrike."
+   ],
+   "pros": ["You choose who and when to fight", "Three hard controls plus a knockdown and an exit", "Doesn't depend on Swift Contract or the Dagger landing"],
+   "cons": ["Shadow Walk is out of combat only until Stigma level 15", "Less damage than the Swift Contract set if the lock breaks", "Detection items and group Stealth counter the opener"],
+   "sources": [
+    {"title": "aion2-guides.info: Assassin, PvP mode", "url": "https://aion2-guides.info/en/assassin/", "note": "AlanStriker's Stigmas (Clone 15, Aerial Bind 5, Shadowstep 5, Shadow Walk 1, Smoke Bomb in duels), skill levels, Specialties, hotbar and five-step macro."},
+    {"title": "YouTube: AlanStriker, 'MOST FUN PVP CLASS! 100k+ Combat Power Assassin Skill Macro & Build Update - Aion 2 Global'", "url": "https://www.youtube.com/watch?v=iti2yomYiRo", "note": "The original video; title only checked here (Global, 100k CP), details as read by aion2-guides."},
+    {"title": "GamerBlurb: Assassin build guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-assassin-build-guide-pve-pvp-leveling-global", "note": "PvP Stigmas Shadow Walk, Illusive Clone, Aerial Bind, Evasion Contract; the combo order and Aerial Bind on five Insignias."},
+    {"title": "Gamers Together: Assassin build", "url": "https://gamerstogether.cz/en/aion-2-assassin-build-guide/", "note": "Stealth combo (Shadow Walk, Shadowstrike, Shadow Fall), Shadowstep to reset, Aerial Bind on the healer."},
+    {"title": "Inven Assassin board: PvP guide for beginners (Korean, 2 Mar 2026)", "url": "https://www.inven.co.kr/board/aion2/6449/5174", "note": "KR-only (Season 2): Stealth 15, Throw Shadowblade, Dagger and Clone at 20 with no defensive Stigma; Abyss Points into Stigma Shards first; pick off stragglers."},
+    {"title": "aion2-meta: Assassin guide", "url": "https://aion2-meta.com/guides/assassin/", "note": "Korean PvP Stigma rates: Shadow Walk 94%, Shadowstep 56%."}
+   ],
+   "disagree": "GamerBlurb keeps Evasion Contract instead of Shadowstep. AlanStriker keeps Shadow Walk at 1 and puts the points into Illusive Clone 15. Keyba (aion2-guides, MMOExp, AOEAH) skips stealth for Spiral Slice and Triniel's Dagger. The Korean Inven guide runs Throw Shadowblade and the Dagger with Stealth, but Korea has a different patch and more shards. This build follows AlanStriker's set, with Shadow Walk at 5 for its stealth crit, since 30 points at 45 can't reach Clone 15."
+  },
+  {
+   "id": "farm",
+   "name": "Open-World Farming",
+   "mode": "PvE",
+   "role": "Solo farming, questing and levelling packs",
+   "summary": "A second preset for the open world. Throw Shadowblade at Stigma level 10 resets its cooldown on every kill, so you chain from mob to mob and get kills before others tag them. Savage Fang and Insignia Explosion clear small packs.",
+   "when": "Open-world farming, Empyrean Traces, questing while levelling (as soon as slot 4 opens at 37).",
+   "popularity": "This is the standard farming preset. aion2maps, Metaroad and Wakayashi all name Throw Shadowblade at 10 for farming, and aion2-guides makes it the first Stigma while levelling. 24% of Metabot's top 150 Global Assassins have it slotted.",
+   "vsMain": "Throw Shadowblade at Stigma level 10 replaces Triniel's Dagger, and Savage Fang stays for packs. Whirlwind Slice goes to 10 for its AoE pick, paid for by Storm Rampage stopping at 8 (trash rarely staggers). The macro uses Savage Roar, not Ambush.",
+   "skills": [
+    {"skill": "Heart Gore", "to": 10},
+    {"skill": "Insignia Explosion", "to": 10},
+    {"skill": "Quick Slice", "to": 10, "note": "63"},
+    {"skill": "Savage Roar", "to": 10, "note": "Engraves an Insignia on everything it hits; 84"},
+    {"skill": "Shadowstrike", "to": 8, "note": "97"},
+    {"skill": "Rear Smite", "to": 10},
+    {"skill": "Assault Stance", "to": 10, "note": "139"},
+    {"skill": "Exploit Weakness", "to": 10},
+    {"skill": "Impact Hit", "to": 10, "note": "181"},
+    {"skill": "Whirlwind Slice", "to": 10, "note": "For Changes to AoE damage; 202"},
+    {"skill": "Infiltrate", "to": 10, "note": "223"},
+    {"skill": "Ambush", "to": 10, "note": "244"},
+    {"skill": "Determination", "to": 10},
+    {"skill": "Ambush Stance", "to": 10, "note": "286"},
+    {"skill": "Flash Slice", "to": 10},
+    {"skill": "Defense Break", "to": 10, "note": "328"},
+    {"skill": "Heightened Sixth Sense", "to": 10, "note": "349"},
+    {"skill": "Storm Rampage", "to": 8, "note": "362"},
+    {"skill": "Defiance", "to": 10, "note": "383. This is the main build's order with Whirlwind Slice and Storm Rampage swapped; no source gives a full farming point order"}
+   ],
+   "specialties": [
+    {"skill": "Whirlwind Slice", "picks": "Changes to AoE damage (or +50% Multi-Hit on hit); from 12 both"},
+    {"skill": "Quick Slice", "picks": "+20% MP restored while MP runs short (Metaroad), or Absorbs 0.7% HP; -1s [Insignia Explosion] cooldown on hit from 12"},
+    {"skill": "Savage Roar", "picks": "-20% MP consumed while MP runs short, otherwise +20% Skill Speed"},
+    {"skill": "Heart Gore", "picks": "Absorbs 0.7% HP and Multi-Hit on hit"},
+    {"skill": "Ambush", "picks": "Absorbs 3% HP"}
+   ],
+   "stigmas": [
+    {"name": "Throw Shadowblade", "lvl": 10, "why": "20 m throw that resets on a kill at 10; its Shadowblade Pursuit chain (5) takes you to the target"},
+    {"name": "Savage Fang", "lvl": 5, "why": "Five Insignias on up to four mobs; up to +20% damage when it hits more targets at 5"},
+    {"name": "Illusive Clone", "lvl": 5, "why": "Kept for elites and field bosses"},
+    {"name": "Swift Contract", "lvl": 5, "why": "+20% Combat Speed and −20% MP Cost at 5"}
+   ],
+   "passives": ["Rear Smite", "Assault Stance", "Exploit Weakness", "Impact Hit", "Determination", "Ambush Stance", "Heightened Sixth Sense"],
+   "daevanion": "Same boards as the main build.",
+   "gear": "Same as the main build. While gear is behind, lean on the absorb picks and potions. A preset can't be switched while a Stigma is cooling down.",
+   "play": [
+    "Pull small packs: Savage Fang, then Insignia Explosion (with five Insignias it stuns every mob it hits), then Whirlwind Slice.",
+    "Open each mob with Throw Shadowblade; finish it and the throw is ready for the next one.",
+    "Hold Quick Slice and the macro: Insignia Explosion with Heart Gore and Savage Roar on top.",
+    "Save Illusive Clone for elites; on trash the cooldown is wasted."
+   ],
+   "pros": ["Fast tagging where many players compete for mobs", "Quick Slice and the absorb picks keep MP and HP up solo"],
+   "cons": ["Assassin is weak on big packs compared with AoE classes", "Throw Shadowblade at 10 spends half your Stigma points at 45, so the clone stays at 5"],
+   "sources": [
+    {"title": "Aion 2 Maps: Assassin", "url": "https://aion2maps.com/guides/assassin/", "note": "Throw Shadowblade at 10 in its own preset, preset rules, the pack method."},
+    {"title": "Metaroad: Assassin PvE Burst build", "url": "https://metaroad.gg/aion2/build-guides/assassin-pve-burst-build", "note": "Farming preset Throw Shadowblade, Savage Fang, Illusive Clone, Swift Contract; Savage Roar in place of Ambush in the farming macro; Quick Slice MP pick while levelling."},
+    {"title": "Wakayashi: Assassin PvE guide (German)", "url": "https://wakayashi.gg/aion2/aion-2-assassinen-pve-guide-skillrotation-makros-alle-skills-erklaert", "note": "Throw Shadowblade for the open world so other players can't steal your kills."},
+    {"title": "aion2-guides.info: Assassin, levelling", "url": "https://aion2-guides.info/en/assassin/", "note": "Throw Shadowblade as the first Stigma to 10, then Savage Fang; pack order Savage Fang, Insignia Explosion, Whirlwind Slice."},
+    {"title": "Metabot: Assassin build planner", "url": "https://metabot.gg/en/aion-2/classes/assassin/build", "note": "24% of the top 150 Global Assassins have Throw Shadowblade slotted."}
+   ],
+   "disagree": "aion2maps keeps Triniel's Dagger and puts Throw Shadowblade in Savage Fang's slot. Metaroad and aion2-guides keep Savage Fang and drop the Dagger, which this build follows. Wakayashi swaps the throw in for whichever of Savage Fang and Evasion Stance you had."
+  },
+  {
+   "id": "progression",
+   "name": "Progression (Evasion Stance)",
+   "mode": "PvE",
+   "role": "Boss DPS for fights you are still learning",
+   "summary": "The main build with a safety net: Evasion Stance replaces Triniel's Dagger, and Savage Fang stays for staggers. The sustain picks (HP absorbs, Defiance's Tenacity) replace two damage picks. You lose a little burst but stay on the boss's back through mechanics you would otherwise run from.",
+   "when": "New or hard bosses, Transcendence and Nightmare floors at your gear limit, pugs without a steady tank.",
+   "popularity": "39% of Metabot's top 150 Global Assassins have Evasion Stance slotted. GuideMMO's recommended set and Metaroad's progression preset both pair it with Savage Fang and drop the Dagger, and Wakayashi swaps it in for hard content.",
+   "vsMain": "Evasion Stance replaces Triniel's Dagger instead of Savage Fang, so one preset holds both stagger and the dodge. Heart Gore and Ambush keep their HP absorbs. Skill points are the same as the main build.",
+   "skills": [
+    {"skill": "Heart Gore", "to": 10},
+    {"skill": "Insignia Explosion", "to": 10},
+    {"skill": "Quick Slice", "to": 10, "note": "63"},
+    {"skill": "Savage Roar", "to": 10, "note": "84"},
+    {"skill": "Shadowstrike", "to": 8, "note": "97"},
+    {"skill": "Rear Smite", "to": 10},
+    {"skill": "Assault Stance", "to": 10, "note": "139"},
+    {"skill": "Exploit Weakness", "to": 10},
+    {"skill": "Impact Hit", "to": 10, "note": "181"},
+    {"skill": "Storm Rampage", "to": 10, "note": "202"},
+    {"skill": "Infiltrate", "to": 10, "note": "223"},
+    {"skill": "Ambush", "to": 10, "note": "244"},
+    {"skill": "Determination", "to": 10},
+    {"skill": "Ambush Stance", "to": 10, "note": "286"},
+    {"skill": "Flash Slice", "to": 10},
+    {"skill": "Defense Break", "to": 10, "note": "328"},
+    {"skill": "Heightened Sixth Sense", "to": 10, "note": "349"},
+    {"skill": "Whirlwind Slice", "to": 8, "note": "362"},
+    {"skill": "Defiance", "to": 10, "note": "383: the main build's order unchanged"}
+   ],
+   "specialties": [
+    {"skill": "Heart Gore", "picks": "Absorbs 0.7% HP and Multi-Hit on hit; at 16 the cooldown reset replaces Multi-Hit (Metaroad, Arthars)"},
+    {"skill": "Ambush", "picks": "Absorbs 3% HP, pressed when HP is low (XifanGG); +2 consecutive uses at 16"},
+    {"skill": "Defiance", "picks": "Restores 20% HP on using [Defiance]; Metaroad's +2s Tenacity duration or XifanGG's Restores 1000 Stamina on using [Defiance] once it reaches 12"},
+    {"skill": "Storm Rampage", "picks": "Absorbs 5% HP until 16 brings -1s all skill cooldowns on hit"}
+   ],
+   "stigmas": [
+    {"name": "Illusive Clone", "lvl": 10, "why": "The burst window, as in the main build"},
+    {"name": "Swift Contract", "lvl": 5, "why": "+20% Combat Speed for the window"},
+    {"name": "Savage Fang", "lvl": 5, "why": "Five Insignias and the class's biggest stagger hit"},
+    {"name": "Evasion Stance", "lvl": 5, "why": "Evades all damage for 2 s every 20 s; two uses in a row at 5, usable on the move at 10"}
+   ],
+   "passives": ["Rear Smite", "Assault Stance", "Exploit Weakness", "Impact Hit", "Determination", "Revitalization Contract"],
+   "daevanion": "Same boards as the main build.",
+   "gear": "Same as the main build. Metaroad keeps Damage Tolerance on the greaves, the one armour slot that rolls it. Defiance's level-16 pick (+50% PvE Damage Tolerance during Tenacity) needs a Compass line.",
+   "play": [
+    "Same opening as the main build, minus the Dagger: Swift Contract, Illusive Clone, Shadowstrike, Savage Fang, then hold the keys.",
+    "When a ground marker appears and you can't walk out in time, press Evasion Stance just before the hit and keep attacking from behind.",
+    "Swap the Dagger back in once you know the fight. Resets are free, but presets can't change while a Stigma is cooling down."
+   ],
+   "pros": ["Much more boss uptime while learning", "Keeps Savage Fang for stagger checks"],
+   "cons": ["Loses the Dagger's back-attack hit and its −10% cooldowns at Stigma 10", "The absorb picks cost some damage"],
+   "sources": [
+    {"title": "GuideMMO: Assassin guide (IruMinaTi, 23 Sep 2026)", "url": "https://guidemmo.com/guide-assassin-aion-2-en/", "note": "Stigma set Clone, Swift Contract, Savage Fang, Evasion Stance, with the Dagger optional; Evasion Stance's levels; the Ludra example."},
+    {"title": "Metaroad: Assassin PvE Burst build", "url": "https://metaroad.gg/aion2/build-guides/assassin-pve-burst-build", "note": "'Progression and new fights' preset with Evasion Stance; Heart Gore absorb and Defiance Tenacity picks; greaves Damage Tolerance."},
+    {"title": "Wakayashi: Assassin PvE guide (German)", "url": "https://wakayashi.gg/aion2/aion-2-assassinen-pve-guide-skillrotation-makros-alle-skills-erklaert", "note": "Evasion Stance to 5 in place of Savage Fang for hard content."},
+    {"title": "aion2-guides.info: Assassin, PvE mode", "url": "https://aion2-guides.info/en/assassin/", "note": "Evasion Stance as the safe swap while learning; Arthars' Heart Gore absorb; XifanGG's Ambush heal and Defiance Stamina picks."},
+    {"title": "Metabot: Assassin build planner", "url": "https://metabot.gg/en/aion-2/classes/assassin/build", "note": "Evasion Stance on 39% of the top 150 Global Assassins (average level 3.5)."}
+   ],
+   "disagree": "Wakayashi and aion2maps drop Savage Fang for Evasion Stance and keep the Dagger. GuideMMO and Metaroad drop the Dagger and keep Savage Fang, which this build follows, so stagger checks still work. GuideMMO calls the clone's and Contract's level-5 lines worthless, but at 45 only one Stigma can reach 10."
+  },
+  {
+   "id": "ambush",
+   "name": "Ambush Line",
+   "mode": "PvE",
+   "role": "Boss DPS with Ambush as the main filler",
+   "summary": "Instead of Savage Roar, Ambush fills the gaps between Insignia Explosion and Heart Gore. From behind it engraves two Insignias per hit, with two extra uses at 16. Storm Rampage goes to 16 so staggers pull every cooldown down.",
+   "when": "Single-target bosses where you hold the back; the same content as the main build.",
+   "popularity": "A minority line on Global. Arthars' launch build (read by aion2-guides) runs Ambush at 16 in the damage line with Savage Roar at only 12. Metaroad stacks Ambush in its macro and presses Savage Roar by hand, and GuideMMO offers Ambush as the alternative to a Savage Roar build. Korean data leans the other way: 57% of top PvE Assassins have Savage Roar at 20+, against 10% for Ambush (aion2-meta).",
+   "vsMain": "Ambush and Storm Rampage get points right after the core three, and Savage Roar comes after them. The ring and Compass lines go to Ambush and Storm Rampage. The macro becomes Insignia Explosion, Heart Gore, Ambush, then Savage Roar on top. Determination comes before Impact Hit; Revitalization Contract replaces Defense Break.",
+   "skills": [
+    {"skill": "Heart Gore", "to": 10},
+    {"skill": "Insignia Explosion", "to": 10},
+    {"skill": "Quick Slice", "to": 10, "note": "63"},
+    {"skill": "Ambush", "to": 10, "note": "84"},
+    {"skill": "Storm Rampage", "to": 10, "note": "105"},
+    {"skill": "Savage Roar", "to": 10, "note": "126"},
+    {"skill": "Shadowstrike", "to": 8, "note": "139"},
+    {"skill": "Rear Smite", "to": 10},
+    {"skill": "Assault Stance", "to": 10, "note": "181"},
+    {"skill": "Exploit Weakness", "to": 10},
+    {"skill": "Determination", "to": 10, "note": "223"},
+    {"skill": "Impact Hit", "to": 10, "note": "244"},
+    {"skill": "Infiltrate", "to": 10},
+    {"skill": "Flash Slice", "to": 10, "note": "286"},
+    {"skill": "Ambush Stance", "to": 10, "note": "307"},
+    {"skill": "Defiance", "to": 10, "note": "328"},
+    {"skill": "Heightened Sixth Sense", "to": 10, "note": "349"},
+    {"skill": "Revitalization Contract", "to": 10, "note": "370"},
+    {"skill": "Whirlwind Slice", "to": 8, "note": "383. The sources give target levels (Ambush and Storm Rampage 16), not a point order; Shadow Fall, Apply Poison and Defense Break stay at 1"}
+   ],
+   "specialties": [
+    {"skill": "Ambush", "picks": "Engraves 2 Insignias for 10s on landing as a Back attack; at 16 add +2 consecutive uses (the absorb as the third at 20)"},
+    {"skill": "Storm Rampage", "picks": "Multi-Hit on hit from 12; at 16 -1s all skill cooldowns on hit"},
+    {"skill": "Savage Roar", "picks": "+20% Skill Speed and -1s [Shadowstrike] cooldown on hit"},
+    {"skill": "Heart Gore", "picks": "Absorbs 0.7% HP and Multi-Hit on hit; at 16 Resets [Heart Gore] cooldown on landing a Critical Hit replaces the absorb (Arthars)"},
+    {"skill": "Insignia Explosion", "picks": "+50% Multi-Hit on hit and Keep 2 stacks of Insignias after [Insignia Explosion]; -3s cooldown at 16"},
+    {"skill": "Quick Slice", "picks": "+50% Multi-Hit on hit and -1s [Insignia Explosion] cooldown on hit; Ignores Block and Evasion and lands as a Critical Hit at 16"}
+   ],
+   "stigmas": [
+    {"name": "Illusive Clone", "lvl": 10, "why": "Burst window"},
+    {"name": "Swift Contract", "lvl": 5, "why": "Combat Speed for the window"},
+    {"name": "Savage Fang", "lvl": 5, "why": "Five Insignias at once and stagger"},
+    {"name": "Triniel's Dagger", "lvl": 5, "why": "Right after the buffs; −10% all cooldowns once it reaches 10"}
+   ],
+   "passives": ["Rear Smite", "Exploit Weakness", "Assault Stance", "Determination", "Impact Hit", "Revitalization Contract"],
+   "daevanion": "Same as the main build, but take Ambush's and Storm Rampage's skill nodes on every board when the route passes them (Metaroad takes every active's node on all four boards).",
+   "gear": "Ring lines: Heart Gore, Quick Slice, Insignia Explosion and Ambush (aion2-guides; GuideMMO: Ambush unless you play Savage Roar). Compass of Magic lines: Savage Roar, Ambush and Storm Rampage. Talisra Wings for 4% Cooldown Reduction.",
+   "play": [
+    "Damage line, bottom slot first: Insignia Explosion, Heart Gore, Ambush, Savage Roar. Hold it with Quick Slice.",
+    "Stay strictly behind: Ambush only engraves on a Back attack.",
+    "On every stagger, Storm Rampage: each hit takes 1 s off all cooldowns, bringing the clone back sooner."
+   ],
+   "pros": ["More Insignias between Clone windows from fewer button presses", "Storm Rampage at 16 shortens the long buff cooldowns"],
+   "cons": ["Needs Compass and ring lines to reach 16 on Ambush and Storm Rampage", "Ambush in the line can make you stutter (aion2maps)", "Loses value whenever you lose the boss's back"],
+   "sources": [
+    {"title": "aion2-guides.info: Assassin, PvE mode", "url": "https://aion2-guides.info/en/assassin/", "note": "Arthars' build: Ambush and Storm Rampage to 16, Savage Roar 12, the damage line Insignia Explosion, Heart Gore, Ambush, Savage Roar; ring lines; passive gear order with Determination third."},
+    {"title": "Metaroad: Assassin PvE Burst build", "url": "https://metaroad.gg/aion2/build-guides/assassin-pve-burst-build", "note": "Macro Insignia Explosion, Heart Gore, Ambush; Ambush and Storm Rampage at 14 with Compass to 16; Compass of Magic lines."},
+    {"title": "GuideMMO: Assassin guide (IruMinaTi)", "url": "https://guidemmo.com/guide-assassin-aion-2-en/", "note": "Ambush worthwhile at 16 (+2 charges, +2 Insignias); Ambush or Savage Roar as the build choice for macro and rings."},
+    {"title": "aion2-meta: Assassin guide", "url": "https://aion2-meta.com/guides/assassin/", "note": "Korean counter-evidence: Savage Roar at 20+ on 57% of PvE players, Ambush 10%; Global average Savage Roar 14.8, Ambush 12.8."}
+   ],
+   "disagree": "Most Korean and Global data favour Savage Roar as the filler, which the main build follows. Metaroad runs both: Ambush in the macro and Savage Roar pressed by hand. AOEAH keeps Ambush below 16 as a heal only, and aion2maps warns that Ambush in the line can stutter. This build follows Arthars' line."
+  }
+ ]
+}
