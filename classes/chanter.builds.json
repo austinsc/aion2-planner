@@ -1,6 +1,6 @@
 {
  "intro": "Most Chanters on Global run one PvE build; the real choices are a separate PvP preset, a support bar for groups without a Cleric, a damage bar for premades, and how you farm. Each build below is drawn from at least three sites; where they disagree, it says so.",
- "crosscheck": "Other sources mostly agree with the main build. Top Global players and public builds run its four Stigmas: Undefeated Mantra, Sprint Mantra, Power of the Storm and Marchutan's Wrath (99/95/65/47% of 150 tracked players on metabot.gg; 62% of 595 public four-Stigma builds counted by aion2vault.com; gamerblurb.com's levelling set). Every source raises Dark Crush first and wants it at 16 to remove its cooldown. The main build's next three, Onslaught, Recuperation and Spinning Strike, match Grobs' level 45 build (aion2vault.com) and the Korean ranker order on aion2-meta.com. Where they differ: (1) Gust Rampage. The main build raises it to 10, but aion2-guides.info calls it not worth the points in Season 1, notXeon drops it once Dark Crush is 16 (aion2vault.com), and 72% of top Global players leave it below 8 (aion2-meta.com). (2) Dark Crush's picks at 16. The main build keeps Critical Hit on hit with the cooldown removal, as Grobs does. aion2-guides.info and the Korean meta on aion2-meta.com keep Piercing Strike with the cooldown removal and add the crit at 20; WallyJTV does the same (aion2vault.com). (3) The fourth Stigma. aion2-guides.info's base bar has Focused Defense in place of Sprint Mantra (Sprint Mantra goes back in for dungeons) and Marchutan's Wrath at 1; gamerblurb.com takes Focused Defense with a Cleric; aion2-meta.com said on 17 Oct that Marchutan's Wrath is no longer a must. (4) Passives. aion2-guides.info puts Inspiring Spell second, right after Attack Preparation; WallyJTV takes survival passives first (aion2vault.com).",
+ "crosscheck": "Other sources mostly agree with the main build. Top Global players and public builds run its four Stigmas: Undefeated Mantra, Sprint Mantra, Power of the Storm and Marchutan's Wrath (99/95/65/47% of 150 tracked players on metabot.gg; 62% of 595 public four-Stigma builds counted by aion2vault.com; gamerblurb.com's levelling set). Every source raises Dark Crush first and wants it at 16 to remove its cooldown. The main build's next three, Onslaught, Recuperation and Spinning Strike, match Grobs' level 45 build (aion2vault.com)[kr] and the Korean ranker order on aion2-meta.com[/kr]. Where they differ: (1) Gust Rampage. The main build raises it to 10, but aion2-guides.info calls it not worth the points in Season 1, notXeon drops it once Dark Crush is 16 (aion2vault.com), and 72% of top Global players leave it below 8 (aion2-meta.com). (2) Dark Crush's picks at 16. The main build keeps Critical Hit on hit with the cooldown removal, as Grobs does. aion2-guides.info keeps Piercing Strike with the cooldown removal and adds the crit at 20[kr], as does the Korean meta on aion2-meta.com[/kr]; WallyJTV does the same (aion2vault.com). (3) The fourth Stigma. aion2-guides.info's base bar has Focused Defense in place of Sprint Mantra (Sprint Mantra goes back in for dungeons) and Marchutan's Wrath at 1; gamerblurb.com takes Focused Defense with a Cleric; aion2-meta.com said on 17 Oct that Marchutan's Wrath is no longer a must. (4) Passives. aion2-guides.info puts Inspiring Spell second, right after Attack Preparation; WallyJTV takes survival passives first (aion2vault.com).",
  "builds": [
   {
    "id": "pvp",
@@ -9,7 +9,7 @@
    "role": "Control fighter for duels, the arena and small fights",
    "summary": "A second skill preset for PvP. You bait the enemy's Defiance with a stun, wait out its cooldown, then chain Impactful Crush, Wave Blow and Marchutan's Wrath into Dark Crush. Your PvE skill and Stigma levels stay as they are.",
    "when": "Arena, duels, Spacetime Rifts and small Abyss fights. For big group fights, use the support build's bar.",
-   "popularity": "The main PvP setup on Global. On 21 Oct, 42 of 1,166 public Chanter builds on questlog were named or tagged PvP; of the 34 real PvP builds, 33 slot Undefeated Mantra and 27 Marchutan's Wrath (aion2vault.com). In Korea, 98.8% of top PvP Chanters run Marchutan's Wrath (aion2-meta.com). Creators: notXeon (Global, 6 Oct), and a Korean beginner's PvP guide (Aug).",
+   "popularity": "The main PvP setup on Global. On 21 Oct, 42 of 1,166 public Chanter builds on questlog were named or tagged PvP; of the 34 real PvP builds, 33 slot Undefeated Mantra and 27 Marchutan's Wrath (aion2vault.com).[kr] In Korea, 98.8% of top PvP Chanters run Marchutan's Wrath (aion2-meta.com).[/kr] Creators: notXeon (Global, 6 Oct)[kr], and a Korean beginner's PvP guide (Aug)[/kr].",
    "vsMain": "The same core with these changes: Gust Rampage drops back to 1; Survival Willpower and Defiance go to 10; Wave Blow and Tremor Crush move up for the stun chain; Earth's Promise takes the 5 spare points. Specialties move to Stun, Seal and Knockdown picks. Fracturing Blow replaces Sprint Mantra until Guardian Blessing can reach 15.",
    "skills": [
     {
@@ -166,7 +166,7 @@
     "Inspiring Spell"
    ],
    "daevanion": "Azphel: the core nodes first, then the Status Effect nodes. Sources split on PvP Damage Boost or Tolerance first, and on Status Effect Chance or Resist next; public Chanter boards take the four Damage Boost corners first. If PvP is your main content, aion2-guides.info's PvP route spends the PvE boards on Impactful Crush, Wave Blow and Defiance nodes instead.",
-   "gear": "Fierce Battle Amulet (PvP Damage Boost) in place of the Revelation Amulet. Brawler Wings (Status Effect Resist and Chance) or Talisra Wings. Status Effect Resist on armour. Survival Willpower and Blessing of Life lines on armour and jewellery in place of Wind's Promise (Korean advice). Saint of Ereshkigal as your Attack title. Stats: HP, PvP Damage Tolerance, PvP Accuracy and Status Effect Resist before damage. Keep one Genus preset for PvP.",
+   "gear": "Fierce Battle Amulet (PvP Damage Boost) in place of the Revelation Amulet. Brawler Wings (Status Effect Resist and Chance) or Talisra Wings. Status Effect Resist on armour.[kr] Survival Willpower and Blessing of Life lines on armour and jewellery in place of Wind's Promise.[/kr] Saint of Ereshkigal as your Attack title. Stats: HP, PvP Damage Tolerance, PvP Accuracy and Status Effect Resist before damage. Keep one Genus preset for PvP.",
    "play": [
     "Make them use Defiance first: open with Impactful Crush from 20 m and watch their buff bar for its icon.",
     "Kite while their Defiance is on cooldown (45 to 60 s by different counts; Sprint Mantra helps on the ground). Then Impactful Crush or Marchutan's Wrath, Wave Blow on the stunned target, then Dark Crush and Spinning Strike.",
@@ -183,7 +183,7 @@
    ],
    "cons": [
     "Rarely bursts anyone down alone; sturdier classes win long fights",
-    "Rated B in PvP on aion2-meta.com and aion2atlas.app. Reddit names Spiritmasters and Templars as the hardest matchups (aion2data.com); a Korean guide names Gladiators",
+    "Rated B in PvP on aion2-meta.com and aion2atlas.app. Reddit names Spiritmasters and Templars as the hardest matchups (aion2data.com)[kr]; a Korean guide names Gladiators[/kr]",
     "Guardian Blessing and Marchutan's Wrath only reach their PvP levels with Stigma Shards",
     "Sprint Mantra does nothing in the Abyss, where you fight in the air"
    ],
@@ -215,21 +215,23 @@
     },
     {
      "title": "Aion2 Meta: Chanter",
+     "region": "KR",
      "url": "https://aion2-meta.com/guides/chanter/",
      "note": "Korean top-player PvP Stigma rates, PvP wings, Survival Willpower on PvP gear"
     },
     {
      "title": "Aion2Data: Chanter guide",
      "url": "https://aion2data.com/guides/chanter",
-     "note": "PvP loadout from Reddit and Inven, Fierce Battle Amulet, hardest matchups"
+     "note": "PvP loadout from Reddit[kr] and Inven[/kr], Fierce Battle Amulet, hardest matchups"
     },
     {
      "title": "Vortex Gaming: Korean Chanter PvP beginner guide (Korean)",
+     "region": "KR",
      "url": "https://vortexgaming.io/postdetail/1247378",
      "note": "Korean server: Survival Willpower, then Blessing of Life; Focused Defense as a core Stigma; matchups"
     }
    ],
-   "disagree": "The fourth Stigma is the main split. Guardian Blessing is in aion2maps.com's preset and in the most common public bar (aion2vault.com). notXeon takes it only at 15 and uses Fracturing Blow before that, which this build follows. Focused Defense: gamerblurb.com, dimach's public PvP build and the Korean guide. Obliterate: metabot.gg. Spinning Strike: most public PvP builds take the Seal; notXeon keeps the PvE picks. Wave Blow: aion2maps.com says its knockdown is the same at every level, so it raises Defiance in its place; aion2-guides.info takes it to 16. This build raises both."
+   "disagree": "The fourth Stigma is the main split. Guardian Blessing is in aion2maps.com's preset and in the most common public bar (aion2vault.com). notXeon takes it only at 15 and uses Fracturing Blow before that, which this build follows. Focused Defense: gamerblurb.com[kr], the Korean guide[/kr] and dimach's public PvP build. Obliterate: metabot.gg. Spinning Strike: most public PvP builds take the Seal; notXeon keeps the PvE picks. Wave Blow: aion2maps.com says its knockdown is the same at every level, so it raises Defiance in its place; aion2-guides.info takes it to 16. This build raises both."
   },
   {
    "id": "support",
@@ -238,7 +240,7 @@
    "role": "Main support in groups with no Cleric, and group PvP",
    "summary": "Swaps two damage Stigmas for Impeding Authority and Healing Touch, and takes the healing picks. You are still a buffer who also heals, not a second Cleric.",
    "when": "Dungeons with no Cleric, groups still learning a fight, and Abyss or Rift group fights (notXeon's group bar).",
-   "popularity": "Rare on Global: Healing Touch is on 13% of top players' bars and Impeding Authority on 9% (metabot.gg), and each is on about 4% of public builds (aion2vault.com). It is more common in Korea, where Healing Touch is high on top players' lists (aion2-meta.com) and in Inven and DCInside guides. Creators: notXeon (Global).",
+   "popularity": "Rare on Global: Healing Touch is on 13% of top players' bars and Impeding Authority on 9% (metabot.gg), and each is on about 4% of public builds (aion2vault.com).[kr] It is more common in Korea, where Healing Touch is high on top players' lists (aion2-meta.com) and in Inven and DCInside guides.[/kr] Creators: notXeon (Global).",
    "vsMain": "Stigmas: Impeding Authority and Healing Touch replace Sprint Mantra and Marchutan's Wrath. Spinning Strike takes the Heal Boost pick. Points move from Gust Rampage to Defiance, and Blessing of Life and Protection Circle come earlier.",
    "skills": [
     {
@@ -416,16 +418,18 @@
     },
     {
      "title": "Inven: Chanter healer and damage Stigmas (Korean)",
+     "region": "KR",
      "url": "https://www.inven.co.kr/board/aion2/6451/53",
      "note": "Korean launch-era bar with Healing Touch and Power of the Storm when there is no Cleric"
     },
     {
      "title": "DCInside: Chanter PvE guide (Korean)",
+     "region": "KR",
      "url": "https://m.dcinside.com/board/aion2/2662361",
      "note": "Korean Stigma priority Undefeated Mantra > Power of the Storm > Healing Touch, Healing Touch at 10"
     }
    ],
-   "disagree": "Whether to carry heal Stigmas at all. Grobs keeps the standard four even as the only support and calls Healing Touch too weak for a slot (aion2vault.com, aion2-guides.info). notXeon and aLuckyRO swap them in when there is no Cleric. For group PvP, gamerblurb.com runs Sprint Mantra and Barrier Spell; notXeon calls Barrier Spell awful. This build follows notXeon. Korean bars carry more Stigma slots and heal Stigmas than Global allows."
+   "disagree": "Whether to carry heal Stigmas at all. Grobs keeps the standard four even as the only support and calls Healing Touch too weak for a slot (aion2vault.com, aion2-guides.info). notXeon and aLuckyRO swap them in when there is no Cleric. For group PvP, gamerblurb.com runs Sprint Mantra and Barrier Spell; notXeon calls Barrier Spell awful. This build follows notXeon.[kr] Korean bars carry more Stigma slots and heal Stigmas than Global allows.[/kr]"
   },
   {
    "id": "premade",
