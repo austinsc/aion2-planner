@@ -117,37 +117,68 @@ def route(board, listed):
     return steps
 
 
-ARIEL_GRADE = {'minor': 'common', 'major': 'rare', 'rare': 'legend', 'legend': 'unique', 'start': 'start'}
-ARIEL_SHORT = {'PvE Damage Boost': 'DMG%', 'PvE Damage Tolerance': 'TOL%', 'Boss Damage Boost': 'BDMG', 'Boss Damage Tolerance': 'BTOL',
-               'Boss Attack': 'BATK', 'Boss Defense': 'BDEF', 'PvE Attack': 'ATK', 'PvE Defense': 'DEF', 'PvE Accuracy': 'ACC',
-               'PvE Evasion': 'EVA', 'Max HP': 'HP', 'Max MP': 'MP'}
-ARIEL_CAP = 30  # Daevanion Crystal: Ariel per character from Substance Morph (21 Oct 2026 patch notes)
+BOARD_GRADE = {'minor': 'common', 'major': 'rare', 'rare': 'legend', 'legend': 'unique', 'start': 'start'}
 TANKS = {'templar'}
+# The boards that are the same for every class and run on their own crystals. Weights are value per point of each stat
+# for damage-dealers; 'tank' replaces some for TANKS. 'first' names the stats whose nodes make up phase 0 when there is no cap.
+EXTRA_BOARDS = {
+    'ariel': {
+        'corners': '4x PvE Damage Boost, 4x PvE Damage Tolerance (own crystal type, PvE only)', 'own': 'PvE, its own crystals', 'cap': 30,
+        'short': {'PvE Damage Boost': 'DMG%', 'PvE Damage Tolerance': 'TOL%', 'Boss Damage Boost': 'BDMG', 'Boss Damage Tolerance': 'BTOL',
+                  'Boss Attack': 'BATK', 'Boss Defense': 'BDEF', 'PvE Attack': 'ATK', 'PvE Defense': 'DEF', 'PvE Accuracy': 'ACC',
+                  'PvE Evasion': 'EVA', 'Max HP': 'HP', 'Max MP': 'MP'},
+        'w': {'PvE Damage Boost': 4, 'Boss Damage Boost': 4, 'PvE Damage Tolerance': 1.5, 'Boss Damage Tolerance': 1.5,
+              'Boss Attack': 0.08, 'PvE Attack': 0.08, 'PvE Accuracy': 0.01, 'Boss Defense': 0.01, 'PvE Evasion': 0.005,
+              'PvE Defense': 0.002, 'Max HP': 0.0005, 'Max MP': 0.0001},
+        'tank': {'PvE Damage Tolerance': 4, 'Boss Damage Tolerance': 4, 'PvE Damage Boost': 2.5, 'Boss Damage Boost': 2.5},
+        'focus': ('damage', 'tolerance, since you tank')},
+    'marchutan': {
+        'corners': '4x Weapon Damage Boost, 4x Weapon Damage Tolerance (Korea and Taiwan only)', 'own': 'Korea and Taiwan only', 'cap': None,
+        'short': {'Weapon Damage Boost': 'WDB%', 'Weapon Damage Tolerance': 'WDT%', 'Endurance': 'END', 'Endurance Penetration': 'ENDP',
+                  'Restoration': 'RES', 'Restoration Penetration': 'RESP', 'Max HP Increase': 'HP%', 'Attack': 'ATK', 'Defense': 'DEF',
+                  'Critical Hit': 'CRIT', 'Critical Hit Resist': 'CRES', 'Block': 'BLK', 'Accuracy': 'ACC', 'Max HP': 'HP'},
+        'w': {'Weapon Damage Boost': 4, 'Endurance Penetration': 1.5, 'Restoration Penetration': 0.6, 'Weapon Damage Tolerance': 1,
+              'Endurance': 0.8, 'Restoration': 0.5, 'Max HP Increase': 0.5, 'Attack': 0.08, 'Critical Hit': 0.01, 'Accuracy': 0.01,
+              'Defense': 0.002, 'Block': 0.002, 'Critical Hit Resist': 0.002, 'Max HP': 0.0005},
+        'tank': {'Weapon Damage Tolerance': 4, 'Endurance': 3, 'Restoration': 2, 'Max HP Increase': 2, 'Weapon Damage Boost': 2,
+                 'Endurance Penetration': 1, 'Defense': 0.01, 'Block': 0.01},
+        'first': ('Weapon Damage Boost', 'Weapon Damage Tolerance'), 'focus': ('Weapon Damage Boost', 'Weapon Damage Tolerance, since you tank')},
+    'yustiel': {
+        'corners': '4x Attack Increase, 4x Defense Increase (Korea and Taiwan only)', 'own': 'Korea and Taiwan only', 'cap': None,
+        'short': {'Attack Increase': 'ATK%', 'Defense Increase': 'DEF%', 'Perfect Resist': 'PRES', 'Perfect Chance': 'PERF',
+                  'Max Attack': 'MATK', 'Max HP': 'HP', 'Max MP': 'MP', 'Defense': 'DEF', 'Block': 'BLK', 'Evasion': 'EVA',
+                  'Accuracy': 'ACC', 'Block Penetration': 'BPEN'},
+        'w': {'Attack Increase': 6, 'Perfect Resist': 2, 'Defense Increase': 1, 'Perfect Chance': 1, 'Max Attack': 0.08,
+              'Block Penetration': 0.01, 'Accuracy': 0.01, 'Defense': 0.002, 'Block': 0.002, 'Evasion': 0.002, 'Max HP': 0.0005, 'Max MP': 0.0001},
+        'tank': {'Defense Increase': 6, 'Perfect Chance': 3, 'Attack Increase': 3, 'Perfect Resist': 1, 'Defense': 0.01, 'Block': 0.01},
+        'first': ('Attack Increase', 'Defense Increase'), 'focus': ('Attack Increase', 'Defense Increase, since you tank')},
+}
 
 
-def ariel_board(cls):
-    """The Ariel board (the same for every class) with a route by value per crystal: damage first, or tolerance first for tanks.
-    Steps inside the first 30 crystals are phase 0, the rest phase 1."""
-    B = json.load(open(os.path.join(HERE, 'ariel_board.json')))
-    w = {'PvE Damage Boost': 4, 'Boss Damage Boost': 4, 'PvE Damage Tolerance': 1.5, 'Boss Damage Tolerance': 1.5,
-         'Boss Attack': 0.08, 'PvE Attack': 0.08, 'PvE Accuracy': 0.01, 'Boss Defense': 0.01, 'PvE Evasion': 0.005,
-         'PvE Defense': 0.002, 'Max HP': 0.0005, 'Max MP': 0.0001}
-    if cls in TANKS:
-        w.update({'PvE Damage Tolerance': 4, 'Boss Damage Tolerance': 4, 'PvE Damage Boost': 2.5, 'Boss Damage Boost': 2.5})
+def extra_board(cls, key):
+    """A board that is the same for every class, with a route by value per crystal: damage first, or defence first for tanks.
+    With a crystal cap, the steps that fit in it are phase 0; without one, the steps up to the last main corner are."""
+    cfg = EXTRA_BOARDS[key]
+    B = json.load(open(os.path.join(HERE, f'{key}_board.json')))
+    tank = cls in TANKS
+    w = dict(cfg['w'], **(cfg['tank'] if tank else {}))
     nodes = []
     for x in B['cells']:
-        n = {'st': None, 'label': x['label'], 'cost': x['cost'], 'n': None, 'c': x['c'], 'r': x['r'], 'id': f"ariel:{x['c']}-{x['r']}",
-             'grade': ARIEL_GRADE[x['type']], 'value': sum(w[e['stat']] * e['value'] for e in x['effects'])}
+        n = {'st': None, 'label': x['label'], 'cost': x['cost'], 'n': None, 'c': x['c'], 'r': x['r'], 'id': f"{key}:{x['c']}-{x['r']}",
+             'grade': BOARD_GRADE[x['type']], 'value': sum(w[e['stat']] * e['value'] for e in x['effects']),
+             'stats': [e['stat'] for e in x['effects']]}
         if x['type'] == 'start':
             n.update(type='start', short='')
         else:
-            n.update(type='stat', short='+'.join(ARIEL_SHORT[e['stat']] for e in x['effects']) if len(x['effects']) < 2 else
-                     {'PvE Attack': 'A+D', 'PvE Accuracy': 'A+E', 'Boss Attack': 'BA+D'}[x['effects'][0]['stat']])
+            n.update(type='stat', short='+'.join(cfg['short'][e['stat']][:2 if len(x['effects']) > 1 else 5] for e in x['effects']))
         nodes.append(n)
     at = {(n['c'], n['r']): n for n in nodes}
     owned = {n['id'] for n in nodes if n['type'] == 'start'}
     byid = {n['id']: n for n in nodes}
     targets = {n['id'] for n in nodes if n['grade'] in ('legend', 'unique')}
+    main = cfg.get('first', (None, None))[1 if tank else 0]
+    main_left = {n['id'] for n in nodes if main and n['stats'] == [main]}
+    cap = cfg['cap']
     steps, spent = [], 0
     while targets:
         dist, prev, pq = {o: 0 for o in owned}, {}, [(0, o) for o in owned]
@@ -162,7 +193,7 @@ def ariel_board(cls):
                     dist[v['id']] = d + v['cost']
                     prev[v['id']] = u
                     heapq.heappush(pq, (dist[v['id']], v['id']))
-        best = fit = None  # best overall, and best that still fits in the first 30 crystals
+        best = fit = None  # best overall, and best that still fits under the cap
         for t in targets:
             path, u = [], t
             while u not in owned:
@@ -171,35 +202,44 @@ def ariel_board(cls):
             score = sum(byid[p]['value'] for p in path) / dist[t]
             if not best or score > best[0]:
                 best = (score, t, path[::-1], dist[t])
-            if spent + dist[t] <= ARIEL_CAP and (not fit or score > fit[0]):
+            if cap and spent + dist[t] <= cap and (not fit or score > fit[0]):
                 fit = (score, t, path[::-1], dist[t])
-        if spent < ARIEL_CAP and fit:
+        if cap and spent < cap and fit:
             best = fit
         _, t, path, cost = best
         spent += cost
-        ph = 0 if spent <= ARIEL_CAP else 1
+        ph = (0 if spent <= cap else 1) if cap else (0 if main_left else 1)
         for pid in path:
             byid[pid]['st'] = ph
+        main_left -= set(path)
         byid[t]['n'] = len(steps) + 1
         steps.append({'n': len(steps) + 1, 'label': byid[t]['label'], 'phase': ph, 'nodes': path, 'cost': cost})
         owned |= set(path)
         targets -= set(path)
     for n in nodes:
         n.pop('value')
+        n.pop('stats')
     first = sum(s['cost'] for s in steps if s['phase'] == 0)
-    return {'key': 'ariel', 'name': 'Ariel', 'cols': B['cols'], 'rows': B['rows'], 'opens': 45,
-            'corners': '4x PvE Damage Boost, 4x PvE Damage Tolerance (own crystal type, PvE only)', 'nodes': nodes, 'steps': steps,
-            'way': '', 'own': 'PvE, its own crystals', 'phases': [f'First {ARIEL_CAP} Ariel crystals', 'Later Ariel crystals'],
-            'note': (f"Ariel crystals come only from Ariel Fragments: Krao Cave and Draupnir on Hard (item level 2,600) drop them, and Substance Morph > Special > Daevanion turns 100 into one crystal, up to {ARIEL_CAP} per character for now. "
-                     f"The route spends the first {first} on {'tolerance, since you tank' if cls in TANKS else 'damage'}. Spare fragments make 5 Enhance Stones each, but only once your crystals are done. "
-                     "Layout from the Korean and Taiwanese client: Global's route is computed here, not taken from a guide.")}
+    focus = cfg['focus'][1 if tank else 0]
+    if key == 'ariel':
+        phases = [f'First {cap} Ariel crystals', 'Later Ariel crystals']
+        note = (f"Ariel crystals come only from Ariel Fragments: Krao Cave and Draupnir on Hard (item level 2,600) drop them, and Substance Morph > Special > Daevanion turns 100 into one crystal, up to {cap} per character for now. "
+                f"The route spends the first {first} on {focus}. Spare fragments make 5 Enhance Stones each, but only once your crystals are done. "
+                "Layout from the Korean and Taiwanese client: Global's route is computed here, not taken from a guide.")
+    else:
+        phases = [f'{main} corners first', 'The rest']
+        note = (f"Not on Global yet: as of the 21 October 2026 update this board exists only in Korea and Taiwan, so there is no way to earn its crystals here. "
+                f"It is shown so you can plan ahead. The route takes the {focus} corners first ({first} crystals), then the rest by value per crystal. "
+                "Layout from the Korean and Taiwanese client; the route is computed here, not taken from a guide.")
+    return {'key': key, 'name': B['name'], 'cols': B['cols'], 'rows': B['rows'], 'opens': B['opens'], 'corners': cfg['corners'],
+            'nodes': nodes, 'steps': steps, 'way': '', 'own': cfg['own'], 'phases': phases, 'note': note}
 
 
 def schedule(boards, levels):
     """Buy each board's while-levelling steps as soon as the crystals allow.
     A board's first two targets go ahead of older boards' remaining ones (the guides take the main
     damage skills' nodes on every board as it opens); otherwise older boards first, in step order."""
-    queue = {b['key']: [s for s in b['steps'] if s['phase'] == 0] for b in boards if b['key'] not in ('azphel', 'ariel')}
+    queue = {b['key']: [s for s in b['steps'] if s['phase'] == 0] for b in boards if b['key'] != 'azphel' and not b.get('own')}
     opens = {b['key']: b['opens'] for b in boards}
     spent, plan = 0, []
     for row in levels:
@@ -227,7 +267,7 @@ def later(boards, legend):
     out = []
     for ph in (1, 2, 3):
         items = [{'board': b['key'], 'n': s['n'], 'label': s['label'], 'cost': s['cost'], 'nodes': s['nodes']}
-                 for b in boards if b['key'] not in ('azphel', 'ariel') for s in b['steps'] if s['phase'] == ph]
+                 for b in boards if b['key'] != 'azphel' and not b.get('own') for s in b['steps'] if s['phase'] == ph]
         if items:
             out.append({'phase': ph, 'title': f"{titles[ph]} (to {totals[ph]} crystals)", 'items': items,
                         'total': sum(i['cost'] for i in items)})
@@ -344,7 +384,9 @@ def build(cls):
             s['t45'] = g['seq'][44]
     byname = {s['name']: s for s in skills}
     boards = [build_board(b, byname) for b in a['boards']]
-    boards.insert(next(i for i, b in enumerate(boards) if b['key'] == 'azphel'), ariel_board(cls))
+    az = next(i for i, b in enumerate(boards) if b['key'] == 'azphel')
+    boards[az:az] = [extra_board(cls, 'ariel')]
+    boards += [extra_board(cls, 'marchutan'), extra_board(cls, 'yustiel')]
     plan = schedule(boards, levels)
     lat, totals = later(boards, a['dv_legend'])
     # 45 build from the skill-points table

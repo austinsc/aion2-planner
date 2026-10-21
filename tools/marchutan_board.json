@@ -1,0 +1,2101 @@
+{
+"_source": "Aion2 Atlas Daevanion planner (https://aion2atlas.app/daevanion-board/), Marchutan board from the Korean/Taiwanese client, read 2026-10-21. Same board for every class. Not on Global as of the 21 October 2026 update.",
+"name": "Marchutan",
+"cols": 15,
+"rows": 15,
+"opens": 45,
+"cells": [
+{
+"c": 0,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Boost +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 2,
+"r": 0,
+"type": "rare",
+"cost": 3,
+"label": "Endurance +1%",
+"effects": [
+{
+"stat": "Endurance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Boost +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 8,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 10,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 0,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Block +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 0,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 0,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 0,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 5,
+"r": 1,
+"type": "rare",
+"cost": 3,
+"label": "Endurance Penetration +1%",
+"effects": [
+{
+"stat": "Endurance Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 8,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 9,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 12,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 14,
+"r": 1,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 1,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Critical Hit +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Accuracy +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 5,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 2,
+"type": "rare",
+"cost": 3,
+"label": "Endurance Penetration +1%",
+"effects": [
+{
+"stat": "Endurance Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 12,
+"r": 2,
+"type": "major",
+"cost": 2,
+"label": "Block +10, Critical Hit +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 2,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 14,
+"r": 2,
+"type": "rare",
+"cost": 3,
+"label": "Restoration Penetration +1%",
+"effects": [
+{
+"stat": "Restoration Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 5,
+"r": 3,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 7,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 3,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 1,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 3,
+"r": 4,
+"type": "major",
+"cost": 2,
+"label": "Max HP Increase +1%",
+"effects": [
+{
+"stat": "Max HP Increase",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 4,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 5,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 4,
+"type": "rare",
+"cost": 3,
+"label": "Endurance +1%",
+"effects": [
+{
+"stat": "Endurance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 9,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 10,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 11,
+"r": 4,
+"type": "major",
+"cost": 2,
+"label": "Max HP Increase +1%",
+"effects": [
+{
+"stat": "Max HP Increase",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 13,
+"r": 4,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 5,
+"type": "rare",
+"cost": 3,
+"label": "Restoration +1%",
+"effects": [
+{
+"stat": "Restoration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 2,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 13,
+"r": 5,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 14,
+"r": 5,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Critical Hit +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Block +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 6,
+"type": "rare",
+"cost": 3,
+"label": "Restoration Penetration +1%",
+"effects": [
+{
+"stat": "Restoration Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 5,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 6,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "Accuracy +10, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 8,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 6,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Accuracy +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 11,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 6,
+"type": "rare",
+"cost": 3,
+"label": "Restoration +1%",
+"effects": [
+{
+"stat": "Restoration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 14,
+"r": 6,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 7,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 3,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 5,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 7,
+"type": "start",
+"cost": 0,
+"label": "Start",
+"effects": []
+},
+{
+"c": 9,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 7,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 7,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 0,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 8,
+"type": "rare",
+"cost": 3,
+"label": "Endurance +1%",
+"effects": [
+{
+"stat": "Endurance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 3,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 5,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Critical Hit +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 8,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 10,
+"r": 8,
+"type": "rare",
+"cost": 3,
+"label": "Endurance Penetration +1%",
+"effects": [
+{
+"stat": "Endurance Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 12,
+"r": 8,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Accuracy +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 8,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 9,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 1,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 2,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 4,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 9,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 14,
+"r": 9,
+"type": "rare",
+"cost": 3,
+"label": "Endurance +1%",
+"effects": [
+{
+"stat": "Endurance",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 10,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Block +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 5,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 6,
+"r": 10,
+"type": "rare",
+"cost": 3,
+"label": "Restoration +1%",
+"effects": [
+{
+"stat": "Restoration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 7,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 10,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 10,
+"type": "major",
+"cost": 2,
+"label": "Max HP Increase +1%",
+"effects": [
+{
+"stat": "Max HP Increase",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 13,
+"r": 10,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 1,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 7,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 8,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 9,
+"r": 11,
+"type": "major",
+"cost": 2,
+"label": "Accuracy +10, Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+},
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 11,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 12,
+"type": "rare",
+"cost": 3,
+"label": "Endurance Penetration +1%",
+"effects": [
+{
+"stat": "Endurance Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 2,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "Block +10, Critical Hit +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 4,
+"r": 12,
+"type": "rare",
+"cost": 3,
+"label": "Restoration Penetration +1%",
+"effects": [
+{
+"stat": "Restoration Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 6,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "Max HP Increase +1%",
+"effects": [
+{
+"stat": "Max HP Increase",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 7,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 9,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 10,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 11,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Critical Hit +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 13,
+"r": 12,
+"type": "major",
+"cost": 2,
+"label": "Attack +5, Block +10",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+},
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 12,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 0,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 4,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Max HP +100",
+"effects": [
+{
+"stat": "Max HP",
+"value": 100
+}
+]
+},
+{
+"c": 5,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 8,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 9,
+"r": 13,
+"type": "rare",
+"cost": 3,
+"label": "Restoration Penetration +1%",
+"effects": [
+{
+"stat": "Restoration Penetration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 11,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 12,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Block +10",
+"effects": [
+{
+"stat": "Block",
+"value": 10
+}
+]
+},
+{
+"c": 14,
+"r": 13,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 0,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Tolerance +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Tolerance",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 1,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Accuracy +10",
+"effects": [
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 2,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 3,
+"r": 14,
+"type": "major",
+"cost": 2,
+"label": "Defense +50, Accuracy +10",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+},
+{
+"stat": "Accuracy",
+"value": 10
+}
+]
+},
+{
+"c": 4,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit Resist +10",
+"effects": [
+{
+"stat": "Critical Hit Resist",
+"value": 10
+}
+]
+},
+{
+"c": 6,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Defense +50",
+"effects": [
+{
+"stat": "Defense",
+"value": 50
+}
+]
+},
+{
+"c": 7,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Boost +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+},
+{
+"c": 8,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Critical Hit +10",
+"effects": [
+{
+"stat": "Critical Hit",
+"value": 10
+}
+]
+},
+{
+"c": 12,
+"r": 14,
+"type": "rare",
+"cost": 3,
+"label": "Restoration +1%",
+"effects": [
+{
+"stat": "Restoration",
+"value": 1,
+"unit": "%"
+}
+]
+},
+{
+"c": 13,
+"r": 14,
+"type": "minor",
+"cost": 1,
+"label": "Attack +5",
+"effects": [
+{
+"stat": "Attack",
+"value": 5
+}
+]
+},
+{
+"c": 14,
+"r": 14,
+"type": "legend",
+"cost": 4,
+"label": "Weapon Damage Boost +2.5%",
+"effects": [
+{
+"stat": "Weapon Damage Boost",
+"value": 2.5,
+"unit": "%"
+}
+]
+}
+]
+}
