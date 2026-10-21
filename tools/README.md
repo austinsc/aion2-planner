@@ -72,3 +72,5 @@ The Stones tab has its own small step: `python3 tools/render_stones.py` writes `
 ```
 
 `mode` is `PvE`, `PvP` or `PvE and PvP`.
+
+Korea- or Taiwan-only content is hidden by the site's **Global only** switch (in the menu bar, on by default). Mark it in text as `[kr]...[/kr]` or `[tw]...[/tw]`; a string that is wholly marked hides its whole list item. A source or a build that is Korea/Taiwan only takes `"region": "KR"` or `"region": "TW"`. `render.py` checks the markers pair up and counts only sources without a region toward the three sites, so every build still shows three with the switch on. Daevanion boards whose `own` starts with "Korea" (Marchutan and Yustiel) are hidden the same way.

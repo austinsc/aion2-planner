@@ -221,16 +221,19 @@ function renderSkills(){
   $('#p-skills').innerHTML = h;
 }
 /* ---------------- DAEVANION ---------------- */
+const GO = () => typeof globalOnly === 'function' && globalOnly();
+// Boards not on Global yet (x.own) are hidden by the site's Global-only switch.
+const isKrBoard = x => !!(x.own && x.own.startsWith('Korea'));
 function renderDaev(){
-  const L = state.level, b = BOARDS[state.board];
+  const L = state.level, b = GO() && isKrBoard(BOARDS[state.board]) ? DATA.boards[0] : BOARDS[state.board];
   const nowIds = new Set(planAt(L).filter(p => p.board === b.key).flatMap(p => p.nodes));
   const routeIds = new Set(b.steps.flatMap(s => s.nodes));
   const totalCr = lvlRow(L).dv, spent = DATA.boards.reduce((a,bb)=>a+ownedCost(bb.key),0);
-  const opensLine = DATA.boards.map(x => `${x.name} ${x.opens}${x.own ? ` (${x.own})` : x.key === 'azphel' ? ' (PvP, its own crystals)' : ''}`).join(' · ');
+  const opensLine = DATA.boards.filter(x => !(GO() && isKrBoard(x))).map(x => `${x.name} ${x.opens}${x.own ? ` (${x.own})` : x.key === 'azphel' ? ' (PvP, its own crystals)' : ''}`).join(' · ');
   let h = `<div class="card">
     <header><h2>Daevanion boards</h2><span class="eyebrow">${totalCr} crystals by level ${L} · ${spent} marked spent</span></header>
     <p class="note">Numbers are the order to buy the targets on each board; the ringed nodes are the cheapest path to them. Click a node to mark it owned. Marking a level done marks that level's nodes for you. ${esc(opensLine)}.</p>
-    <div class="btabs">${DATA.boards.map(x => `<button class="btab" data-board="${x.key}" aria-selected="${x.key===b.key}">${x.name}<small>${x.own && x.own.startsWith('Korea') ? 'Korea/Taiwan only' : `opens ${x.opens}`} · ${ownedCost(x.key)} / ${x.nodes.reduce((a,n)=>a+n.cost,0)} cr</small></button>`).join('')}</div>
+    <div class="btabs">${DATA.boards.map(x => `<button class="btab${isKrBoard(x) ? ' nonglobal' : ''}" data-board="${x.key}" aria-selected="${x.key===b.key}">${x.name}<small>${isKrBoard(x) ? 'Korea/Taiwan only' : `opens ${x.opens}`} · ${ownedCost(x.key)} / ${x.nodes.reduce((a,n)=>a+n.cost,0)} cr</small></button>`).join('')}</div>
     <div class="legend">${(b.phases || PHASES).map((p, i) => `<span><i style="background:var(--p${i})"></i>${esc(p.split(' (')[0].replace('District quests and sealed dungeons', 'Quest & dungeon crystals'))}</span>`).join('')}<span><i style="background:var(--ok)"></i>Owned</span><span>Dim: not on the route</span></div>
     <div class="boardwrap">
       <div class="board" style="--cols:${b.cols};grid-template-columns:repeat(${b.cols},1fr)">` +
@@ -295,36 +298,42 @@ function renderBuild(){
 let buildPick = null;
 function renderBuilds(){
   const el = $('#p-builds'); if (!el) return;
-  const B = DATA.builds;
+  const B0 = DATA.builds;
+  // Region markup: [kr]...[/kr] or [tw]...[/tw] in text, "region" on a build or source. The site's Global-only switch hides them.
+  const B = B0 && { ...B0, builds: (B0.builds || []).filter(x => !(GO() && x.region)) };
   if (!B || !B.builds || !B.builds.length) { el.innerHTML = '<div class="card"><p class="empty">No other builds for this class yet.</p></div>'; return; }
   try { buildPick = buildPick || sessionStorage.getItem(STORE + '-build'); } catch(e){}
   const b = B.builds.find(x => x.id === buildPick) || B.builds[0];
   const nameTag = n => SK[n] ? skTag(n, 'sm') : `<span class="sk"><span class="nm">${esc(n)}</span></span>`;
   const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch(e) { return ''; } };
   const list = (arr, f) => arr && arr.length ? `<ul class="list">${arr.map(f).join('')}</ul>` : '<p class="empty">—</p>';
+  const tag = r => `<span class="nonglobal-tag">${esc(String(r).toUpperCase())}</span>`;
+  const rt = s => esc(s || '').replace(/\[(kr|tw)\]([\s\S]*?)\[\/\1\]/g, (m, r, t) => `<span class="nonglobal">${tag(r)}${t}</span>`);
+  const whole = s => /^\[(kr|tw)\][\s\S]*\[\/\1\]$/.test((s || '').trim());
+  const ng = on => on ? ' class="nonglobal"' : '';
   let h = `<div class="card gold"><header><h2>PvP and alternate builds</h2><span class="eyebrow">${B.builds.length} builds · pick one</span></header>
-    <p class="note">${esc(B.intro || "The main PvE build is the one the rest of this planner follows. These are the other builds players run, each checked against several sources.")}</p>
+    <p class="note">${rt(B.intro || "The main PvE build is the one the rest of this planner follows. These are the other builds players run, each checked against several sources.")}</p>
     <div class="bpicks">${B.builds.map(x => `<button class="bpick ${x.id === b.id ? 'on' : ''}" data-build="${esc(x.id)}"><span class="mode mode-${esc(x.mode.replace(/ and /, '-').toLowerCase())}">${esc(x.mode)}</span><b>${esc(x.name)}</b><small>${esc(x.role)}</small></button>`).join('')}</div></div>`;
   h += `<div class="card"><header><h2>${esc(b.name)}</h2><span class="eyebrow">${esc(b.mode)} · ${esc(b.role)}</span></header>
-    <p>${esc(b.summary)}</p>
-    ${b.when ? `<p class="note"><b>When:</b> ${esc(b.when)}</p>` : ''}
-    ${b.popularity ? `<p class="note"><b>How common:</b> ${esc(b.popularity)}</p>` : ''}
-    ${b.vsMain ? `<p class="note"><b>Against the main build:</b> ${esc(b.vsMain)}</p>` : ''}</div>`;
+    <p>${rt(b.summary)}</p>
+    ${b.when ? `<p class="note"><b>When:</b> ${rt(b.when)}</p>` : ''}
+    ${b.popularity ? `<p class="note"><b>How common:</b> ${rt(b.popularity)}</p>` : ''}
+    ${b.vsMain ? `<p class="note"><b>Against the main build:</b> ${rt(b.vsMain)}</p>` : ''}</div>`;
   h += `<div class="grid2 bgrid">`;
   if (b.skills && b.skills.length) h += `<div class="card"><header><h3>Skill points</h3><span class="eyebrow">in this order</span></header><ol class="order">` +
-    b.skills.map((x, i) => `<li><span class="o">${i+1}</span><span class="skills">${nameTag(x.skill)}${x.note ? `<span class="muted" style="font-size:.85rem">${esc(x.note)}</span>` : ''}</span><span class="to">to<b class="num">${esc(x.to)}</b></span></li>`).join('') + `</ol></div>`;
-  h += `<div class="bcol"><div class="card"><header><h3>Stigmas</h3></header>${list(b.stigmas, x => `<li style="align-items:flex-start">${nameTag(x.name)}${x.lvl ? `<span class="chip">to <b class="num">${esc(x.lvl)}</b></span>` : ''}<span class="note" style="flex:1 1 220px">${esc(x.why || '')}</span></li>`)}
+    b.skills.map((x, i) => `<li><span class="o">${i+1}</span><span class="skills">${nameTag(x.skill)}${x.note ? `<span class="muted" style="font-size:.85rem">${rt(x.note)}</span>` : ''}</span><span class="to">to<b class="num">${esc(x.to)}</b></span></li>`).join('') + `</ol></div>`;
+  h += `<div class="bcol"><div class="card"><header><h3>Stigmas</h3></header>${list(b.stigmas, x => `<li style="align-items:flex-start"${ng(whole(x.why))}>${nameTag(x.name)}${x.lvl ? `<span class="chip">to <b class="num">${esc(x.lvl)}</b></span>` : ''}<span class="note" style="flex:1 1 220px">${rt(x.why || '')}</span></li>`)}
     ${b.passives && b.passives.length ? `<h3 style="margin-top:6px">Passives, in order</h3><div class="chips">${b.passives.map(nameTag).join('')}</div>` : ''}</div>`;
-  if (b.daevanion || b.gear) h += `<div class="card"><header><h3>Daevanion and gear</h3></header>${b.daevanion ? `<p class="note"><b>Daevanion:</b> ${esc(b.daevanion)}</p>` : ''}${b.gear ? `<p class="note"><b>Gear:</b> ${esc(b.gear)}</p>` : ''}</div>`;
+  if (b.daevanion || b.gear) h += `<div class="card"><header><h3>Daevanion and gear</h3></header>${b.daevanion ? `<p class="note"><b>Daevanion:</b> ${rt(b.daevanion)}</p>` : ''}${b.gear ? `<p class="note"><b>Gear:</b> ${rt(b.gear)}</p>` : ''}</div>`;
   h += `</div>`;
-  if (b.specialties && b.specialties.length) h += `<div class="card"><header><h3>Specialties</h3></header>${list(b.specialties, x => `<li style="align-items:flex-start">${nameTag(x.skill)}<span class="pick" style="flex:1 1 220px">${esc(x.picks)}</span></li>`)}</div>`;
+  if (b.specialties && b.specialties.length) h += `<div class="card"><header><h3>Specialties</h3></header>${list(b.specialties, x => `<li style="align-items:flex-start">${nameTag(x.skill)}<span class="pick" style="flex:1 1 220px">${rt(x.picks)}</span></li>`)}</div>`;
   h += `</div>`;
-  if (b.play && b.play.length) h += `<div class="card"><header><h3>How to play it</h3></header><ul class="fix">${b.play.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
-  if ((b.pros && b.pros.length) || (b.cons && b.cons.length)) h += `<div class="grid2"><div class="card"><header><h3>Strengths</h3></header>${list(b.pros, x => `<li><span>${esc(x)}</span></li>`)}</div><div class="card"><header><h3>Weaknesses</h3></header>${list(b.cons, x => `<li><span>${esc(x)}</span></li>`)}</div></div>`;
-  h += `<div class="card"><header><h3>Sources for this build</h3><span class="eyebrow">${new Set(b.sources.map(x => host(x.url))).size} sites</span></header><ol class="src">` +
-    b.sources.map(x => `<li><a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="muted">(${esc(host(x.url))})</span>${x.note ? `: ${esc(x.note)}` : ''}</li>`).join('') + `</ol>
-    ${b.disagree ? `<p class="note"><b>Where sources disagree:</b> ${esc(b.disagree)}</p>` : ''}</div>`;
-  if (B.crosscheck) h += `<div class="card"><header><h3>The main PvE build, cross-checked</h3></header><p class="note">${esc(B.crosscheck)}</p></div>`;
+  if (b.play && b.play.length) h += `<div class="card"><header><h3>How to play it</h3></header><ul class="fix">${b.play.map(x => `<li${ng(whole(x))}>${rt(x)}</li>`).join('')}</ul></div>`;
+  if ((b.pros && b.pros.length) || (b.cons && b.cons.length)) h += `<div class="grid2"><div class="card"><header><h3>Strengths</h3></header>${list(b.pros, x => `<li${ng(whole(x))}><span>${rt(x)}</span></li>`)}</div><div class="card"><header><h3>Weaknesses</h3></header>${list(b.cons, x => `<li${ng(whole(x))}><span>${rt(x)}</span></li>`)}</div></div>`;
+  h += `<div class="card"><header><h3>Sources for this build</h3><span class="eyebrow">${new Set(b.sources.filter(x => !(GO() && x.region)).map(x => host(x.url))).size} sites</span></header><ol class="src">` +
+    b.sources.map(x => `<li${ng(x.region)}>${x.region ? tag(x.region) : ''}<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="muted">(${esc(host(x.url))})</span>${x.note ? `: ${rt(x.note)}` : ''}</li>`).join('') + `</ol>
+    ${b.disagree ? `<p class="note"><b>Where sources disagree:</b> ${rt(b.disagree)}</p>` : ''}</div>`;
+  if (B.crosscheck) h += `<div class="card"><header><h3>The main PvE build, cross-checked</h3></header><p class="note">${rt(B.crosscheck)}</p></div>`;
   el.innerHTML = h;
   el.querySelectorAll('[data-build]').forEach(x => x.onclick = () => { buildPick = x.dataset.build; try { sessionStorage.setItem(STORE + '-build', buildPick); } catch(e){} renderBuilds(); });
 }
@@ -558,6 +567,7 @@ function renderAll(){
   renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderBuilds(); renderStig(); renderArcana(); renderMacro(); renderStones();
 }
 if (typeof siteMenu === 'function') siteMenu(META.cls, '../');
+window.addEventListener('globalonly', () => renderAll());
 loadLocal();
 renderSrc(); renderAll();
 try { const t = sessionStorage.getItem(STORE + '-tab'); if (t) showTab(t); } catch(e){}

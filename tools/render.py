@@ -5,7 +5,7 @@ The guide may override any generated value: per-skill fields, per-level keep/not
 the crystal schedule order, the 45 build rows, and it supplies the stigmas, passives,
 written notes, macro cards and sources.
 """
-import html, json, os, sys
+import html, json, os, re, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -87,9 +87,22 @@ def check(cls, d):
                 if x['name'] not in names: bad.append((where + ' stigmas', x['name']))
             for x in b.get('passives', []):
                 if x not in names: bad.append((where + ' passives', x))
-            hosts = {urlparse(x['url']).netloc.replace('www.', '') for x in b.get('sources', []) if x.get('url')}
+            # The three sites must remain with the Global-only switch on, so Korea/Taiwan-only sources don't count.
+            hosts = {urlparse(x['url']).netloc.replace('www.', '') for x in b.get('sources', []) if x.get('url') and not x.get('region')}
             if len(hosts) < 3:
-                bad.append((where, f'needs sources from at least 3 different sites, has {sorted(hosts)}'))
+                bad.append((where, f'needs sources from at least 3 different sites (not counting region ones), has {sorted(hosts)}'))
+            for x in [b] + b.get('sources', []):
+                if x.get('region') not in (None, 'KR', 'TW'):
+                    bad.append((where, f"region must be KR or TW, not {x.get('region')!r}"))
+        # Region markup in text: [kr]...[/kr] or [tw]...[/tw], not nested.
+        def strings(o):
+            if isinstance(o, dict): return [s for v in o.values() for s in strings(v)]
+            if isinstance(o, list): return [s for v in o for s in strings(v)]
+            return [o] if isinstance(o, str) else []
+        for t in strings(B):
+            rest = re.sub(r'\[(kr|tw)\][^\[]*?(?:\[(?!/?(?:kr|tw)\])[^\[]*?)*\[/\1\]', '', t)
+            if re.search(r'\[/?(kr|tw)\]', rest):
+                bad.append(('builds region markup', t[:80]))
     if bad:
         raise SystemExit(f'{cls}: problems {bad}')
 

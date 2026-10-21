@@ -15,13 +15,30 @@ const SITE_EXTRA = [
   { key: 'essence', name: 'Essence Extraction', href: 'essence-extraction/' },
 ];
 
+/* Site-wide "Global only" switch, on by default: hides content that applies only to the Korean and Taiwanese servers.
+   Pages mark such content with class "nonglobal"; scripts that render it listen for the "globalonly" event. */
+const GLOBAL_KEY = 'aion2-global-only';
+function globalOnly() { try { return localStorage.getItem(GLOBAL_KEY) !== '0'; } catch(e) { return true; } }
+function applyGlobalOnly() {
+  document.documentElement.classList.toggle('global-only', globalOnly());
+  document.querySelectorAll('.gtoggle').forEach(b => b.setAttribute('aria-pressed', globalOnly()));
+}
+function setGlobalOnly(on) {
+  try { localStorage.setItem(GLOBAL_KEY, on ? '1' : '0'); } catch(e) {}
+  applyGlobalOnly();
+  window.dispatchEvent(new Event('globalonly'));
+}
+applyGlobalOnly();
+
 function siteMenu(current, root) {
   const el = document.getElementById('site');
   if (!el) return;
   const link = (p, extra = '') => `<a href="${root}${p.href}index.html"${p.key === current ? ' aria-current="page"' : ''}>${extra}${p.name}</a>`;
-  el.innerHTML = `<div class="wrap"><a class="home" href="${root}index.html"${current === 'home' ? ' aria-current="page"' : ''}>AION 2 Planner</a><span class="sep"></span>` +
+  el.innerHTML = `<div class="wrap"><div class="links"><a class="home" href="${root}index.html"${current === 'home' ? ' aria-current="page"' : ''}>AION 2 Planner</a><span class="sep"></span>` +
     SITE.map(p => link(p, p.icon ? `<img src="${root}${p.icon}" alt="">` : '')).join('') +
-    `<span class="sep"></span>` + SITE_EXTRA.map(p => link(p)).join('') + `</div>`;
-  const cur = el.querySelector('[aria-current="page"]'), wrap = el.firstChild;
+    `<span class="sep"></span>` + SITE_EXTRA.map(p => link(p)).join('') + `</div>` +
+    `<button class="gtoggle" type="button" aria-pressed="${globalOnly()}" title="Hide advice, data and boards that apply only to the Korean and Taiwanese servers"><span class="sw"></span>Global only</button></div>`;
+  el.querySelector('.gtoggle').onclick = () => setGlobalOnly(!globalOnly());
+  const cur = el.querySelector('[aria-current="page"]'), wrap = el.querySelector('.links');
   if (cur && wrap.scrollWidth > wrap.clientWidth) wrap.scrollLeft = cur.offsetLeft - (wrap.clientWidth - cur.offsetWidth) / 2;
 }
