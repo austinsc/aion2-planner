@@ -43,6 +43,9 @@ def merge(cls):
             'build45': auto['build45'], 'stigmas': g['stigmas'], 'passives': g['passives'], 'costTable': auto['costTable'],
             'macro': g['macro'], 'sources': g['sources'],
             'arcana': {'cards': auto.get('arcana', []), **g.get('arcana', {})}}
+    bp = os.path.join(ROOT, 'classes', f'{cls}.builds.json')
+    if os.path.exists(bp):
+        data['builds'] = json.load(open(bp))
     for k in ('azphelPhases',):
         if k in g:
             data[k] = g[k]
@@ -66,8 +69,29 @@ def check(cls, d):
                 for s in [it.get('skill')] + it.get('skills', []) + [x.get('skill') for x in it.get('cells', [])]:
                     if s and s not in names and b['t'] not in ('hand', 'keys'):
                         bad.append(('macro ' + b['t'], s))
+    B = d.get('builds')
+    if B:
+        from urllib.parse import urlparse
+        for b in B['builds']:
+            where = f"build {b.get('id')}"
+            for k in ('id', 'name', 'mode', 'role', 'summary', 'sources'):
+                if not b.get(k):
+                    bad.append((where, 'missing ' + k))
+            if b.get('mode') not in ('PvE', 'PvP', 'PvE and PvP'):
+                bad.append((where, 'mode must be PvE, PvP or "PvE and PvP"'))
+            for x in b.get('skills', []):
+                if x['skill'] not in names: bad.append((where + ' skills', x['skill']))
+            for x in b.get('specialties', []):
+                if x['skill'] not in names: bad.append((where + ' specialties', x['skill']))
+            for x in b.get('stigmas', []):
+                if x['name'] not in names: bad.append((where + ' stigmas', x['name']))
+            for x in b.get('passives', []):
+                if x not in names: bad.append((where + ' passives', x))
+            hosts = {urlparse(x['url']).netloc.replace('www.', '') for x in b.get('sources', []) if x.get('url')}
+            if len(hosts) < 3:
+                bad.append((where, f'needs sources from at least 3 different sites, has {sorted(hosts)}'))
     if bad:
-        raise SystemExit(f'{cls}: unknown skill names {bad}')
+        raise SystemExit(f'{cls}: problems {bad}')
 
 
 def write(cls):

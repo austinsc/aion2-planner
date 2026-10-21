@@ -339,3 +339,13 @@ table.theo td .gain{margin-left:6px}
 .acard .aalt b{display:block;font-family:var(--font-cond);letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:var(--warn)}
 .chip.on{border-color:var(--ok);color:var(--ok)}
 .chip.off{opacity:.55}
+
+/* ---------- builds ---------- */
+.bpicks{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.bpick{display:grid;gap:3px;justify-items:start;text-align:left;padding:10px 12px;border-radius:10px;border:1px solid var(--line2);background:var(--panel2)}
+.bpick b{font-family:var(--font-display);font-weight:600;color:var(--fg)}
+.bpick small{color:var(--muted);font-size:.8rem}
+.bpick.on{border-color:var(--gold);background:color-mix(in srgb, var(--gold) 14%, var(--panel2))}
+.bpick .mode{font-family:var(--font-cond);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;padding:1px 7px;border-radius:999px;color:#fff;background:var(--ok)}
+.bpick .mode-pvp{background:var(--fire)}
+.bpick .mode-pve-pvp{background:var(--p2)}

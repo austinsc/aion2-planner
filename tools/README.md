@@ -45,3 +45,30 @@ The Stones tab has its own small step: `python3 tools/render_stones.py` writes `
 | `sources` | `{url, title, what}` or `{links: [[url, title], ...], what}` |
 
 `render.py` stops with an error if the guide names a skill the class does not have (in `hand` and `keys` blocks other names are allowed and shown as plain text).
+
+## The builds file
+
+`classes/<class>.builds.json` feeds the **PvP & alt builds** tab: the class's PvP build and the popular alternates, each drawn from several sources. `render.py` merges it into `data.js` and refuses it if a skill, Specialty, Stigma or passive name isn't the class's, or if a build cites fewer than three different sites.
+
+```json
+{
+  "intro": "One or two sentences for the top of the tab.",
+  "crosscheck": "How other sources compare with the planner's main PvE build: what they agree on and where they differ.",
+  "builds": [{
+    "id": "pvp", "name": "PvP Burst", "mode": "PvP", "role": "Burst DPS (arena and Abyss)",
+    "summary": "What the build is and why people run it.", "when": "Where to use it.",
+    "popularity": "How common it is, and the evidence (rankings, guides, creators).",
+    "vsMain": "What changes against the main PvE build.",
+    "skills": [{"skill": "Skill name", "to": 10, "note": "optional"}],
+    "specialties": [{"skill": "Skill name", "picks": "The picks"}],
+    "stigmas": [{"name": "Stigma name", "lvl": 10, "why": "One line"}],
+    "passives": ["Passive name"],
+    "daevanion": "Board focus, e.g. Azphel first for PvP.", "gear": "Stats, Manastones, Arcana or Theostones that differ.",
+    "play": ["How to play it, one tip per line"], "pros": ["..."], "cons": ["..."],
+    "sources": [{"title": "Site: page", "url": "https://...", "note": "What it contributed"}],
+    "disagree": "Where the sources split, and what this build follows."
+  }]
+}
+```
+
+`mode` is `PvE`, `PvP` or `PvE and PvP`.
