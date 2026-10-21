@@ -22,6 +22,7 @@ Open [`index.html`](index.html) for the menu. Every page also has a menu bar alo
 | Guide | Path | What |
 |---|---|---|
 | Macro Guide | [`macros/`](macros/index.html) | How the in-game skill macro and basic-attack cancelling work, setting it up step by step, what goes in it, fixes, and every class's boss setup |
+| Crafting | [`crafting/`](crafting/index.html) | The five crafts: proficiency 1-100 with each craft tracked separately, what unlocks when, success rates, the Dragon Lord gear ladder to item level 102, materials, and what alts need |
 | Essence Extraction | [`essence-extraction/`](essence-extraction/index.html) | Gathering proficiency 1-100: route, spots per faction, Professional test, skill points |
 
 ## Run it
@@ -55,11 +56,11 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 
 ## Hosting
 
-The site is published on GitHub Pages from the `gh-pages` branch. [`.github/workflows/pages.yml`](.github/workflows/pages.yml) rebuilds that branch on every push to `main`: `tools/build_site.sh` copies the menu, `shared/`, every planner folder, `macros/` and `essence-extraction/` into `_site/` and adds `.nojekyll`, and the workflow pushes it to `gh-pages`. You can also run it by hand from the Actions tab.
+The site is published on GitHub Pages from the `gh-pages` branch. [`.github/workflows/pages.yml`](.github/workflows/pages.yml) rebuilds that branch on every push to `main`: `tools/build_site.sh` copies the menu, `shared/`, every planner folder, `macros/`, `crafting/` and `essence-extraction/` into `_site/` and adds `.nojekyll`, and the workflow pushes it to `gh-pages`. You can also run it by hand from the Actions tab.
 
 ## How it is built
 
-`shared/` holds the planner engine, styles, node frames and the site menu. Each class folder has a generated `data.js`, its icons and a page shell. The level steps, skill levels, Daevanion routes and crystal schedule are generated from the sources by the scripts in [`tools/`](tools/README.md). The written parts (skill roles, notes, Stigma plan, macro cards) are in `classes/<class>.guide.json`. The Essence Extraction data is compiled by hand in `essence-extraction/data.js`. The Macro Guide is `tools/templates/macros.html`; `python3 tools/render_macros.py` fills in each class's setup from the guide files and writes `macros/index.html`.
+`shared/` holds the planner engine, styles, node frames and the site menu. Each class folder has a generated `data.js`, its icons and a page shell. The level steps, skill levels, Daevanion routes and crystal schedule are generated from the sources by the scripts in [`tools/`](tools/README.md). The written parts (skill roles, notes, Stigma plan, macro cards) are in `classes/<class>.guide.json`. The Essence Extraction and Crafting data are compiled by hand in `essence-extraction/data.js` and `crafting/data.js`. The Macro Guide is `tools/templates/macros.html`; `python3 tools/render_macros.py` fills in each class's setup from the guide files and writes `macros/index.html`.
 
 ## Data and sources
 

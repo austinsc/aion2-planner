@@ -10,6 +10,10 @@ GUIDES = [{'key': 'macros', 'name': 'Macro Guide', 'href': 'macros/', 'role': 'C
            'build': 'Set up the in-game skill macro',
            'blurb': 'How the macro and basic-attack cancelling work, the setup in game step by step, what goes in it, and every class at a glance.',
            'store': None, 'svg': '<rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/>'},
+          {'key': 'crafting', 'name': 'Crafting', 'href': 'crafting/', 'role': 'Professions',
+           'build': 'Five crafts, proficiency 1 to 100',
+           'blurb': 'What each craft makes and unlocks, success rates, the Dragon Lord ladder to item level 102, materials, and what your alts need.',
+           'store': 'crafting-planner', 'kind': 'craft', 'svg': '<path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7L3 15l3 3 8-8M3 21h10"/>'},
           {'key': 'essence', 'name': 'Essence Extraction', 'href': 'essence-extraction/', 'role': 'Gathering profession',
            'build': 'Proficiency 1 to 100, fastest route',
            'blurb': 'Which ore, plants and gems to gather at each proficiency, where they grow, and how to get past each gate.',
@@ -31,7 +35,7 @@ def main():
         site.append({'key': c, 'name': m['name'], 'href': f'{c}-planner/', 'icon': f"{c}-planner/icons/{m['brandIcon']}.webp"})
     gath = [f'''    <a class="cc" href="{g['href']}index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">{g['svg']}</svg></span>
       <h2>{e(g['name'])}</h2><span class="role">{e(g['role'])}</span>
-      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p>{f'<span class="prog" data-store="{g["store"]}" data-kind="prof"></span>' if g['store'] else ''}</a>''' for g in GUIDES]
+      <span class="build">{e(g['build'])}</span><p>{e(g['blurb'])}</p>{f'<span class="prog" data-store="{g["store"]}" data-kind="{g.get('kind', 'prof')}"></span>' if g['store'] else ''}</a>''' for g in GUIDES]
     page = open(os.path.join(HERE, 'templates', 'home.html'), encoding='utf-8').read()
     page = page.replace('{cards}', '\n'.join(cards)).replace('{guides}', '\n'.join(gath)).replace('{compiled}', '18 Oct 2026')
     open(os.path.join(ROOT, 'index.html'), 'w', encoding='utf-8').write(page)

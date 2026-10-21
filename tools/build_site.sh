@@ -7,7 +7,7 @@ out="${1:-_site}"
 rm -rf "$out"
 mkdir -p "$out"
 cp index.html LICENSE NOTICE.md "$out"/
-cp -r shared essence-extraction macros *-planner "$out"/
+cp -r shared essence-extraction crafting macros *-planner "$out"/
 # Serve files as they are: no Jekyll processing.
 touch "$out/.nojekyll"
 echo "Site written to $out ($(find "$out" -type f | wc -l) files)"

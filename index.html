@@ -64,11 +64,14 @@
       <h2>Chanter</h2><span class="role">Support</span>
       <span class="build">PvE Dark Crush</span><p>Melee support. A one-line Dark Crush macro, mantras always on, party heals and buffs by hand.</p><span class="prog" data-store="chanter-planner"></span></a>
   </div>
-  <div class="sect"><h2>Guides</h2><span class="eyebrow">macros and gathering</span></div>
+  <div class="sect"><h2>Guides</h2><span class="eyebrow">macros, crafting and gathering</span></div>
   <div class="classes">
     <a class="cc" href="macros/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></span>
       <h2>Macro Guide</h2><span class="role">Combat</span>
       <span class="build">Set up the in-game skill macro</span><p>How the macro and basic-attack cancelling work, the setup in game step by step, what goes in it, and every class at a glance.</p></a>
+    <a class="cc" href="crafting/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7L3 15l3 3 8-8M3 21h10"/></svg></span>
+      <h2>Crafting</h2><span class="role">Professions</span>
+      <span class="build">Five crafts, proficiency 1 to 100</span><p>What each craft makes and unlocks, success rates, the Dragon Lord ladder to item level 102, materials, and what your alts need.</p><span class="prog" data-store="crafting-planner" data-kind="craft"></span></a>
     <a class="cc" href="essence-extraction/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>
       <h2>Essence Extraction</h2><span class="role">Gathering profession</span>
       <span class="build">Proficiency 1 to 100, fastest route</span><p>Which ore, plants and gems to gather at each proficiency, where they grow, and how to get past each gate.</p><span class="prog" data-store="essence-planner" data-kind="prof"></span></a>
@@ -88,7 +91,7 @@ siteMenu('home', '');
 document.querySelectorAll('[data-store]').forEach(el => {
   try {
     const s = JSON.parse(localStorage.getItem(el.dataset.store) || 'null');
-    if (s && s.level) el.textContent = el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
+    if (s && s.level) el.textContent = el.dataset.kind === 'craft' ? `${s.craft || 'Crafting'} ${s.level} of 100` : el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
   } catch (e) {}
 });
 </script>

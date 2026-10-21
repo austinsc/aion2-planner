@@ -11,6 +11,7 @@ const SITE = [
 ];
 const SITE_EXTRA = [
   { key: 'macros', name: 'Macros', href: 'macros/' },
+  { key: 'crafting', name: 'Crafting', href: 'crafting/' },
   { key: 'essence', name: 'Essence Extraction', href: 'essence-extraction/' },
 ];
 

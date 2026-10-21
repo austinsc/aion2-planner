@@ -41,7 +41,7 @@
   <div class="classes">
 {cards}
   </div>
-  <div class="sect"><h2>Guides</h2><span class="eyebrow">macros and gathering</span></div>
+  <div class="sect"><h2>Guides</h2><span class="eyebrow">macros, crafting and gathering</span></div>
   <div class="classes">
 {guides}
   </div>
@@ -60,7 +60,7 @@ siteMenu('home', '');
 document.querySelectorAll('[data-store]').forEach(el => {
   try {
     const s = JSON.parse(localStorage.getItem(el.dataset.store) || 'null');
-    if (s && s.level) el.textContent = el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
+    if (s && s.level) el.textContent = el.dataset.kind === 'craft' ? `${s.craft || 'Crafting'} ${s.level} of 100` : el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
   } catch (e) {}
 });
 </script>
