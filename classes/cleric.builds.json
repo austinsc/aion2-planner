@@ -1,0 +1,273 @@
+{
+ "intro": "The Cleric's PvP build and the presets players actually run besides the planner's PvE Condemnation build: group PvP support, a full-support dungeon healer and a solo farming preset. Each preset keeps its own skill and Stigma levels, so none of them touches your PvE build.",
+ "crosscheck": "Most sources agree with the planner's PvE build. Th3Ruthless's Global guide (DPS chapter), aion2-guides.info (from Lucia's, Kaeria's and Whelps' guides) and aion2-meta's data on the top 37 Global Clerics all run Light of Protection, Earth Punishment, Prayer of Amplification and Noble Aura, and every guide builds on Chain of Torment, then Condemnation with its crit reset and Earth Punishment's sure crits. They differ on four points. (1) The fourth Stigma: game8 runs Power Burst in place of Noble Aura. MetaBot's 151 tracked top Global Clerics slot Summon Resurrection (64%) more often than Prayer of Amplification (50%), and aion2atlas also uses Summon Resurrection as the flex slot. (2) The heals: guides built on Korean and Taiwanese play (games.gg, mmoexp) and aion2-meta's Korean data put Radiant Recovery and Healing Light to 20 alongside Condemnation. The planner leaves heals at 1 until 34 and raises them after the damage skills. (3) Passives: games.gg and mmoexp say to skip Lightning Strike Scattershot and Radiant Benediction, max Immortal Veil first and put Survival Willpower at 10. aion2-meta finds about half of top Global Clerics keep Scattershot below 8. The planner puts Scattershot and Radiant Benediction at 10 and Survival Willpower at 1. (4) Specialties: for Light of Regeneration, Th3Ruthless takes +20% healed at 50% HP or less plus Incoming Heal, and game8 takes Incoming Heal plus Move Speed; the planner takes Defense plus Move Speed. For Radiant Recovery, Th3Ruthless, mmoexp and aoeah take the two-debuff cleanse. For Judgment Thunder, Th3Ruthless takes the enemy Combat Speed cut where game8 and the planner take −20% MP. Condemnation and Bolt picks match game8 and Th3Ruthless.",
+ "builds": [
+  {
+   "id": "pvp",
+   "name": "PvP Condemnation duelist",
+   "mode": "PvP",
+   "role": "Damage and self-sustain (1v1, small fights)",
+   "summary": "Keeps the PvE damage engine: Chain of Torment, Earth Punishment's sure crits and Condemnation resetting itself. It then trades party damage for survival: Salvation as the panic button, Survival Willpower against crowd control and Voice of Doom against healing and shields.",
+   "when": "Duels, open-world ganks and small skirmishes where you have to kill someone, not keep a group alive.",
+   "popularity": "The most common PvP setup in Global guides. Stigma sets from Th3Ruthless, aion2maps, Lucia (via aion2-guides.info) and aoeah share Light of Protection and almost always Earth Punishment. Korean top-player data on aion2-meta (1,015 PvP players) shows Light of Protection, Salvation, Earth Punishment and Yustiel's Power in nearly every PvP Cleric's kit, and Voice of Doom in about three quarters. Global PvP is still early: MetaBot finds top Global Clerics have taken almost no Azphel nodes yet.",
+   "vsMain": "Survival Willpower goes to 10 in place of Radiant Benediction. Salvation and Voice of Doom replace Noble Aura and Prayer of Amplification. Picks move to crowd control and cleanses. Light of Protection's PvP half (7.5% at Stigma 10) still applies.",
+   "skills": [
+    {"skill": "Condemnation", "to": 10},
+    {"skill": "Chain of Torment", "to": 10},
+    {"skill": "Earth's Retribution", "to": 10},
+    {"skill": "Judgment Thunder", "to": 10},
+    {"skill": "Debilitating Mark", "to": 10, "note": "105 points"},
+    {"skill": "Healing Light", "to": 10},
+    {"skill": "Radiant Recovery", "to": 10},
+    {"skill": "Defiance", "to": 10, "note": "168: your only crowd-control break"},
+    {"skill": "Bolt", "to": 10},
+    {"skill": "Divine Aura", "to": 10},
+    {"skill": "Light of Regeneration", "to": 10, "note": "231"},
+    {"skill": "Survival Willpower", "to": 10, "note": "in place of the main build's Radiant Benediction"},
+    {"skill": "Warm Benediction", "to": 10, "note": "273"},
+    {"skill": "Earth's Grace", "to": 10},
+    {"skill": "Empyrean Lord's Grace", "to": 10, "note": "315"},
+    {"skill": "Immortal Veil", "to": 10},
+    {"skill": "Healing Enhancement", "to": 10, "note": "357"},
+    {"skill": "Lightning Strike Scattershot", "to": 10, "note": "378, 5 spare. Lucia and GamesFuze would rather put these 21 into Empyrean Lords' Benediction for its Block heal. No source gives a full order at 45: this is aion2maps' PvP swap on the planner's 45 build, ordered by Th3Ruthless's PvP priorities"}
+   ],
+   "specialties": [
+    {"skill": "Chain of Torment", "picks": "Has a 20% chance to inflict Knockdown on the target for 3s, and the +5% PvP Damage Tolerance reduction"},
+    {"skill": "Debilitating Mark", "picks": "−15% target Defense, and Has a 20% chance to inflict Stun on the target for 3s"},
+    {"skill": "Condemnation", "picks": "Up to +12% damage when less targets hit, and the crit reset. Against a melee player, a 20% chance to Root for 3s in place of the +12%"},
+    {"skill": "Judgment Thunder", "picks": "Up to +12% damage, and a 10% chance to Root for 2s on landing Divine Punishment"},
+    {"skill": "Healing Light", "picks": "+2 consecutive uses, and a 50% chance to remove 1 debuff"},
+    {"skill": "Radiant Recovery", "picks": "−3s cooldown, and Removes up to 2 debuffs"},
+    {"skill": "Earth's Retribution", "picks": "+20% Discharge trigger chance and −7s Bolt cooldown; Ignores Block and Evasion once it reaches 16"},
+    {"skill": "Bolt", "picks": "+30% Skill Speed (Lucia takes +300 Skill Accuracy against evasive players)"},
+    {"skill": "Defiance", "picks": "Restores 10% HP on use; +2s Tenacity duration once gear lifts it to 12"}
+   ],
+   "stigmas": [
+    {"name": "Light of Protection", "lvl": 10, "why": "On all the time: PvP Damage Boost and Tolerance for you and your group, plus +10% Incoming Heal and +100 Accuracy"},
+    {"name": "Earth Punishment", "lvl": 5, "why": "While it burns the target, every Condemnation crits and resets itself"},
+    {"name": "Salvation", "lvl": 5, "why": "3 s immune to damage and status effects, with +100% Incoming Heal at 5. Heal up through it"},
+    {"name": "Voice of Doom", "lvl": 5, "why": "−60% Incoming Heal and HP Potion Recovery on up to four players for 20 s; removes shields from 10. Noble Aura or Yustiel's Power instead (see Disagree)"}
+   ],
+   "passives": ["Survival Willpower", "Warm Benediction", "Earth's Grace", "Empyrean Lord's Grace", "Immortal Veil", "Healing Enhancement"],
+   "daevanion": "PvE boards as in the main build. Azphel, the PvP board, runs on its own crystals: 36 from Ereshkigal's Monolith and 110 from the Abyss Shop in Season 1. Take its core PvP Damage Boost and PvP Damage Tolerance nodes first, then Status Effect Resist; the sources split on which core comes first. game8 adds Status Effect Chance and PvP Attack nodes after the cores.",
+   "gear": "Passive lines for Survival Willpower and Immortal Veil on armour, necklace and earrings in place of the two Graces. Status Effect Resist on armour. Abyssal Manastones with PvP lines (game8: PvP Attack, PvP Accuracy, PvP Block, HP; a Korean Inven guide: Accuracy and Critical Hit Resist on PvP armour). The Fierce Battle Amulet (PvP Damage Boost) in place of the Revelation Amulet. Saint of Ereshkigal as the attack title. Brawler Wings, which give Status Effect Resist, or Talisra. Genus Insight: Critical Hit Resist on slot 2 and Front Attack Damage Boost on the damage slot.",
+   "play": [
+    "Before the fight: Light of Protection on, Light of Regeneration running.",
+    "Land Debilitating Mark and Chain of Torment first, so the enemy spends their cleanse on those. Then Earth Punishment and Voice of Doom, and Condemnation without a break while the burn lasts.",
+    "Hold Earth Punishment and Voice of Doom through a Gladiator's Tenaciousness, a Cleric's Salvation or a Sorcerer's Hibernation.",
+    "Put Divine Aura where the fight will stay, and fire Bolt only when it can finish charging and the target has no defensive cooldown up.",
+    "Salvation at low HP, then heal yourself through the 3 s. Keep Defiance for the stun or knockdown that would decide the fight; it does not free you from Root, Slow, Seal or Taunt.",
+    "Macro only the damage line. Press the heals, Salvation, Defiance and Voice of Doom yourself."
+   ],
+   "pros": ["Keeps your PvE damage loop and healing, so you can outlast most duelists", "Hard counters for healers and shields (Voice of Doom) and for burst (Salvation)"],
+   "cons": ["Defiance is your only crowd-control break, and you have no dash beyond Dodge", "Very little hard crowd control (aion2atlas), and you are the first target in group fights (aion2-meta)"],
+   "sources": [
+    {"title": "Aion 2 Maps: Cleric, PvP tab", "url": "https://aion2maps.com/guides/cleric/#pvp", "note": "The PvP preset (Survival Willpower for Radiant Benediction), Stigma options alone and in a group, PvP Specialty swaps, the Watch-for table, PvP gear and the Azphel route"},
+    {"title": "Th3Ruthless: AION 2 Cleric Guide, chapter 1 (1v1 PvP)", "url": "https://clericguideaion2global.netlify.app/#chapter-1-1v1-pvp", "note": "The Global duel set (Earth Punishment, Noble Aura, Light of Protection, Salvation), the Voice of Doom swap against healers and shields, the 20-level Specialties, passive order with Survival Willpower first, PvP stats and the duel plan"},
+    {"title": "aion2-guides.info: Cleric, PvP mode", "url": "https://aion2-guides.info/en/cleric/", "note": "Lucia's Global PvP set (Prayer of Amplification, Light of Protection, Yustiel's Power, Voice of Doom), the Knockdown, Stun and +300 Skill Accuracy picks, and Empyrean Lords' Benediction as the PvP passive"},
+    {"title": "AOEAH: Best Aion 2 Cleric Builds (PvP and PvE)", "url": "https://www.aoeah.com/news/4868--best-aion-2-cleric-builds-skills-macros--daevanion-pvp--pve", "note": "The 1v1 set (Earth Punishment, Noble Aura, Light of Protection, Prayer of Amplification) and the 1v1 versus team Specialty picks for Judgment Thunder and Debilitating Mark"},
+    {"title": "AION 2 META: Cleric build guide", "url": "https://aion2-meta.com/guides/cleric/", "note": "Korean PvP pick rates for each Stigma and skill (Korean data, more Stigma slots), Brawler Wings in PvP and the PvP titles"},
+    {"title": "Vortex Gaming: Cleric skill and Stigma guide (Korean video summary)", "url": "https://vortexgaming.io/en/postdetail/688137", "note": "Korea only: the solo PvP Stigmas (Earth Punishment, Voice of Doom, Yustiel's Power, Light of Protection, Salvation) and Survival Willpower high in PvP"}
+   ],
+   "disagree": "The fourth Stigma is the main split. Voice of Doom: aion2maps (shared with Yustiel's Power), Lucia, and Th3Ruthless as a swap against healers or shields. Noble Aura: Th3Ruthless's default and aoeah. Yustiel's Power: Lucia and the Korean summary. Prayer of Amplification: Lucia and aoeah. This build takes Voice of Doom because it is the PvP-only answer the other three lack. Lucia drops Salvation (aion2-guides.info calls it a skip in PvE); aion2maps, Th3Ruthless and the Korean summary keep it, so it stays. Sources also differ on Salvation at 20: aion2maps says it triggers itself when an Impact effect lands, while Th3Ruthless says it can be pressed during one but never fires on its own. That level is out of reach at 45 anyway."
+  },
+  {
+   "id": "group-pvp",
+   "name": "Group PvP support",
+   "mode": "PvP",
+   "role": "Healer and cleanser (5v5 arena, Abyss, open-world groups)",
+   "summary": "All four Stigmas go to keeping the group alive and able to act: Absolution and Radiant Recovery cleanse, Yustiel's Power goes up before the enemy burst, and Salvation is the last resort. Your damage skills are for slowing, rooting and debuffing the target your team is on.",
+   "when": "Any organised group fight where another player's job is damage.",
+   "popularity": "The most widely recommended PvP Cleric. Th3Ruthless, aion2maps, MetaBot's PvP build, a Korean Inven guide and aion2atlas all build on Salvation plus Absolution or Yustiel's Power. In aion2-meta's Korean PvP data, Salvation (98%), Yustiel's Power (96%) and Absolution (95%) sit beside Light of Protection in nearly every kit, and 88% of PvP Clerics have Radiant Recovery at 20 or higher.",
+   "vsMain": "Heals and Defiance come first and Empyrean Lord's Grace comes last. Survival Willpower, Warm Benediction, Healing Enhancement and Immortal Veil replace the damage passives. Absolution, Yustiel's Power and Salvation replace Earth Punishment, Noble Aura and Prayer of Amplification. Specialties take slows, stuns and cleanses.",
+   "skills": [
+    {"skill": "Radiant Recovery", "to": 10},
+    {"skill": "Healing Light", "to": 10},
+    {"skill": "Light of Regeneration", "to": 10},
+    {"skill": "Defiance", "to": 10, "note": "84 points"},
+    {"skill": "Chain of Torment", "to": 10},
+    {"skill": "Debilitating Mark", "to": 10},
+    {"skill": "Condemnation", "to": 10, "note": "147"},
+    {"skill": "Survival Willpower", "to": 10},
+    {"skill": "Warm Benediction", "to": 10},
+    {"skill": "Healing Enhancement", "to": 10},
+    {"skill": "Immortal Veil", "to": 10, "note": "231"},
+    {"skill": "Earth's Retribution", "to": 10},
+    {"skill": "Judgment Thunder", "to": 10, "note": "273"},
+    {"skill": "Earth's Grace", "to": 10, "note": "294: its Accuracy helps your slows and stuns land"},
+    {"skill": "Divine Aura", "to": 10},
+    {"skill": "Bolt", "to": 10, "note": "336"},
+    {"skill": "Radiant Benediction", "to": 10, "note": "357: Th3Ruthless raises it later, since it heals only while you attack"},
+    {"skill": "Empyrean Lord's Grace", "to": 10, "note": "378, 5 spare. Th3Ruthless leaves it at 1; nothing else here needs the points. No source gives a full order at 45: this follows Th3Ruthless's group-PvP priorities and MetaBot's PvP skill list"}
+   ],
+   "specialties": [
+    {"skill": "Radiant Recovery", "picks": "Removes up to 2 debuffs, and −3s cooldown (Th3Ruthless: +20% Skill Speed in place of −3s if casting it fast is the problem)"},
+    {"skill": "Healing Light", "picks": "+2 consecutive uses, and a 50% chance to remove 1 debuff; −2s cooldown at 16"},
+    {"skill": "Light of Regeneration", "picks": "+5% Incoming Heal during healing, and +5% Move Speed during healing; the PvP Damage Tolerance pick at 16"},
+    {"skill": "Chain of Torment", "picks": "Slows target for 5s, and the PvP Damage Tolerance cut"},
+    {"skill": "Debilitating Mark", "picks": "Has a 20% chance to inflict Stun on the target for 3s, and the PvP Damage Boost cut"},
+    {"skill": "Judgment Thunder", "picks": "−10% enemy Combat Speed on landing Divine Punishment, and a 10% chance to Root"},
+    {"skill": "Divine Aura", "picks": "The pick that slows nearby enemies, and the longer duration"},
+    {"skill": "Defiance", "picks": "Restores 1000 Stamina on use; +2s Tenacity duration at 12"}
+   ],
+   "stigmas": [
+    {"name": "Light of Protection", "lvl": 5, "why": "PvP Damage Boost and Tolerance for the group. With a Chanter in the group, use Benevolence instead: only the higher of it and Undefeated Mantra applies"},
+    {"name": "Absolution", "lvl": 10, "why": "Group heal and cleanse; −30 s cooldown at 5, and removes every debuff at 10"},
+    {"name": "Yustiel's Power", "lvl": 5, "why": "+10% PvP Damage Tolerance for the group in 40 m, plus a shield of 10% Max HP at 5. Cast it before their burst lands"},
+    {"name": "Salvation", "lvl": 5, "why": "3 s immunity for yourself when you are focused. At 15 (after 45) it also covers the lowest-HP ally"}
+   ],
+   "passives": ["Survival Willpower", "Warm Benediction", "Healing Enhancement", "Immortal Veil", "Earth's Grace", "Radiant Benediction"],
+   "daevanion": "PvE boards: take the Healing Light, Radiant Recovery, Light of Regeneration and Healing Enhancement nodes, Nezekan's Cooldown Reduction and Zikel's Damage Tolerance corners ahead of the damage nodes (my reading of Th3Ruthless's support stat order). Azphel: the core PvP Damage Tolerance and Boost nodes, then Status Effect Resist. A support has more reason to take Tolerance first; the sources split.",
+   "gear": "Survival first: HP, PvP Damage Tolerance, Critical Hit Resist, Status Effect Resist. Then Combat Speed and Cooldown Reduction, then Attack, which Healing Enhancement turns into Heal Boost. Keep enough Accuracy for slows and stuns to land. game8's support set: Magic Armor Arcana (MP refill at low HP, PvP Defense) with Light of Regeneration, Healing Light and Healing Enhancement lines, and Abyssal Manastones with PvP lines.",
+   "play": [
+    "Stand where your group can reach you and the enemy has to pay to reach you. Keep Light of Regeneration up.",
+    "Yustiel's Power just before a coordinated burst, not after it.",
+    "Healing Light for one focused player, Radiant Recovery for group damage or a debuff, Absolution when several are low or something dangerous needs cleansing.",
+    "Don't fire Yustiel's Power, Absolution and Salvation together because several bars dropped; each solves a different problem.",
+    "Between heals, put Debilitating Mark and Chain of Torment on your team's target for the stun, knockdown and slow chances.",
+    "Abyss and long open-world fights: Summon Resurrection in place of Salvation once the survivors are stable."
+   ],
+   "pros": ["Strongest cleansing and anti-burst in the game", "The role Korean and Global PvP groups want a Cleric for"],
+   "cons": ["Very little personal damage", "You are the first target, so you need Defiance and good positioning"],
+   "sources": [
+    {"title": "Th3Ruthless: AION 2 Cleric Guide, chapter 2 (5v5 Arena and Open World)", "url": "https://clericguideaion2global.netlify.app/#chapter-2-5v5-arena-and-open-world", "note": "Light of Protection or Benevolence, Absolution, Yustiel's Power and Salvation; the 20-level picks; passive order; support stats; Summon Resurrection for open world"},
+    {"title": "Aion 2 Maps: Cleric, PvP tab", "url": "https://aion2maps.com/guides/cleric/#pvp", "note": "The group Stigmas (Light of Protection, Salvation, Yustiel's Power, Absolution), Benevolence with a Chanter, and what each level adds in PvP"},
+    {"title": "MetaBot: Cleric build planner, PvP build", "url": "https://metabot.gg/en/aion-2/classes/cleric/build", "note": "A PvP build with all three heals and Debilitating Mark at 10, Divine Aura at 5, and Light of Protection, Absolution, Salvation and Earth Punishment"},
+    {"title": "Inven (Korean): Cleric setup guide", "url": "https://www.inven.co.kr/board/aion2/6452/8262", "note": "Korea only: PvP Stigma path to Light of Protection 20, Salvation 20, Yustiel's Power 20 and Summon Resurrection 10, Absolution for large group fights, and Accuracy plus Critical Hit Resist on PvP armour"},
+    {"title": "Aion2 Atlas: Cleric build, PvP", "url": "https://aion2atlas.app/builds/cleric/", "note": "Unkillable Support: Salvation, Summon Resurrection, Voice of Doom and Absolution (its PvP picks are inferred, not tested)"},
+    {"title": "AION 2 META: Cleric build guide", "url": "https://aion2-meta.com/guides/cleric/", "note": "Korean PvP pick rates: the support Stigmas, Radiant Recovery and Healing Light at 20, Defiance at 20 in 39% of PvP builds"},
+    {"title": "game8: Support Cleric PvP Build", "url": "https://game8.co/games/Aion-2/archives/631965", "note": "Heal rotation, Magic Armor Arcana and PvP Manastones; its Stigmas lean to damage (see Disagree)"}
+   ],
+   "disagree": "The core is settled: Light of Protection without a Chanter, plus Salvation and Absolution or Yustiel's Power. The fourth slot is not. Summon Resurrection: the Korean Inven guide, aion2atlas and aoeah's team set. Voice of Doom: aion2atlas and OSLink. Root: game8 and OSLink. game8's 'Support' PvP build is closer to the duel build (Earth Punishment, Yustiel's Power, Root, Light of Protection). This build follows Th3Ruthless and aion2maps, the two Global guides with the most detail. Putting the 10 on Absolution at 45 is my call: the sources give 15–20 targets for later."
+  },
+  {
+   "id": "healer",
+   "name": "Full-support dungeon healer",
+   "mode": "PvE",
+   "role": "Main healer (progression, learning a dungeon, weak groups)",
+   "summary": "The planner's build heals on the side of its damage. This one turns that around: Benevolence, Absolution and Yustiel's Power cover predictable damage, cleanses and heavy hits, and the heals get their points first. You still keep Chain of Torment and Condemnation going when the group is stable.",
+   "when": "New dungeons and progression fights, groups that keep dying, or when your party asks for a dedicated healer.",
+   "popularity": "Recommended by Th3Ruthless, GamesFuze, games.gg and aoeah as the support setup. It is the minority choice on Global: MetaBot sees Absolution on 23% of top Global Clerics, Benevolence on 13% and Yustiel's Power on 9%. Several guides warn that dungeon rewards follow damage contribution, so a Cleric who only heals can leave with less.",
+   "vsMain": "Heals go to 10 before the damage skills, Healing Enhancement comes early, and Lightning Strike Scattershot and Survival Willpower stay at 1. Benevolence, Absolution and Yustiel's Power replace Earth Punishment, Noble Aura and Prayer of Amplification, so Condemnation crits only on its own.",
+   "skills": [
+    {"skill": "Healing Light", "to": 10},
+    {"skill": "Radiant Recovery", "to": 10},
+    {"skill": "Light of Regeneration", "to": 10, "note": "63 points"},
+    {"skill": "Healing Enhancement", "to": 10, "note": "84: the first passive for a healer"},
+    {"skill": "Chain of Torment", "to": 10},
+    {"skill": "Condemnation", "to": 10},
+    {"skill": "Debilitating Mark", "to": 10, "note": "147"},
+    {"skill": "Earth's Retribution", "to": 10},
+    {"skill": "Judgment Thunder", "to": 10, "note": "189"},
+    {"skill": "Warm Benediction", "to": 10},
+    {"skill": "Immortal Veil", "to": 10, "note": "231"},
+    {"skill": "Earth's Grace", "to": 10, "note": "252"},
+    {"skill": "Divine Aura", "to": 10},
+    {"skill": "Bolt", "to": 10, "note": "294"},
+    {"skill": "Radiant Benediction", "to": 10, "note": "315"},
+    {"skill": "Defiance", "to": 10, "note": "336"},
+    {"skill": "Empyrean Lord's Grace", "to": 10, "note": "357, 26 spare: Survival Willpower if crowd control keeps stopping your heals (Th3Ruthless). No source gives a full order at 45: this follows Th3Ruthless's heal-first priorities"}
+   ],
+   "specialties": [
+    {"skill": "Healing Light", "picks": "+2 consecutive uses, and +2% HP restored; −2s cooldown at 16 (the 50% cleanse pick in place of +2% for debuff-heavy fights)"},
+    {"skill": "Radiant Recovery", "picks": "Removes up to 2 debuffs, and −3s cooldown; +5% HP restored at 16"},
+    {"skill": "Light of Regeneration", "picks": "+20% amount healed when HP is 50% or less, and +5% Incoming Heal during healing; the Damage Tolerance pick at 16"},
+    {"skill": "Earth's Retribution", "picks": "+20% MP restored, and +20% Discharge trigger chance"},
+    {"skill": "Judgment Thunder", "picks": "−20% MP consumed, and up to +12% damage when fewer targets are hit"},
+    {"skill": "Chain of Torment", "picks": "+3s Damage over Time, and the PvE Damage Tolerance cut"},
+    {"skill": "Condemnation", "picks": "Up to +12% damage, and the crit reset"}
+   ],
+   "stigmas": [
+    {"name": "Light of Protection", "lvl": 10, "why": "15% PvE Damage Boost and Tolerance for the party, always on. With a Chanter, Salvation instead"},
+    {"name": "Benevolence", "lvl": 5, "why": "Party heal over time, 30 s long from level 5. Start it as a long stretch of damage begins (90 s cooldown)"},
+    {"name": "Absolution", "lvl": 5, "why": "Big party heal and cleanse, on a 60 s cooldown from level 5. Keep it for real emergencies"},
+    {"name": "Yustiel's Power", "lvl": 5, "why": "+20% PvE Damage Tolerance and a shield of 10% Max HP for the party. Cast it before the heavy hit"}
+   ],
+   "passives": ["Healing Enhancement", "Warm Benediction", "Immortal Veil", "Earth's Grace", "Radiant Benediction"],
+   "daevanion": "Same boards. Move the Healing Light, Radiant Recovery, Light of Regeneration and Healing Enhancement nodes and Zikel's Damage Tolerance corners ahead of the Bolt and Judgment Thunder nodes (an adaptation of Th3Ruthless's heal-first order; no source gives a healer route).",
+   "gear": "Attack is still your healing stat, because Healing Enhancement turns it into Heal Boost; every source agrees on that. Th3Ruthless's order: enough HP and Damage Tolerance, then Cooldown Reduction and Combat Speed, then Attack and Heal Boost, then Accuracy. GamesFuze adds HP and Defense, with Wisdom [Lumiel] and Life [Yustiel] as Empyrean stats. Incoming Heal on the helm (games.gg) helps only you.",
+   "play": [
+    "Before the pull: Light of Regeneration up, and work out what the next mechanic needs: protection, steady healing or a cleanse.",
+    "Yustiel's Power before a predictable heavy hit. Benevolence for long stretches of damage or when mechanics keep you moving.",
+    "Healing Light for focused damage, Radiant Recovery for group damage or a debuff, Absolution when several are in danger.",
+    "When the group is stable, keep Debilitating Mark and Chain of Torment on the boss and attack; Radiant Benediction heals the party while you do.",
+    "Once the group stops needing Yustiel's Power, put Earth Punishment in its slot (Th3Ruthless's first step back toward the DPS build)."
+   ],
+   "pros": ["The most forgiving setup for a struggling group", "Covers every kind of damage: preventive, sustained, burst and debuffs"],
+   "cons": ["Far less damage, and dungeon rewards follow damage contribution", "Benevolence and Absolution are weak at 5; couga's guide (now aion2-guides.info) says they earn a slot only from 15"],
+   "sources": [
+    {"title": "Th3Ruthless: AION 2 Cleric Guide, chapter 3 (PvE Dungeon Support)", "url": "https://clericguideaion2global.netlify.app/#chapter-3-pve-dungeon-support", "note": "The four support Stigmas, Salvation with a Chanter, heal-first priorities, the 20-level picks, passive order and the healing plan"},
+    {"title": "GamesFuze: AION 2 Cleric Build (Dungeons and PvP)", "url": "https://gamesfuze.com/guides/aion-2-cleric-build-best-healer-skills-stigmas-and-gear-dungeons-pvp/", "note": "Healing build: Benevolence, Light of Protection and Yustiel's Power first, then Absolution; heal skills as the long-term investment; healer Empyrean stats"},
+    {"title": "games.gg: Aion 2 Cleric Guide", "url": "https://games.gg/aion-2/guides/aion-2-cleric-guide/", "note": "Support Stigma priority: Light of Protection = Absolution = Salvation = Yustiel's Power, ahead of Benevolence = Summon Resurrection. Built on Korean and Taiwanese guides"},
+    {"title": "AOEAH: Best Aion 2 Cleric Builds", "url": "https://www.aoeah.com/news/4868--best-aion-2-cleric-builds-skills-macros--daevanion-pvp--pve", "note": "The support set (Absolution, Benevolence, Summon Resurrection, Light of Protection) and the healing macro variant"},
+    {"title": "MetaBot: Cleric build planner", "url": "https://metabot.gg/en/aion-2/classes/cleric/build", "note": "Share of top Global Clerics with each support Stigma equipped"},
+    {"title": "aion2-guides.info: Cleric", "url": "https://aion2-guides.info/en/cleric/", "note": "Support swaps (Summon Resurrection or Yustiel's Power for Noble Aura), the note that Absolution and Benevolence need 15, and the warning that rewards follow damage"}
+   ],
+   "disagree": "Three-way split on the four: Th3Ruthless runs Light of Protection, Benevolence, Absolution and Yustiel's Power. games.gg ranks Salvation level with Absolution and Yustiel's Power, and puts Benevolence lower. aoeah takes Summon Resurrection over Yustiel's Power. This build follows Th3Ruthless, the only Global source with a full support chapter. Swap Yustiel's Power for Summon Resurrection when recovering from deaths matters more than preventing them."
+  },
+  {
+   "id": "solo",
+   "name": "Solo farming preset",
+   "mode": "PvE",
+   "role": "Solo damage with self-healing (open world, quests, farming)",
+   "summary": "A preset for playing alone at 45: all the damage of the PvE build with its AoE and MP picks, no points in party-only passives, and heals used on yourself. All of your attacks hit up to four enemies around the target.",
+   "when": "Open-world farming, quests, hunting packs and solo bosses.",
+   "popularity": "Solo or levelling Cleric builds appear on MetaBot, OSLink, aion2-guides.info and aion2maps, and all of them lead with Chain of Torment, Condemnation, Earth Punishment and Noble Aura. The sources agree Cleric is a slow solo class (aion2atlas, games.gg, aion2-meta), so most players use this as a second preset beside a dungeon build.",
+   "vsMain": "Radiant Benediction (heals the party when you attack) and Lightning Strike Scattershot stay at 1. Debilitating Mark, Healing Light and Light of Regeneration move ahead of the passives. The Specialties switch to AoE and MP picks. Power Burst is ready for a solo boss.",
+   "skills": [
+    {"skill": "Condemnation", "to": 10},
+    {"skill": "Chain of Torment", "to": 10},
+    {"skill": "Judgment Thunder", "to": 10},
+    {"skill": "Earth's Retribution", "to": 10},
+    {"skill": "Divine Aura", "to": 10},
+    {"skill": "Bolt", "to": 10, "note": "126 points"},
+    {"skill": "Debilitating Mark", "to": 10},
+    {"skill": "Healing Light", "to": 10},
+    {"skill": "Light of Regeneration", "to": 10, "note": "189: both heal you as well"},
+    {"skill": "Empyrean Lord's Grace", "to": 10},
+    {"skill": "Earth's Grace", "to": 10, "note": "231"},
+    {"skill": "Warm Benediction", "to": 10},
+    {"skill": "Immortal Veil", "to": 10, "note": "273"},
+    {"skill": "Healing Enhancement", "to": 10, "note": "294"},
+    {"skill": "Radiant Recovery", "to": 10},
+    {"skill": "Defiance", "to": 10, "note": "336, 47 spare. No solo source spends the rest: Survival Willpower against stuns from elites, or Lightning Strike Scattershot. This follows MetaBot's levelling build and OSLink's solo priorities"}
+   ],
+   "specialties": [
+    {"skill": "Divine Aura", "picks": "Changes to AoE Skill (hits up to four enemies), and +50% attacking speed"},
+    {"skill": "Earth's Retribution", "picks": "+20% MP restored, and +20% Discharge trigger chance"},
+    {"skill": "Judgment Thunder", "picks": "−20% MP consumed, and up to +12% damage"},
+    {"skill": "Condemnation", "picks": "Restores 100 MP on hit, and the crit reset"},
+    {"skill": "Chain of Torment", "picks": "+3s Damage over Time, and the PvE Damage Tolerance cut"},
+    {"skill": "Bolt", "picks": "+30% Skill Speed, and up to +20% damage when fewer targets are hit"},
+    {"skill": "Healing Light", "picks": "+2 consecutive uses, and +2% HP restored"}
+   ],
+   "stigmas": [
+    {"name": "Light of Protection", "lvl": 10, "why": "Its 15% PvE Damage Boost and Tolerance apply to you alone too"},
+    {"name": "Earth Punishment", "lvl": 5, "why": "Sure Condemnation crits, plus 20 stagger damage"},
+    {"name": "Noble Aura", "lvl": 5, "why": "Attacks your target every 2 s for 5 minutes; free damage while you move between packs"},
+    {"name": "Prayer of Amplification", "lvl": 5, "why": "+20% Attack every 60 s. Swap in Power Burst (50 stagger damage) for a solo boss whose stagger gauge won't break"}
+   ],
+   "passives": ["Empyrean Lord's Grace", "Earth's Grace", "Warm Benediction", "Immortal Veil", "Healing Enhancement"],
+   "daevanion": "As the main build: Condemnation and Judgment Thunder nodes on every board, Earth's Retribution and Divine Aura, and the Combat Speed and Damage Boost corners. Skip the Healing Light and Radiant Recovery nodes until you are done with the damage route.",
+   "gear": "As the main build: Attack, Critical Hit, Combat Speed, Weapon Damage Boost, then HP. Rings with Condemnation, Earth's Retribution or Bolt levels. Summon Resurrection does nothing alone, so leave it out.",
+   "play": [
+    "On a pack: Debilitating Mark, Divine Aura and Bolt, then Chain of Torment, then Condemnation on every target carrying it. Judgment Thunder fills the gaps.",
+    "Keep Earth's Retribution going between skills: it is your MP, 110 a hit.",
+    "Light of Regeneration before a pull; Healing Light when you drop. Heal only when the bar actually drops.",
+    "Noble Aura at the first pull; it lasts 5 minutes and follows you.",
+    "Keep this on a second preset with its own macro and swap at the dungeon door."
+   ],
+   "pros": ["Kills packs faster than any dungeon setup", "Heals itself through most open-world damage"],
+   "cons": ["Still the slowest solo class in most tier lists", "Little crowd-control escape if a player jumps you; switch to the PvP preset"],
+   "sources": [
+    {"title": "Aion 2 Maps: Cleric, levelling and trash preset", "url": "https://aion2maps.com/guides/cleric/#levelling", "note": "The pack opener, the AoE Divine Aura pick, MP picks when MP runs short, no Summon Resurrection alone, Power Burst for solo bosses"},
+    {"title": "MetaBot: Cleric build planner, levelling build", "url": "https://metabot.gg/en/aion-2/classes/cleric/build", "note": "Damage skills, both Graces, Healing Light and Light of Regeneration at 10; heal only when the bar drops; crit passives over heal-boost while killing alone"},
+    {"title": "OSLink: AION 2 Cleric Build Guide, solo build", "url": "https://www.oslink.io/blog/guide/aion-2-cleric-build-guide.html", "note": "Solo priority: the attack skills first, then Healing Light and Light of Regeneration, with Earth Punishment and Noble Aura"},
+    {"title": "aion2-guides.info: Cleric, levelling", "url": "https://aion2-guides.info/en/cleric/", "note": "Whelps' Stigma order (Earth Punishment, Light of Protection, Noble Aura, Prayer of Amplification) and the AoE Divine Aura pick for farming (aLuckyRO, Whelps)"},
+    {"title": "game8: Condemnation Cleric PvE Build", "url": "https://game8.co/games/Aion-2/archives/626195", "note": "Levelling priority (Chain of Torment, Condemnation, Earth Punishment, with Power Burst and Prayer of Amplification) and the MP picks"},
+    {"title": "AOEAH: Best Aion 2 Cleric Builds", "url": "https://www.aoeah.com/news/4868--best-aion-2-cleric-builds-skills-macros--daevanion-pvp--pve", "note": "Divine Aura's +50% attacking speed for mob farming and the MP pick on Earth's Retribution for general play"}
+   ],
+   "disagree": "MetaBot's levelling build keeps Summon Resurrection in the fourth slot for dungeons, and aion2maps suggests Root for packs, while aion2-guides.info says Root has no use in PvE. This build keeps Prayer of Amplification, with Power Burst as the boss swap, as aion2maps and game8 suggest. Sources split on Divine Aura's farming pick: the AoE change (aion2maps, aLuckyRO, Whelps) or the attacking speed (aoeah). Take both if the skill has two slots."
+  }
+ ]
+}
