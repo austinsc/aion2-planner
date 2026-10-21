@@ -1,0 +1,945 @@
+{
+ "intro": "The Spiritmaster's PvP preset and the three or four other setups Global players actually run, each pulled together from several guides, Korean boards and Global character statistics. Each is a separate skill preset: resets are free, and a preset keeps its own skill and Stigma levels.",
+ "crosscheck": "The other sources back the planner's main build on its core. GamerBlurb, Fextralife, games.gg, AOEAH and Evripides' Global guide all run Summon: Ancient Spirit, Enhance: Spirit's Benediction, Jointstrike: Corrode and Flame Blessing. ExpCarry's 16 October sample of 200 Global Spiritmasters found that exact set on about 35% of them, with the Ancient Spirit on 89.5%, Benediction 79.5%, Corrode 74% and Flame Blessing 49.5%. Elemental Fusion, Combustion and the Fire Spirit come first everywhere: they are Evripides' three level-20 musts and Inven's Korean tier 1. The Fire Spirit is summoned last so it stays out, and Wind and Soul's Cry are left low. The differences: ExpCarry counts Jointstrike: Destructive Attack in about 38% of four-Stigma builds against Flame Blessing's 48%, so it is a common fourth slot rather than an occasional swap (see that build below). Evripides ranks Mental Focus above Spirit Strike in the passives and puts Benediction, Elemental Fusion and Corrode in the macro, keeping five Earth Tremor stacks up before each summon. A Korean video guide (VortexGaming) rates the Corrode passive as nearly worthless (about 0.019% of total damage per level), where the planner raises it in row 9. AOEAH calls Mental Focus PvP-only, which no other source does. GameWith's statistics on the top 1,290 EU Spiritmasters support the planner's Daevanion route: their top 20 all take Nezekan's Combat Speed and Cooldown Reduction, Zikel's Damage Boost and Triniel's Multi-Hit nodes. ExpCarry also notes the 14 October fix to Ancient Spirits at Stigma level 15 or lower that sometimes failed to use their skill.",
+ "builds": [
+  {
+   "id": "pvp",
+   "name": "PvP Control (Proxy and Seize Magic)",
+   "mode": "PvP",
+   "role": "Tanky kiting DPS for arena, 1v1 and small Abyss fights",
+   "summary": "The PvE core minus the boss-only pieces. It keeps the Ancient Spirit and Benediction, and puts Command: Proxy and Seize Magic in the last two Stigma slots. The Earth Spirit stays out to Taunt, and you win by outlasting. You break their crowd control with Defiance, strip their defensive buffs, Fear them once their Defiance is spent, and let the spirits' damage over time add up.",
+   "when": "Arena, duels and small-group fights in the Abyss. For large Abyss fights, see the group build below.",
+   "popularity": "This is the PvP set in four separate guides: Aion 2 Maps, Evripides (his 'Default' PvP set), Fextralife and GamerBlurb. In GameWith's statistics on the top 1,290 EU Spiritmasters, Seize Magic sits on 46% of their bars and Command: Proxy on 27%. ExpCarry warns that public data doesn't show which preset a player uses for PvP.",
+   "vsMain": "Stigma slots 3 and 4 become Command: Proxy and Seize Magic in place of Jointstrike: Corrode and Flame Blessing. Rapid Scattershot and Spirit's Descent go back to 1, and Soul's Cry and Revitalization Contract go to 10. The Earth Spirit, not the Fire Spirit, is the one that stays out. Defiance moves to the top of the order.",
+   "skills": [
+    {
+     "skill": "Defiance",
+     "to": 10,
+     "note": "Your only crowd-control break; Evripides and Fextralife rush it"
+    },
+    {
+     "skill": "Elemental Fusion",
+     "to": 10
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "to": 10
+    },
+    {
+     "skill": "Cold Shock",
+     "to": 10
+    },
+    {
+     "skill": "Combustion",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Earth Spirit",
+     "to": 10,
+     "note": "The spirit that stays out"
+    },
+    {
+     "skill": "Soul's Cry",
+     "to": 10,
+     "note": "Fear, plus a 5 s Root from its pick"
+    },
+    {
+     "skill": "Spirit Protection",
+     "to": 10
+    },
+    {
+     "skill": "Revitalization Contract",
+     "to": 10,
+     "note": "+35% Status Effect Resist at 10"
+    },
+    {
+     "skill": "Dimensional Control",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Strike",
+     "to": 10
+    },
+    {
+     "skill": "Mental Focus",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Water Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Element Unification",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Revitalization",
+     "to": 10
+    },
+    {
+     "skill": "Corrode",
+     "to": 10
+    },
+    {
+     "skill": "Consecutive Countercurrent",
+     "to": 10,
+     "note": "378 of 383 points. Rapid Scattershot, Spirit's Descent, Summon: Wind Spirit and Spirit Communion stay at 1. No source gives a full PvP point order: this one follows Evripides' and Fextralife's priorities and Aion 2 Maps' preset"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Summon: Earth Spirit",
+     "picks": "10% chance to activate skill when Earth Spirit lands attack, then +20% PvE Damage Tolerance and +10 PvP Damage Tolerance to Earth Spirit"
+    },
+    {
+     "skill": "Soul's Cry",
+     "picks": "Inflicts Root for 5s"
+    },
+    {
+     "skill": "Cold Shock",
+     "picks": "+50% Multi-Hit on hit, and Absorbs 1% HP (Evripides says the +2% Attack stacks rarely build in PvP)"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 20% HP on using [Defiance]; from 12, the PvP Damage Tolerance pick during its immunity"
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "picks": "Changes to mobile skill, and -2s cooldown"
+    },
+    {
+     "skill": "Elemental Fusion",
+     "picks": "Extra damage after 3s on hit, and +10 all Element Boost on hit; at 16, 25% chance to regain Four Elements"
+    },
+    {
+     "skill": "Dimensional Control",
+     "picks": "Extra damage after 3s on hit, and +50% Multi-Hit chance on hit; at 16, Fextralife and Evripides use its Root chance to make the enemy spend Defiance"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "lvl": 10,
+     "why": "Takes a large share of your damage in PvP too; summon it after Benediction"
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "lvl": 5,
+     "why": "+10% PvP Damage Boost and Tolerance for you and your spirit, and 10% Max HP back on cast"
+    },
+    {
+     "name": "Command: Proxy",
+     "lvl": 5,
+     "why": "For 6 s at 5, your spirit with the most HP within 25 m shares the hits you take. Use it against their burst"
+    },
+    {
+     "name": "Seize Magic",
+     "lvl": 5,
+     "why": "Strips up to 3 buffs from up to 4 enemies; from 10 it also Seals for 5 s when it removes 3"
+    }
+   ],
+   "passives": [
+    "Spirit Protection",
+    "Revitalization Contract",
+    "Spirit Strike",
+    "Mental Focus"
+   ],
+   "daevanion": "Azphel, the PvP board, runs on its own crystals: 36 from Ereshkigal's Monolith in Season 1 and 110 from the Abyss Shop. Take its core nodes first, then Status Effect Resist (Aion 2 Maps). Guides split on whether PvP Damage Boost or PvP Damage Tolerance comes first, but you get both. GameWith's top 20 EU Spiritmasters mostly took HP, PvP Attack and Status Effect Resist first.",
+   "gear": "Status Effect Resist on every armour piece. Evripides aims for 100%+ Status Effect Resist, 2000+ Accuracy and about 40% Regeneration. Take Revitalization Contract lines on the necklace and earrings, and intermediate Abyssal Manastones with PvP Accuracy and PvP Attack (or PvP Damage Boost: sources split). Wear the Fierce Battle Amulet in place of the Revelation Amulet, and Brawler Wings, or Talisra Wings until you have them. Keep a PvP Genus preset. Inven's Korean PvP guide puts a high value on HP and Defence for this class, since Proxy adds Defence and potions and shields scale with Max HP. It warns that PvP Damage Boost loses value when your Attack can't get past their Defence.",
+   "play": [
+    "End the spirit line on the Earth Spirit: its skill can Taunt a player, and Defiance can't remove a Taunt. Evripides' PvP macro is only Elemental Fusion then the Earth Spirit; play the rest by hand.",
+    "Open with Benediction, then summon the Ancient Spirit, so it takes your buffed stats.",
+    "When they open on you: Defiance at once, then Command: Proxy for the follow-up. Don't hold Proxy once their burst starts. Use it when an Assassin's Shadowstrike stuns you or a Sorcerer's Frost lands.",
+    "Use Seize Magic after they buff: a Gladiator's Armor of Balance, a Ranger's Mother Nature's Breath or a Sorcerer's Arctic Armor. A Templar's Noble Armor and a Chanter's Guardian Blessing can't be removed.",
+    "Make them spend Defiance before Soul's Cry: Dimensional Control's Root or Curse can bait it out. Don't Fear into a Gladiator's Tenaciousness, a Cleric's Salvation or a Sorcerer's Hibernation.",
+    "Keep your dodge for engages and for a Sorcerer's meteor, which ignores evasion and block. Kite at range: your spirits keep hitting while you move out."
+   ],
+   "pros": [
+    "The tankiest ranged DPS in PvP (Evripides)",
+    "Fear and Taunt: control no other class has",
+    "Seize Magic answers most classes' defensive buffs"
+   ],
+   "cons": [
+    "Less mobility than a Ranger and less burst than a Sorcerer",
+    "Wins on timing: a cooldown pressed too early or too late loses the fight",
+    "Fear is control, not a kill tool, and your only escapes are dodge and Defiance"
+   ],
+   "sources": [
+    {
+     "title": "Aion 2 Maps: Spiritmaster, PvP tab",
+     "url": "https://aion2maps.com/guides/spiritmaster/",
+     "note": "The PvP preset (point swaps, Stigmas and picks), Stigma level effects, the matchup table, PvP gear, Genus preset and Azphel route"
+    },
+    {
+     "title": "Evripides: Spirit Master guide, Global edition (PvP Starter, 3 Oct 2026)",
+     "url": "https://aion2-elementalist-guide.netlify.app/global/",
+     "note": "Level-20 musts (Defiance, Cold Shock, Elemental Fusion, Curse), passives, the two-skill PvP macro, matchups, stat goals, Abyssal Manastones, titles and alternative Stigma sets"
+    },
+    {
+     "title": "Fextralife: Spiritmaster Builds (9 Oct 2026)",
+     "url": "https://aion2.wiki.fextralife.com/Spiritmaster_Builds",
+     "note": "PvP Control and Survival build: Stigmas, Defiance and Curse first, PvP picks, Seize Magic milestones, Proxy's 25 m tether, stat priority"
+    },
+    {
+     "title": "GamerBlurb: Spiritmaster Build Guide (6 Oct 2026)",
+     "url": "https://gamerblurb.com/guides/aion-2-spiritmaster-build-guide-pve-pvp-leveling-global",
+     "note": "The same four PvP Stigmas, Corrode as the anti-healer swap, PvP stat order, and keeping Fear, Proxy, Seize Magic and Defiance off the macro"
+    },
+    {
+     "title": "GameWith: Spiritmaster build stats, Global Europe",
+     "url": "https://gamewith.ai/aion2/en/build-stats/eu/elementalist",
+     "note": "How often the PvP Stigmas appear on the top 1,290 EU Spiritmasters' bars, and the Azphel nodes their top 20 take"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster PvP guide (8 Aug 2026)",
+     "url": "https://www.inven.co.kr/board/aion2/6454/9148",
+     "note": "Korean-release view: Benediction, Ancient Spirit, Proxy, Kaisinel's Power and Siphon as core, the HP and Defence focus, and Flame Blessing as useless in PvP"
+    }
+   ],
+   "disagree": "The Ancient Spirit and Benediction are in nearly every PvP set; the other two slots vary. Aion 2 Maps, Evripides, Fextralife and GamerBlurb use Proxy and Seize Magic, and this build follows them. Evripides and Aion 2 Maps offer Siphon or Kaisinel's Power instead of Proxy, and Corrode against Clerics, Chanters and other healers. Inven's Korean guide calls Siphon the best PvP Stigma and treats Kaisinel's Power as core, but Korea has six Stigma slots to Global's four. games.gg's arena set drops the Ancient Spirit and Benediction for Cry of Terror, Magic Block, Seize Magic and Proxy, which no other source does. Proxy lasts 6 s at Stigma level 5 in the client data that Aion 2 Maps and Fextralife quote; Evripides says 7 s. For the Attack title, Evripides takes Treading on White Wings (PvP Accuracy, PvP Attack, 5.5% PvP Damage Boost), and Aion 2 Maps takes Saint of Ereshkigal (4% PvP Damage Boost)."
+  },
+  {
+   "id": "pve-destructive",
+   "name": "PvE Destructive Attack",
+   "mode": "PvE",
+   "role": "Boss DPS with extra stagger",
+   "summary": "The main PvE build with Jointstrike: Destructive Attack in Flame Blessing's slot. It does 50 stagger damage, charging to 55, 60 and 65 from Stigma level 5, the most of any Spiritmaster skill. At higher Stigma levels it hits harder: always a critical hit at 15, and at 20 its first hit resets Curse and Corrode.",
+   "when": "Stagger checks, and bosses where your party runs out of time on the stagger gauge. Some top players also run it on Transcendence bosses once the Stigma is levelled.",
+   "popularity": "ExpCarry counted it in about 38% of 172 public four-Stigma Global builds, against Flame Blessing's 48%. GameWith shows it on 45% of the top 1,290 EU Spiritmasters' bars. In Korea, with six slots, it is part of the standard PvE set (Inven).",
+   "vsMain": "Only Stigma slot 4 changes: Destructive Attack at 5 in place of Flame Blessing. Skill points, Specialties and the macro stay the same. Destructive Attack goes on its own key and is held to charge.",
+   "skills": [
+    {
+     "skill": "Elemental Fusion",
+     "to": 10
+    },
+    {
+     "skill": "Combustion",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Cold Shock",
+     "to": 10
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "to": 10
+    },
+    {
+     "skill": "Dimensional Control",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Strike",
+     "to": 10
+    },
+    {
+     "skill": "Mental Focus",
+     "to": 10
+    },
+    {
+     "skill": "Element Unification",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Water Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Rapid Scattershot",
+     "to": 10,
+     "note": "Fire it in the stagger windows this build opens"
+    },
+    {
+     "skill": "Spirit Revitalization",
+     "to": 10
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Corrode",
+     "to": 10
+    },
+    {
+     "skill": "Spirit's Descent",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Protection",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Earth Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Consecutive Countercurrent",
+     "to": 10,
+     "note": "Same 378 points as the main build; 5 spare"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Elemental Fusion",
+     "picks": "As the main build: Extra damage after 3s on hit, and +10 all Element Boost on hit. Don't take its charge pick"
+    },
+    {
+     "skill": "Combustion",
+     "picks": "As the main build: up to 12% more damage when fewer targets are hit, and +20% Skill Speed"
+    },
+    {
+     "skill": "Rapid Scattershot",
+     "picks": "Restores 120 MP; at 16, -1s all skill cooldowns on hit"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "lvl": 10,
+     "why": "Unchanged core; 15 is the next target (its skill every 5 basic attacks)"
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "lvl": 5,
+     "why": "Unchanged"
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "lvl": 5,
+     "why": "Unchanged; fire it before Destructive Attack"
+    },
+    {
+     "name": "Jointstrike: Destructive Attack",
+     "lvl": 5,
+     "why": "50–65 stagger by charge step; +30% Skill Speed at 10, always crits at 15, resets Curse and Corrode at 20"
+    }
+   ],
+   "passives": [
+    "Spirit Strike",
+    "Mental Focus",
+    "Element Unification",
+    "Spirit Revitalization"
+   ],
+   "daevanion": "Same as the main build's route.",
+   "gear": "Same as the main build. Arcana and Stigma Shards go to Destructive Attack after the Ancient Spirit and Benediction, toward its level-20 reset.",
+   "play": [
+    "Open as usual: Benediction, then the Ancient Spirit, then the macro. Fire Destructive Attack a few seconds after the Ancient Spirit lands.",
+    "Fire it only once Corrode and Curse have gone out: a Jointstrike overwrites the one before, and at 20 its reset is wasted on skills that are already ready.",
+    "Let go of the macro key while you charge it. A Korean post found the macro firing a freshly reset Curse and cutting the charge short (AOEAH).",
+    "Keep it off the macro: a macro step fires a charge skill at its first stage. Save it for when the stagger gauge opens."
+   ],
+   "pros": [
+    "Your biggest stagger tool, for stagger-check bosses",
+    "Grows stronger with Stigma investment, where Flame Blessing is the simpler default (ExpCarry)",
+    "Resets Curse and Corrode at 20"
+   ],
+   "cons": [
+    "One more manual press, held and timed",
+    "Weak until it has Stigma levels",
+    "Loses Flame Blessing's +100 Accuracy"
+   ],
+   "sources": [
+    {
+     "title": "ExpCarry: Spiritmaster Build Guide (17 Oct 2026)",
+     "url": "https://expcarry.com/aion-2-spiritmaster-guide",
+     "note": "The 38% / 48% split in 172 four-Stigma builds, and when Destructive Attack overtakes Flame Blessing"
+    },
+    {
+     "title": "Aion 2 Maps: Spiritmaster, Swaps",
+     "url": "https://aion2maps.com/guides/spiritmaster/",
+     "note": "Stagger values, Stigma level effects, Transcendence usage, and the own-key, held-charge rule"
+    },
+    {
+     "title": "AOEAH: Best Spiritmaster builds (9 Oct 2026)",
+     "url": "https://www.aoeah.com/news/4867--aion-2-best-spiritmaster-summoner-skill-builds-daevanion-macro-pve--pvp",
+     "note": "Timing after the Ancient Spirit, releasing the macro while charging, and the Korean six-Stigma set it comes from"
+    },
+    {
+     "title": "GamerBlurb: Spiritmaster Build Guide",
+     "url": "https://gamerblurb.com/guides/aion-2-spiritmaster-build-guide-pve-pvp-leveling-global",
+     "note": "Swap it in for the weakest damage Stigma where stagger matters"
+    },
+    {
+     "title": "games.gg: Spiritmaster Guide (4 Oct 2026)",
+     "url": "https://games.gg/aion-2/guides/aion-2-spiritmaster-guide/",
+     "note": "Destructive Attack can't go in the macro and needs its own key"
+    },
+    {
+     "title": "GameWith: Spiritmaster build stats, Global Europe",
+     "url": "https://gamewith.ai/aion2/en/build-stats/eu/elementalist",
+     "note": "On 45% of the top EU Spiritmasters' bars"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster macro and cycle (13 Aug 2026)",
+     "url": "https://www.inven.co.kr/board/aion2/6454/9216",
+     "note": "Korean opener with Destructive Attack after the Ancient Spirit; Corrode kept out of the macro (Korean six-slot set)"
+    }
+   ],
+   "disagree": "ExpCarry and Aion 2 Maps treat it as a real alternative once levelled, and Aion 2 Maps notes most top Transcendence players still keep Flame Blessing. A Korean video guide (VortexGaming) rates its cooldown reset as of little value. This build is for stagger checks and for players who will level the Stigma. Otherwise keep Flame Blessing."
+  },
+  {
+   "id": "four-spirits",
+   "name": "PvE Four Spirits (Wind added)",
+   "mode": "PvE",
+   "role": "Boss and dungeon DPS",
+   "summary": "The main build with the Wind Spirit as a fourth summon, so more spirit-skill hits feed Four Elements. A Korean Inven test measured about 6% more on a one-minute dummy. The cost is a fourth 150-MP summon every 15 s, and its Specialties need skill levels the planner's route doesn't give.",
+   "when": "Boss DPS once your MP holds up, especially with a high Combat Speed.",
+   "popularity": "Aion 2 Maps finds it on close to half of Global's top Spiritmasters. GameWith shows the Wind Spirit on 85% of the top 1,290 EU Spiritmasters' bars, but at an average skill level of only 7.5. Most guides (Evripides, GamerBlurb, Inven's Korean summary) drop it at endgame.",
+   "vsMain": "Summon: Wind Spirit goes to 10, paid for by leaving Consecutive Countercurrent at 1 (no source names the point to cut: it is the main build's last row). The spirit line holds four summons, still ending on the Fire Spirit.",
+   "skills": [
+    {
+     "skill": "Elemental Fusion",
+     "to": 10
+    },
+    {
+     "skill": "Combustion",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Cold Shock",
+     "to": 10
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "to": 10
+    },
+    {
+     "skill": "Dimensional Control",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Strike",
+     "to": 10
+    },
+    {
+     "skill": "Mental Focus",
+     "to": 10
+    },
+    {
+     "skill": "Element Unification",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Water Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Wind Spirit",
+     "to": 10,
+     "note": "The fourth spirit"
+    },
+    {
+     "skill": "Rapid Scattershot",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Revitalization",
+     "to": 10
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Corrode",
+     "to": 10
+    },
+    {
+     "skill": "Spirit's Descent",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Protection",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Earth Spirit",
+     "to": 10,
+     "note": "378 of 383 points; Consecutive Countercurrent, Soul's Cry, Spirit Communion and Revitalization Contract stay at 1"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Summon: Wind Spirit",
+     "picks": "10% chance to activate skill when Wind Spirit lands attack; with 12–14 from board nodes and gear, add +20% Wind Spirit Critical Hit, the pair most four-spirit players run"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "lvl": 10,
+     "why": "Unchanged"
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "lvl": 5,
+     "why": "Unchanged"
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "lvl": 5,
+     "why": "Unchanged; press it by hand if Elemental Fusion takes its macro row"
+    },
+    {
+     "name": "Flame Blessing",
+     "lvl": 5,
+     "why": "Unchanged (Destructive Attack works here too)"
+    }
+   ],
+   "passives": [
+    "Spirit Strike",
+    "Mental Focus",
+    "Element Unification",
+    "Spirit Revitalization"
+   ],
+   "daevanion": "The main route, plus the Wind Spirit's nodes if you want its level-12 pick; the planner's route skips them.",
+   "gear": "As the main build, with more MP sustain: keep Cold Shock's MP pick in mind and end on the Water Spirit when MP runs low.",
+   "play": [
+    "The in-game macro's quick slot holds four skills, so four spirits plus Elemental Fusion don't fit one stack. Aion 2 Maps offers putting Elemental Fusion in the damage line and pressing Corrode by hand after the Ancient Spirit; that leaves a spirit line of Water, Earth, Wind, Fire.",
+    "AOEAH says Korean four-spirit players fire Elemental Fusion from a mouse macro. NC has never approved those, so stay on the in-game macro.",
+    "If MP runs dry, drop back to three spirits for the fight."
+   ],
+   "pros": [
+    "More spirit-skill hits, so more Elemental Fusion casts",
+    "The Wind Spirit heals you 1.5% HP per hit while it is out"
+   ],
+   "cons": [
+    "Another 150 MP every 15 s",
+    "Needs a macro rearrangement or an external macro",
+    "The gain is a dummy result; dungeon damage depends on uptime more than on the macro (Inven)"
+   ],
+   "sources": [
+    {
+     "title": "Aion 2 Maps: Spiritmaster, Macro",
+     "url": "https://aion2maps.com/guides/spiritmaster/",
+     "note": "Close to half of top Global players run four; the Wind Spirit picks and levels; the alternative macro layout"
+    },
+    {
+     "title": "AOEAH: Best Spiritmaster builds",
+     "url": "https://www.aoeah.com/news/4867--aion-2-best-spiritmaster-summoner-skill-builds-daevanion-macro-pve--pvp",
+     "note": "The Inven test (about 6% on a 1-minute dummy), the quick-slot limit, and the mouse-macro risk"
+    },
+    {
+     "title": "GameWith: Spiritmaster build stats, Global Europe",
+     "url": "https://gamewith.ai/aion2/en/build-stats/eu/elementalist",
+     "note": "The Wind Spirit is on 85% of bars, at an average skill level of 7.5"
+    },
+    {
+     "title": "GamerBlurb: Spiritmaster Build Guide",
+     "url": "https://gamerblurb.com/guides/aion-2-spiritmaster-build-guide-pve-pvp-leveling-global",
+     "note": "The counter-view: Four Elements counts spirit-skill hits, not distinct elements, so Wind is easy to drop"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster PvE settings summary (2 Jul 2026)",
+     "url": "https://www.inven.co.kr/board/aion2/6454/8152",
+     "note": "Korean tier list that puts the Wind Spirit in 'no need to raise'"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster macro and cycle",
+     "url": "https://www.inven.co.kr/board/aion2/6454/9216",
+     "note": "Dummy damage barely tracks dungeon damage; uptime matters more than the macro"
+    }
+   ],
+   "disagree": "Aion 2 Maps' parses and GameWith's bars show many Global players keeping the Wind Spirit. Evripides, GamerBlurb, AOEAH and Inven's Korean summary all call three spirits the clean endgame setup. Evripides marks the Wind Spirit 'not used in PvE', and no build he lists spends its board node. Run it only if your MP holds up and the in-game macro arrangement works for you."
+  },
+  {
+   "id": "solo-farm",
+   "name": "Solo Levelling and Farming (Siphon)",
+   "mode": "PvE",
+   "role": "Solo questing, open-world farming and trash-heavy content",
+   "summary": "A safer, sustain-first version of the same engine for solo play. Siphon is in a Stigma slot for HP and MP. Elemental Fusion turns into an area skill for packs, the MP-saving picks stay in, and the Wind Spirit is raised in place of Rapid Scattershot, which only hits staggered targets.",
+   "when": "Levelling to 45, open-world farming and trash-heavy runs while your gear is light. Swap back to the main build for bosses.",
+   "popularity": "Siphon is GamerBlurb's levelling Stigma and ExpCarry's solo pick, and games.gg's AoE and solo-farming build includes it. Korea's catch-up guide on Inven also slots it. GameWith shows Siphon on 50% of the top EU Spiritmasters' bars, the most of any non-core Stigma.",
+   "vsMain": "Siphon replaces Flame Blessing. Elemental Fusion and Combustion take their pack and MP picks. Rapid Scattershot stays at 1, and the Wind Spirit goes to 10. The Earth Spirit moves up the order for tanking tough enemies.",
+   "skills": [
+    {
+     "skill": "Elemental Fusion",
+     "to": 10
+    },
+    {
+     "skill": "Combustion",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "to": 10,
+     "note": "Its skill hits up to 4 enemies"
+    },
+    {
+     "skill": "Cold Shock",
+     "to": 10
+    },
+    {
+     "skill": "Dimensional Control",
+     "to": 10,
+     "note": "Slows up to 4 enemies by 40%"
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Strike",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Water Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Earth Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Mental Focus",
+     "to": 10
+    },
+    {
+     "skill": "Element Unification",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Wind Spirit",
+     "to": 10,
+     "note": "HP sustain while levelling"
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Revitalization",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Protection",
+     "to": 10
+    },
+    {
+     "skill": "Spirit's Descent",
+     "to": 10
+    },
+    {
+     "skill": "Corrode",
+     "to": 10
+    },
+    {
+     "skill": "Consecutive Countercurrent",
+     "to": 10,
+     "note": "378 of 383 points; Rapid Scattershot, Soul's Cry, Spirit Communion and Revitalization Contract stay at 1. The order is built from the levelling priorities in GamerBlurb, AOEAH and games.gg; none gives a full order"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Elemental Fusion",
+     "picks": "Changes to AoE Skill for packs (Extra damage after 3s on hit for elites)"
+    },
+    {
+     "skill": "Combustion",
+     "picks": "-20% MP consumed"
+    },
+    {
+     "skill": "Cold Shock",
+     "picks": "+20% MP restored"
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "picks": "10% chance to activate skill when Fire Spirit lands attack, or -50% MP Cost while MP runs short"
+    },
+    {
+     "skill": "Dimensional Control",
+     "picks": "Extra damage after 3s on hit (games.gg adds its MP-restore pick)"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 20% HP on using [Defiance]"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "lvl": 10,
+     "why": "Still the core: it gives you Four Elements as it lands"
+    },
+    {
+     "name": "Enhance: Spirit's Benediction",
+     "lvl": 5,
+     "why": "Damage, Damage Tolerance and HP every second, and 10% Max HP back on cast"
+    },
+    {
+     "name": "Siphon",
+     "lvl": 5,
+     "why": "A hit that absorbs 10% HP and drains 300 MP every 30 s; a shield from 15"
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "lvl": 5,
+     "why": "For elites and quest bosses; Cursed Cloud (area damage over time) instead for big packs"
+    }
+   ],
+   "passives": [
+    "Spirit Strike",
+    "Spirit Protection",
+    "Mental Focus",
+    "Element Unification"
+   ],
+   "daevanion": "The planner's while-levelling route is unchanged: Elemental Fusion and Combustion on every board, the Fire Spirit and Cold Shock on Nezekan and Zikel, and the Combat Speed and Damage Boost core nodes.",
+   "gear": "Enough Accuracy that pulls don't miss, then Attack and MP sustain. Raise HP and Defence for hard solo content (games.gg).",
+   "play": [
+    "End on the spirit the pull needs: Fire for packs, Earth for a tough enemy (it draws the attacks), Water when MP is low, Wind when HP is low.",
+    "Take Corrode out of the macro on trash: it goes off on weak mobs and its cooldown drifts.",
+    "Don't overpull: repeated deaths cost more than bigger pulls save (games.gg, GamerBlurb).",
+    "Swap Siphon back to Flame Blessing once you survive comfortably (GamerBlurb)."
+   ],
+   "pros": [
+    "Safest solo setup: HP and MP from Siphon, Benediction and the Wind Spirit",
+    "Area Elemental Fusion and the Fire Spirit clear packs",
+    "The same engine as the boss build, so nothing new to learn"
+   ],
+   "cons": [
+    "Lower single-target damage than the main build",
+    "The area pick weakens Elemental Fusion on bosses",
+    "Needs a preset swap before dungeons"
+   ],
+   "sources": [
+    {
+     "title": "GamerBlurb: Spiritmaster Build Guide, levelling",
+     "url": "https://gamerblurb.com/guides/aion-2-spiritmaster-build-guide-pve-pvp-leveling-global",
+     "note": "Levelling Stigmas (Ancient Spirit, Benediction, Corrode, Siphon), the skill priority, and swapping Siphon for Flame Blessing later"
+    },
+    {
+     "title": "games.gg: Spiritmaster Guide, AoE and solo farming",
+     "url": "https://games.gg/aion-2/guides/aion-2-spiritmaster-guide/",
+     "note": "Area Elemental Fusion, the Fire Spirit as main summon, Cursed Cloud or Corrode with Siphon, pull-size advice"
+    },
+    {
+     "title": "ExpCarry: Spiritmaster Build Guide",
+     "url": "https://expcarry.com/aion-2-spiritmaster-guide",
+     "note": "Siphon when sustain limits solo play; the Wind and Earth Spirits for recovery and dangerous pulls"
+    },
+    {
+     "title": "Aion 2 Maps: Spiritmaster, Levelling",
+     "url": "https://aion2maps.com/guides/spiritmaster/",
+     "note": "Levelling Specialties, which spirit to end on while questing, and Corrode off the macro on trash"
+    },
+    {
+     "title": "AOEAH: Best Spiritmaster builds",
+     "url": "https://www.aoeah.com/news/4867--aion-2-best-spiritmaster-summoner-skill-builds-daevanion-macro-pve--pvp",
+     "note": "Levelling priority tiers; Rapid Scattershot is for bosses only"
+    },
+    {
+     "title": "GameWith: Spiritmaster build stats, Global Europe",
+     "url": "https://gamewith.ai/aion2/en/build-stats/eu/elementalist",
+     "note": "Siphon on 50% of the top EU Spiritmasters' bars"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster PvE settings summary",
+     "url": "https://www.inven.co.kr/board/aion2/6454/8152",
+     "note": "Korean catch-up Stigma set with Siphon at 5 beside Flame Blessing and Corrode (Korean five-to-six-slot layout)"
+    }
+   ],
+   "disagree": "Sources agree on Siphon for solo play but split on its partner. GamerBlurb keeps Corrode, and games.gg offers Cursed Cloud for packs; this build keeps Corrode and names Cloud as the swap. AOEAH drops the Wind Spirit after the first week, while ExpCarry keeps it for recovery during levelling. Levelling skill points follow the planner's level stepper; the order above is for a farming preset at 45."
+  },
+  {
+   "id": "abyss-group",
+   "name": "Abyss Group PvP (Fear and Anti-heal)",
+   "mode": "PvP",
+   "role": "Backline control and damage over time in large fights",
+   "summary": "For Abyss and other group fights, where a Cleric or Chanter keeps targets alive and there are several enemies to hit. It trades Proxy and Seize Magic for area pressure. Corrode cuts their healing, Cursed Cloud puts area damage over time on grouped enemies, and Cry of Terror adds an area Fear on top of Soul's Cry.",
+   "when": "Abyss fights, sieges and group PvP, especially against healer-backed groups.",
+   "popularity": "Each guide builds this set a little differently: games.gg's Abyss build, AOEAH's mass-PvP notes, and Evripides' 'Utility' and anti-healer Stigma sets. GameWith shows Cursed Cloud on 39% of the top EU Spiritmasters' bars, Magic Block on 33% and Cry of Terror on 24%.",
+   "vsMain": "Stigmas become the Ancient Spirit, Corrode, Cursed Cloud and Cry of Terror. Skill points follow the PvP build, with the Fire Spirit ahead of the Earth Spirit for grouped enemies. Elemental Fusion takes its area pick.",
+   "skills": [
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Elemental Fusion",
+     "to": 10
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "to": 10
+    },
+    {
+     "skill": "Cold Shock",
+     "to": 10
+    },
+    {
+     "skill": "Combustion",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Fire Spirit",
+     "to": 10,
+     "note": "Hits up to 4 enemies"
+    },
+    {
+     "skill": "Soul's Cry",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Protection",
+     "to": 10
+    },
+    {
+     "skill": "Revitalization Contract",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Earth Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Dimensional Control",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Strike",
+     "to": 10
+    },
+    {
+     "skill": "Mental Focus",
+     "to": 10
+    },
+    {
+     "skill": "Summon: Water Spirit",
+     "to": 10
+    },
+    {
+     "skill": "Element Unification",
+     "to": 10
+    },
+    {
+     "skill": "Spirit Revitalization",
+     "to": 10
+    },
+    {
+     "skill": "Corrode",
+     "to": 10
+    },
+    {
+     "skill": "Consecutive Countercurrent",
+     "to": 10,
+     "note": "Extra damage against targets with damage over time on them. 378 of 383 points; Rapid Scattershot, Spirit's Descent, Summon: Wind Spirit and Spirit Communion stay at 1. No source gives an order: this one adapts the PvP build"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Elemental Fusion",
+     "picks": "Changes to AoE Skill against grouped enemies (Fextralife's pick for clustered enemies; Evripides also marks a mass-PvP pick), plus +10 all Element Boost on hit"
+    },
+    {
+     "skill": "Soul's Cry",
+     "picks": "Inflicts Root for 5s"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 20% HP on using [Defiance]"
+    },
+    {
+     "skill": "Jointstrike: Curse",
+     "picks": "Changes to mobile skill, and -2s cooldown"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Summon: Ancient Spirit",
+     "lvl": 10,
+     "why": "Kept by every group set except games.gg's"
+    },
+    {
+     "name": "Jointstrike: Corrode",
+     "lvl": 5,
+     "why": "Damage over time and a damage debuff; from 15 it cuts incoming healing by 70%"
+    },
+    {
+     "name": "Cursed Cloud",
+     "lvl": 5,
+     "why": "Area damage over time for grouped enemies; 20 stagger"
+    },
+    {
+     "name": "Cry of Terror",
+     "lvl": 5,
+     "why": "Area Fear, on top of Soul's Cry"
+    }
+   ],
+   "passives": [
+    "Spirit Protection",
+    "Revitalization Contract",
+    "Consecutive Countercurrent",
+    "Spirit Strike"
+   ],
+   "daevanion": "Azphel as in the PvP build: core nodes, then Status Effect Resist.",
+   "gear": "As the PvP build: Status Effect Resist, HP, PvP Accuracy and Attack Manastones. Evripides pairs Cry of Terror with Kaisinel's Power for Status Effect Chance, which Inven also says Magic Block needs to land.",
+   "play": [
+    "Stay behind your frontline and kite at range, with spirits between you and the enemy. Move first and cast Elemental Fusion second when several players are on you (games.gg).",
+    "Curse first, so they use a potion on it, then Corrode: potions and cleanses remove it.",
+    "Open on grouped enemies with Cursed Cloud and the Fire Spirit (AOEAH).",
+    "Coordinate Fear and dispels with your group, and focus the target your group calls (GamerBlurb, games.gg)."
+   ],
+   "pros": [
+    "Cuts healers' throughput",
+    "Area damage and Fear for crowded fights",
+    "Damage over time keeps working while you reposition"
+   ],
+   "cons": [
+    "No Proxy: weaker when an Assassin dives you",
+    "Its damage over time can be cleansed",
+    "Fear lands less often without Status Effect Chance"
+   ],
+   "sources": [
+    {
+     "title": "games.gg: Spiritmaster Guide, Abyss and group PvP",
+     "url": "https://games.gg/aion-2/guides/aion-2-spiritmaster-guide/",
+     "note": "Cursed Cloud, Cry of Terror and Magic Block for group fights; focus-fire and positioning tips"
+    },
+    {
+     "title": "Evripides: Spirit Master guide, Global edition",
+     "url": "https://aion2-elementalist-guide.netlify.app/global/",
+     "note": "'Utility' set (Ancient Spirit, Cry of Terror, Corrode, Kaisinel's Power) and the anti-healer set; the Curse-then-Corrode rule; the mass-PvP Elemental Fusion pick"
+    },
+    {
+     "title": "AOEAH: Best Spiritmaster builds, PvP",
+     "url": "https://www.aoeah.com/news/4867--aion-2-best-spiritmaster-summoner-skill-builds-daevanion-macro-pve--pvp",
+     "note": "Cursed Cloud and the Fire Spirit against clumped enemies in mass PvP"
+    },
+    {
+     "title": "Aion 2 Maps: Spiritmaster, PvP preset swaps",
+     "url": "https://aion2maps.com/guides/spiritmaster/",
+     "note": "Corrode against Clerics and Chanters and in group fights; 70% healing cut from Stigma 15"
+    },
+    {
+     "title": "ExpCarry: Spiritmaster Build Guide",
+     "url": "https://expcarry.com/aion-2-spiritmaster-guide",
+     "note": "Abyss direction: Corrode, summon pressure and situational control from behind the frontline"
+    },
+    {
+     "title": "GameWith: Spiritmaster build stats, Global Europe",
+     "url": "https://gamewith.ai/aion2/en/build-stats/eu/elementalist",
+     "note": "Cursed Cloud, Magic Block and Cry of Terror usage on top EU bars"
+    },
+    {
+     "title": "Inven (Korean): Spiritmaster PvP guide",
+     "url": "https://www.inven.co.kr/board/aion2/6454/9148",
+     "note": "Korean view: Corrode and Cursed Cloud debuffs get cleansed, Magic Block needs Kaisinel's Power, and Cry of Terror is not worth it over Soul's Cry"
+    }
+   ],
+   "disagree": "This is the least settled set. games.gg drops the Ancient Spirit for Magic Block, Evripides keeps it with Kaisinel's Power, and AOEAH keeps the four PvE Stigmas with Cursed Cloud swapped in. Inven's Korean guide advises against Cry of Terror. This build takes the overlap: the Ancient Spirit, Corrode, Cloud and Cry of Terror. Swap in Magic Block with Kaisinel's Power if your group needs caster interrupts. The healing cut is −70% from Stigma 15 in Aion 2 Maps' client data, and −60% in Evripides' guide."
+  }
+ ]
+}
