@@ -1,0 +1,299 @@
+{
+  "intro": "One PvP preset for arena and small Abyss fights, then the three other setups Global Rangers actually run: the PvE damage bar taken into big Abyss fights, a stagger-and-packs dungeon variant, and a sustain setup for solo farming. Skill and Stigma resets are free, so each can sit in its own preset beside the main build.",
+  "crosscheck": "The other guides agree with the main build on its core: Vaizel's Authority, Bow of Blessing and Supporting Fire on every top build (98%, 94% and 88% of 703 public Global builds on questlog, counted by aion2vault.com), Vaizel's Authority to 20 first, Deadshot charged by hand on its own key inside Precision, and Focused Eye then Hunter's Resolve as the passives that matter (aion2vault.com, metaroad.gg, guidemmo.com, skycoach.gg). The fourth Stigma is the open question. Griffon Arrow leads Explosive Arrow only 51% to 47%, and whelps runs Explosive Arrow until Griffon Arrow reaches 15, which is what the planner does (aion2vault.com). metaroad.gg puts Griffon Arrow in slot 4 from the start, and gamesfuze.com runs both arrows instead of Supporting Fire. Specialties mostly match. guidemmo.com takes Deadshot's \"Ignores Block and Evasion\" pick with Skill Speed in place of the mobile pick, which aion2maps.com rates as a split. On skill points, metaroad.gg raises Suppressing Arrow, Explosion Trap and Defiance to 12 and Unyielding Resolve and Revitalization Contract to 10, where the planner leaves Suppressing Arrow, Defiance and the two resist passives at 1. aion2maps.com's live page now also takes Defiance to 8 in PvE for its 20% heal. The macros differ only in grouping: whelps runs Gale Arrow → Drill Dart → Tempest Shot and Snare Shot → Explosive Arrow → Burst Arrow, and skycoach.gg runs Moxsy's Gale Arrow → Drill Dart → Burst Arrow → Drill Dart. Korean Inven posts from Sep 2026 (KR only, a later patch) hold Snipe, Tempest Shot and Drill Dart at 16 and push Snare Shot and Burst Arrow to 20. KR also has five Stigma slots by then (vortexgaming.io), so don't copy KR loadouts onto Global as they are.",
+  "builds": [
+    {
+      "id": "pvp",
+      "name": "PvP Kiter",
+      "mode": "PvP",
+      "role": "Ranged burst and control (arena, small Abyss fights)",
+      "summary": "A preset that gives up some PvE damage for survival and crowd control. Slow and stun from 20 m, land a charged Deadshot inside Precision, and keep Mother Nature's Breath, Ambush Kick and Defiance for when a melee player reaches you. Ranger has no invulnerability skill, so the build gets its survival from these three and from raising the two resist passives.",
+      "when": "Arenas, 1v1 and small-scale Abyss roaming. For big zerg fights see the Abyss damage bar build.",
+      "popularity": "Niche. On 18 Oct 2026 only 41 of 984 public Global Ranger builds on questlog were tagged PvP, and 17 of those were whelps' \"Ranger PvP Small Scale\" or copies of it (aion2vault.com). Mother Nature's Breath with Ambush Kick is also J0EI's suggestion. A widely read Korean Inven post (Sep 2026, KR only) calls Ranger the weakest solo PvP class at the top end.",
+      "vsMain": "Supporting Fire and Explosive Arrow come out for Mother Nature's Breath and Ambush Kick. Arrow Scattershot, Vigilant Eye and Wind Vigor go back to 1. Defiance goes to 10, the two resist passives to 10 and Suppressing Arrow to 8. Several Specialties change to HP absorbs and knockbacks. Azphel and PvP gear are added.",
+      "skills": [
+        {"skill": "Snipe", "to": 10, "note": "Step 1, with the next four: 105 points"},
+        {"skill": "Deadshot", "to": 10},
+        {"skill": "Drill Dart", "to": 10, "note": "Its Bleed cuts their healing by 60%"},
+        {"skill": "Gale Arrow", "to": 10},
+        {"skill": "Tempest Shot", "to": 10},
+        {"skill": "Marking Shot", "to": 10, "note": "Step 2, with Snare Shot and Burst Arrow: 168"},
+        {"skill": "Snare Shot", "to": 10},
+        {"skill": "Burst Arrow", "to": 10},
+        {"skill": "Defiance", "to": 10, "note": "Step 3: your only crowd-control break, 189"},
+        {"skill": "Focused Eye", "to": 10, "note": "Step 4, with Hunter's Resolve: 231"},
+        {"skill": "Hunter's Resolve", "to": 10},
+        {"skill": "Revitalization Contract", "to": 10, "note": "Step 5, with Unyielding Resolve: 273"},
+        {"skill": "Unyielding Resolve", "to": 10},
+        {"skill": "Suppressing Arrow", "to": 8, "note": "Step 6: stun under Precision, 286"},
+        {"skill": "Explosion Trap", "to": 8, "note": "Step 7: 299"},
+        {"skill": "Hunter's Soul", "to": 10, "note": "Step 8: 320"},
+        {"skill": "Rooting Eye", "to": 10, "note": "Step 9: 341"},
+        {"skill": "Concentrated Fire", "to": 10, "note": "Step 10, with Melee Fire: 383 of 383. Arrow Scattershot, Vigilant Eye and Wind Vigor stay at 1"},
+        {"skill": "Melee Fire", "to": 10}
+      ],
+      "specialties": [
+        {"skill": "Deadshot", "picks": "Changes to mobile skill, and Ignores Block and Evasion and lands as Multi-Hit in place of +30% Skill Speed (aion2maps, metaroad). Some keep Skill Speed as a third pick once Deadshot reaches 20 (Inven, KR)"},
+        {"skill": "Marking Shot", "picks": "+5s duration, and 30% chance to inflict Knock Back on hit in place of Perfect Chance. whelps takes +1 consecutive use (skill level 12) in place of the duration"},
+        {"skill": "Gale Arrow", "picks": "50% chance to inflict Knock Back on hit, beside Changes to mobile skill"},
+        {"skill": "Drill Dart", "picks": "Absorbs 3% HP in place of +20% Skill Speed (10 of 19 PvP builds)"},
+        {"skill": "Burst Arrow", "picks": "Absorbs 10% HP in place of the fewer-targets damage pick"},
+        {"skill": "Snare Shot", "picks": "Changes to mobile skill; whelps adds the Shackling Arrow chain for a Root"},
+        {"skill": "Suppressing Arrow", "picks": "+1s Stun at 8; +20% Stun chance needs skill level 12 (9 of 15 PvP builds take it)"},
+        {"skill": "Explosion Trap", "picks": "+20% Stun chance once a board node or gear line takes it to 12"},
+        {"skill": "Defiance", "picks": "Restores 20% HP on using Defiance"}
+      ],
+      "stigmas": [
+        {"name": "Vaizel's Authority", "lvl": 10, "why": "On every PvP bar: +20% Attack for your Deadshot window"},
+        {"name": "Bow of Blessing", "lvl": 5, "why": "+200 Critical Hit and +100 Accuracy; on 18 of 20 independent PvP bars. whelps swaps it for Sealing Arrow (5 s Seal) in small fights"},
+        {"name": "Mother Nature's Breath", "lvl": 5, "why": "Your one defensive Stigma: PvP Damage Tolerance, Crit Resist and HP back for 6 s; from 5 it clears and blocks DoTs"},
+        {"name": "Ambush Kick", "lvl": 5, "why": "Disengage: gets behind a close target, knocks it back and jumps you away. Range grows at 5"}
+      ],
+      "passives": ["Focused Eye", "Hunter's Resolve", "Revitalization Contract", "Unyielding Resolve", "Hunter's Soul", "Rooting Eye"],
+      "daevanion": "Azphel (opens at 45, its own crystals): the 4-point PvP Damage Boost and PvP Damage Tolerance corners first, then Status Effect Resist. Sources split on Boost or Tolerance first; whelps buys two Tolerance corners first. Season 1 gives about 146 Azphel crystals (36 from Ereshkigal's Monolith, 110 from the Abyss Shop), enough for every core and Resist node. On the PvE boards, the Unyielding Resolve and Revitalization Contract nodes help this preset.",
+      "gear": "Fierce Battle Amulet (PvP Damage Boost) in place of the Revelation Amulet. Abyssal Manastones with PvP lines, and Status Effect Resist on the armour. Brawler or Talisra wings. Saint of Ereshkigal as the attack title. Archon Abyss sets from the Abyss Shop, from Decanus up to Tribunus. Add HP and PvP Damage Tolerance if you die on first contact. KR players also run extreme-Evasion sets; they are costly and Inven posters say they still die (KR only).",
+      "play": [
+        "Stay near 20 m and circle with the terrain. Make them spend their gap closer before you spend Ambush Kick.",
+        "Snare Shot, then Burst Arrow: it only hits a slowed or rooted target. Drill Dart's Bleed cuts heals, so put it on healed targets.",
+        "Marking Shot, then Deadshot at once, with Vaizel's Authority and Bow of Blessing up. Tap Deadshot when they can reach you; charge it fully only when they can't.",
+        "Suppressing Arrow only stuns while Precision is up, so fire it inside the same window.",
+        "Mother Nature's Breath when they commit to you; Ambush Kick or Explosion Trap when a melee player is on you.",
+        "Save Defiance for Stun, Knockdown, Grab or Fear. It does not remove Root, Slow, Seal or Blind.",
+        "Wait out a Gladiator's Tenaciousness or a Cleric's Salvation (3 s immune) before you fire Deadshot.",
+        "Macro only the damage chains (Snare Shot → Burst Arrow; Gale Arrow → Drill Dart → Tempest Shot). Press Marking Shot, Deadshot, Stigmas and Defiance yourself."
+      ],
+      "pros": [
+        "Most of the kit reaches 20 m, with slows, stuns and knockbacks to keep melee players off you",
+        "Drill Dart's healing cut punishes targets that are being healed",
+        "The HP-absorb Specialties and Mother Nature's Breath give you real sustain while you kite"
+      ],
+      "cons": [
+        "No invulnerability skill; a KR Inven post says Mother Nature's Breath is weak next to other classes' defences",
+        "Loses most of its damage if you stand still to charge Deadshot",
+        "Few PvP builds have been published, so the picks are less settled than the PvE ones"
+      ],
+      "sources": [
+        {"title": "Aion 2 Maps: Ranger, PvP tab", "url": "https://aion2maps.com/guides/ranger/", "note": "The PvP preset: Stigmas, the skill-point changes (resist passives and Defiance to 10), Specialty swaps, the Watch-for table, PvP gear and the Azphel crystal counts"},
+        {"title": "AION2 Vault: Ranger PvP Build", "url": "https://aion2vault.com/builds/ranger/pvp/", "note": "Stigma shares on 20 independent PvP builds, whelps' small-scale bar and swaps (Sealing Arrow, Stealth, Ensnaring Trap), the Suppressing Arrow stun picks, HP absorbs and Azphel boards"},
+        {"title": "AION2 Vault: Ranger Macro", "url": "https://aion2vault.com/builds/ranger/macro/", "note": "The PvP macro chains and what stays out of the macro"},
+        {"title": "GamerBlurb: Ranger Build Guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-ranger-build-guide-pve-pvp-leveling-global", "note": "PvP priorities: make them spend mobility first, keep Defiance manual, HP and PvP Damage Tolerance first in PvP stats"},
+        {"title": "Metaroad: Ranger PvE DPS Build", "url": "https://metaroad.gg/aion2/build-guides/ranger-pve-dps-build", "note": "Deadshot's Ignores Block and Evasion pick for PvP; Mother Nature's Breath, Ambush Kick and Sealing Arrow as the PvP Stigmas"},
+        {"title": "GamesFuze: Ranger Build (PvP, PvE, Solo)", "url": "https://gamesfuze.com/guides/aion-2-ranger-build-best-skills-stigmas-gear-pvp-pve-solo/", "note": "The Archon Abyss gear path; Defiance's HP pick"},
+        {"title": "Aion2 Atlas: Ranger Build", "url": "https://aion2atlas.app/builds/ranger/", "note": "The Stealth and Ambush Kick kiting style, and the KR view that Ranger needs Evasion to compete in PvP"},
+        {"title": "Inven (KR): Ranger board, PvP skill levels", "url": "https://www.inven.co.kr/board/aion2/6450/19673", "note": "KR PvP skill levels (Tempest Shot, Deadshot, Gale Arrow, Drill Dart 20; Snipe, Defiance 16) and Deadshot picks 2/3/4"},
+        {"title": "Inven (KR): \"Ranger PvP has no answer right now\"", "url": "https://www.inven.co.kr/board/aion2/6450/20060", "note": "KR player view that Ranger is the weakest solo PvP class at the top end because it has no invulnerability"}
+      ],
+      "disagree": "Most public PvP builds keep the PvE damage bar (Bow of Blessing, Supporting Fire, Griffon Arrow), while whelps and aion2maps swap two or three Stigmas for survival tools. This build follows aion2maps and J0EI: Bow of Blessing stays, Mother Nature's Breath and Ambush Kick come in. Sealing Arrow, Stealth and Ensnaring Trap are the swaps. GamerBlurb alone runs Explosive Arrow and Arrow Storm in PvP. aion2maps leaves 13 points spare after its changes; this build spends them on Suppressing Arrow to 8, after aion2vault's count of PvP stun picks. The Specialties at Deadshot 20 are not settled."
+    },
+    {
+      "id": "abyss-damage",
+      "name": "Abyss Damage Bar",
+      "mode": "PvP",
+      "role": "Backline damage in large Abyss and battleground fights",
+      "summary": "Keep the PvE damage Stigmas and fire from behind your own group. In big fights nobody can reach you, and Ranger has no long cooldowns to wait on, so it keeps firing and racks up kills and Abyss Points.",
+      "when": "Large Abyss fights, sieges, boss contests and 10v10 battlegrounds, which even out stats.",
+      "popularity": "The most common PvP setup: 18 of 20 independent PvP builds slot Bow of Blessing, 17 Vaizel's Authority, 11 Supporting Fire and 10 Griffon Arrow (aion2vault.com, Oct 2026). jormundghandr's notes say nearly every top Korean PvP Ranger carries this bar, and whelps plays his PvE build in large fights.",
+      "vsMain": "The same four Stigmas as the main build. Defiance and Suppressing Arrow take the points of Arrow Scattershot and Wind Vigor, and 5 spare go into Revitalization Contract. Azphel and PvP gear are added.",
+      "skills": [
+        {"skill": "Snipe", "to": 10, "note": "Step 1, with the next four: 105"},
+        {"skill": "Deadshot", "to": 10},
+        {"skill": "Drill Dart", "to": 10},
+        {"skill": "Gale Arrow", "to": 10},
+        {"skill": "Tempest Shot", "to": 10},
+        {"skill": "Focused Eye", "to": 10, "note": "Step 2, then Hunter's Resolve and Hunter's Soul: 168"},
+        {"skill": "Hunter's Resolve", "to": 10},
+        {"skill": "Hunter's Soul", "to": 10},
+        {"skill": "Marking Shot", "to": 10, "note": "Step 3, with Burst Arrow: 210"},
+        {"skill": "Burst Arrow", "to": 10},
+        {"skill": "Snare Shot", "to": 10, "note": "Step 4: 231"},
+        {"skill": "Defiance", "to": 10, "note": "Step 5: 252"},
+        {"skill": "Concentrated Fire", "to": 10, "note": "Step 6: 273"},
+        {"skill": "Rooting Eye", "to": 10, "note": "Step 7: 294"},
+        {"skill": "Suppressing Arrow", "to": 10, "note": "Step 8: 315"},
+        {"skill": "Explosion Trap", "to": 10, "note": "Step 9: 336"},
+        {"skill": "Melee Fire", "to": 10, "note": "Step 10, with Vigilant Eye: 378"},
+        {"skill": "Vigilant Eye", "to": 10},
+        {"skill": "Revitalization Contract", "to": 5, "note": "Last 5 points: 383. Arrow Scattershot, Wind Vigor and Unyielding Resolve stay at 1"}
+      ],
+      "specialties": [
+        {"skill": "Deadshot", "picks": "Changes to mobile skill, and Ignores Block and Evasion and lands as Multi-Hit if you are short on Accuracy against players"},
+        {"skill": "Suppressing Arrow", "picks": "+1s Stun; +20% Stun chance at 12"},
+        {"skill": "Defiance", "picks": "Restores 20% HP on using Defiance"},
+        {"skill": "Drill Dart", "picks": "Absorbs 3% HP if you are focused, otherwise the PvE picks"}
+      ],
+      "stigmas": [
+        {"name": "Vaizel's Authority", "lvl": 10, "why": "+20% Attack; pushed to 20 first as in PvE"},
+        {"name": "Bow of Blessing", "lvl": 5, "why": "Crit and Accuracy for the burst window"},
+        {"name": "Supporting Fire", "lvl": 5, "why": "An orb that keeps firing and heals you a little"},
+        {"name": "Explosive Arrow", "lvl": 5, "why": "Area hit, stronger on slowed targets; Griffon Arrow takes the slot once it reaches 15. Mother Nature's Breath here when you need to survive"}
+      ],
+      "passives": ["Focused Eye", "Hunter's Resolve", "Hunter's Soul", "Concentrated Fire", "Rooting Eye"],
+      "daevanion": "Azphel as in the PvP Kiter: PvP Damage Boost and Tolerance corners, then Status Effect Resist. PvE boards as in the main build.",
+      "gear": "PvP stat priority: Attack, Accuracy and Critical Hit for damage, then Status Effect Resist and HP; Evasion from PvP Evasion Manastones rather than sub-stats (jormundghandr). Fierce Battle Amulet and the Archon Abyss sets as in the PvP Kiter. Battlegrounds even out stats; gear only counts in the Abyss.",
+      "play": [
+        "Stay with your group and behind its front line. Don't chase a low target away from it.",
+        "Hold Snipe and the macro on whoever your group is focusing. Buffs and Marking Shot by hand, then Deadshot.",
+        "Abyss Points come from damage on players who die, so steady area damage pays here.",
+        "Swap Explosive Arrow or Griffon Arrow for Mother Nature's Breath if their divers keep reaching you."
+      ],
+      "pros": [
+        "Highest sustained damage of the PvP setups, with no long cooldowns",
+        "Shares Stigma levels with your PvE build, so it needs no extra Stigma Shards",
+        "Hard to pick out of a crowd at 20 m"
+      ],
+      "cons": [
+        "Falls over quickly if an Assassin or Gladiator dives you",
+        "No disengage Stigma"
+      ],
+      "sources": [
+        {"title": "AION2 Vault: Ranger PvP Build", "url": "https://aion2vault.com/builds/ranger/pvp/", "note": "Stigma shares on public PvP builds, jormundghandr's damage bar and stat notes, whelps' large-scale advice and JOHNPAL's view of Ranger in big fights"},
+        {"title": "SkyCoach: AION 2 Ranger Class Guide", "url": "https://skycoach.gg/blog/aion-2/articles/a2-ranger-guide", "note": "Mass PvP play: stay near friendly players, macro, and farm Abyss currency from damage"},
+        {"title": "GamerBlurb: Ranger Build Guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-ranger-build-guide-pve-pvp-leveling-global", "note": "Griffon Arrow for larger Abyss fights from behind allied protection; don't chase too far"},
+        {"title": "Metaroad: Ranger PvE DPS Build", "url": "https://metaroad.gg/aion2/build-guides/ranger-pve-dps-build", "note": "PvP note: keep the same four Stigmas and swap Griffon Arrow for Mother Nature's Breath when you need to survive"},
+        {"title": "Aion 2 Maps: Ranger", "url": "https://aion2maps.com/guides/ranger/", "note": "Azphel route, PvP gear table and the Defiance raise"}
+      ],
+      "disagree": "Whether to swap the fourth damage Stigma for Mother Nature's Breath is up to how often you get dived; jormundghandr and Metaroad both name it as the first survival swap. No source gives a full point order for this preset; it is the main build with Defiance and Suppressing Arrow raised, following aion2maps' PvP changes and jormundghandr's macro, which uses Suppressing Arrow."
+    },
+    {
+      "id": "stagger",
+      "name": "Stagger and Packs",
+      "mode": "PvE",
+      "role": "Dungeon DPS for stagger checks and pack-heavy runs",
+      "summary": "The main build with Arrow Storm in the fourth Stigma slot. Arrow Storm does 50 stagger damage at any level, more than twice any other Ranger skill. Explosion Trap's pull and Arrow Scattershot get their points earlier, for bosses that must be staggered fast and for runs that are mostly packs.",
+      "when": "Expedition and Transcendence bosses with a hard stagger check, groups short on stagger, and pack-heavy dungeon runs.",
+      "popularity": "A common situational swap rather than a separate main build. Metaroad keeps it as one of its three presets; Allyria, aion2maps and GamerBlurb name Arrow Storm for stagger checks. J0EI finds its long cooldown hard to justify the rest of the time.",
+      "vsMain": "Arrow Storm in place of Explosive Arrow. With all 383 points the skill levels match the main build; the change is the order: Explosion Trap and Arrow Scattershot move ahead of the passives in rows 5–7, which matters while you are short on Wisdom Stones.",
+      "skills": [
+        {"skill": "Snipe", "to": 10, "note": "Step 1, with the next four: 105"},
+        {"skill": "Deadshot", "to": 10},
+        {"skill": "Drill Dart", "to": 10},
+        {"skill": "Gale Arrow", "to": 10},
+        {"skill": "Tempest Shot", "to": 10},
+        {"skill": "Focused Eye", "to": 10, "note": "Step 2, then Hunter's Resolve and Hunter's Soul: 168"},
+        {"skill": "Hunter's Resolve", "to": 10},
+        {"skill": "Hunter's Soul", "to": 10},
+        {"skill": "Marking Shot", "to": 10, "note": "Step 3, with Burst Arrow (15 stagger): 210"},
+        {"skill": "Burst Arrow", "to": 10},
+        {"skill": "Snare Shot", "to": 10, "note": "Step 4: 231"},
+        {"skill": "Explosion Trap", "to": 10, "note": "Step 5, moved up for its pull: 252"},
+        {"skill": "Arrow Scattershot", "to": 10, "note": "Step 6, moved up: it only hits staggered targets: 273"},
+        {"skill": "Concentrated Fire", "to": 10, "note": "Step 7: 294"},
+        {"skill": "Rooting Eye", "to": 10, "note": "Step 8: 315"},
+        {"skill": "Melee Fire", "to": 10, "note": "Step 9, then Vigilant Eye: 357"},
+        {"skill": "Vigilant Eye", "to": 10},
+        {"skill": "Wind Vigor", "to": 10, "note": "Step 10: 378, 5 spare, as in the main build"}
+      ],
+      "specialties": [
+        {"skill": "Explosion Trap", "picks": "Pulls enemies on explosion; at 12, Extra damage after 3s on hit (Metaroad, aion2vault)"},
+        {"skill": "Arrow Scattershot", "picks": "Changes to mobile skill at 10; −1s all cooldowns on hit once board or Arcana lines take it to 16 (guidemmo, aion2maps)"}
+      ],
+      "stigmas": [
+        {"name": "Vaizel's Authority", "lvl": 10, "why": "Still first to 20"},
+        {"name": "Bow of Blessing", "lvl": 5, "why": "Unchanged"},
+        {"name": "Supporting Fire", "lvl": 5, "why": "Unchanged; Metaroad's pack preset runs Griffon Arrow here instead"},
+        {"name": "Arrow Storm", "lvl": 5, "why": "50 stagger at any level; save it for when the gauge opens"}
+      ],
+      "passives": ["Focused Eye", "Hunter's Resolve", "Hunter's Soul", "Concentrated Fire", "Rooting Eye"],
+      "daevanion": "As the main build. Arrow Scattershot nodes cost 3 points each, and Metaroad only takes them where they sit on the path to something else.",
+      "gear": "As the main build.",
+      "play": [
+        "Hold Arrow Storm, Burst Arrow, Explosive or Griffon Arrow and a charged Deadshot until the stagger gauge opens, then dump them together.",
+        "In the stagger window, hold Arrow Scattershot in place of Snipe while the macro keeps running.",
+        "On packs, Snipe-tag everything, pull it together with Explosion Trap, then run the macro.",
+        "Swap back to Explosive Arrow or Griffon Arrow for bosses without a hard stagger check."
+      ],
+      "pros": [
+        "Clears stagger checks other groups fail",
+        "Same skill levels as the main build at full points, so switching costs nothing"
+      ],
+      "cons": [
+        "Arrow Storm's long cooldown makes it a damage loss outside stagger windows",
+        "Late-game Rangers drop Arrow Scattershot once their rotation is faster (J0EI, Moxsy)"
+      ],
+      "sources": [
+        {"title": "Metaroad: Ranger PvE DPS Build", "url": "https://metaroad.gg/aion2/build-guides/ranger-pve-dps-build", "note": "Packs-and-stagger loadout (Vaizel's Authority, Bow of Blessing, Griffon Arrow, Arrow Storm or Explosive Arrow) and the Explosion Trap picks"},
+        {"title": "AION2 Vault: Ranger PvE Build", "url": "https://aion2vault.com/builds/ranger/pve/", "note": "Stagger damage per skill, Allyria's Arrow Storm advice, J0EI's view on its cooldown, and Moxsy and J0EI dropping Arrow Scattershot later"},
+        {"title": "Aion 2 Maps: Ranger, Swaps", "url": "https://aion2maps.com/guides/ranger/", "note": "Arrow Storm in slot 4 for stagger checks, and the stagger table"},
+        {"title": "GamerBlurb: Ranger Build Guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-ranger-build-guide-pve-pvp-leveling-global", "note": "Arrow Storm when stagger pressure matters; Arrow Scattershot saved for stagger"},
+        {"title": "GuideMMO: Ranger Guide (IruMinaTi)", "url": "https://guidemmo.com/guide-ranger-aion-2-en/", "note": "Arrow Scattershot in place of Snipe during stagger, raised to 16 for its cooldown cut"},
+        {"title": "SkyCoach: AION 2 Ranger Class Guide", "url": "https://skycoach.gg/blog/aion-2/articles/a2-ranger-guide", "note": "Pack farming: aggro everything with Snipe, group with Explosion Trap, then macro"}
+      ],
+      "disagree": "Metaroad drops Supporting Fire to keep Griffon Arrow beside Arrow Storm; aion2maps and Allyria keep Supporting Fire and swap only the fourth slot. This build follows the latter, since Griffon Arrow is weak below Stigma level 15. guidemmo still raises Arrow Scattershot to 16, while Moxsy and J0EI stop using it later. The point order is this page's own reordering of the main build; no source gives one."
+    },
+    {
+      "id": "solo",
+      "name": "Solo Sustain",
+      "mode": "PvE",
+      "role": "Solo levelling, open-world farming and learning content",
+      "summary": "Damage traded for staying alive without a healer. The HP-absorb Specialties go on Snipe, Drill Dart and Burst Arrow, Mother Nature's Breath takes the fourth Stigma slot, and the pack tools (Snare Shot, Explosion Trap, Tempest Shot) and survival passives get their points early.",
+      "when": "Questing to 45, open-world and Abyss farming alone, and dungeons you are still learning or are undergeared for.",
+      "popularity": "Recommended by several guides as the fallback while gear catches up: Metaroad's third loadout, GamerBlurb's levelling advice and Allyria's absorb picks (via aion2vault). Mother Nature's Breath is on about 11% of public Ranger bars.",
+      "vsMain": "Mother Nature's Breath in place of Explosive Arrow. The absorb Specialties replace damage picks. Snare Shot, Burst Arrow and Explosion Trap get points earlier, and Vigilant Eye and Revitalization Contract go to 10. Arrow Scattershot and Wind Vigor drop.",
+      "skills": [
+        {"skill": "Snipe", "to": 10, "note": "Step 1, with the next four: 105. While levelling, Tempest Shot and Snipe first"},
+        {"skill": "Tempest Shot", "to": 10},
+        {"skill": "Deadshot", "to": 10},
+        {"skill": "Drill Dart", "to": 10},
+        {"skill": "Gale Arrow", "to": 10},
+        {"skill": "Focused Eye", "to": 10, "note": "Step 2, with Hunter's Resolve: 147"},
+        {"skill": "Hunter's Resolve", "to": 10},
+        {"skill": "Snare Shot", "to": 10, "note": "Step 3, with Burst Arrow: 189"},
+        {"skill": "Burst Arrow", "to": 10},
+        {"skill": "Explosion Trap", "to": 10, "note": "Step 4: pulls the pack together, 210"},
+        {"skill": "Marking Shot", "to": 10, "note": "Step 5: 231"},
+        {"skill": "Hunter's Soul", "to": 10, "note": "Step 6: 252"},
+        {"skill": "Vigilant Eye", "to": 10, "note": "Step 7: heals you on each dodge, 273"},
+        {"skill": "Revitalization Contract", "to": 10, "note": "Step 8: a big heal when you drop to 10% HP, once a minute, 294"},
+        {"skill": "Concentrated Fire", "to": 10, "note": "Step 9, with Rooting Eye: 336"},
+        {"skill": "Rooting Eye", "to": 10},
+        {"skill": "Melee Fire", "to": 10, "note": "Step 10: its knockback pushes back mobs that reach you, 357"},
+        {"skill": "Defiance", "to": 8, "note": "Step 11: 370"},
+        {"skill": "Arrow Scattershot", "to": 8, "note": "Step 12: 383 of 383. Wind Vigor, Unyielding Resolve and Suppressing Arrow stay at 1"}
+      ],
+      "specialties": [
+        {"skill": "Snipe", "picks": "+20% MP restored while levelling, or Absorbs 0.7% HP; keep −1s Deadshot cooldown on hit"},
+        {"skill": "Drill Dart", "picks": "Absorbs 3% HP in place of +20% Skill Speed"},
+        {"skill": "Burst Arrow", "picks": "Absorbs 10% HP, beside Changes to mobile skill"},
+        {"skill": "Tempest Shot", "picks": "−20% MP consumed while levelling"},
+        {"skill": "Explosion Trap", "picks": "Pulls enemies on explosion"},
+        {"skill": "Deadshot", "picks": "+30% Skill Speed and Changes to mobile skill, as in the main build"},
+        {"skill": "Defiance", "picks": "Restores 20% HP on using Defiance"}
+      ],
+      "stigmas": [
+        {"name": "Vaizel's Authority", "lvl": 10, "why": "Still first"},
+        {"name": "Bow of Blessing", "lvl": 5, "why": "Unchanged"},
+        {"name": "Supporting Fire", "lvl": 5, "why": "Its orb's shots also absorb HP"},
+        {"name": "Mother Nature's Breath", "lvl": 5, "why": "+20% PvE Damage Tolerance for 6 s with heals from hits; at 5 it clears damage over time"}
+      ],
+      "passives": ["Focused Eye", "Hunter's Resolve", "Hunter's Soul", "Vigilant Eye", "Revitalization Contract", "Concentrated Fire", "Rooting Eye"],
+      "daevanion": "As the main build while levelling. With Nightmare-shop crystals, the Vigilant Eye and Revitalization Contract nodes come earlier here.",
+      "gear": "As the main build; a Movement Speed line on boots helps kiting. Add HP or a defensive line only if you keep dying.",
+      "play": [
+        "Tag the pack with Snipe, drag it together, drop Explosion Trap and run the macro; Tempest Shot hits up to four with no cooldown.",
+        "Snare Shot first so Burst Arrow can fire and its 10% absorb lands.",
+        "Keep moving: Snipe and Tempest Shot fire on the move, and a Ranger caught by a pack dies.",
+        "On a tough single target, Marking Shot, then a charged Deadshot.",
+        "Once you stop dying, put the damage picks back and swap Mother Nature's Breath for Explosive or Griffon Arrow."
+      ],
+      "pros": [
+        "Kills most mobs before they reach you, and heals through what does",
+        "No healer needed for open-world content",
+        "Uses the same skills as the main build, so it is a cheap reset"
+      ],
+      "cons": [
+        "Noticeably lower boss damage than the main build",
+        "Mother Nature's Breath must be pressed by hand at the right moment"
+      ],
+      "sources": [
+        {"title": "Metaroad: Ranger PvE DPS Build", "url": "https://metaroad.gg/aion2/build-guides/ranger-pve-dps-build", "note": "The survival loadout with Mother Nature's Breath, Drill Dart's absorb as the next fix, and Revitalization Contract and Vigilant Eye as survival passives"},
+        {"title": "GamerBlurb: Ranger Build Guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-ranger-build-guide-pve-pvp-leveling-global", "note": "Levelling priorities, Explosion Trap on the chase path, Mother Nature's Breath while gear catches up, and Drill Dart's absorb while levelling"},
+        {"title": "AION2 Vault: Ranger PvE Build", "url": "https://aion2vault.com/builds/ranger/pve/", "note": "Allyria's HP-absorb picks (0.7% Snipe, 3% Drill Dart, 10% Burst Arrow) and Moxsy's +20% MP while levelling"},
+        {"title": "SkyCoach: AION 2 Ranger Class Guide", "url": "https://skycoach.gg/blog/aion-2/articles/a2-ranger-guide", "note": "Pack farming method, and Drill Dart's absorb for levelling and solo farming"},
+        {"title": "Aion2 Atlas: Ranger Leveling Build", "url": "https://aion2atlas.app/builds/ranger/leveling/", "note": "Tempest Shot then Snipe first while levelling, and the pack rotation: Snare Shot, Burst Arrow, Explosion Trap"},
+        {"title": "OSLink: Ranger Build Guide", "url": "https://www.oslink.io/blog/guide/aion-2-ranger-build-guide.html", "note": "MP picks on Snipe and Tempest Shot while levelling"},
+        {"title": "GamesFuze: Ranger Build (PvP, PvE, Solo)", "url": "https://gamesfuze.com/guides/aion-2-ranger-build-best-skills-stigmas-gear-pvp-pve-solo/", "note": "Melee Fire's knockback on nearby enemies"}
+      ],
+      "disagree": "Levelling order splits: Aion2 Atlas, OSLink and aion2maps put Tempest Shot and Snipe first, while GamerBlurb leads with Drill Dart, Snare Shot and Gale Arrow. Resets are free, so it does not matter much. No source gives a full 383-point solo order. This one is assembled from their priorities: pack tools and absorb skills early, then the survival passives Metaroad names."
+    }
+  ]
+}
