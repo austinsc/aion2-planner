@@ -349,3 +349,6 @@ table.theo td .gain{margin-left:6px}
 .bpick .mode{font-family:var(--font-cond);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:.68rem;padding:1px 7px;border-radius:999px;color:#fff;background:var(--ok)}
 .bpick .mode-pvp{background:var(--fire)}
 .bpick .mode-pve-pvp{background:var(--p2)}
+.bgrid{align-items:start}
+.bgrid .card{align-content:start}
+.bcol{display:grid;gap:18px;min-width:0}

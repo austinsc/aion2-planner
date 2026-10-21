@@ -310,13 +310,14 @@ function renderBuilds(){
     ${b.when ? `<p class="note"><b>When:</b> ${esc(b.when)}</p>` : ''}
     ${b.popularity ? `<p class="note"><b>How common:</b> ${esc(b.popularity)}</p>` : ''}
     ${b.vsMain ? `<p class="note"><b>Against the main build:</b> ${esc(b.vsMain)}</p>` : ''}</div>`;
-  h += `<div class="grid2">`;
+  h += `<div class="grid2 bgrid">`;
   if (b.skills && b.skills.length) h += `<div class="card"><header><h3>Skill points</h3><span class="eyebrow">in this order</span></header><ol class="order">` +
     b.skills.map((x, i) => `<li><span class="o">${i+1}</span><span class="skills">${nameTag(x.skill)}${x.note ? `<span class="muted" style="font-size:.85rem">${esc(x.note)}</span>` : ''}</span><span class="to">to<b class="num">${esc(x.to)}</b></span></li>`).join('') + `</ol></div>`;
-  h += `<div class="card"><header><h3>Stigmas</h3></header>${list(b.stigmas, x => `<li style="align-items:flex-start">${nameTag(x.name)}${x.lvl ? `<span class="chip">to <b class="num">${esc(x.lvl)}</b></span>` : ''}<span class="note" style="flex:1 1 220px">${esc(x.why || '')}</span></li>`)}
+  h += `<div class="bcol"><div class="card"><header><h3>Stigmas</h3></header>${list(b.stigmas, x => `<li style="align-items:flex-start">${nameTag(x.name)}${x.lvl ? `<span class="chip">to <b class="num">${esc(x.lvl)}</b></span>` : ''}<span class="note" style="flex:1 1 220px">${esc(x.why || '')}</span></li>`)}
     ${b.passives && b.passives.length ? `<h3 style="margin-top:6px">Passives, in order</h3><div class="chips">${b.passives.map(nameTag).join('')}</div>` : ''}</div>`;
-  if (b.specialties && b.specialties.length) h += `<div class="card"><header><h3>Specialties</h3></header>${list(b.specialties, x => `<li style="align-items:flex-start">${nameTag(x.skill)}<span class="pick" style="flex:1 1 220px">${esc(x.picks)}</span></li>`)}</div>`;
   if (b.daevanion || b.gear) h += `<div class="card"><header><h3>Daevanion and gear</h3></header>${b.daevanion ? `<p class="note"><b>Daevanion:</b> ${esc(b.daevanion)}</p>` : ''}${b.gear ? `<p class="note"><b>Gear:</b> ${esc(b.gear)}</p>` : ''}</div>`;
+  h += `</div>`;
+  if (b.specialties && b.specialties.length) h += `<div class="card"><header><h3>Specialties</h3></header>${list(b.specialties, x => `<li style="align-items:flex-start">${nameTag(x.skill)}<span class="pick" style="flex:1 1 220px">${esc(x.picks)}</span></li>`)}</div>`;
   h += `</div>`;
   if (b.play && b.play.length) h += `<div class="card"><header><h3>How to play it</h3></header><ul class="fix">${b.play.map(x => `<li>${esc(x)}</li>`).join('')}</ul></div>`;
   if ((b.pros && b.pros.length) || (b.cons && b.cons.length)) h += `<div class="grid2"><div class="card"><header><h3>Strengths</h3></header>${list(b.pros, x => `<li><span>${esc(x)}</span></li>`)}</div><div class="card"><header><h3>Weaknesses</h3></header>${list(b.cons, x => `<li><span>${esc(x)}</span></li>`)}</div></div>`;
