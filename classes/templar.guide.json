@@ -237,14 +237,84 @@
   }
  },
  "build45": [
-  {"order": 1, "skills": ["Judgment", "Vicious Strike", "Pummel", "Punishment"], "to": 10, "cum": 84},
-  {"order": 2, "skills": ["Warding Strike"], "to": 10, "cum": 105},
-  {"order": 3, "skills": ["Fury"], "to": 10, "cum": 126},
-  {"order": 4, "skills": ["Poach"], "to": 8, "cum": 139, "alt": "for its boss pick"},
-  {"order": 5, "skills": ["Annihilate", "Shield Smite"], "to": 10, "cum": 181},
-  {"order": 6, "skills": ["Insulting Roar", "Impact Hit", "Punishing Benediction"], "to": 10, "cum": 244, "alt": "in any order"},
-  {"order": 7, "skills": ["Enhance Health", "Ironclad Defense"], "to": 10, "cum": 286},
-  {"order": 8, "skills": ["Poach", "Shield Rush", "Block Pain", "Debilitating Smash", "Defiance"], "to": 10, "cum": 378, "alt": "Poach, Shield Rush and Block Pain first, then Debilitating Smash, then Defiance"}
+  {
+   "order": 1,
+   "skills": [
+    "Judgment",
+    "Vicious Strike",
+    "Pummel",
+    "Punishment"
+   ],
+   "to": 10,
+   "cum": 84
+  },
+  {
+   "order": 2,
+   "skills": [
+    "Warding Strike"
+   ],
+   "to": 10,
+   "cum": 105
+  },
+  {
+   "order": 3,
+   "skills": [
+    "Fury"
+   ],
+   "to": 10,
+   "cum": 126
+  },
+  {
+   "order": 4,
+   "skills": [
+    "Poach"
+   ],
+   "to": 8,
+   "cum": 139,
+   "alt": "for its boss pick"
+  },
+  {
+   "order": 5,
+   "skills": [
+    "Annihilate",
+    "Shield Smite"
+   ],
+   "to": 10,
+   "cum": 181
+  },
+  {
+   "order": 6,
+   "skills": [
+    "Insulting Roar",
+    "Impact Hit",
+    "Punishing Benediction"
+   ],
+   "to": 10,
+   "cum": 244,
+   "alt": "in any order"
+  },
+  {
+   "order": 7,
+   "skills": [
+    "Enhance Health",
+    "Ironclad Defense"
+   ],
+   "to": 10,
+   "cum": 286
+  },
+  {
+   "order": 8,
+   "skills": [
+    "Poach",
+    "Shield Rush",
+    "Block Pain",
+    "Debilitating Smash",
+    "Defiance"
+   ],
+   "to": 10,
+   "cum": 378,
+   "alt": "Poach, Shield Rush and Block Pain first, then Debilitating Smash, then Defiance"
+  }
  ],
  "stigmas": [
   {
@@ -324,26 +394,43 @@
       {
        "tag": "Entry 1 · Judgment line",
        "cells": [
-        {"skill": "Judgment", "extra": "fires first"},
-        {"skill": "Warding Strike"},
-        {"skill": "Shield Smite"},
-        {"skill": "Pummel"}
+        {
+         "skill": "Judgment",
+         "extra": "fires first"
+        },
+        {
+         "skill": "Warding Strike"
+        },
+        {
+         "skill": "Shield Smite"
+        },
+        {
+         "skill": "Pummel"
+        }
        ]
       },
       {
        "tag": "Entry 2 · Annihilate line",
        "small": true,
        "cells": [
-        {"skill": "Annihilate"},
-        {"skill": "Doom Shield"}
+        {
+         "skill": "Annihilate"
+        },
+        {
+         "skill": "Doom Shield"
+        }
        ]
       },
       {
        "tag": "Entry 3 · Buff line",
        "small": true,
        "cells": [
-        {"skill": "Battlefield Banner"},
-        {"skill": "Noble Armor"}
+        {
+         "skill": "Battlefield Banner"
+        },
+        {
+         "skill": "Noble Armor"
+        }
        ]
       }
      ]
@@ -351,15 +438,33 @@
     {
      "t": "seq",
      "items": [
-      {"skill": "Judgment"},
-      {"skill": "Warding Strike"},
-      {"skill": "Shield Smite"},
-      {"skill": "Pummel", "arrow": "→ 10 ms →"},
-      {"skill": "Annihilate"},
-      {"skill": "Doom Shield", "arrow": "→ 10 ms →"},
-      {"skill": "Battlefield Banner"},
-      {"skill": "Noble Armor"}
-    ]
+      {
+       "skill": "Judgment"
+      },
+      {
+       "skill": "Warding Strike"
+      },
+      {
+       "skill": "Shield Smite"
+      },
+      {
+       "skill": "Pummel",
+       "arrow": "→ 10 ms →"
+      },
+      {
+       "skill": "Annihilate"
+      },
+      {
+       "skill": "Doom Shield",
+       "arrow": "→ 10 ms →"
+      },
+      {
+       "skill": "Battlefield Banner"
+      },
+      {
+       "skill": "Noble Armor"
+      }
+     ]
     },
     {
      "t": "note",
@@ -374,10 +479,30 @@
     {
      "t": "hand",
      "items": [
-      {"skills": ["Noble Armor"], "why": "To open, before Battlefield Banner. After that the buff line fires it each time it comes back, every 120 s."},
-      {"skills": ["Battlefield Banner"], "why": "To open, just before you close in. After that the buff line fires it."},
-      {"skills": ["Punishment"], "why": "On its own key, held until it fires at full charge, between Judgment windows. The macro would fire it at its first stage."},
-      {"skills": ["Taunt"], "why": "Each time it comes off cooldown, for threat and Shrink."}
+      {
+       "skills": [
+        "Noble Armor"
+       ],
+       "why": "To open, before Battlefield Banner. After that the buff line fires it each time it comes back, every 120 s."
+      },
+      {
+       "skills": [
+        "Battlefield Banner"
+       ],
+       "why": "To open, just before you close in. After that the buff line fires it."
+      },
+      {
+       "skills": [
+        "Punishment"
+       ],
+       "why": "On its own key, held until it fires at full charge, between Judgment windows. The macro would fire it at its first stage."
+      },
+      {
+       "skills": [
+        "Taunt"
+       ],
+       "why": "Each time it comes off cooldown, for threat and Shrink."
+      }
      ]
     }
    ]
@@ -389,11 +514,36 @@
     {
      "t": "hand",
      "items": [
-      {"skills": ["Poach"], "why": "To get back to the boss after you move out of a pattern: with its 45 pick it moves you to the boss."},
-      {"skills": ["Shield Rush"], "why": "After a Dodge: it rushes you back, 20 m with its pick, and switches Judgment on for 2 s."},
-      {"skills": ["Defiance"], "why": "When a boss stuns, knocks down or grabs you. It frees you and its pick restores 20% HP."},
-      {"skills": ["Empyrean Lord's Punishment"], "why": "If you slotted it for a stagger check: save it for when the gauge opens, for its 50 stagger damage (100 at Stigma 10)."},
-      {"skills": ["Debilitating Smash"], "why": "No press needed: Shield Smite's pick fires it from half its hits."}
+      {
+       "skills": [
+        "Poach"
+       ],
+       "why": "To get back to the boss after you move out of a pattern: with its 45 pick it moves you to the boss."
+      },
+      {
+       "skills": [
+        "Shield Rush"
+       ],
+       "why": "After a Dodge: it rushes you back, 20 m with its pick, and switches Judgment on for 2 s."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "When a boss stuns, knocks down or grabs you. It frees you and its pick restores 20% HP."
+      },
+      {
+       "skills": [
+        "Empyrean Lord's Punishment"
+       ],
+       "why": "If you slotted it for a stagger check: save it for when the gauge opens, for its 50 stagger damage (100 at Stigma 10)."
+      },
+      {
+       "skills": [
+        "Debilitating Smash"
+       ],
+       "why": "No press needed: Shield Smite's pick fires it from half its hits."
+      }
      ]
     }
    ]
@@ -405,11 +555,23 @@
     {
      "t": "seq",
      "items": [
-      {"skill": "Noble Armor"},
-      {"skill": "Battlefield Banner"},
-      {"skill": "Taunt"},
-      {"skill": "Vicious Strike", "label": "Hold Vicious Strike + macro key"},
-      {"skill": "Punishment", "label": "Punishment, fully charged"}
+      {
+       "skill": "Noble Armor"
+      },
+      {
+       "skill": "Battlefield Banner"
+      },
+      {
+       "skill": "Taunt"
+      },
+      {
+       "skill": "Vicious Strike",
+       "label": "Hold Vicious Strike + macro key"
+      },
+      {
+       "skill": "Punishment",
+       "label": "Punishment, fully charged"
+      }
      ]
     },
     {
@@ -424,10 +586,22 @@
     {
      "t": "fix",
      "items": [
-      {"b": "Punishment never fires at full charge.", "text": "It is in the macro, which fires it uncharged. Give it its own key and hold it."},
-      {"b": "Judgment fires less than you'd expect.", "text": "Keep Doom Shield out of the Judgment line: its 3 s window drops to 2 s when Shield Smite or Warding Strike fires straight after it."},
-      {"b": "Damage feels low.", "text": "Try the Judgment line without Pummel; some setups do more damage that way."},
-      {"b": "Buffs go off on trash.", "text": "Take the buff line out of the macro for trash-heavy runs and press the two buffs yourself."}
+      {
+       "b": "Punishment never fires at full charge.",
+       "text": "It is in the macro, which fires it uncharged. Give it its own key and hold it."
+      },
+      {
+       "b": "Judgment fires less than you'd expect.",
+       "text": "Keep Doom Shield out of the Judgment line: its 3 s window drops to 2 s when Shield Smite or Warding Strike fires straight after it."
+      },
+      {
+       "b": "Damage feels low.",
+       "text": "Try the Judgment line without Pummel; some setups do more damage that way."
+      },
+      {
+       "b": "Buffs go off on trash.",
+       "text": "Take the buff line out of the macro for trash-heavy runs and press the two buffs yourself."
+      }
      ]
     }
    ]
@@ -439,9 +613,26 @@
     {
      "t": "hand",
      "items": [
-      {"skills": ["Poach"], "why": "Pull, kill, pull again: its levelling pick resets the cooldown on a kill."},
-      {"skills": ["Warding Strike", "Punishment"], "why": "Or gather a pack, open with Warding Strike, then release a fully charged Punishment. Both hit up to 4 enemies."},
-      {"skills": ["Pummel", "Punishment"], "why": "Solo, take an HP-absorb pick: Pummel's 3%, or Punishment's 10% when packs wear you down."}
+      {
+       "skills": [
+        "Poach"
+       ],
+       "why": "Pull, kill, pull again: its levelling pick resets the cooldown on a kill."
+      },
+      {
+       "skills": [
+        "Warding Strike",
+        "Punishment"
+       ],
+       "why": "Or gather a pack, open with Warding Strike, then release a fully charged Punishment. Both hit up to 4 enemies."
+      },
+      {
+       "skills": [
+        "Pummel",
+        "Punishment"
+       ],
+       "why": "Solo, take an HP-absorb pick: Pummel's 3%, or Punishment's 10% when packs wear you down."
+      }
      ]
     },
     {
@@ -457,13 +648,54 @@
     {
      "t": "hand",
      "items": [
-      {"skills": ["Taunt"], "why": "Takes the boss back. Its hit carries about 50 times an ordinary hit's threat and scales with its damage, so damage gear is threat gear. It holds the boss against a second Templar doing up to about twice your damage."},
-      {"skills": ["Insulting Roar", "Judgment", "Pummel"], "why": "Keep hitting: Insulting Roar adds +100% Enmity Boost, Judgment carries about 3.5 times an ordinary hit's threat and Pummel 2.5 times."},
-      {"skills": ["Fury", "Shield of Protection"], "why": "Every Block gives the party +10% PvE Damage Boost for 20 s (12% at Fury 14) and you +3% Front Attack Damage Boost. Shield of Protection, if slotted, guarantees a Block every 20 s."},
-      {"skills": ["Taunt"], "why": "Shrink, its debuff, cuts the boss's Attack by 10% and, from Stigma 5, its PvE Damage Tolerance by 10%, so the whole party hits harder."},
-      {"skills": ["Warding Strike", "Doom Shield", "Noble Armor"], "why": "Your mitigation: Warding Strike (from the macro) heals and gives +20% PvE Damage Tolerance for 10 s, Doom Shield's hit shields 5% Max HP, Noble Armor keeps +9% Max HP up."},
-      {"skills": ["Defiance"], "why": "Breaks Stun, Knockdown, Airborne, Grab, Frost and Fear, then 5 s of status immunity, about every 50 s."},
-      {"skills": ["Poach", "Shield Rush"], "why": "Position: close in with Poach's 45 pick and Shield Rush back after a Dodge. About 63% of your boss damage lands from the front, where Fury's Front Attack bonus counts."}
+      {
+       "skills": [
+        "Taunt"
+       ],
+       "why": "Takes the boss back. Its hit carries about 50 times an ordinary hit's threat and scales with its damage, so damage gear is threat gear. It holds the boss against a second Templar doing up to about twice your damage."
+      },
+      {
+       "skills": [
+        "Insulting Roar",
+        "Judgment",
+        "Pummel"
+       ],
+       "why": "Keep hitting: Insulting Roar adds +100% Enmity Boost, Judgment carries about 3.5 times an ordinary hit's threat and Pummel 2.5 times."
+      },
+      {
+       "skills": [
+        "Fury",
+        "Shield of Protection"
+       ],
+       "why": "Every Block gives the party +10% PvE Damage Boost for 20 s (12% at Fury 14) and you +3% Front Attack Damage Boost. Shield of Protection, if slotted, guarantees a Block every 20 s."
+      },
+      {
+       "skills": [
+        "Taunt"
+       ],
+       "why": "Shrink, its debuff, cuts the boss's Attack by 10% and, from Stigma 5, its PvE Damage Tolerance by 10%, so the whole party hits harder."
+      },
+      {
+       "skills": [
+        "Warding Strike",
+        "Doom Shield",
+        "Noble Armor"
+       ],
+       "why": "Your mitigation: Warding Strike (from the macro) heals and gives +20% PvE Damage Tolerance for 10 s, Doom Shield's hit shields 5% Max HP, Noble Armor keeps +9% Max HP up."
+      },
+      {
+       "skills": [
+        "Defiance"
+       ],
+       "why": "Breaks Stun, Knockdown, Airborne, Grab, Frost and Fear, then 5 s of status immunity, about every 50 s."
+      },
+      {
+       "skills": [
+        "Poach",
+        "Shield Rush"
+       ],
+       "why": "Position: close in with Poach's 45 pick and Shield Rush back after a Dodge. About 63% of your boss damage lands from the front, where Fury's Front Attack bonus counts."
+      }
      ]
     },
     {
@@ -491,8 +723,14 @@
   },
   {
    "links": [
-    ["https://aion2.wiki.fextralife.com/Level_Progression", "Fextralife level progression"],
-    ["https://questlog.gg/aion-2/en/table/character-levels", "Questlog character levels"]
+    [
+     "https://aion2.wiki.fextralife.com/Level_Progression",
+     "Fextralife level progression"
+    ],
+    [
+     "https://questlog.gg/aion-2/en/table/character-levels",
+     "Questlog character levels"
+    ]
    ],
    "what": "skill points, Daevanion points, Stigma points and slots per level."
   },
@@ -501,5 +739,14 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Four Vigor cards give Primal Vigor's four-card bonus, +150 PvE Attack while your HP is 70% or more. The Mirror of Magic adds Wisdom; a fifth Vigor card would add no set bonus.",
+  "alts": [
+   {
+    "card": "Mirror",
+    "text": "Mirror of Vigor (Illusion) instead: with four Vigor cards already in, it only swaps the Pantheon stat."
+   }
+  ]
+ }
 }

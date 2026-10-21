@@ -281,18 +281,74 @@ function renderMacro(){
   $('#p-macro').innerHTML = DATA.macro.map(c => `<div class="card ${c.gold ? 'gold' : ''}"><header><h${c.h || 3}>${esc(c.title)}</h${c.h || 3}>${c.eyebrow ? `<span class="eyebrow">${esc(c.eyebrow)}</span>` : ''}</header>` +
     c.blocks.map(b => BLOCK[b.t](b)).join('\n') + `</div>`).join('');
 }
+/* ---------------- ARCANA ---------------- */
+// The five Arcana cards: the version to keep (it sets the set and the Pantheon stat) and the skill lines to aim for.
+const PANTHEON = {
+  Wisdom: ['Lumiel', 'MP cost reduction', 'Smite (Double Chance)'], Time: ['Siel', 'Combat Speed', 'Smite Resist'],
+  Destruction: ['Zikel', 'Attack Increase', 'Perfect Resist'], Illusion: ['Kaisinel', 'Cooldown Reduction', 'Endurance Penetration'],
+  Death: ['Triniel', 'Critical Hit', 'Regeneration Penetration'], Justice: ['Nezekan', 'Defense', 'Perfect activation chance'],
+  Freedom: ['Vaizel', 'Accuracy', 'Evasion'], Space: ['Israphel', 'Move Speed', 'Block Chance'],
+  Destiny: ['Marchutan', 'MP', 'Endurance Chance'], Life: ['Yustiel', 'HP', 'Regeneration activation chance'],
+};
+const ARCANA_SETS = {
+  Vigor: { name: 'Primal Vigor', b2: '+60 PvE Attack while your HP is 70% or more', b4: '+150 PvE Attack while your HP is 70% or more' },
+  Magic: { name: 'Magic Armor', b2: '1,500 MP back when your MP falls to 20% or less (30 s cooldown)', b4: '+1,000 PvE Defense while your MP is 50% or more' },
+};
+const ARCANA_POOL = { Chalice: 'Rolls any of your Active and Passive skills (22)', Parchment: 'Rolls from one half of your Active skills (6)', Compass: 'Rolls from the other half of your Active skills (6)', Bell: 'Rolls from one half of your Passive skills (5)', Mirror: 'Rolls from the other half of your Passive skills (5)' };
+const ARCANA_ICON = {
+  Chalice: '<path d="M7 3h10v4a5 5 0 0 1-10 0z"/><path d="M12 12v6M8 21h8M9 18h6"/>',
+  Parchment: '<path d="M6 4h11a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H7"/><path d="M6 4a2 2 0 0 0-2 2v1h4V6a2 2 0 0 0-2-2zM7 20a2 2 0 0 1-2-2V7M9 9h7M9 13h7M9 17h4"/>',
+  Compass: '<circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/>',
+  Bell: '<path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 20a2 2 0 0 0 4 0M12 3v2"/>',
+  Mirror: '<ellipse cx="12" cy="9" rx="6" ry="7"/><path d="M12 16v5M9 21h6M9.5 6.5l2-2"/>',
+};
+function renderArcana(){
+  const A = DATA.arcana || { cards: [] };
+  const count = { Vigor: 0, Magic: 0 }; A.cards.forEach(c => count[c.set] = (count[c.set] || 0) + 1);
+  const alts = t => (A.alts || []).filter(a => a.card === t);
+  const lineTag = o => `${SK[o.skill] ? skTag(o.skill, 'sm') : `<span class="sk"><span class="nm">${esc(o.skill)}</span></span>`}${o.size ? `<b class="sz num">+${o.size}</b>` : ''}`;
+  let h = `<div class="card gold"><header><h2>Arcana at 45</h2><span class="eyebrow">five cards · worn from level 45</span></header>
+    <p class="note">Which version of each card to keep, and the skill lines to aim for. The version (of Vigor or of Magic) decides the card's set and its Pantheon stat. A number is the line's target size: each card level raises a random line by 1, up to +4 a line, so treat it as a target. A line without a number is fine at any size.</p>
+    <div class="acards">` + A.cards.map(c => {
+      const P = PANTHEON[c.stat] || ['', '', ''], S = ARCANA_SETS[c.set] || { name: c.set };
+      return `<article class="acard set-${esc(c.set.toLowerCase())}">
+        <div class="atop"><span class="aico" aria-hidden="true"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">${ARCANA_ICON[c.type] || ''}</svg></span>
+          <div><h3>${esc(c.type)}</h3><small>of ${esc(c.set)} · ${esc(S.name)}</small></div></div>
+        <div class="astat"><b>${esc(c.stat)}</b><span>${esc(P[1])} · ${esc(P[2])}</span></div>
+        <ol class="alines">${c.lines.map(l => `<li>${l.opts.map(lineTag).join('<span class="or">or</span>')}${l.note ? `<small>${esc(l.note)}</small>` : ''}</li>`).join('')}
+          ${c.rest ? `<li class="rest">${esc(c.rest.replace(/^the rest: /, 'Other lines: '))}</li>` : ''}</ol>
+        <p class="apool">${esc(ARCANA_POOL[c.type] || '')}</p>
+        ${alts(c.type).map(a => `<p class="aalt"><b>Also played</b>${esc(a.text)}</p>`).join('')}
+      </article>`;
+    }).join('') + `</div>
+    ${A.note ? `<p class="note">${esc(A.note)}</p>` : ''}</div>`;
+  h += `<div class="grid2"><div class="card"><header><h3>Set bonuses with these cards</h3><span class="eyebrow">${count.Vigor || 0} Vigor · ${count.Magic || 0} Magic</span></header><ul class="list">` +
+    Object.entries(ARCANA_SETS).flatMap(([k, S]) => [[2, S.b2], [4, S.b4]].map(([n, b]) => `<li><span class="chip ${(count[k] || 0) >= n ? 'on' : 'off'}">${esc(S.name)} ${n}</span><span class="${(count[k] || 0) >= n ? '' : 'muted'}" style="font-size:.9rem;flex:1 1 180px;min-width:0">${esc(b)}</span><span class="cost">${(count[k] || 0) >= n ? '✓ active' : '—'}</span></li>`)).join('') +
+    `</ul><p class="note">Five cards fit one four-card bonus or both two-card bonuses, not both. Four Vigor cards trade a Magic card's Pantheon stat and the MP refill for +150 PvE Attack; flat Attack is worth under 1% per 100 on endgame gear, more on lighter gear.</p></div>`;
+  h += `<div class="card"><header><h3>How cards work</h3></header><ul class="list" style="font-size:.9rem">
+      <li><b>Lines by grade</b><span class="muted">Common 1, Rare 2, Epic 3, Unique 4, each a skill or passive from that card's pool. A card also adds item level (20 to 80 by grade).</span></li>
+      <li><b>Levelling</b><span class="muted">Feed cards or Training Arcana from Transcendence dungeons into the card you wear. Feeding a levelled card into a better one returns all its EXP, so switch whenever a better card drops.</span></li>
+      <li><b>Crafting (Transmute)</b><span class="muted">5 Mysterious Crystals and 2,000,000 Kina, plus 10 crystals and 3,000,000 Kina for each line you choose, up to two. Crystals come from extracting cards, the Season 1 challenge and the Season Shop, and can't be traded.</span></li>
+      <li><b>Craft the Chalice first</b><span class="muted">It is the only card that can roll any skill, so your top skill shows up on only about 18% of Unique Chalices; choosing the line is worth the crystals.</span></li>
+    </ul></div></div>`;
+  h += `<div class="card"><header><h3>Pantheon stats on these cards</h3><span class="eyebrow">each stat has two effects</span></header><div class="tscroll"><table><thead><tr><th>Stat</th><th>Deity</th><th>Effects</th><th>On</th></tr></thead><tbody>` +
+    [...new Set(A.cards.map(c => c.stat))].map(st => `<tr><td><b>${esc(st)}</b></td><td class="muted">${esc((PANTHEON[st] || [''])[0])}</td><td>${esc((PANTHEON[st] || []).slice(1).join(' · '))}</td><td class="muted">${esc(A.cards.filter(c => c.stat === st).map(c => c.card).join(', '))}</td></tr>`).join('') +
+    `</tbody></table></div><p class="note">The other versions: Chalice and Parchment come in both sets too; the Compass of Vigor carries Freedom and of Magic Death, the Bell Justice or Destruction, and the Mirror Illusion or Wisdom. For damage, sources rank Wisdom, Time and Destruction highest.</p></div>`;
+  $('#p-arcana').innerHTML = h;
+}
 /* ---------------- SOURCES ---------------- */
 function renderSrc(){
   const a = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
   const cls = META.cls;
   $('#p-src').innerHTML = `<div class="card"><header><h2>Sources</h2><span class="eyebrow">compiled ${esc(META.compiled || '18 Oct 2026')}</span></header>
   <ol class="src">` + DATA.sources.map(s => `<li>${s.url ? a(s.url, s.title) : s.links.map(l => a(l[0], l[1])).join(' and ')}: ${esc(s.what)}</li>`).join('') +
-    `<li>Game art: skill icons and Daevanion node frames are &copy; NCSOFT Corporation, all rights reserved. Icons were taken from ${a('https://metabot.gg/en/aion-2/skills', 'Metabot')} and node frames from ${a(`https://wikily.gg/aion-2/daevanion/${cls}/nezekan`, 'Wikily')}. They identify skills and nodes in this unofficial fan tool, which NCSOFT does not endorse. AION is a trademark of NCSOFT Corporation.</li>
+    `<li>${a('https://aion2maps.com/guides/' + cls + '/#arcana', 'Aion 2 Maps: ' + META.name + ' Arcana')}, ${a('https://aion2maps.com/guides/arcana/', 'Arcana')} and ${a('https://aion2maps.com/guides/pantheon-stats/', 'Pantheon stats')}: the cards and lines to keep, set bonuses, card pools and crafting costs, and what each Pantheon stat does.</li>
+    <li>Game art: skill icons and Daevanion node frames are &copy; NCSOFT Corporation, all rights reserved. Icons were taken from ${a('https://metabot.gg/en/aion-2/skills', 'Metabot')} and node frames from ${a(`https://wikily.gg/aion-2/daevanion/${cls}/nezekan`, 'Wikily')}. They identify skills and nodes in this unofficial fan tool, which NCSOFT does not endorse. AION is a trademark of NCSOFT Corporation.</li>
   </ol>
   <p class="note">${esc(TXT.src || '')}</p></div>`;
 }
 /* ---------------- tabs & level ---------------- */
-const TABS = ['now','levels','skills','daev','build','stig','macro','src'];
+const TABS = ['now','levels','skills','daev','build','stig','arcana','macro','src'];
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + id));
@@ -305,7 +361,7 @@ $('#lvUp').onclick = () => setLevel(state.level + 1);
 $('#lvRange').oninput = e => setLevel(+e.target.value);
 function renderAll(){
   $('#lvOut').value = state.level; $('#lvRange').value = state.level;
-  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderMacro();
+  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderArcana(); renderMacro();
 }
 if (typeof siteMenu === 'function') siteMenu(META.cls, '../');
 loadLocal();

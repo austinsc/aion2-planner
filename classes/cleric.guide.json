@@ -671,5 +671,18 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Three Vigor cards with the Compass and Bell of Magic: both two-card bonuses. The Chalice's Condemnation line, with the rings' extra lines, takes Condemnation past its target.",
+  "alts": [
+   {
+    "card": "Compass",
+    "text": "Compass of Vigor (Freedom: Accuracy and Evasion): four Vigor cards and +150 PvE Attack, but no Magic Armor MP refill."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Magic (Wisdom) instead; or Healing Enhancement as the big line in place of Earth's Grace."
+   }
+  ]
+ }
 }

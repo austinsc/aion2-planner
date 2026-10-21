@@ -262,3 +262,27 @@ textarea{width:100%;min-height:90px;background:var(--panel2);color:var(--fg);bor
 .ico.ph{display:inline-grid;place-items:center;font-family:var(--font-cond);font-weight:700;font-size:.7rem;color:var(--gold2);background:var(--panel2)}
 .nd .ph{position:absolute;left:22%;top:22%;width:56%;height:56%;border-radius:50%;display:grid;place-items:center;background:#000;color:var(--gold2);font-family:var(--font-cond);font-weight:700;font-size:.8em}
 @media (max-width:520px){ .lvl{flex-wrap:wrap;min-width:0} .lvl .save{flex-basis:100%;text-align:right;margin-top:-6px} }
+
+/* ---------- arcana cards ---------- */
+.acards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.acard{--set:var(--gold);display:grid;gap:10px;align-content:start;padding:14px;border-radius:14px;border:1px solid color-mix(in srgb, var(--set) 55%, var(--line));background:linear-gradient(180deg, color-mix(in srgb, var(--set) 14%, var(--panel2)), var(--panel) 45%);box-shadow:inset 0 0 0 3px color-mix(in srgb, var(--set) 10%, transparent);min-width:0}
+.acard.set-vigor{--set:var(--fire)}
+.acard.set-magic{--set:var(--water)}
+.acard .atop{display:flex;align-items:center;gap:12px}
+.acard .aico{width:48px;height:48px;border-radius:50%;display:grid;place-items:center;flex:none;color:var(--set);background:var(--panel);border:1px solid color-mix(in srgb, var(--set) 60%, var(--line))}
+.acard h3{font-size:1.05rem;color:var(--gold2)}
+.acard .atop small{display:block;color:var(--muted);font-family:var(--font-cond);font-weight:600;letter-spacing:.04em}
+.acard .astat{display:grid;gap:2px;padding:8px 10px;border-radius:8px;background:var(--panel2);border:1px solid var(--line)}
+.acard .astat b{font-family:var(--font-cond);letter-spacing:.06em;text-transform:uppercase;font-size:.8rem;color:var(--set)}
+.acard .astat span{font-size:.85rem}
+.alines{display:grid;gap:6px;margin:0;padding:0;list-style:none}
+.alines li{display:flex;flex-wrap:wrap;align-items:center;gap:4px 8px;font-size:.9rem;min-width:0}
+.alines li .sz{font-family:var(--font-cond);color:var(--gold2)}
+.alines li .or{font-size:.75rem;color:var(--faint);text-transform:uppercase;letter-spacing:.06em}
+.alines li small{flex-basis:100%;color:var(--muted);font-size:.78rem;padding-left:32px;margin-top:-2px}
+.alines li.rest{color:var(--muted);font-style:italic;font-size:.85rem}
+.acard .apool{font-size:.78rem;color:var(--faint)}
+.acard .aalt{font-size:.82rem;color:var(--muted);border-top:1px dashed var(--line2);padding-top:8px}
+.acard .aalt b{display:block;font-family:var(--font-cond);letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:var(--warn)}
+.chip.on{border-color:var(--ok);color:var(--ok)}
+.chip.off{opacity:.55}

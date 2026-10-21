@@ -42,6 +42,7 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 - **Skills**: every active, passive and stigma skill with cooldowns, MP and Specialty picks.
 - **Daevanion**: the five boards with numbered routes, a crystal schedule while levelling, and the route after 45.
 - **Build at 45**, **Stigmas**, **Macro**: the reset order for 383 points, stigma plan, and the boss and trash macro setups.
+- **Arcana**: the five cards to keep at 45, each with its version (set), Pantheon stat and the skill lines to aim for, plus the set bonuses they give, the alternatives players use, and how cards level and craft.
 
 ## What is in the Essence Extraction planner
 

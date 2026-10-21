@@ -586,5 +586,18 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Chalice and Parchment of Vigor with the Bell and Mirror of Magic: both two-card bonuses, +60 PvE Attack while your HP is 70% or more and 1,500 MP back when your MP drops to 20%.",
+  "alts": [
+   {
+    "card": "Compass",
+    "text": "Compass of Magic (Death: Critical Hit) in place of Freedom; no set bonus changes."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Vigor (Illusion): with the Compass of Vigor that is four Vigor cards and +150 PvE Attack, in place of Wisdom and the MP refill."
+   }
+  ]
+ }
 }

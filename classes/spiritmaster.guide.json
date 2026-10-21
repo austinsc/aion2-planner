@@ -579,5 +579,18 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Three Vigor cards with the Bell and Mirror of Magic: both two-card bonuses.",
+  "alts": [
+   {
+    "card": "Chalice",
+    "text": "Mental Focus +4 in place of Spirit Strike's +4."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Vigor (Illusion: shorter cooldowns) in place of Wisdom."
+   }
+  ]
+ }
 }

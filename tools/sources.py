@@ -158,7 +158,7 @@ def a2m_class(cls):
     d['sections'] = {}
     for sid in ['levelling', 'specialties-while-levelling', 'while-questing', 'build', 'skill-points', 'specialties',
                 'stigmas', 'passives', 'swaps', 'skill-levels-past-10', 'stigma-points', 'macro', 'set-it-up',
-                'in-a-fight', 'tanking', 'daevanion', 'stats', 'pvp', 'how-it-fights']:
+                'in-a-fight', 'tanking', 'daevanion', 'stats', 'arcana', 'pvp', 'how-it-fights']:
         s = section(t, sid)
         if s:
             d['sections'][sid] = s

@@ -649,5 +649,22 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Three Primal Vigor cards with the Bell and Mirror of Magic: both two-card bonuses. The Bell and the Mirror are the Magic pair because only those versions carry Destruction and Wisdom.",
+  "alts": [
+   {
+    "card": "Chalice",
+    "text": "Sword Aura Rampage at +1 here if both rings carry a Sword Aura Rampage line in place of Attack."
+   },
+   {
+    "card": "Bell",
+    "text": "Bell of Vigor (Justice) for four Vigor cards and the +150 PvE Attack bonus, giving up Destruction and the MP refill."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Vigor (Illusion: shorter cooldowns, Endurance Penetration) in place of Wisdom; with the Bell of Magic that also makes four Vigor cards."
+   }
+  ]
+ }
 }

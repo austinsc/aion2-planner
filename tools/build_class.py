@@ -156,6 +156,53 @@ def later(boards, legend):
     return out, totals
 
 
+def split_top(text, sep):
+    """Split on sep outside parentheses."""
+    out, depth, cur, i = [], 0, '', 0
+    while i < len(text):
+        ch = text[i]
+        depth += ch == '('
+        depth -= ch == ')'
+        if depth == 0 and text.startswith(sep, i):
+            out.append(cur)
+            cur, i = '', i + len(sep)
+            continue
+        cur += ch
+        i += 1
+    return out + [cur]
+
+
+def arcana(section, names):
+    """The class's Arcana table: each card's version (set), Pantheon stat and skill lines with target sizes."""
+    tb = sources.tables(section)
+    if not tb:
+        return []
+    cards = []
+    for row in tb[0][1:]:
+        card, stat, lines = row[0][0], row[1][0], row[2][0]
+        typ, _, st = card.partition(' of ')
+        main, _, rest = lines.partition('; the rest: ')
+        out = []
+        for part in split_top(main, ', '):
+            part = part.strip()
+            note = ''
+            m = re.search(r'\s*\((.*)\)$', part)
+            if m:
+                note = re.sub(r'\s*\(arithmetic\)|^size: arithmetic$|^arithmetic: ', '', m.group(1)).strip()
+                part = part[:m.start()].strip()
+            opts = []
+            for o in split_top(part, ' or '):
+                mm = re.match(r'(.+?)(?: \+(\d))?$', o.strip())
+                opts.append({'skill': mm.group(1), 'size': int(mm.group(2)) if mm.group(2) else None})
+            for o in opts:
+                if o['skill'] not in names:
+                    print(f"  arcana: {card} line {o['skill']!r} is not a class skill", file=sys.stderr)
+            out.append({'opts': opts, 'note': note})
+        cards.append({'card': card, 'type': typ, 'set': st, 'stat': stat, 'lines': out,
+                      'rest': ('the rest: ' + rest) if rest else ''})
+    return cards
+
+
 def build(cls):
     a = sources.a2m_class(cls)
     mb = {s['name']: s for s in sources.metabot_skills()[cls]}
@@ -252,7 +299,8 @@ def build(cls):
         rows = [r['to'] for r in build45 if s['name'] in r['skills']]
         if rows:
             s['t45'] = max(rows)
-    return {'cls': cls, 'skills': skills, 'levels': levels, 'steps': steps, 'boards': boards, 'plan': plan,
+    arc = arcana(a['sections'].get('arcana', ''), {x['name'] for x in skills})
+    return {'cls': cls, 'arcana': arc, 'skills': skills, 'levels': levels, 'steps': steps, 'boards': boards, 'plan': plan,
             'later': lat, 'phaseTotals': totals, 'build45': build45, 'costTable': COST, 'order': a['order']}
 
 

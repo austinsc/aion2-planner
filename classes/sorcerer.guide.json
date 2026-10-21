@@ -824,5 +824,26 @@
    ],
    "what": "cross-checks on board priorities and passives."
   }
- ]
+ ],
+ "arcana": {
+  "note": "The Chalice, Parchment and Mirror of Vigor with the Compass and Bell of Magic: both two-card bonuses, +60 PvE Attack while your HP is 70% or more and 1,500 MP back when your MP drops to 20% or less.",
+  "alts": [
+   {
+    "card": "Chalice",
+    "text": "Flame Arrow in place of Bittercold Wind once both rings are Dragon Lord rings with a Bittercold Wind line. Or Robe of Flame in place of a skill line, which leaves that skill short of 20."
+   },
+   {
+    "card": "Parchment",
+    "text": "Flame Arrow in place of Firestorm: Flame Arrow reaches 16 or more and Firestorm stops at 16."
+   },
+   {
+    "card": "Compass",
+    "text": "Compass of Vigor (Freedom: Accuracy) while you are short of Accuracy."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Magic (Wisdom) once you have about 35% Cooldown Reduction without Illusion."
+   }
+  ]
+ }
 }

@@ -604,5 +604,22 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Dark Crush and Spinning Strike each need 4 levels from the Chalice and Parchment together to reach 20, so the two cards share them, the Chalice taking the larger share. Three Vigor cards and two Magic: both two-card bonuses.",
+  "alts": [
+   {
+    "card": "Chalice",
+    "text": "Wind's Promise, Impact Hit and Attack Preparation in place of the skill lines, if you accept that Dark Crush and Spinning Strike can't both reach 20."
+   },
+   {
+    "card": "Compass",
+    "text": "Compass of Magic (Death: Critical Hit) once you no longer need the Accuracy."
+   },
+   {
+    "card": "Mirror",
+    "text": "Mirror of Vigor (Illusion): the sources split evenly."
+   }
+  ]
+ }
 }

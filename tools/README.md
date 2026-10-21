@@ -21,6 +21,7 @@ Fetched pages are cached in `tools/cache/` (git-ignored); delete a file there to
 - **Daevanion boards**: every node with its grade, cost and route phase; each numbered target's route is the cheapest connected path from the nodes already owned. A phase's leftover route nodes join its last numbered step, or form a "Filler nodes" step when the phase has no target on that board.
 - **Crystal schedule while levelling**: each board's while-levelling steps are bought as soon as the crystals allow (4 a level from 12). A board's first two targets go ahead of older boards' remaining ones; otherwise older boards first, in step order.
 - **45 build**: the skill points table, in order.
+- **Arcana**: each card's version, Pantheon stat and skill lines with target sizes, from the class guide's Arcana table. The guide file's `arcana` key adds a note and the alternatives (`alts`).
 
 ## The guide file
 

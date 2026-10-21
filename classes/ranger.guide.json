@@ -469,7 +469,7 @@
        "skills": [
         "Snare Shot",
         "Burst Arrow"
-      ],
+       ],
        "why": "Slow the pack so Burst Arrow can hit; solo, its Absorbs 10% HP pick (from 28) keeps you up."
       }
      ]
@@ -515,5 +515,18 @@
    "title": "Metabot Daevanion guide",
    "what": "board rules, node costs, corner stats."
   }
- ]
+ ],
+ "arcana": {
+  "note": "Chalice and Parchment of Vigor, then the Compass, Bell and Mirror of Magic: both two-card bonuses.",
+  "alts": [
+   {
+    "card": "Chalice",
+    "text": "Snipe +4, Tempest Shot +3, Gale Arrow +1 and Burst Arrow +1, with no passive lines, so Snipe and Tempest Shot reach 20."
+   },
+   {
+    "card": "Mirror",
+    "text": "Concentrated Fire as the second line in place of Hunter's Soul."
+   }
+  ]
+ }
 }

@@ -41,7 +41,8 @@ def merge(cls):
     data = {'meta': g['meta'], 'phases': g['phases'], 'text': g['text'], 'skills': auto['skills'], 'levels': auto['levels'],
             'steps': auto['steps'], 'boards': auto['boards'], 'plan': auto['plan'], 'later': auto['later'],
             'build45': auto['build45'], 'stigmas': g['stigmas'], 'passives': g['passives'], 'costTable': auto['costTable'],
-            'macro': g['macro'], 'sources': g['sources']}
+            'macro': g['macro'], 'sources': g['sources'],
+            'arcana': {'cards': auto.get('arcana', []), **g.get('arcana', {})}}
     for k in ('azphelPhases',):
         if k in g:
             data[k] = g[k]
