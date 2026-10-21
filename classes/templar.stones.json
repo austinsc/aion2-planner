@@ -1,0 +1,72 @@
+{
+ "weapon": "Longsword and shield",
+ "mana": {
+  "headline": "Front Attack Damage Boost first, then Weapon Damage Boost or Critical Damage Boost.",
+  "lines": [
+   {
+    "line": "Front Attack Damage Boost",
+    "tag": "First",
+    "note": "A multiplier of its own, and about 63% of your boss damage lands from the front. Manastones, the Varian Genus board and Fury give it; no Soul Binding line or wing does."
+   },
+   {
+    "line": "Weapon Damage Boost",
+    "tag": "Then",
+    "note": "Either of these two as the next pick."
+   },
+   {
+    "line": "Critical Damage Boost",
+    "tag": "Then",
+    "note": "Either of these two as the next pick."
+   }
+  ],
+  "fill": "Fill the other slots with Attack, then Critical Hit. For a hard tanking fight, one source puts Block first, then Defense and HP, because Block raises parry and shield block chance. The Templar guide itself takes damage lines first.",
+  "pvp": "Abyssal Manastones swap about a third of every roll for PvP lines such as PvP Attack. Use them only on a PvP set. Builds split on which PvP line to take first, so check what your Abyss gear already has.",
+  "extra": [
+   "Only Superior and Superior Abyssal Manastones roll the damage lines, at 0.5% each per roll, so most of your slots will still be Attack, Critical Hit and the like."
+  ],
+  "fillShort": "Attack, then Critical Hit"
+ },
+ "theo": {
+  "role": "Tank",
+  "pve": {
+   "effects": [
+    "slow-combat",
+    "earth"
+   ],
+   "why": "Lumiel's Interference is the only proc that slows how fast the target attacks (-50% Combat Speed, 7 s at Unique), which suits a tank. For a pure damage stone, Ulgorn's Will is the Templar favourite and every single-target stone of a grade averages the same."
+  },
+  "pvp": {
+   "effects": [
+    "root"
+   ],
+   "why": "A 2% chance to root, up to 5 s at Unique, once every 5 s at most. Nezekan's March holds a player in place."
+  },
+  "top": [
+   [
+    "Perion's Tragedy",
+    17
+   ],
+   [
+    "Vidar's Dignity",
+    14
+   ],
+   [
+    "Zikel's Vestige",
+    14
+   ],
+   [
+    "Nua's Scheme",
+    12
+   ],
+   [
+    "Ulgorn's Will",
+    11
+   ],
+   [
+    "Notun's Craft",
+    11
+   ]
+  ],
+  "note": "Templars mix damage and control among the top players, which fits a tank that has to hold enemies. The tier list names Ulgorn's Will as the most engraved damage stone."
+ }
+}

@@ -247,6 +247,59 @@ textarea{width:100%;min-height:90px;background:var(--panel2);color:var(--fg);bor
 .fix{display:grid;gap:8px;margin:0;padding:0;list-style:none}
 .fix li{padding:8px 10px;border-left:3px solid var(--warn);background:var(--panel2);border-radius:0 8px 8px 0;font-size:.9rem}
 .fix li b{color:var(--warn)}
+/* skill level breakdown: points + Daevanion */
+.dv{color:var(--p2);font-weight:600}
+.lvgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.lvrow{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px;border:1px solid var(--line);border-radius:10px;background:var(--panel2)}
+.lvrow .mid{display:grid;gap:4px;min-width:0}
+.lvrow .brk{font-size:.85rem;color:var(--muted)}
+.lvrow .brk b{color:var(--fg)}
+.lvrow .big{font-family:var(--font-display);font-weight:700;font-size:1.7rem;line-height:1;color:var(--gold2);min-width:1.6ch;text-align:center}
+.pips{display:inline-flex;gap:3px;flex-wrap:wrap}
+.pip{font-family:var(--font-cond);font-weight:700;font-size:.66rem;line-height:1;padding:2px 5px;border-radius:999px;border:1px solid var(--line2);color:var(--faint)}
+.pip.on{background:var(--gold);border-color:var(--gold);color:#1a1408}
+.seg{display:inline-flex;border:1px solid var(--line2);border-radius:999px;overflow:hidden}
+.seg button{border:0;background:transparent;padding:6px 14px;font-family:var(--font-cond);font-weight:600;letter-spacing:.04em;font-size:.85rem;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--gold);color:#1a1408}
+.gain{display:inline-flex;align-items:center;gap:5px;font-size:.8rem;padding:2px 9px;border-radius:999px;background:color-mix(in srgb, var(--p2) 16%, transparent);border:1px solid color-mix(in srgb, var(--p2) 50%, transparent);color:var(--fg);white-space:nowrap}
+.gain b{color:var(--gold2)}
+.lvt{display:grid;gap:4px;font-size:.85rem;margin-top:2px}
+.lvt .r{display:flex;flex-wrap:wrap;align-items:center;gap:4px 10px}
+.lvt .r .lab{flex:0 0 170px;color:var(--muted)}
+.lvt .r .tot{color:var(--gold2);min-width:3ch}
+@media (max-width:520px){ .lvt .r .lab{flex-basis:100%} }
+.legendnote{font-size:.85rem;color:var(--muted)}
+/* stones tab */
+.sico{width:34px;height:34px;border-radius:7px;object-fit:cover;flex:none;border:1px solid var(--line2);background:#000;vertical-align:middle}
+.sico.sm{width:24px;height:24px;border-radius:5px}
+.sico.lg{width:48px;height:48px;border-radius:9px}
+.gr{display:inline-block;font-family:var(--font-cond);font-weight:700;font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;padding:1px 7px;border-radius:999px;border:1px solid var(--gr);color:color-mix(in srgb, var(--gr) 65%, var(--fg))}
+.stonecards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px}
+.stonecard{display:grid;gap:10px;align-content:start;padding:12px;border:1px solid var(--line2);border-radius:10px;background:var(--panel2);min-width:0}
+.sc-head{display:flex;gap:12px;align-items:center}
+.sc-head>div{display:grid;gap:2px;min-width:0}
+.sc-head small{color:var(--muted);font-size:.82rem}
+.sc-grades{display:grid;gap:6px}
+.sc-g{display:grid;gap:1px;padding:6px 10px;border-left:3px solid var(--gr);background:var(--panel);border-radius:0 8px 8px 0}
+.sc-g b{color:color-mix(in srgb, var(--gr) 65%, var(--fg))}
+.sc-g small{color:var(--muted);font-size:.8rem}
+.pickblock{display:grid;gap:10px}
+.bars{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+.bars li{display:grid;grid-template-columns:minmax(190px,1.4fr) minmax(120px,1fr) minmax(80px,1fr) 3.2em;gap:8px 12px;align-items:center;font-size:.9rem}
+.bars .bn{display:flex;align-items:center;gap:8px;flex-wrap:wrap;min-width:0}
+.bars .be{color:var(--muted);font-size:.82rem}
+.bars .bt{height:8px;border-radius:99px;background:var(--panel2);border:1px solid var(--line);overflow:hidden}
+.bars .bt i{display:block;height:100%;background:var(--gold)}
+@media (max-width:640px){ .bars li{grid-template-columns:1fr auto} .bars .be{grid-column:1/-1;order:3} .bars .bt{grid-column:1/-1;order:4} }
+.calc{display:flex;flex-wrap:wrap;gap:12px}
+.calc label{display:grid;gap:4px;font-family:var(--font-cond);font-weight:600;letter-spacing:.05em;text-transform:uppercase;font-size:.72rem;color:var(--muted)}
+.calc select{min-width:180px;max-width:100%;padding:8px 10px;border-radius:8px;border:1px solid var(--line2);background:var(--panel2);color:var(--fg);font:inherit;text-transform:none;letter-spacing:0;font-size:.95rem}
+.calcout{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.cbox{display:grid;gap:2px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);min-width:0}
+.cbox b{font-family:var(--font-display);font-size:1.35rem;color:var(--gold2)}
+.cbox small{color:var(--muted);font-size:.8rem}
+table.theo tr.rec td{background:color-mix(in srgb, var(--gold) 8%, transparent)}
+table.theo td .gain{margin-left:6px}
 .foot{color:var(--faint);font-size:.78rem;text-align:center;padding-top:10px}
 
 /* ---------- site menu ---------- */

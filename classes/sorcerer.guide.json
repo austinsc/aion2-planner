@@ -194,8 +194,7 @@
   },
   "Assault Bombardment": {
    "role": "Not used in the PvE build.",
-   "spec": null,
-   "kind": "passive"
+   "spec": null
   },
   "Cold Storm": {
    "role": "7 s storm: slow and Frostbite on up to 4 enemies.",

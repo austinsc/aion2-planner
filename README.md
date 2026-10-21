@@ -37,12 +37,13 @@ Opening `index.html` straight from disk also works. Progress (level, completed l
 
 ## What is in each class planner
 
-- **Now**: the current level's skill point spends, what to hold back, new skills, Specialty picks and Daevanion nodes to buy.
+- **Now**: the current level's skill point spends, what to hold back, new skills, Specialty picks and Daevanion nodes to buy. Every skill's level is shown as the points you assign plus the Daevanion skill nodes, which is the level the game displays, with a switch between the planned nodes and the ones you marked owned.
 - **Levels 1-45**: the whole route with per-level points, crystals and unlocks.
 - **Skills**: every active, passive and stigma skill with cooldowns, MP and Specialty picks.
 - **Daevanion**: the five boards with numbered routes, a crystal schedule while levelling, and the route after 45.
 - **Build at 45**, **Stigmas**, **Macro**: the reset order for 383 points, stigma plan, and the boss and trash macro setups.
 - **Arcana**: the five cards to keep at 45, each with its version (set), Pantheon stat and the skill lines to aim for, plus the set bonuses they give, the alternatives players use, and how cards level and craft.
+- **Stones**: which Manastone lines to keep and what to fill the rest with, which Theostone to engrave for dungeons and for PvP, what the top 100 players of the class run, all 51 Theostones with their chances and damage, an odds calculator for Manastone rolls, and how to get and combine stones.
 
 ## What is in the Essence Extraction planner
 

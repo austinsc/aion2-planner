@@ -9,7 +9,7 @@ const PHASES = DATA.phases;
 const STORE = META.storageKey || (META.cls + '-planner');
 
 /* ---------------- state ---------------- */
-const state = { level: 1, done: {}, nodes: {}, notes: '', board: DATA.boards[0].key };
+const state = { level: 1, done: {}, nodes: {}, notes: '', board: DATA.boards[0].key, dmode: 'plan' };
 let db = null, docRef = null, saving = false, pending = false;
 const $ = s => document.querySelector(s);
 const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -24,7 +24,7 @@ function persist(){
   clearTimeout(saveTimer);
   saveTimer = setTimeout(flush, 500);
 }
-const snapshot = () => ({ level: state.level, done: state.done, nodes: state.nodes, notes: state.notes, board: state.board, updatedAt: new Date().toISOString() });
+const snapshot = () => ({ level: state.level, done: state.done, nodes: state.nodes, notes: state.notes, board: state.board, dmode: state.dmode, updatedAt: new Date().toISOString() });
 async function flush(){
   if (!docRef) return;
   if (saving) { pending = true; return; }
@@ -53,7 +53,7 @@ async function connect(){
 function applyRemote(d){
   if (!d) return;
   state.level = Math.min(45, Math.max(1, +d.level || 1));
-  state.done = d.done || {}; state.nodes = d.nodes || {}; state.notes = d.notes || ''; state.board = BOARDS[d.board] ? d.board : state.board;
+  state.done = d.done || {}; state.nodes = d.nodes || {}; state.notes = d.notes || ''; state.board = BOARDS[d.board] ? d.board : state.board; state.dmode = d.dmode === 'owned' ? 'owned' : 'plan';
   saveLocal(); renderAll();
 }
 
@@ -70,6 +70,31 @@ function boardName(k){ return BOARDS[k].name; }
 function nodeTitle(n){ return n.label + (n.cost ? ` (${n.cost} crystal${n.cost>1?'s':''})` : ''); }
 const firstBoard = DATA.boards[0];
 const levelBoards = DATA.boards.filter(b => b.key !== 'azphel');
+
+/* ---------------- skill level = points you assign + Daevanion skill nodes ---------------- */
+const skillOfNode = id => { const n = NODES[id]; return n && n.type === 'skill' ? n.skill : null; };
+function daevPlanned(name, L){ let c = 0; DATA.plan.forEach(p => { if (p.lvl <= L) p.nodes.forEach(id => { if (skillOfNode(id) === name) c++; }); }); return c; }
+function daevOwned(name){ let c = 0; for (const id in state.nodes) if (state.nodes[id] && skillOfNode(id) === name) c++; return c; }
+function daevRoute(name, maxPhase){ let c = 0; levelBoards.forEach(b => b.steps.forEach(s => { if (s.phase <= maxPhase) s.nodes.forEach(id => { if (skillOfNode(id) === name) c++; }); })); return c; }
+function daevNow(name, L){ return state.dmode === 'owned' ? daevOwned(name) : daevPlanned(name, L); }
+const crystalsAt = i => ((PHASES[i] || '').match(/to (\d+)/) || (PHASES[i] || '').match(/(\d+) crystals/) || [])[1] || '';
+function gainChips(ids){
+  const m = {}; ids.forEach(id => { const s = skillOfNode(id); if (s) m[s] = (m[s] || 0) + 1; });
+  const g = Object.entries(m);
+  return g.length ? `<span class="chips" style="gap:6px">${g.map(([s, n]) => `<span class="gain">${icon(s, 'sm')}<b>+${n}</b> ${esc(s)}</span>`).join('')}</span>` : '';
+}
+function pips(total){ return `<span class="pips" title="Specialty picks open at skill level 8, 12, 16 and 20">${[8, 12, 16, 20].map(v => `<span class="pip ${total >= v ? 'on' : ''}">${v}</span>`).join('')}</span>`; }
+function daevTag(name){ const d = daevRoute(name, 1); return d ? `<span class="gain"><span class="dv">+${d} Daev</span></span>` : ''; }
+function levelChip(name, pts, L){ const d = daevNow(name, L); return `<span class="chip"><b class="num">${pts + d}</b> now <span class="muted">= ${pts} pts${d ? ` + ${d} Daev` : ''}</span></span>`; }
+function lvTable(s){
+  const rows = [
+    ['Levelling, level 45', step(45).levels[s.name] || 1, daevPlanned(s.name, 45)],
+    [`45 build, ${crystalsAt(1)} crystals`, s.t45, daevRoute(s.name, 1)],
+    [`Full route, ${crystalsAt(3)} crystals`, s.t45, daevRoute(s.name, 3)]
+  ];
+  if (s.t45 === 1 && !rows.some(r => r[2])) return `<p class="note">Leave at 1. No Daevanion node raises it.</p>`;
+  return `<div class="lvt">${rows.map(([lab, p, d]) => `<div class="r"><span class="lab">${lab}</span><span class="num">${p} pts${d ? ` <span class="dv">+ ${d} Daev</span>` : ''}</span><b class="num tot">= ${p + d}</b>${pips(p + d)}</div>`).join('')}</div>`;
+}
 
 /* ---------------- NOW ---------------- */
 function renderNow(){
@@ -95,7 +120,7 @@ function renderNow(){
   // skill points
   h += `<div class="card"><header><h3>Spend skill points</h3><span class="eyebrow">${st.spend} point${st.spend===1?'':'s'}</span></header>`;
   if (st.alloc.length) {
-    h += `<ul class="list">` + st.alloc.map(a => `<li>${skTag(a.skill)}<span class="arrow num">${a.a} → ${a.b}</span><span class="cost num">${a.cost} pt${a.cost>1?'s':''}</span></li>`).join('') + `</ul>`;
+    h += `<ul class="list">` + st.alloc.map(a => `<li>${skTag(a.skill)}<span class="arrow num">${a.a} → ${a.b}</span>${daevNow(a.skill, L) ? `<span class="muted num" style="font-size:.85rem">+ ${daevNow(a.skill, L)} <span class="dv">Daev</span> = <b>${a.b + daevNow(a.skill, L)}</b> in game</span>` : ''}<span class="cost num">${a.cost} pt${a.cost>1?'s':''}</span></li>`).join('') + `</ul>`;
   } else h += `<p class="empty">${st.gained ? 'No spending this level.' : 'No skill points yet. Skill points start at level 4.'}</p>`;
   if (st.keep) h += `<p class="keep">${esc(st.keep)}</p>`;
   h += `</div>`;
@@ -119,7 +144,7 @@ function renderNow(){
     h += `<ul class="list">` + plan.map(p => {
       const own = p.nodes.every(id => state.nodes[id]);
       const target = NODES[p.nodes[p.nodes.length-1]];
-      return `<li><span class="lvbadge">${boardName(p.board)}</span>${target && target.type==='skill' && target.skill === p.label.replace(/ \+\d+$/, '') ? skTag(target.skill) : `<b>${esc(p.label)}</b>`}<span class="muted" style="font-size:.85rem">step ${p.n} · ${p.nodes.length} node${p.nodes.length>1?'s':''}</span><span class="cost num">${p.cost} cr${own ? ' · ✓ owned' : ''}</span></li>`;
+      return `<li><span class="lvbadge">${boardName(p.board)}</span>${target && target.type==='skill' && target.skill === p.label.replace(/ \+\d+$/, '') ? skTag(target.skill) : `<b>${esc(p.label)}</b>`}<span class="muted" style="font-size:.85rem">step ${p.n} · ${p.nodes.length} node${p.nodes.length>1?'s':''}</span>${gainChips(p.nodes)}<span class="cost num">${p.cost} cr${own ? ' · ✓ owned' : ''}</span></li>`;
     }).join('') + `</ul>
     <div class="act"><button class="pill" id="ownPlan">Mark these nodes owned</button><button class="pill ghost" id="goBoard">Open the board</button></div>`;
   } else if (row.dv) h += `<p class="empty">Nothing to buy yet: save your crystals for the next step in the route.</p>`;
@@ -127,12 +152,18 @@ function renderNow(){
   h += `</div>`;
   h += `</div>`; // grid2
 
-  // skill wall
+  // skill levels: points + Daevanion
   const learned = DATA.skills.filter(s => s.kind !== 'stigma' && s.learn <= L);
-  h += `<div class="card"><header><h3>Your skill levels at ${L}</h3><span class="eyebrow">from skill points · Daevanion nodes add +1 each</span></header><div class="wall">` +
-    learned.map(s => { const v = lv[s.name] || 1; return `<div class="cell ${v>=10?'max':''} ${v===1?'one':''}">${icon(s.name)}<span class="lv num">${v}</span><span>${esc(s.name)}</span></div>`; }).join('') + `</div></div>`;
+  h += `<div class="card"><header><h3>Skill levels at ${L}</h3><span class="eyebrow">points you assign + Daevanion nodes = the level the game shows</span></header>
+    <div class="act" style="align-items:center"><span class="seg" role="group" aria-label="Count Daevanion levels from"><button data-dmode="plan" aria-pressed="${state.dmode !== 'owned'}">Planned nodes</button><button data-dmode="owned" aria-pressed="${state.dmode === 'owned'}">Nodes I marked owned</button></span>
+    <span class="legendnote"><b>Gold</b> = total in game · points you spend · <span class="dv">Daev</span> = +1 per owned skill node. Pips light up as the total reaches the Specialty levels 8, 12, 16, 20.</span></div>
+    <div class="lvgrid">` + learned.map(s => {
+      const p = lv[s.name] || 1, d = daevNow(s.name, L), tot = p + d;
+      return `<div class="lvrow">${icon(s.name, 'lg')}<div class="mid"><span class="sk ${s.elem || ''}"><span class="nm">${esc(s.name)}</span></span><span class="brk num"><b>${p}</b> pts${d ? ` <span class="dv">+ ${d} Daev</span>` : ''}</span>${pips(tot)}</div><b class="big num">${tot}</b></div>`;
+    }).join('') + `</div></div>`;
   h += `<div class="card"><header><h3>Notes</h3><span class="eyebrow">saved with your progress</span></header><textarea id="notes" placeholder="Where you are, what you need to buy, gear to fish for…">${esc(state.notes)}</textarea></div>`;
   $('#p-now').innerHTML = h;
+  document.querySelectorAll('[data-dmode]').forEach(x => x.onclick = () => { state.dmode = x.dataset.dmode; persist(); renderAll(); });
   $('#markDone').onclick = () => { if (state.done[L]) delete state.done[L]; else { state.done[L] = true; planAt(L).forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); } persist(); renderAll(); };
   const nx = $('#nextLvl'); if (nx) nx.onclick = () => { state.done[L] = true; planAt(L).forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); state.level = L + 1; persist(); renderAll(); window.scrollTo({top:0,behavior:'smooth'}); };
   const op = $('#ownPlan'); if (op) op.onclick = () => { plan.forEach(p => p.nodes.forEach(id => state.nodes[id] = true)); persist(); renderAll(); };
@@ -143,7 +174,7 @@ function renderNow(){
 function renderLevels(){
   const doneCount = Object.keys(state.done).length;
   let h = `<div class="card"><header><h2>Levels 1–45</h2><span class="eyebrow">${doneCount} of 45 done · click a row to jump</span></header>
-  <p class="note">${esc(TXT.levels || '')}</p>
+  <p class="note">${esc(TXT.levels || '')} The levels in this table are the points you assign. Daevanion skill nodes add +1 level each on top of that, so the in-game level is higher: see the Now and Skills tabs for the totals.</p>
   <div class="tscroll"><table><thead><tr><th></th><th>Lv</th><th>Pts</th><th>Spend</th><th>Keep / specialty</th><th>Daevanion</th><th>Notes</th></tr></thead><tbody>`;
   for (let L = 1; L <= 45; L++) {
     const st = step(L), row = lvlRow(L), plan = planAt(L);
@@ -168,7 +199,7 @@ function renderSkills(){
   const groups = [['active','Active skills',`${count('active')} skills raised with skill points; Specialties open at skill level 8, 12, 16 and 20`],['passive','Passive skills','Raised with the same skill points; no Specialties'],['stigma','Stigma skills','Slots at 22, 27, 32 and 37; raised with Stigma points only']];
   let h = '';
   for (const [k, title, sub] of groups) {
-    h += `<div class="card"><header><h2>${title}</h2><span class="eyebrow">${sub}</span></header><div>`;
+    h += `<div class="card"><header><h2>${title}</h2><span class="eyebrow">${sub}</span></header>${k !== 'stigma' ? '<p class="note">Every skill shows the points you assign plus Daevanion skill nodes. The rows under each skill give the in-game level at level 45 while levelling, at the 45 build, and after the full route.</p>' : ''}<div>`;
     for (const s of DATA.skills.filter(x => x.kind === k)) {
       const cur = s.kind === 'stigma' ? null : (s.learn <= L ? (lv[s.name] || 1) : null);
       const stg = DATA.stigmas.find(x => x.name === s.name);
@@ -176,11 +207,12 @@ function renderSkills(){
       h += `<div class="skillrow">${icon(s.name,'lg')}<div>
         <div class="head"><span class="sk ${s.elem||''}"><span class="nm">${esc(s.name)}</span></span>
           <span class="lvbadge">Lv ${s.learn}</span>
-          ${cur !== null ? `<span class="chip">now <b class="num">${cur}</b></span>` : s.kind!=='stigma' ? `<span class="chip muted">not yet learned</span>` : ''}
-          ${s.kind !== 'stigma' ? `<span class="chip">at 45 <b class="num">${s.t45}</b></span>` : stg ? `<span class="chip">slot ${stg.slot} · to <b class="num">${stg.t45}</b></span>` : ''}
+          ${cur !== null ? levelChip(s.name, cur, L) : s.kind!=='stigma' ? `<span class="chip muted">not yet learned</span>` : ''}
+          ${s.kind !== 'stigma' ? '' : stg ? `<span class="chip">slot ${stg.slot} · to <b class="num">${stg.t45}</b></span>` : ''}
         </div>
         <div class="meta">${s.cd ? `<span>Cooldown <b>${esc(s.cd)}</b></span>` : ''}${s.mp && s.mp !== '—' ? `<span>MP <b>${esc(s.mp)}</b></span>` : ''}${s.range && s.range !== '—' ? `<span>Range <b>${esc(s.range)}</b></span>` : ''}</div>
         ${s.role ? `<p class="role">${esc(s.role)}</p>` : ''}
+        ${s.kind !== 'stigma' ? lvTable(s) : ''}
         ${sp['8'] || sp['45'] || sp['12'] || sp['16'] ? `<div class="specs">${sp['8'] ? `<span><b>Skill 8 while levelling</b> ${esc(sp['8'])}</span>` : ''}${sp['45'] ? `<span><b>Pick at 45</b> ${esc(sp['45'])}</span>` : ''}${sp['12'] ? `<span><b>Skill 12</b> ${esc(sp['12'])}</span>` : ''}${sp['16'] ? `<span><b>Skill 16</b> ${esc(sp['16'])}</span>` : ''}</div>` : ''}
       </div></div>`;
     }
@@ -248,8 +280,8 @@ function hideTip(){ tip.hidden = true; }
 /* ---------------- BUILD ---------------- */
 function renderBuild(){
   let h = `<div class="card gold"><header><h2>Skill points at 45</h2><span class="eyebrow">${esc(TXT.buildSub || '')}</span></header>
-    <p class="note">${esc(TXT.build || '')}</p>
-    <ol class="order">` + DATA.build45.map(r => `<li><span class="o">${r.order}</span><span class="skills">${r.skills.map(s => skTag(s)).join('')}${r.alt ? `<span class="muted">${esc(r.alt)}</span>` : ''}</span><span class="to">to level<b class="num">${r.to}</b><span class="num">${r.cum} used</span></span></li>`).join('') + `</ol></div>`;
+    <p class="note">${esc(TXT.build || '')} The purple +N Daev tags show Daevanion skill nodes that add on top once you have ${crystalsAt(1)} crystals, so a skill at 10 points shows as 14 in game when four of its nodes are bought.</p>
+    <ol class="order">` + DATA.build45.map(r => `<li><span class="o">${r.order}</span><span class="skills">${r.skills.map(s => skTag(s) + daevTag(s)).join('')}${r.alt ? `<span class="muted">${esc(r.alt)}</span>` : ''}</span><span class="to">to level<b class="num">${r.to}</b><span class="num">${r.cum} used</span></span></li>`).join('') + `</ol></div>`;
   h += `<div class="grid2"><div class="card"><header><h3>Passives, in order</h3></header><ol class="order">` +
     DATA.passives.map((p,i) => `<li><span class="o">${i+1}</span><span class="skills">${skTag(p)}</span><span class="to muted" style="max-width:220px;white-space:normal;font-weight:500">${esc((SK[p]||{}).role||'')}</span></li>`).join('') +
     `</ol><p class="note">${esc(TXT.passives || '')}</p></div>`;
@@ -336,6 +368,129 @@ function renderArcana(){
     `</tbody></table></div><p class="note">The other versions: Chalice and Parchment come in both sets too; the Compass of Vigor carries Freedom and of Magic Death, the Bell Justice or Destruction, and the Mirror Illusion or Wisdom. For damage, sources rank Wisdom, Time and Destruction highest.</p></div>`;
   $('#p-arcana').innerHTML = h;
 }
+/* ---------------- STONES ---------------- */
+// Manastones, Soulstones and Theostones. STONES (shared/stones.js) holds the facts; DATA.stones (<class>-planner/stones.js) the class advice.
+const calcState = { stat: 'dmg', minTier: 0, lines: 1 };
+function renderStones(){
+  const el = $('#p-stones'); if (!el) return;
+  const S = DATA.stones;
+  if (typeof STONES === 'undefined' || !S) { el.innerHTML = '<div class="card"><p class="empty">Stone advice is not available for this class yet.</p></div>'; return; }
+  const GR = ['rare', 'epic', 'unique'], R = STONES.rarity;
+  const EFF = Object.fromEntries(STONES.effects.map(e => [e.k, e]));
+  const byName = {}; STONES.effects.forEach(e => GR.forEach(g => { byName[e.grades[g].name] = { e, g }; }));
+  const cap = s => s[0].toUpperCase() + s.slice(1);
+  const img = (f, c = '') => `<img class="sico ${c}" src="../shared/stone-icons/${f}.webp" alt="">`;
+  const gtag = g => `<span class="gr" style="--gr:${R[g]}">${cap(g)}</span>`;
+  const isDmg = e => e.kind === 'damage' || e.kind === 'aoe';
+  const cdText = e => `${e.cd} s cooldown${e.grades.rare.cd ? ` (Rare: ${e.grades.rare.cd} s)` : ''}`;
+  const picks = {};
+  [['pve', 'PvE'], ['pvp', 'PvP'], ['alt', 'Alt']].forEach(([k, lab]) => ((S.theo[k] || {}).effects || []).forEach(x => { (picks[x] = picks[x] || []).push(lab); }));
+  const topShare = {}; S.theo.top.forEach(([n, s]) => { topShare[n] = s; });
+
+  const tile = (capText, body, sub, cls = '') => `<div class="keytile ${cls}"><span class="kcap">${esc(capText)}</span><div class="kbody">${body}</div><small>${esc(sub)}</small></div>`;
+  const stoneCard = (key, label) => {
+    const e = EFF[key];
+    return `<div class="stonecard"><div class="sc-head">${img(e.icon, 'lg')}<div><span class="eyebrow">${esc(label)}</span><b>${esc(e.label)}</b><small>${e.chance}% chance on attack · ${cdText(e)}</small></div></div>
+      <div class="sc-grades">${GR.map(g => `<div class="sc-g" style="--gr:${R[g]}"><b>${esc(e.grades[g].name)}</b><small>${cap(g)} · ${esc(e.grades[g].val)}${isDmg(e) ? ` · about ${e.grades[g].avg} per attack` : ''}</small></div>`).join('')}</div></div>`;
+  };
+  const pickBlock = (sect, title, sub) => {
+    const p = S.theo[sect]; if (!p) return '';
+    return `<div class="pickblock"><h3>${esc(title)}</h3><p class="note">${esc(p.why)}</p><div class="stonecards">${p.effects.map((k, i) => stoneCard(k, i === 0 ? sub : 'Also good')).join('')}</div></div>`;
+  };
+  const first = key => { const e = EFF[key]; return `${img(e.icon, 'sm')}<b>${esc(e.grades.unique.name)}</b>`; };
+  const firstSent = t => (t.match(/^.*?[.!?](?=\s|$)/) || [t])[0];
+
+  let h = '';
+  // ---- at a glance
+  const M = S.mana, T = S.theo;
+  h += `<div class="card gold"><header><h2>${esc(META.name)} stones</h2><span class="eyebrow">weapon: ${esc(S.weapon)} · ${esc(T.role)}</span></header>
+    <p class="note">Manastones add one rolled stat per slot to weapons, guards and armor; Soulstones do the same for accessories. A Theostone is a separate weapon engraving with a chance to proc on attack. The class guides below say what to keep, what to fill the rest with and which Theostone to engrave.</p>
+    <div class="keys">
+      ${tile('Manastones · keep', `<b>${esc(M.lines.filter(l => l.tag === 'First' || l.tag === 'Keep').map(l => l.line).slice(0, 2).join(', ') || M.lines[0].line)}</b>`, M.headline)}
+      ${tile('Manastones · the rest', `<b>${esc(M.fillShort || firstSent(M.fill))}</b>`, 'Superior stones roll damage lines at only 0.5% each per roll, so most slots end up as these.')}
+      ${tile('Theostone · dungeons', first(T.pve.effects[0]), T.role)}
+      ${tile('Theostone · PvP', first(T.pvp.effects[0]), EFF[T.pvp.effects[0]].label + ', ' + EFF[T.pvp.effects[0]].chance + '% chance')}
+    </div></div>`;
+
+  // ---- manastones for this class
+  h += `<div class="card"><header><h2>Manastones for ${esc(META.name)}</h2><span class="eyebrow">lines worth keeping, in order</span></header>
+    <p class="note">${esc(M.headline)}</p>
+    <ol class="order">` + M.lines.map((l, i) => `<li><span class="o">${i + 1}</span><span class="skills" style="display:grid;gap:2px"><b>${esc(l.line)}</b><small class="muted">${esc(l.note)}</small></span><span class="to">${esc(l.tag)}</span></li>`).join('') + `</ol>
+    <p class="note"><b>The other slots.</b> ${esc(M.fill)}</p>
+    <p class="note"><b>PvP set.</b> ${esc(M.pvp)}</p>` +
+    (M.extra && M.extra.length ? `<ul class="fix">${M.extra.map(x => `<li>${esc(x)}</li>`).join('')}</ul>` : '') + `</div>`;
+
+  // ---- odds calculator
+  const C = STONES.mana.calc;
+  h += `<div class="card"><header><h2>How many stones will it take?</h2><span class="eyebrow">Superior Manastone or Soulstone</span></header>
+    <p class="note">Each slot picks a stat by weight, then a tier: Rare 50%, Epic 35%, Unique 15%. Pick what you are chasing.</p>
+    <div class="calc">
+      <label>Stat<select id="cStat">${C.stats.map(s => `<option value="${s.k}" ${s.k === calcState.stat ? 'selected' : ''}>${esc(s.name)}</option>`).join('')}</select></label>
+      <label>Minimum tier<select id="cTier">${C.tierNames.map((n, i) => `<option value="${i}" ${i === calcState.minTier ? 'selected' : ''}>${i === 0 ? 'Any tier' : n + ' or better'}</option>`).join('')}</select></label>
+      <label>Slots to fill with it<select id="cLines">${[1, 2, 3, 4].map(n => `<option value="${n}" ${n === calcState.lines ? 'selected' : ''}>${n}</option>`).join('')}</select></label>
+    </div>
+    <div class="calcout" id="cOut"></div>
+    <p class="note">Abyssal stones keep the damage lines at the same odds but give core stats such as Attack only 6% instead of 10%, and about a third of every roll to PvP lines. Use regular stones for PvE.</p></div>`;
+
+  // ---- slots, sizes, pool
+  const MS = STONES.mana, ic = STONES.stoneIcons;
+  h += `<div class="card"><header><h2>Slots, sizes and where stones come from</h2><span class="eyebrow">weapons, guards and armor take Manastones · accessories take Soulstones</span></header>
+    <div class="grid2"><div><h3>Slots by gear grade</h3><div class="tscroll"><table><thead><tr><th>Gear grade</th><th>Slots</th><th>Kinah per engrave</th></tr></thead><tbody>` +
+    MS.slots.map(s => `<tr><td>${esc(s.grade)}</td><td class="num">${s.n}</td><td class="num">${s.kina.toLocaleString('en-US')}</td></tr>`).join('') + `</tbody></table></div>
+      <p class="note">Amulets, belts and the rune have no slots. Slot count is fixed by grade, which is a big part of why a Unique piece beats an Epic one.</p></div>
+    <div><h3>Stone sizes</h3><div class="tscroll"><table><thead><tr><th>Size</th><th>Tier odds</th><th>Attack</th><th>Crit. Hit</th><th>Defense</th><th>HP</th></tr></thead><tbody>` +
+    MS.sizes.map((z, i) => `<tr><td><span class="sk">${img(ic.manastone[i], 'sm')}${img(ic.soulstone[i], 'sm')}<b>${esc(z.name)}</b></span></td><td class="muted">${esc(z.tiers)}</td><td class="num">${esc(z.attack)}</td><td class="num">${esc(z.crit)}</td><td class="num">${esc(z.defense)}</td><td class="num">${esc(z.hp)}</td></tr>`).join('') + `</tbody></table></div></div></div>
+    <h3>What each stone can roll</h3><div class="tscroll"><table><thead><tr><th>Stat</th><th>Lesser and Intermediate</th><th>Superior</th><th>Abyssal Lesser and Intermediate</th><th>Superior Abyssal</th></tr></thead><tbody>` +
+    MS.pool.map(r => `<tr><td>${esc(r.stat)}</td><td>${esc(r.regular)}</td><td>${esc(r.superior)}</td><td>${esc(r.abyssal)}</td><td>${esc(r.sabyssal)}</td></tr>`).join('') + `</tbody></table></div>
+    <h3>Where to get them</h3><ul class="when">` + MS.sources.map(s => `<li><span class="who"><b>${esc(s[0])}</b></span><span class="why">${esc(s[1])}</span></li>`).join('') + `</ul>
+    <div class="chips">${[['Manastone', ic.manastone[2]], ['Soulstone', ic.soulstone[2]], ['Abyssal Manastone', ic.abyssalManastone[2]], ['Abyssal Soulstone', ic.abyssalSoulstone[2]]].map(([n, f]) => `<span class="chip">${img(f, 'sm')}Superior ${esc(n)}</span>`).join('')}</div></div>`;
+
+  // ---- theostones for this class
+  h += `<div class="card gold"><header><h2>Theostones for ${esc(META.name)}</h2><span class="eyebrow">${esc(T.role)}</span></header>
+    <p class="note">A Theostone is an engraving with a chance to proc when you attack. Only Epic and Unique weapons have the slot, identical stones do not stack, and even a Unique stone adds under 1% of your damage in PvE. Damage stones deal a flat amount. Within one grade, every single-target damage stone averages the same, and every area stone averages half of that per target. What separates them is the one-second cooldown and how many enemies you hit.</p>` +
+    pickBlock('pve', 'For dungeons and levelling', 'Best for you') + pickBlock('alt', 'If you tank', 'Alternative') + pickBlock('pvp', 'For PvP', 'Control stone') +
+    `<div class="pickblock"><h3>What the top players of your class run</h3><p class="note">The share of the 100 strongest ${esc(META.name)}s that have each stone on their weapon or guard, from the official character pages (Global, 20 Oct 2026). ${esc(T.note)}</p><ul class="bars">` +
+    T.top.map(([n, s]) => { const x = byName[n]; return `<li><span class="bn">${img(x.e.icon, 'sm')}<b>${esc(n)}</b> ${gtag(x.g)}</span><span class="be">${esc(x.e.label)}</span><span class="bt"><i style="width:${Math.min(100, s * 100 / 35)}%"></i></span><b class="num">${s}%</b></li>`; }).join('') + `</ul></div></div>`;
+
+  // ---- all 17
+  h += `<div class="card"><header><h2>All 17 Theostones</h2><span class="eyebrow">51 stones: each effect in three grades</span></header>
+    <p class="note">Tags mark your class's picks. The proc chance is the same at every grade; the grade changes the duration or the damage. Rare stones are tradeable, Epic and Unique are not.</p>
+    <div class="tscroll"><table class="theo"><thead><tr><th>Effect</th><th>Chance</th><th>Cooldown</th><th>Rare</th><th>Epic</th><th>Unique</th></tr></thead><tbody>` +
+    STONES.effects.map(e => `<tr class="${picks[e.k] ? 'rec' : ''}"><td><span class="sk">${img(e.icon, 'sm')}<b>${esc(e.label)}</b></span>${(picks[e.k] || []).map(t => `<span class="gain">${t} pick</span>`).join('')}</td><td class="num">${e.chance}%</td><td class="num">${e.cd} s${e.grades.rare.cd ? ` <span class="muted">(Rare ${e.grades.rare.cd} s)</span>` : ''}</td>` +
+      GR.map(g => `<td><span class="nm" style="color:${R[g]}">${esc(e.grades[g].name)}</span>${topShare[e.grades[g].name] ? ` <span class="gain">${topShare[e.grades[g].name]}% of top ${esc(META.name)}s</span>` : ''}<br><small class="muted">${esc(e.grades[g].val)}${isDmg(e) ? ` · ~${e.grades[g].avg}/attack` : ''}</small></td>`).join('') + `</tr>`).join('') + `</tbody></table></div></div>`;
+
+  // ---- getting and combining
+  const TH = STONES.theo;
+  h += `<div class="card"><header><h2>Getting and combining Theostones</h2><span class="eyebrow">engrave from the Enhancement menu</span></header>
+    <div class="grid2"><div><h3>Where they come from</h3><ul class="when">` + TH.sources.map(s => `<li><span class="who"><b>${esc(s[0])}</b></span><span class="why">${esc(s[1])}</span></li>`).join('') + `</ul></div>
+    <div><h3>Combining</h3><p class="note">Register stones of one grade in the Combine window. The result is a random stone from a fixed pool, and the pool includes the same grade, so most combines do not upgrade. Identical stones do not stack, so every Rare stone you will not engrave is combine fodder.</p>
+      <div class="tscroll"><table><thead><tr><th>Combine</th><th>Same grade</th><th>Upgrade</th></tr></thead><tbody>` + TH.combine.map(c => `<tr><td>${esc(c.from)}</td><td>${esc(c.same)}</td><td>${esc(c.up)}</td></tr>`).join('') + `</tbody></table></div>
+      <p class="note">Before engraving, read the popup: removing a stone either returns it or destroys it. Do not swap a Unique stone back and forth without checking which.</p></div></div></div>`;
+
+  // ---- levelling, rules, caveats, sources
+  h += `<div class="card"><header><h2>While levelling</h2></header><ul class="fix">` + STONES.levelling.map(x => `<li>${esc(x)}</li>`).join('') + `</ul></div>`;
+  h += `<div class="card"><header><h2>Rules that apply to every stone</h2></header><ul class="when">` + STONES.rules.map(r => `<li><span class="who"><b>${esc(r[0])}</b></span><span class="why">${esc(r[1])}</span></li>`).join('') + `</ul></div>`;
+  h += `<div class="card"><header><h2>Where sources disagree</h2><span class="eyebrow">compiled ${esc(STONES.compiled)}</span></header><ul class="fix">` + STONES.caveats.map(x => `<li>${esc(x)}</li>`).join('') + `</ul>
+    <h3>Sources</h3><ol class="src">` + STONES.sources.map(s => `<li><a href="${esc(s[0])}" target="_blank" rel="noopener">${esc(s[1])}</a>: ${esc(s[2])}</li>`).join('') + `</ol></div>`;
+  el.innerHTML = h;
+
+  // ---- calculator wiring
+  const fmtPct = p => (p >= 1 ? p.toFixed(1) : p >= 0.1 ? p.toFixed(2) : p.toFixed(3)) + '%';
+  const fmtN = n => n >= 100 ? Math.round(n).toLocaleString('en-US') : n >= 10 ? n.toFixed(0) : n.toFixed(1);
+  function updateCalc(){
+    const st = C.stats.find(s => s.k === calcState.stat) || C.stats[0];
+    const pTier = C.tiers.slice(calcState.minTier).reduce((a, b) => a + b, 0) / 100;
+    const chance = st.w / 100 * pTier, one = 1 / chance, k = calcState.lines;
+    $('#cOut').innerHTML = `<div class="cbox"><span class="eyebrow">Chance per stone</span><b class="num">${fmtPct(chance * 100)}</b><small>${esc(st.name)}${calcState.minTier ? ', ' + C.tierNames[calcState.minTier] + ' or better' : ', any tier'}</small></div>
+      <div class="cbox"><span class="eyebrow">Stones for one slot</span><b class="num">about ${fmtN(one)}</b><small>on average</small></div>
+      ${k > 1 ? `<div class="cbox"><span class="eyebrow">Stones for ${k} slots</span><b class="num">about ${fmtN(one * k)}</b><small>each slot is rolled separately</small></div>` : ''}
+      <div class="cbox"><span class="eyebrow">Value at each tier</span><b class="num" style="font-size:1rem">${C.tierNames.map((n, i) => `${st.vals[i]}`).join(' / ')}${esc(st.unit)}</b><small>${C.tierNames.join(' / ')}${st.unit ? ' · 100 Boost = 1%' : ''}</small></div>`;
+  }
+  $('#cStat').onchange = e => { calcState.stat = e.target.value; updateCalc(); };
+  $('#cTier').onchange = e => { calcState.minTier = +e.target.value; updateCalc(); };
+  $('#cLines').onchange = e => { calcState.lines = +e.target.value; updateCalc(); };
+  updateCalc();
+}
 /* ---------------- SOURCES ---------------- */
 function renderSrc(){
   const a = (u, t) => `<a href="${esc(u)}" target="_blank" rel="noopener">${esc(t)}</a>`;
@@ -348,7 +503,7 @@ function renderSrc(){
   <p class="note">${esc(TXT.src || '')}</p></div>`;
 }
 /* ---------------- tabs & level ---------------- */
-const TABS = ['now','levels','skills','daev','build','stig','arcana','macro','src'];
+const TABS = ['now','levels','skills','daev','build','stig','arcana','macro','stones','src'];
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + id));
@@ -361,7 +516,7 @@ $('#lvUp').onclick = () => setLevel(state.level + 1);
 $('#lvRange').oninput = e => setLevel(+e.target.value);
 function renderAll(){
   $('#lvOut').value = state.level; $('#lvRange').value = state.level;
-  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderArcana(); renderMacro();
+  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderStig(); renderArcana(); renderMacro(); renderStones();
 }
 if (typeof siteMenu === 'function') siteMenu(META.cls, '../');
 loadLocal();

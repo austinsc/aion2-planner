@@ -1,0 +1,841 @@
+{
+ "compiled": "20 Oct 2026",
+ "effects": [
+  {
+   "k": "blind",
+   "label": "Blind",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_001",
+   "grades": {
+    "unique": {
+     "name": "Fregion's Schemes",
+     "val": "7s",
+     "tip": "Has a 3% chance to inflict [Blind] for 7s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Bollvig's Tragedy",
+     "val": "6s",
+     "tip": "Has a 3% chance to inflict [Blind] for 6s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Kaisinel's Vestige",
+     "val": "5s",
+     "tip": "Has a 3% chance to inflict [Blind] for 5s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 3,
+   "cd": 5
+  },
+  {
+   "k": "seal",
+   "label": "Seal",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_003",
+   "grades": {
+    "unique": {
+     "name": "Beritra's Conspiracy",
+     "val": "5s",
+     "tip": "Has a 3% chance to inflict [Seal] for 5s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Khrudgelmir's Silence",
+     "val": "4s",
+     "tip": "Has a 3% chance to inflict [Seal] for 4s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Perion's Tragedy",
+     "val": "3s",
+     "tip": "Has a 3% chance to inflict [Seal] for 3s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 3,
+   "cd": 5
+  },
+  {
+   "k": "root",
+   "label": "Root",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_004",
+   "grades": {
+    "unique": {
+     "name": "Nezekan's March",
+     "val": "5s",
+     "tip": "Has a 2% chance to inflict [Root] for 5s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Charna's Root",
+     "val": "4s",
+     "tip": "Has a 2% chance to inflict [Root] for 4s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Heladrir's Chains",
+     "val": "3s",
+     "tip": "Has a 2% chance to inflict [Root] for 3s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 2,
+   "cd": 5
+  },
+  {
+   "k": "stun",
+   "label": "Stun",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_005",
+   "grades": {
+    "unique": {
+     "name": "Meslamtaeda's Greed",
+     "val": "3s",
+     "tip": "Has a 3% chance to inflict [Stun] for 3s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Fasimedes's Dignity",
+     "val": "2s",
+     "tip": "Has a 3% chance to inflict [Stun] for 2s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Aulak's Roar",
+     "val": "1s",
+     "tip": "Has a 3% chance to inflict [Stun] for 1s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 3,
+   "cd": 5
+  },
+  {
+   "k": "paralyze",
+   "label": "Paralyze",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_006",
+   "grades": {
+    "unique": {
+     "name": "Ereshkigal's Honor",
+     "val": "4s",
+     "tip": "Has a 2% chance to inflict [Paralyze] for 4s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Vidar's Dignity",
+     "val": "3s",
+     "tip": "Has a 2% chance to inflict [Paralyze] for 3s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Nua's Scheme",
+     "val": "2s",
+     "tip": "Has a 2% chance to inflict [Paralyze] for 2s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 2,
+   "cd": 5
+  },
+  {
+   "k": "slow-move",
+   "label": "-50% Move Speed",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_007",
+   "grades": {
+    "unique": {
+     "name": "Kaisinel's Reverie",
+     "val": "7s",
+     "tip": "Has a 3% chance to inflict -50% Move Speed for 7s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Deltras's Loyalty",
+     "val": "6s",
+     "tip": "Has a 3% chance to inflict -50% Move Speed for 6s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Reda's Tenacity",
+     "val": "5s",
+     "tip": "Has a 3% chance to inflict -50% Move Speed for 5s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 3,
+   "cd": 5
+  },
+  {
+   "k": "slow-combat",
+   "label": "-50% Combat Speed",
+   "kind": "control",
+   "icon": "icon_item_usable_godstone_wp_r_008",
+   "grades": {
+    "unique": {
+     "name": "Lumiel's Interference",
+     "val": "7s",
+     "tip": "Has a 3% chance to inflict -50% Combat Speed for 7s on attack · Effect Activation Cooldown: 5s"
+    },
+    "epic": {
+     "name": "Io's Sadness",
+     "val": "6s",
+     "tip": "Has a 3% chance to inflict -50% Combat Speed for 6s on attack · Effect Activation Cooldown: 5s"
+    },
+    "rare": {
+     "name": "Notun's Craft",
+     "val": "5s",
+     "tip": "Has a 3% chance to inflict -50% Combat Speed for 5s on attack · Effect Activation Cooldown: 5s"
+    }
+   },
+   "chance": 3,
+   "cd": 5
+  },
+  {
+   "k": "poison",
+   "label": "Poison",
+   "kind": "dot",
+   "icon": "icon_item_usable_godstone_wp_r_009",
+   "grades": {
+    "unique": {
+     "name": "Zikel's Arrogance",
+     "val": "600 every 2s for 20s",
+     "tip": "Has a 5% chance to deal 600 Poison damage every 2s for 20s on attack · Effect Activation Cooldown: 1s"
+    },
+    "epic": {
+     "name": "Orissan's Blood",
+     "val": "450 every 2s for 20s",
+     "tip": "Has a 5% chance to deal 450 Poison damage every 2s for 20s on attack · Effect Activation Cooldown: 1s"
+    },
+    "rare": {
+     "name": "Santras's Secret",
+     "val": "300 every 2s for 20s",
+     "tip": "Has a 5% chance to deal 300 Poison damage every 2s for 20s on attack · Effect Activation Cooldown: 1s"
+    }
+   },
+   "chance": 5,
+   "cd": 1
+  },
+  {
+   "k": "bleed",
+   "label": "Bleed",
+   "kind": "dot",
+   "icon": "icon_item_usable_godstone_wp_r_010",
+   "grades": {
+    "unique": {
+     "name": "Fregion's Strategy",
+     "val": "800 every 2s for 10s",
+     "tip": "Has a 3% chance to deal 800 Bleed damage every 2s for 10s on attack · Effect Activation Cooldown: 1s"
+    },
+    "epic": {
+     "name": "Mahisha's Wrath",
+     "val": "600 every 2s for 10s",
+     "tip": "Has a 3% chance to deal 600 Bleed damage every 2s for 10s on attack · Effect Activation Cooldown: 1s"
+    },
+    "rare": {
+     "name": "Feruk's Instinct",
+     "val": "400 every 2s for 10s",
+     "tip": "Has a 3% chance to deal 400 Bleed damage every 2s for 10s on attack · Effect Activation Cooldown: 1s"
+    }
+   },
+   "chance": 3,
+   "cd": 1
+  },
+  {
+   "k": "fire",
+   "label": "Fire, one target",
+   "kind": "damage",
+   "icon": "icon_item_usable_godstone_wp_r_011",
+   "grades": {
+    "unique": {
+     "name": "Tiamat's Rage",
+     "val": "15,000",
+     "tip": "Has a 1% chance to deal 15,000 Fire damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 150.0
+    },
+    "epic": {
+     "name": "Traufnir's Courage",
+     "val": "10,000",
+     "tip": "Has a 1% chance to deal 10,000 Fire damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 100.0
+    },
+    "rare": {
+     "name": "Zikel's Vestige",
+     "val": "5,000",
+     "tip": "Has a 1% chance to deal 5,000 Fire damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    }
+   },
+   "chance": 1,
+   "cd": 1
+  },
+  {
+   "k": "water",
+   "label": "Water, one target",
+   "kind": "damage",
+   "icon": "icon_item_usable_godstone_wp_r_012",
+   "grades": {
+    "unique": {
+     "name": "Triniel's Rationality",
+     "val": "7,500",
+     "tip": "Has a 2% chance to deal 7,500 Water damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 150.0
+    },
+    "epic": {
+     "name": "Sif's Knowledge",
+     "val": "5,000",
+     "tip": "Has a 2% chance to deal 5,000 Water damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 100.0
+    },
+    "rare": {
+     "name": "Tassin's Command",
+     "val": "2,500",
+     "tip": "Has a 2% chance to deal 2,500 Water damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    }
+   },
+   "chance": 2,
+   "cd": 1
+  },
+  {
+   "k": "earth",
+   "label": "Earth, one target",
+   "kind": "damage",
+   "icon": "icon_item_usable_godstone_wp_r_013",
+   "grades": {
+    "unique": {
+     "name": "Vaizel's Oath",
+     "val": "3,000",
+     "tip": "Has a 5% chance to deal 3,000 Earth damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 150.0
+    },
+    "epic": {
+     "name": "Freyr's Wisdom",
+     "val": "2,000",
+     "tip": "Has a 5% chance to deal 2,000 Earth damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 100.0
+    },
+    "rare": {
+     "name": "Ulgorn's Will",
+     "val": "1,000",
+     "tip": "Has a 5% chance to deal 1,000 Earth damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    }
+   },
+   "chance": 5,
+   "cd": 1
+  },
+  {
+   "k": "wind",
+   "label": "Wind, one target",
+   "kind": "damage",
+   "icon": "icon_item_usable_godstone_wp_r_014",
+   "grades": {
+    "unique": {
+     "name": "Meslamtaeda's Regret",
+     "val": "1,500",
+     "tip": "Has a 10% chance to deal 1,500 Wind damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 150.0
+    },
+    "epic": {
+     "name": "Sigyn's Brilliance",
+     "val": "1,000",
+     "tip": "Has a 10% chance to deal 1,000 Wind damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 100.0
+    },
+    "rare": {
+     "name": "Aultross's Promise",
+     "val": "500",
+     "tip": "Has a 10% chance to deal 500 Wind damage to a single target on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    }
+   },
+   "chance": 10,
+   "cd": 1
+  },
+  {
+   "k": "fire-aoe",
+   "label": "Fire, up to 4 targets",
+   "kind": "aoe",
+   "icon": "icon_item_usable_godstone_wp_r_015",
+   "grades": {
+    "unique": {
+     "name": "Tiamat's Counterstrike",
+     "val": "3,750",
+     "tip": "Has a 2% chance to deal 3,750 AoE Fire damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 75.0
+    },
+    "epic": {
+     "name": "Boreas's Encouragement",
+     "val": "2,500",
+     "tip": "Has a 2% chance to deal 2,500 AoE Fire damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    },
+    "rare": {
+     "name": "Bargott's Ember",
+     "val": "1,250",
+     "tip": "Has a 2% chance to deal 1,250 AoE Fire damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 25.0
+    }
+   },
+   "chance": 2,
+   "cd": 1
+  },
+  {
+   "k": "water-aoe",
+   "label": "Water, up to 4 targets",
+   "kind": "aoe",
+   "icon": "icon_item_usable_godstone_wp_r_016",
+   "grades": {
+    "unique": {
+     "name": "Marchutan's Justice",
+     "val": "1,875",
+     "tip": "Has a 4% chance to deal 1,875 AoE Water damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 75.0
+    },
+    "epic": {
+     "name": "Charna's Acumen",
+     "val": "1,250",
+     "tip": "Has a 4% chance to deal 1,250 AoE Water damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    },
+    "rare": {
+     "name": "Aulvicar's Sorcery",
+     "val": "625",
+     "tip": "Has a 4% chance to deal 625 AoE Water damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 25.0
+    }
+   },
+   "chance": 4,
+   "cd": 1
+  },
+  {
+   "k": "earth-aoe",
+   "label": "Earth, up to 4 targets",
+   "kind": "aoe",
+   "icon": "icon_item_usable_godstone_wp_r_017",
+   "grades": {
+    "unique": {
+     "name": "Yustiel's Compassion",
+     "val": "750",
+     "tip": "Has a 10% chance to deal 750 AoE Earth damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 75.0
+    },
+    "epic": {
+     "name": "Thrasymedes's Wisdom",
+     "val": "500",
+     "tip": "Has a 10% chance to deal 500 AoE Earth damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    },
+    "rare": {
+     "name": "Gartua's Strength",
+     "val": "250",
+     "tip": "Has a 10% chance to deal 250 AoE Earth damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 25.0
+    }
+   },
+   "chance": 10,
+   "cd": 1
+  },
+  {
+   "k": "wind-aoe",
+   "label": "Wind, up to 4 targets",
+   "kind": "aoe",
+   "icon": "icon_item_usable_godstone_wp_r_018",
+   "grades": {
+    "unique": {
+     "name": "Beritra's Selfishness",
+     "val": "375",
+     "tip": "Has a 20% chance to deal 375 AoE Wind damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 75.0
+    },
+    "epic": {
+     "name": "Jumentis's Dexterity",
+     "val": "250",
+     "tip": "Has a 20% chance to deal 250 AoE Wind damage to up to 4 targets on attack · Effect Activation Cooldown: 1s",
+     "avg": 50.0
+    },
+    "rare": {
+     "name": "Rathman's Greed",
+     "val": "125",
+     "tip": "Has a 20% chance to deal 125 AoE Wind damage to up to 4 targets on attack · Effect Activation Cooldown: 5s",
+     "avg": 25.0,
+     "cd": 5
+    }
+   },
+   "chance": 20,
+   "cd": 1
+  }
+ ],
+ "rarity": {
+  "rare": "#19E048",
+  "epic": "#379AFF",
+  "unique": "#FFD02B"
+ },
+ "stoneIcons": {
+  "manastone": [
+   "icon_item_usable_enchant_magicstone_a_c_001",
+   "icon_item_usable_enchant_magicstone_a_c_002",
+   "icon_item_usable_enchant_magicstone_a_c_003"
+  ],
+  "abyssalManastone": [
+   "icon_item_usable_enchant_magicstone_abyss_a_r_001",
+   "icon_item_usable_enchant_magicstone_abyss_a_r_002",
+   "icon_item_usable_enchant_magicstone_abyss_a_r_003"
+  ],
+  "soulstone": [
+   "icon_item_usable_enchant_soulstone_a_c_001",
+   "icon_item_usable_enchant_soulstone_a_c_002",
+   "icon_item_usable_enchant_soulstone_a_c_003"
+  ],
+  "abyssalSoulstone": [
+   "icon_item_usable_enchant_soulstone_abyss_a_r_001",
+   "icon_item_usable_enchant_soulstone_abyss_a_r_002",
+   "icon_item_usable_enchant_soulstone_abyss_a_r_003"
+  ]
+ },
+ "mana": {
+  "slots": [
+   {
+    "grade": "Common",
+    "n": 1,
+    "kina": 500
+   },
+   {
+    "grade": "Rare",
+    "n": 2,
+    "kina": 1000
+   },
+   {
+    "grade": "Epic",
+    "n": 3,
+    "kina": 1500
+   },
+   {
+    "grade": "Unique",
+    "n": 4,
+    "kina": 2000
+   }
+  ],
+  "sizes": [
+   {
+    "name": "Lesser",
+    "tiers": "Common 70% · Rare 30%",
+    "attack": "+1 / +3",
+    "crit": "+5 / +7",
+    "defense": "+10 / +30",
+    "hp": "+30 / +60"
+   },
+   {
+    "name": "Intermediate",
+    "tiers": "Common 50% · Rare 35% · Epic 15%",
+    "attack": "+2 / +4 / +8",
+    "crit": "+6 / +9 / +13",
+    "defense": "+20 / +40 / +75",
+    "hp": "+45 / +80 / +130"
+   },
+   {
+    "name": "Superior",
+    "tiers": "Rare 50% · Epic 35% · Unique 15%",
+    "attack": "+3 / +5 / +10",
+    "crit": "+7 / +10 / +15",
+    "defense": "+30 / +50 / +100",
+    "hp": "+50 / +100 / +160"
+   }
+  ],
+  "pool": [
+   {
+    "stat": "Attack, Defense, Accuracy, Evasion, Critical Hit, Critical Hit Resist",
+    "regular": "10% each",
+    "superior": "10% each",
+    "abyssal": "6% each",
+    "sabyssal": "6% each"
+   },
+   {
+    "stat": "Block",
+    "regular": "10%",
+    "superior": "10%",
+    "abyssal": "10%",
+    "sabyssal": "10%"
+   },
+   {
+    "stat": "HP, MP",
+    "regular": "15% each",
+    "superior": "13.75% each",
+    "abyssal": "9.5% each",
+    "sabyssal": "9.5% each"
+   },
+   {
+    "stat": "Damage Boost, Weapon Damage Boost, Critical Damage Boost, Back Attack Damage Boost, Front Attack Damage Boost",
+    "regular": "not in pool",
+    "superior": "0.5% each",
+    "abyssal": "not in pool",
+    "sabyssal": "0.5% each"
+   },
+   {
+    "stat": "PvP Attack, Defense, Accuracy, Evasion, Critical Hit, Critical Hit Resist, Block",
+    "regular": "not in pool",
+    "superior": "not in pool",
+    "abyssal": "5% each",
+    "sabyssal": "4.5% each"
+   },
+   {
+    "stat": "PvP Damage Boost",
+    "regular": "not in pool",
+    "superior": "not in pool",
+    "abyssal": "not in pool",
+    "sabyssal": "1%"
+   }
+  ],
+  "calc": {
+   "tiers": [
+    50,
+    35,
+    15
+   ],
+   "tierNames": [
+    "Rare",
+    "Epic",
+    "Unique"
+   ],
+   "stats": [
+    {
+     "k": "attack",
+     "name": "Attack",
+     "w": 10,
+     "vals": [
+      3,
+      5,
+      10
+     ],
+     "unit": ""
+    },
+    {
+     "k": "crit",
+     "name": "Critical Hit",
+     "w": 10,
+     "vals": [
+      7,
+      10,
+      15
+     ],
+     "unit": ""
+    },
+    {
+     "k": "acc",
+     "name": "Accuracy",
+     "w": 10,
+     "vals": [
+      7,
+      10,
+      15
+     ],
+     "unit": ""
+    },
+    {
+     "k": "anydmg",
+     "name": "Any one of the five damage lines",
+     "w": 2.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    },
+    {
+     "k": "dmg",
+     "name": "Damage Boost",
+     "w": 0.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    },
+    {
+     "k": "wdmg",
+     "name": "Weapon Damage Boost",
+     "w": 0.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    },
+    {
+     "k": "cdmg",
+     "name": "Critical Damage Boost",
+     "w": 0.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    },
+    {
+     "k": "fdmg",
+     "name": "Front Attack Damage Boost",
+     "w": 0.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    },
+    {
+     "k": "bdmg",
+     "name": "Back Attack Damage Boost",
+     "w": 0.5,
+     "vals": [
+      10,
+      30,
+      100
+     ],
+     "unit": " Boost"
+    }
+   ]
+  },
+  "sources": [
+   [
+    "Lesser",
+    "Tradeable Lesser stones drop from named level 45+ monsters in Verteron and Altgard and from Abyss monsters. Bound Lesser stones come from six quests, the Hard stages of Deus Research Base and Shattered Arkanis, achievements and the Daeva Pass."
+   ],
+   [
+    "Intermediate and Superior",
+    "Tradeable ones come only from Alchemy. Five Lesser stones, 3 Spiritstone Powder and 2 Professional Ink at mastery 20 make an Intermediate, and each craft has a 20% great-success chance to make a Superior instead. 30 Intermediate, 10 Powder and 2 Exceptional Ink at mastery 85 make a Superior directly."
+   ],
+   [
+    "Chests",
+    "The Growth Manastone Chest gives a Lesser (50%), Intermediate (40%) or Superior (10%) stone. Bound Superior stones also come from achievements and the battle pass."
+   ],
+   [
+    "Abyssal",
+    "The Lesser Abyssal Manastone costs 1,000 Abyss Points in the Abyss Shop, 50 a week. Superior Abyssal stones have no direct recipe: a great success on the Intermediate Abyssal craft is the only way to craft one."
+   ]
+  ]
+ },
+ "theo": {
+  "combine": [
+   {
+    "from": "Rare",
+    "same": "88.9% Rare",
+    "up": "11.1% Epic"
+   },
+   {
+    "from": "Epic",
+    "same": "90.9% Epic",
+    "up": "9.1% Unique"
+   },
+   {
+    "from": "Unique",
+    "same": "100% Unique",
+    "up": "no upgrade, but it rerolls the effect"
+   }
+  ],
+  "sources": [
+   [
+    "Regional quests",
+    "Three per faction at level 45 give a Rare Theostone Chest (Bound) each, plus 100,000 Kinah."
+   ],
+   [
+    "Abyss Trade Shop",
+    "Rare Theostone Selection Chest (Bound) for 35,000 Abyss Points: you pick any of the 17 Rare stones."
+   ],
+   [
+    "Daeva Pass",
+    "Two Rare Theostone Chests (Bound)."
+   ],
+   [
+    "Arena shop",
+    "Rare Theostone Chest (Bound) for 1 Arena Token, 5 per character per week."
+   ],
+   [
+    "Season Shop",
+    "Rare Theostone Chest (Bound) for 17,500 Oath Coin, 10 per account per server, until 16 Dec 2026."
+   ],
+   [
+    "Black Cloud Merchants",
+    "Rotating Rare and Epic stones (Bound), levels 1 to 45."
+   ],
+   [
+    "Market",
+    "Tradeable Rare stones, searchable with the Theostone Properties filter."
+   ],
+   [
+    "Combining",
+    "The only verified way to get Epic and Unique stones."
+   ]
+  ]
+ },
+ "rules": [
+  [
+   "What a stone gives",
+   "100 Boost on a damage line is 1% of that stat on your character sheet. A yellow (Unique) Boost line is 100, blue is 30."
+  ],
+  [
+   "Value order",
+   "Front or Back Damage Boost, then Weapon Damage Boost and Critical Damage Boost about equal, then Damage Boost, then Attack. On endgame gear aim for at least one yellow Damage Boost line; two yellow Attack lines are worth about one."
+  ],
+  [
+   "Where they go",
+   "Manastones go into weapons, guards and armor. Soulstones go into necklaces, earrings, rings and bracelets. Both roll from the same pool. Amulets, belts and the rune have no slots."
+  ],
+  [
+   "Only Superior stones roll damage lines",
+   "Damage Boost, Weapon Damage Boost, Critical Damage Boost and the Front and Back Attack lines are 0.5% each per roll, 2.5% together. Plan around the 10% stats and treat a damage line as a bonus."
+  ],
+  [
+   "Rerolls replace",
+   "Checked slots reroll and unchecked slots are kept. There is no undo, so uncheck the slots you like before every reroll."
+  ],
+  [
+   "What stones cannot roll",
+   "No stone rolls Combat Speed, Double Chance, cooldown reduction or main stats. Those come from base stats, Soul Binding, Daevanion boards, Arcana and the pet."
+  ],
+  [
+   "Item level",
+   "Each stone line adds item level by its colour: gray +1, green +2, blue +3, yellow +4."
+  ]
+ ],
+ "levelling": [
+  "Do not fill levelling gear with stones to raise gear score. Stones are spent when you replace the piece.",
+  "If you want something on levelling gear, use Lesser or Intermediate stones and keep Superior stones for Unique pieces you will keep.",
+  "Upgrading a piece in the Enhancement menu keeps its Manastones, Theostone and Soul Binding. A new drop starts empty, and a Transfer does not carry stones.",
+  "Theostones need an Epic or Unique weapon, so you will have none while levelling. At level 45 the three regional quests each pay a Rare Theostone Chest.",
+  "Craft Intermediate stones in Alchemy in bulk: each craft has a 20% chance to produce a Superior stone from 5 Lesser stones."
+ ],
+ "caveats": [
+  "Sources disagree on stone priority. The class guides rank the damage lines first, since a yellow Boost line is the biggest single gain. A role-based analysis says to put Attack, then Critical Hit, on most slots because damage lines are rare. This tab follows the class guides for what to keep and the role analysis for what to fill the rest with.",
+  "Theostone slots: one source says only Epic and Unique weapons carry one. Another says Epic and Unique off-hand guards have one too, so top players run two different stones. Check your guard in the Enhancement menu.",
+  "The tier list ranks stones by how many of the top 100 players of each class run them. Those players are ranked on all content including PvP, which is why control stones such as Seal and Paralyze rank so high. For dungeons and levelling a damage stone is the better pick.",
+  "Weapon types per class come from Metabot. The glows guide only shows greatsword, longsword, staff, bow and orb, so the preview for a dagger, spellbook or mace may use another weapon.",
+  "Numbers come from the global client as read by the sources below and can change with patches."
+ ],
+ "sources": [
+  [
+   "https://metabot.gg/en/aion-2/guides/theostone-guide",
+   "Metabot Theostone guide",
+   "all 51 stones with proc chances, damage maths, combining and where to get them"
+  ],
+  [
+   "https://metabot.gg/en/aion-2/guides/manastone-guide",
+   "Metabot Manastone guide",
+   "slots by grade, stone sizes, the full stat pool and odds, crafting and where to get stones"
+  ],
+  [
+   "https://aion2maps.com/guides/manastones/",
+   "Aion 2 Maps: Manastones and Theostones",
+   "value order, stone odds and what to keep"
+  ],
+  [
+   "https://aion2maps.com/guides/stat-lines/",
+   "Aion 2 Maps: Stat lines",
+   "what gear lines roll alongside stones"
+  ],
+  [
+   "https://aion2tierlist.com/guides/aion-2-theostone-tier-list",
+   "AION 2 Tier List: Theostone tier list",
+   "which stones the top 100 players of each class run (20 Oct 2026)"
+  ],
+  [
+   "https://aion2maps.com/guides/classes/",
+   "Aion 2 Maps class guides",
+   "each class's manastone priority on its Gear tab"
+  ],
+  [
+   "https://metabot.gg/en/aion-2/godstones",
+   "Metabot Theostone list",
+   "exact tooltips and the stone icons"
+  ]
+ ]
+}

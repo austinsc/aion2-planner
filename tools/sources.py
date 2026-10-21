@@ -57,6 +57,8 @@ def metabot_skills():
             slug = re.search(r'href="/en/aion-2/skills/([^"]+)"', r)
             name = text(re.search(r'<span class="B32I9a_nameText">(.*?)</span>', r).group(1))
             tds = [text(x) for x in re.findall(r'<td[^>]*>(.*?)</td>', r, flags=re.S)]
+            if kind == 'passive' and tds[1:2] and tds[1] not in ('', '\u2014'):
+                kind = 'stigma'  # Metabot lists some stigmas under the passive heading; passives have no cooldown
             rows.append({'name': name, 'id': ic.group(1) if ic else None, 'slug': slug.group(1) if slug else None,
                          'kind': kind, 'unlock': tds[0] if tds else '', 'cd': tds[1] if len(tds) > 1 else '',
                          'range': tds[2] if len(tds) > 2 else '', 'mp': tds[3] if len(tds) > 3 else ''})
