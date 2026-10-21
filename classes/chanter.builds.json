@@ -1,0 +1,816 @@
+{
+ "intro": "Most Chanters on Global run one PvE build; the real choices are a separate PvP preset, a support bar for groups without a Cleric, a damage bar for premades, and how you farm. Each build below is drawn from at least three sites; where they disagree, it says so.",
+ "crosscheck": "Other sources mostly agree with the main build. Top Global players and public builds run its four Stigmas: Undefeated Mantra, Sprint Mantra, Power of the Storm and Marchutan's Wrath (99/95/65/47% of 150 tracked players on metabot.gg; 62% of 595 public four-Stigma builds counted by aion2vault.com; gamerblurb.com's levelling set). Every source raises Dark Crush first and wants it at 16 to remove its cooldown. The main build's next three, Onslaught, Recuperation and Spinning Strike, match Grobs' level 45 build (aion2vault.com) and the Korean ranker order on aion2-meta.com. Where they differ: (1) Gust Rampage. The main build raises it to 10, but aion2-guides.info calls it not worth the points in Season 1, notXeon drops it once Dark Crush is 16 (aion2vault.com), and 72% of top Global players leave it below 8 (aion2-meta.com). (2) Dark Crush's picks at 16. The main build keeps Critical Hit on hit with the cooldown removal, as Grobs does. aion2-guides.info and the Korean meta on aion2-meta.com keep Piercing Strike with the cooldown removal and add the crit at 20; WallyJTV does the same (aion2vault.com). (3) The fourth Stigma. aion2-guides.info's base bar has Focused Defense in place of Sprint Mantra (Sprint Mantra goes back in for dungeons) and Marchutan's Wrath at 1; gamerblurb.com takes Focused Defense with a Cleric; aion2-meta.com said on 17 Oct that Marchutan's Wrath is no longer a must. (4) Passives. aion2-guides.info puts Inspiring Spell second, right after Attack Preparation; WallyJTV takes survival passives first (aion2vault.com).",
+ "builds": [
+  {
+   "id": "pvp",
+   "name": "PvP Stun Chain",
+   "mode": "PvP",
+   "role": "Control fighter for duels, the arena and small fights",
+   "summary": "A second skill preset for PvP. You bait the enemy's Defiance with a stun, wait out its cooldown, then chain Impactful Crush, Wave Blow and Marchutan's Wrath into Dark Crush. Your PvE skill and Stigma levels stay as they are.",
+   "when": "Arena, duels, Spacetime Rifts and small Abyss fights. For big group fights, use the support build's bar.",
+   "popularity": "The main PvP setup on Global. On 21 Oct, 42 of 1,166 public Chanter builds on questlog were named or tagged PvP; of the 34 real PvP builds, 33 slot Undefeated Mantra and 27 Marchutan's Wrath (aion2vault.com). In Korea, 98.8% of top PvP Chanters run Marchutan's Wrath (aion2-meta.com). Creators: notXeon (Global, 6 Oct), and a Korean beginner's PvP guide (Aug).",
+   "vsMain": "The same core with these changes: Gust Rampage drops back to 1; Survival Willpower and Defiance go to 10; Wave Blow and Tremor Crush move up for the stun chain; Earth's Promise takes the 5 spare points. Specialties move to Stun, Seal and Knockdown picks. Fracturing Blow replaces Sprint Mantra until Guardian Blessing can reach 15.",
+   "skills": [
+    {
+     "skill": "Dark Crush",
+     "to": 10
+    },
+    {
+     "skill": "Impactful Crush",
+     "to": 10,
+     "note": "your opener and Defiance bait"
+    },
+    {
+     "skill": "Spinning Strike",
+     "to": 10
+    },
+    {
+     "skill": "Onslaught",
+     "to": 10
+    },
+    {
+     "skill": "Recuperation",
+     "to": 10,
+     "note": "heal and cleanse"
+    },
+    {
+     "skill": "Wave Blow",
+     "to": 10,
+     "note": "knockdown on a stunned target"
+    },
+    {
+     "skill": "Tremor Crush",
+     "to": 10
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Survival Willpower",
+     "to": 10,
+     "note": "+35% Status Effect Resist at 10"
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10,
+     "note": "it also raises Impact-type Chance"
+    },
+    {
+     "skill": "Incandescent Blow",
+     "to": 10
+    },
+    {
+     "skill": "Rushing Smash",
+     "to": 10
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "to": 10,
+     "note": "for its Stun or Seal pick"
+    },
+    {
+     "skill": "Blessing of Life",
+     "to": 10
+    },
+    {
+     "skill": "Protection Circle",
+     "to": 10
+    },
+    {
+     "skill": "Wind's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Inspiring Spell",
+     "to": 10
+    },
+    {
+     "skill": "Earth's Promise",
+     "to": 5,
+     "note": "the 5 spare points; 383 in all. Gust Rampage, Crossguard and Raging Spell stay at 1"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Impactful Crush",
+     "picks": "+1s [Impactful Crush] Stun duration; at 16 +20% [Impactful Crush] Stun Chance. Not the AoE or mobile picks"
+    },
+    {
+     "skill": "Wave Blow",
+     "picks": "+1s Knockdown duration; at 16 -5s cooldown"
+    },
+    {
+     "skill": "Tremor Crush",
+     "picks": "+10m [Tremor Crush] range; at 16, +25% [Tremor Crush] Stun Chance in place of the Stamina pick"
+    },
+    {
+     "skill": "Spinning Strike",
+     "picks": "40% chance to inflict Seal for 3s, with Up to +20% damage when less targets hit; at 16 Ignores Block and Evasion and lands as a Critical Hit"
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "picks": "40% chance to inflict Stun for 3s, or +20% Seal Chance (the most common pick in public PvP builds)"
+    },
+    {
+     "skill": "Rushing Smash",
+     "picks": "-20% target's Impact-type Resist for 5s, so your stuns land more often; at 16 Ignores Block and Evasion and lands as Multi-Hit"
+    },
+    {
+     "skill": "Dark Crush",
+     "picks": "Critical Hit on hit; at 16 Removes [Dark Crush] cooldown"
+    },
+    {
+     "skill": "Recuperation",
+     "picks": "+1 consecutive use and Heal over Time can stack up to 2 times, and Removes up to 2 debuffs in place of +5% HP restored"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 10% HP on using [Defiance]; at 12 add the [Crushing Strike] Chain Skill"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Undefeated Mantra",
+     "lvl": 10,
+     "why": "+7.5% PvP Damage Boost and Tolerance for you and your group at 10; first to 20 later"
+    },
+    {
+     "name": "Marchutan's Wrath",
+     "lvl": 5,
+     "why": "Opens Dark Crush from 20 m. With Stigma Shards: a 50% stun at 10, and -70% Incoming Heal and Potion Recovery at 15"
+    },
+    {
+     "name": "Power of the Storm",
+     "lvl": 5,
+     "why": "Combat Speed and shorter cooldowns for the burst; every 90 s at 5"
+    },
+    {
+     "name": "Fracturing Blow",
+     "lvl": 5,
+     "why": "A rush that takes 30% off their Defense for 5 s, strong even at low levels. Swap it for Guardian Blessing once you can take that to 15"
+    }
+   ],
+   "passives": [
+    "Survival Willpower",
+    "Impact Hit",
+    "Blessing of Life",
+    "Protection Circle",
+    "Wind's Promise",
+    "Attack Preparation",
+    "Inspiring Spell"
+   ],
+   "daevanion": "Azphel: the core nodes first, then the Status Effect nodes. Sources split on PvP Damage Boost or Tolerance first, and on Status Effect Chance or Resist next; public Chanter boards take the four Damage Boost corners first. If PvP is your main content, aion2-guides.info's PvP route spends the PvE boards on Impactful Crush, Wave Blow and Defiance nodes instead.",
+   "gear": "Fierce Battle Amulet (PvP Damage Boost) in place of the Revelation Amulet. Brawler Wings (Status Effect Resist and Chance) or Talisra Wings. Status Effect Resist on armour. Survival Willpower and Blessing of Life lines on armour and jewellery in place of Wind's Promise (Korean advice). Saint of Ereshkigal as your Attack title. Stats: HP, PvP Damage Tolerance, PvP Accuracy and Status Effect Resist before damage. Keep one Genus preset for PvP.",
+   "play": [
+    "Make them use Defiance first: open with Impactful Crush from 20 m and watch their buff bar for its icon.",
+    "Kite while their Defiance is on cooldown (45 to 60 s by different counts; Sprint Mantra helps on the ground). Then Impactful Crush or Marchutan's Wrath, Wave Blow on the stunned target, then Dark Crush and Spinning Strike.",
+    "Keep the macro for the damage line only. Press stuns, Wave Blow, Tremor Crush and defensives yourself.",
+    "Tremor Crush after a dodge catches runners. Use it the moment an immunity like Tenaciousness or Salvation ends.",
+    "Your Defiance doesn't break Root, Slow, Seal, Blind or Taunt. Their Defiance breaks your stun and knockdown, but not Spinning Strike's Seal.",
+    "Against Clerics and potion users, Marchutan's Wrath at 15 cuts their healing by 70%.",
+    "notXeon says stuns in a row don't get shorter. That is his observation, not something the game text says."
+   ],
+   "pros": [
+    "Stuns, a Seal and a guaranteed knockdown to lock one target",
+    "Recuperation heals and cleanses you mid-fight",
+    "A preset of its own, so your PvE build is left alone"
+   ],
+   "cons": [
+    "Rarely bursts anyone down alone; sturdier classes win long fights",
+    "Rated B in PvP on aion2-meta.com and aion2atlas.app. Reddit names Spiritmasters and Templars as the hardest matchups (aion2data.com); a Korean guide names Gladiators",
+    "Guardian Blessing and Marchutan's Wrath only reach their PvP levels with Stigma Shards",
+    "Sprint Mantra does nothing in the Abyss, where you fight in the air"
+   ],
+   "sources": [
+    {
+     "title": "Aion 2 Maps: Chanter, PvP tab",
+     "url": "https://aion2maps.com/guides/chanter/",
+     "note": "PvP preset changes (Gust Rampage to 1, Survival Willpower 10, Defiance), PvP specialties, Marchutan's Wrath 15, gear, Genus preset, Azphel, counters"
+    },
+    {
+     "title": "AION 2 Global Guides: Chanter (PvP mode)",
+     "url": "https://aion2-guides.info/chanter/",
+     "note": "notXeon's solo and group Stigma sets, PvP specialties, the bait-Defiance plan, Defiance picks, the PvP Daevanion route"
+    },
+    {
+     "title": "AION2 Vault: Chanter PvP build",
+     "url": "https://aion2vault.com/builds/chanter/pvp/",
+     "note": "shares across 34 public PvP builds (Stigmas and specialties), Azphel boards, macro advice"
+    },
+    {
+     "title": "MetaBot: Chanter build planner",
+     "url": "https://metabot.gg/en/aion-2/classes/chanter/build",
+     "note": "editorial PvP build (control chain maxed), PvP strengths and weaknesses"
+    },
+    {
+     "title": "GamerBlurb: Chanter build guide",
+     "url": "https://gamerblurb.com/guides/aion-2-chanter-build-guide-pve-pvp-leveling-global",
+     "note": "arena Stigma set with Fracturing Blow, PvP specialties, PvP stat order"
+    },
+    {
+     "title": "Aion2 Meta: Chanter",
+     "url": "https://aion2-meta.com/guides/chanter/",
+     "note": "Korean top-player PvP Stigma rates, PvP wings, Survival Willpower on PvP gear"
+    },
+    {
+     "title": "Aion2Data: Chanter guide",
+     "url": "https://aion2data.com/guides/chanter",
+     "note": "PvP loadout from Reddit and Inven, Fierce Battle Amulet, hardest matchups"
+    },
+    {
+     "title": "Vortex Gaming: Korean Chanter PvP beginner guide (Korean)",
+     "url": "https://vortexgaming.io/postdetail/1247378",
+     "note": "Korean server: Survival Willpower, then Blessing of Life; Focused Defense as a core Stigma; matchups"
+    }
+   ],
+   "disagree": "The fourth Stigma is the main split. Guardian Blessing is in aion2maps.com's preset and in the most common public bar (aion2vault.com). notXeon takes it only at 15 and uses Fracturing Blow before that, which this build follows. Focused Defense: gamerblurb.com, dimach's public PvP build and the Korean guide. Obliterate: metabot.gg. Spinning Strike: most public PvP builds take the Seal; notXeon keeps the PvE picks. Wave Blow: aion2maps.com says its knockdown is the same at every level, so it raises Defiance in its place; aion2-guides.info takes it to 16. This build raises both."
+  },
+  {
+   "id": "support",
+   "name": "Support Healer",
+   "mode": "PvE and PvP",
+   "role": "Main support in groups with no Cleric, and group PvP",
+   "summary": "Swaps two damage Stigmas for Impeding Authority and Healing Touch, and takes the healing picks. You are still a buffer who also heals, not a second Cleric.",
+   "when": "Dungeons with no Cleric, groups still learning a fight, and Abyss or Rift group fights (notXeon's group bar).",
+   "popularity": "Rare on Global: Healing Touch is on 13% of top players' bars and Impeding Authority on 9% (metabot.gg), and each is on about 4% of public builds (aion2vault.com). It is more common in Korea, where Healing Touch is high on top players' lists (aion2-meta.com) and in Inven and DCInside guides. Creators: notXeon (Global).",
+   "vsMain": "Stigmas: Impeding Authority and Healing Touch replace Sprint Mantra and Marchutan's Wrath. Spinning Strike takes the Heal Boost pick. Points move from Gust Rampage to Defiance, and Blessing of Life and Protection Circle come earlier.",
+   "skills": [
+    {
+     "skill": "Recuperation",
+     "to": 10
+    },
+    {
+     "skill": "Dark Crush",
+     "to": 10
+    },
+    {
+     "skill": "Onslaught",
+     "to": 10
+    },
+    {
+     "skill": "Spinning Strike",
+     "to": 10
+    },
+    {
+     "skill": "Blessing of Life",
+     "to": 10,
+     "note": "heals grow with your Attack"
+    },
+    {
+     "skill": "Protection Circle",
+     "to": 10
+    },
+    {
+     "skill": "Impactful Crush",
+     "to": 10
+    },
+    {
+     "skill": "Incandescent Blow",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Wind's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Inspiring Spell",
+     "to": 10
+    },
+    {
+     "skill": "Earth's Promise",
+     "to": 10,
+     "note": "with no Cleric, nothing overrides its debuff"
+    },
+    {
+     "skill": "Rushing Smash",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Wave Blow",
+     "to": 10,
+     "note": "its boss debuff at 12 is party mitigation"
+    },
+    {
+     "skill": "Defiance",
+     "to": 10
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "to": 10
+    },
+    {
+     "skill": "Tremor Crush",
+     "to": 10,
+     "note": "378 in all; 5 spare. Gust Rampage, Crossguard, Raging Spell and Survival Willpower stay at 1. The order is ours: no source gives a full one"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Spinning Strike",
+     "picks": "+10% Heal Boost (up to 20%) in place of -5s cooldown"
+    },
+    {
+     "skill": "Recuperation",
+     "picks": "+1 consecutive use and Heal over Time can stack up to 2 times, and Removes up to 2 debuffs on debuff-heavy fights (else +5% HP restored); at 16 -3s cooldown"
+    },
+    {
+     "skill": "Dark Crush",
+     "picks": "As the main build"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Undefeated Mantra",
+     "lvl": 10,
+     "why": "Always on; first to 20, unless a Cleric's Light of Protection already covers it"
+    },
+    {
+     "name": "Power of the Storm",
+     "lvl": 5,
+     "why": "Kept in every notXeon bar; just before a stagger or big burst"
+    },
+    {
+     "name": "Impeding Authority",
+     "lvl": 5,
+     "why": "Party shield within 40 m, +15% Defense at 5; for known raid-wide hits"
+    },
+    {
+     "name": "Healing Touch",
+     "lvl": 5,
+     "why": "Party heal every 30 s, more on targets under 50% HP; at 15 it removes five debuffs"
+    }
+   ],
+   "passives": [
+    "Blessing of Life",
+    "Protection Circle",
+    "Attack Preparation",
+    "Wind's Promise",
+    "Inspiring Spell",
+    "Earth's Promise",
+    "Impact Hit"
+   ],
+   "daevanion": "The main route, but buy Recuperation's nodes as each board opens instead of after 45. For your own survival, take the Zikel Damage Tolerance corners earlier. Our reading of gamerblurb.com's defensive order.",
+   "gear": "Keep Attack: Blessing of Life turns it into Heal Boost. Then HP, Damage Tolerance and Cooldown Reduction (gamerblurb.com's defensive order). Arcana: Recuperation's Compass line; Mirror of Vigor (Illusion, cooldowns) is the full-support choice over Mirror of Magic.",
+   "play": [
+    "Mantras on before the pull. Power of the Storm on the pull and again just before a stagger.",
+    "Recuperation twice in a row when the party takes damage or carries a debuff; both charges are back after 30 s.",
+    "Impeding Authority goes up just before a known raid-wide hit. Healing Touch is for emergencies, not on cooldown.",
+    "Attack between heals. Your heals scale with Attack, and your mantras matter more than an extra cast.",
+    "In group PvP, stay within 40 m of your team; chasing a kill takes your buffs and heals out of range.",
+    "On the ground (Rift fights), notXeon swaps Impeding Authority for Sprint Mantra."
+   ],
+   "pros": [
+    "Lets a group with no Cleric clear normal content",
+    "Two party cleanses: Recuperation, and Healing Touch at 15",
+    "One bar covers both dungeons and group PvP"
+   ],
+   "cons": [
+    "Thin healing next to a Cleric; no resurrection",
+    "Fewer Dark Crush windows without Marchutan's Wrath",
+    "Healing Touch only removes debuffs from Stigma level 15"
+   ],
+   "sources": [
+    {
+     "title": "AION2 Vault: Chanter PvE build",
+     "url": "https://aion2vault.com/builds/chanter/pve/",
+     "note": "notXeon's healer bar, Grobs' and aLuckyRO's views, public pick rates"
+    },
+    {
+     "title": "AION 2 Global Guides: Chanter",
+     "url": "https://aion2-guides.info/chanter/",
+     "note": "group-support bar, Healing Touch and Impeding Authority levels, Recuperation picks for the only healer, Mirror of Vigor"
+    },
+    {
+     "title": "GamerBlurb: Chanter build guide",
+     "url": "https://gamerblurb.com/guides/aion-2-chanter-build-guide-pve-pvp-leveling-global",
+     "note": "defensive PvE and group PvP Stigma sets, defensive stat order"
+    },
+    {
+     "title": "Aion 2 Maps: Chanter, Support and Swaps",
+     "url": "https://aion2maps.com/guides/chanter/",
+     "note": "no-Cleric swap, Spinning Strike's Heal Boost pick, Blessing of Life scaling, Recuperation's cleanse"
+    },
+    {
+     "title": "Aion2Data: Chanter guide",
+     "url": "https://aion2data.com/guides/chanter",
+     "note": "the support swap from Reddit, evidence rated thin; Earth's Promise is worth more without a Cleric"
+    },
+    {
+     "title": "MetaBot: Chanter build planner",
+     "url": "https://metabot.gg/en/aion-2/classes/chanter/build",
+     "note": "Global top-player rates for Healing Touch and Impeding Authority"
+    },
+    {
+     "title": "Inven: Chanter healer and damage Stigmas (Korean)",
+     "url": "https://www.inven.co.kr/board/aion2/6451/53",
+     "note": "Korean launch-era bar with Healing Touch and Power of the Storm when there is no Cleric"
+    },
+    {
+     "title": "DCInside: Chanter PvE guide (Korean)",
+     "url": "https://m.dcinside.com/board/aion2/2662361",
+     "note": "Korean Stigma priority Undefeated Mantra > Power of the Storm > Healing Touch, Healing Touch at 10"
+    }
+   ],
+   "disagree": "Whether to carry heal Stigmas at all. Grobs keeps the standard four even as the only support and calls Healing Touch too weak for a slot (aion2vault.com, aion2-guides.info). notXeon and aLuckyRO swap them in when there is no Cleric. For group PvP, gamerblurb.com runs Sprint Mantra and Barrier Spell; notXeon calls Barrier Spell awful. This build follows notXeon. Korean bars carry more Stigma slots and heal Stigmas than Global allows."
+  },
+  {
+   "id": "premade",
+   "name": "Premade Damage",
+   "mode": "PvE",
+   "role": "Damage support for a premade group that has a Cleric",
+   "summary": "Fracturing Blow replaces Sprint Mantra: its -30% Defense raises the whole party's damage. Gust Rampage's points go to Defiance. Past 45, Guardian Blessing at 15 is the long-term swap for more critical damage.",
+   "when": "Premade dungeon and expedition groups that dodge well and have a Cleric. Also the endgame target once Stigma Shards come in.",
+   "popularity": "The most-liked public Chanter build on questlog, mourasb's 'Chanters2' (45 likes), runs this bar; 8% of public builds swap Sprint Mantra for Fracturing Blow (aion2vault.com). Guardian Blessing is in dimach's 'PvE' build (second most liked) and 9% of builds. It also appears on many top Global characters' Stigma lists (aion2-meta.com).",
+   "vsMain": "Fracturing Blow replaces Sprint Mantra. Defiance replaces Gust Rampage at 10. Passive order follows aion2-guides.info: Attack Preparation, Inspiring Spell, Wind's Promise, Impact Hit.",
+   "skills": [
+    {
+     "skill": "Dark Crush",
+     "to": 10
+    },
+    {
+     "skill": "Onslaught",
+     "to": 10
+    },
+    {
+     "skill": "Spinning Strike",
+     "to": 10
+    },
+    {
+     "skill": "Incandescent Blow",
+     "to": 10
+    },
+    {
+     "skill": "Recuperation",
+     "to": 10
+    },
+    {
+     "skill": "Impactful Crush",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Inspiring Spell",
+     "to": 10
+    },
+    {
+     "skill": "Wind's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Rushing Smash",
+     "to": 10
+    },
+    {
+     "skill": "Protection Circle",
+     "to": 10
+    },
+    {
+     "skill": "Earth's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Defiance",
+     "to": 10,
+     "note": "in Gust Rampage's place"
+    },
+    {
+     "skill": "Blessing of Life",
+     "to": 10
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "to": 10
+    },
+    {
+     "skill": "Wave Blow",
+     "to": 10
+    },
+    {
+     "skill": "Tremor Crush",
+     "to": 10,
+     "note": "378 in all; 5 spare. Gust Rampage, Crossguard, Raging Spell and Survival Willpower stay at 1. The first ten follow aion2-guides.info's priorities; the rest is the main build's order"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Dark Crush",
+     "picks": "Critical Hit on hit; at 16 Removes [Dark Crush] cooldown (Grobs). aion2-guides.info keeps Adds [Piercing Strike] Chain Skill and adds the crit at 20"
+    },
+    {
+     "skill": "Spinning Strike",
+     "picks": "-5s cooldown and Up to +20% damage when less targets hit; at 16 Grobs swaps -5s for Ignores Block and Evasion and lands as a Critical Hit"
+    },
+    {
+     "skill": "Onslaught",
+     "picks": "+50% Multi-Hit on hit and -1s [Spinning Strike] cooldown on hit; at 16 Adds [Storm Chain] Chain Skill"
+    },
+    {
+     "skill": "Incandescent Blow",
+     "picks": "Deals up to 12% more damage when less targets are hit; at 16 Ignores Block and Evasion and lands as Multi-Hit"
+    },
+    {
+     "skill": "Defiance",
+     "picks": "Restores 10% HP on using [Defiance]; from 12, +2s Tenacity duration, and at 16 +50% PvE Damage Tolerance during Tenacity"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Undefeated Mantra",
+     "lvl": 10,
+     "why": "Always on; first to 20 for its party Critical Damage and Double Chance"
+    },
+    {
+     "name": "Power of the Storm",
+     "lvl": 5,
+     "why": "Grobs takes it to 5 first, for 30 s off its cooldown"
+    },
+    {
+     "name": "Marchutan's Wrath",
+     "lvl": 5,
+     "why": "A third Dark Crush window"
+    },
+    {
+     "name": "Fracturing Blow",
+     "lvl": 5,
+     "why": "-30% Defense on the target for 5 s; Defense is a flat cut, so it is worth most while gear is low"
+    }
+   ],
+   "passives": [
+    "Attack Preparation",
+    "Inspiring Spell",
+    "Wind's Promise",
+    "Impact Hit",
+    "Protection Circle",
+    "Earth's Promise"
+   ],
+   "daevanion": "As the main build. aion2-guides.info puts Incandescent Blow's nodes with Dark Crush, Onslaught and Spinning Strike, ahead of Recuperation's.",
+   "gear": "As the main build. For Guardian Blessing later, raise Wind's Promise past 10 with gear lines and Arcana; dimach takes it to 20.",
+   "play": [
+    "Agree with your Cleric on buffs: Undefeated Mantra and Light of Protection don't stack, and Power of the Storm can't land on someone who has Earth's Blessing.",
+    "Fracturing Blow at the start of each burst window, so the Defense cut covers the party's big hits.",
+    "Without Sprint Mantra the party moves slower, so call out dodges.",
+    "Past 45: Undefeated Mantra to 20 first. Then Guardian Blessing to 15 in Marchutan's Wrath's slot (dimach) for x1.5 Wind's Promise; Dark Crush and Spinning Strike's always-crit picks make that pay."
+   ],
+   "pros": [
+    "More party damage than Sprint Mantra's move speed",
+    "Defiance gives you a stun break with damage tolerance in mechanics"
+   ],
+   "cons": [
+    "Loses Sprint Mantra's move speed and heal on hit",
+    "Guardian Blessing only pays off at Stigma level 15, which needs Stigma Shards"
+   ],
+   "sources": [
+    {
+     "title": "AION2 Vault: Best Chanter build",
+     "url": "https://aion2vault.com/builds/chanter/best/",
+     "note": "the most-liked public builds (mourasb's Fracturing Blow bar, dimach's Guardian Blessing bar), shares, and Marchutan's Wrath compared with Guardian Blessing"
+    },
+    {
+     "title": "AION 2 Global Guides: Chanter",
+     "url": "https://aion2-guides.info/chanter/",
+     "note": "Grobs' Fracturing Blow advice for premades, passive priority, Defiance at 16, Gust Rampage not worth points"
+    },
+    {
+     "title": "MetaBot: Chanter build planner",
+     "url": "https://metabot.gg/en/aion-2/classes/chanter/build",
+     "note": "Global top-player rates for Fracturing Blow (11%) and Guardian Blessing (7%)"
+    },
+    {
+     "title": "Aion2 Meta: Chanter",
+     "url": "https://aion2-meta.com/guides/chanter/",
+     "note": "Marchutan's Wrath no longer a must (17 Oct); Guardian Blessing on top Global characters' lists"
+    },
+    {
+     "title": "Aion2 Atlas: Chanter build",
+     "url": "https://aion2atlas.app/builds/chanter/",
+     "note": "Fracturing Blow in the PvE core loop"
+    },
+    {
+     "title": "Aion 2 Maps: Chanter",
+     "url": "https://aion2maps.com/guides/chanter/",
+     "note": "Guardian Blessing past 45 and what each of its levels adds"
+    }
+   ],
+   "disagree": "Which Stigma Guardian Blessing replaces: Marchutan's Wrath in dimach's build, Sprint Mantra on aion2maps.com. aion2-guides.info says there is no room for it in Season 1. Fracturing Blow: aion2vault.com counts it in 8% of builds, while aion2-meta.com shows a different mix for top Global characters. Whether Marchutan's Wrath is still worth a slot is open: aion2-meta.com says it is optional now; most public builds keep it."
+  },
+  {
+   "id": "farm",
+   "name": "Solo Levelling and Farming",
+   "mode": "PvE",
+   "role": "Solo questing, open-world packs and elites",
+   "summary": "The main engine with solo picks: HP absorbs while your gear is weak, Impactful Crush's area stun for gathered packs, and Rushing Smash's reset on kill to dash from pack to pack.",
+   "when": "Levelling to 45 and farming alone at 45 before your Wisdom Stones are done.",
+   "popularity": "Most levelling builds use the standard four Stigmas: 95 of 98 public builds with 'level' in the name (aion2vault.com). The swaps here are each creator's levelling advice: Grobs, WallyJTV and aLuckyRO (aion2vault.com), aion2-guides.info, metabot.gg and gamerblurb.com.",
+   "vsMain": "The first 203 points (levels alone) follow metabot.gg's levelling build. Gust Rampage stays at 10 for staggered elites, and Defiance stays at 1. Specialties take the AoE and absorb picks.",
+   "skills": [
+    {
+     "skill": "Onslaught",
+     "to": 10
+    },
+    {
+     "skill": "Incandescent Blow",
+     "to": 10
+    },
+    {
+     "skill": "Rushing Smash",
+     "to": 10,
+     "note": "two board nodes take it to 12 for the reset"
+    },
+    {
+     "skill": "Impactful Crush",
+     "to": 10
+    },
+    {
+     "skill": "Dark Crush",
+     "to": 10
+    },
+    {
+     "skill": "Spinning Strike",
+     "to": 10
+    },
+    {
+     "skill": "Recuperation",
+     "to": 10
+    },
+    {
+     "skill": "Blessing of Life",
+     "to": 10
+    },
+    {
+     "skill": "Attack Preparation",
+     "to": 10
+    },
+    {
+     "skill": "Tremor Crush",
+     "to": 7
+    },
+    {
+     "skill": "Inspiring Spell",
+     "to": 5,
+     "note": "203 points: what levels alone give at 45"
+    },
+    {
+     "skill": "Wind's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Impact Hit",
+     "to": 10
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "to": 10,
+     "note": "triggered by Rushing Smash in packs"
+    },
+    {
+     "skill": "Tremor Crush",
+     "to": 10
+    },
+    {
+     "skill": "Inspiring Spell",
+     "to": 10
+    },
+    {
+     "skill": "Protection Circle",
+     "to": 10
+    },
+    {
+     "skill": "Earth's Promise",
+     "to": 10
+    },
+    {
+     "skill": "Gust Rampage",
+     "to": 10,
+     "note": "spam on staggered elites while levelling"
+    },
+    {
+     "skill": "Wave Blow",
+     "to": 10,
+     "note": "378 in all; 5 spare. From Wind's Promise on, the order is ours"
+    }
+   ],
+   "specialties": [
+    {
+     "skill": "Impactful Crush",
+     "picks": "Changes to AoE damage, to stun the whole pack"
+    },
+    {
+     "skill": "Onslaught",
+     "picks": "Absorbs 0.7% HP and +50% Multi-Hit on hit (Grobs), or +20% MP restored while new characters run dry (aLuckyRO)"
+    },
+    {
+     "skill": "Dark Crush",
+     "picks": "Critical Hit on hit; solo, Absorbs 0.7% HP if HP runs short"
+    },
+    {
+     "skill": "Rushing Smash",
+     "picks": "50% chance to trigger [Heat Wave Blow] on hit; at 12 Resets cooldown on defeating an enemy. Never the Charge pick"
+    },
+    {
+     "skill": "Heat Wave Blow",
+     "picks": "Up to +20% damage when more targets hit"
+    }
+   ],
+   "stigmas": [
+    {
+     "name": "Undefeated Mantra",
+     "lvl": 10,
+     "why": "Damage and tolerance; first to 10"
+    },
+    {
+     "name": "Sprint Mantra",
+     "lvl": 5,
+     "why": "Move speed between packs and a heal on hit"
+    },
+    {
+     "name": "Marchutan's Wrath",
+     "lvl": 5,
+     "why": "Opens Dark Crush on up to four mobs; can sit in slot 3 until 37 when solo"
+    },
+    {
+     "name": "Power of the Storm",
+     "lvl": 5,
+     "why": "Faster cycling on elites; aion2-guides.info runs Obliterate here for packs, an AoE knockdown"
+    }
+   ],
+   "passives": [
+    "Blessing of Life",
+    "Attack Preparation",
+    "Inspiring Spell",
+    "Wind's Promise",
+    "Impact Hit"
+   ],
+   "daevanion": "The main route. Buy Rushing Smash's Nezekan and Zikel nodes early if you farm a lot: at skill 12 it resets on each kill, from level 25 at the earliest.",
+   "gear": "Enough Accuracy that your hits land, then Attack, Combat Speed and Damage Boost (gamerblurb.com's levelling order). Add Healing Touch only if survival is what slows you down.",
+   "play": [
+    "Packs: Rushing Smash in, Impactful Crush's area stun, then the Dark Crush line with Onslaught held.",
+    "Elites: Impactful Crush, Dark Crush, Wave Blow on the stunned target, Spinning Strike, Dark Crush again.",
+    "Keep weaving Onslaught: every hit restores MP.",
+    "Before Dark Crush reaches 16, press one opener by hand when Dark Crush is ready, so the macro doesn't waste a window.",
+    "Low HP: Recuperation; Sprint Mantra also heals on hits."
+   ],
+   "pros": [
+    "Sturdy and quick solo, with self-heals",
+    "Rushing Smash's reset chains packs without downtime"
+   ],
+   "cons": [
+    "Absorb and AoE picks lose damage on bosses; switch to the main build's picks for dungeons",
+    "Clears slower than Gladiator or Spiritmaster (aion2atlas.app)"
+   ],
+   "sources": [
+    {
+     "title": "MetaBot: Chanter build planner, Levelling 1-45",
+     "url": "https://metabot.gg/en/aion-2/classes/chanter/build",
+     "note": "the 203-point levelling skill levels and Stigma set"
+    },
+    {
+     "title": "AION 2 Global Guides: Chanter, levelling",
+     "url": "https://aion2-guides.info/chanter/",
+     "note": "pack and elite rotations, Obliterate for packs, Rushing Smash reset, early macro"
+    },
+    {
+     "title": "AION2 Vault: Chanter PvE build",
+     "url": "https://aion2vault.com/builds/chanter/pve/",
+     "note": "Grobs', WallyJTV's and aLuckyRO's levelling picks (absorbs, MP, Impactful Crush AoE, Rushing Smash reset)"
+    },
+    {
+     "title": "GamerBlurb: Chanter levelling build",
+     "url": "https://gamerblurb.com/guides/aion-2-chanter-build-guide-pve-pvp-leveling-global",
+     "note": "levelling skill and Stigma priority, levelling stats"
+    },
+    {
+     "title": "Aion 2 Maps: Chanter, Levelling",
+     "url": "https://aion2maps.com/guides/chanter/",
+     "note": "Impactful Crush AoE for packs, Dark Crush absorb solo, Marchutan's Wrath in slot 3 while solo"
+    },
+    {
+     "title": "Aion2 Atlas: Chanter build",
+     "url": "https://aion2atlas.app/builds/chanter/",
+     "note": "solo rating: sturdy with self-heals, but clears slower than Gladiator or Spiritmaster"
+    }
+   ],
+   "disagree": "The fourth Stigma while farming: Power of the Storm (gamerblurb.com, metabot.gg, Grobs) or Obliterate for packs (aion2-guides.info); aLuckyRO starts with Ensnaring Mark. Onslaught's first pick: HP absorb (Grobs) or MP (aLuckyRO). This build follows the majority and keeps Power of the Storm."
+  }
+ ]
+}
