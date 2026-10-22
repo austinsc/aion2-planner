@@ -1,0 +1,78 @@
+{
+  "summary": "The common damage setup (four Death statues, twelve Wisdom and Illusion artworks), with the statues on Freedom: a Ranger shoots the boss from the front, where Accuracy decides how often it blocks or parries. Once you're at the Accuracy cap, switch to Space. The PvP preset keeps Freedom for Evasion against melee players.",
+  "presets": [
+    {
+      "name": "PvE",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Wisdom", "why": "Smite doubles a hit; J0EI calls it king on Global, which has few other Double Chance sources."},
+        {"stat": "Time", "why": "Combat Speed up to the 88.1% step with Gale Arrow; past that step it adds little."},
+        {"stat": "Destruction", "why": "Attack Increase, a multiplier on all your Attack."},
+        {"stat": "Illusion", "why": "Cooldown Reduction for Vaizel's Authority, Bow of Blessing and Deadshot. GuideMMO aims for 33% or more."},
+        {"stat": "Death", "why": "Critical Hit, but at about 40% under Precision you reach the 50% cap whenever Bow of Blessing is up."},
+        {"stat": "Freedom", "why": "Accuracy against the boss's Block and Parry until you reach the cap."},
+        {"stat": "Justice", "why": "Perfect chance, once the lines above are covered."},
+        {"stat": "Space", "why": "Move Speed: nice for kiting, no damage."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "eternity", "notun"],
+      "statueStat": "Freedom",
+      "statueWhy": "You fight from the front, so the boss's Block and Parry apply and Accuracy cancels them one for one up to the cap. [kr]Korean top Rangers stack far more Accuracy on their jewellery than Assassins do. [/kr]Once you're at the cap, Space is the better version.",
+      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 4}, {"id": "elite-unique", "n": 7}],
+      "artworkStat": "Destiny",
+      "artworkWhy": "Neither adds damage. Destiny's MP is the useful one: the Arcana set is chosen partly for its MP refill.",
+      "bracelets": ["Time", "Wisdom", "Destruction", "Illusion", "Death", "Freedom", "Justice"],
+      "braceletWhy": "Time and Wisdom first, then Destruction and Illusion. For a fifth line, Death if you're under the crit cap or Freedom if you're short on Accuracy, then Justice.[kr] Korean Rangers argue on Inven over dropping Destruction, Death or Freedom for Justice once they reach their caps.[/kr]",
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (Nightmare shop, 14,000 Phantasmal Fragments) gives the same three stats at 45 and is the realistic one. The artworks are the Elyos set (Gartua, the four Expedition pieces and seven elite and boss pieces); Asmodians have four elite and boss pieces and fill three slots with Epic ones."
+    },
+    {
+      "name": "PvP",
+      "mode": "PvP",
+      "priority": [
+        {"stat": "Time", "why": "Combat Speed for more arrows inside a Precision window."},
+        {"stat": "Freedom", "why": "Accuracy counts against players (PvE Accuracy doesn't), and Evasion keeps melee classes off you."},
+        {"stat": "Illusion", "why": "Cooldown Reduction for your escapes and burst, and Endurance Penetration."},
+        {"stat": "Death", "why": "Crit lands far less often on players (about 29% in one duel test), and it pierces Regeneration."},
+        {"stat": "Destruction", "why": "Attack Increase."},
+        {"stat": "Wisdom", "why": "Smite still deals 1.5x against players."},
+        {"stat": "Life", "why": "HP and Regeneration for when someone reaches you."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "eternity", "notun"],
+      "statueStat": "Freedom",
+      "statueWhy": "Accuracy and Evasion both count against players.[kr] Korean PvP Rangers often run Evasion builds and keep Freedom on their bracelets for it.[/kr]",
+      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 4}, {"id": "elite-unique", "n": 7}],
+      "artworkStat": "Life",
+      "artworkWhy": "Smite builds keep their Wisdom artworks in PvP, so only the version changes: Life for HP. Destiny's Endurance is the other choice, but every player's artworks give Illusion, which pierces it.",
+      "bracelets": ["Time", "Freedom", "Illusion", "Destruction", "Life", "Death", "Wisdom"],
+      "braceletWhy": "Time and Freedom first.[kr] A Korean PvP Ranger's fixed lines are Time, Freedom, Life, Illusion and Destruction, with Death or Justice last.[/kr]",
+      "note": "For a tankier Endurance preset, swap three Wisdom artworks for Guardian Lord Nahma's artwork and the two PvP artworks (Argo and Ardus Shrine or Impetusium), and use Destiny. Players do this mainly on tanks; no source recommends it for Rangers."
+    }
+  ],
+  "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Death (Compass of Magic), Destruction (Bell of Magic) and Wisdom (Mirror of Magic), up to 20 each, so four of the five feed damage. The Compass of Magic's Death stops paying at the crit cap, which a Ranger reaches under Bow of Blessing. If you're short on Accuracy instead, the Compass of Vigor (Freedom) is the swap, and it is the usual PvP card. Keep the Mirror of Magic: its Wisdom also cuts MP costs.[kr] A Korean Ranger who switched to the Mirror of Vigor ran out of MP.[/kr][kr] Korean top Rangers wear the Compass of Magic in PvE (84%) and the Compass of Vigor in PvP (71%).[/kr] Among Global's top 100 Rangers, 93% wear the Bell of Magic, 92% the Chalice of Vigor and 78% the Parchment of Vigor.",
+  "tips": [
+    "No top-100 Global Ranger wears an Abyssal Bracelet yet (they wear the Ascension Bracelet with a Liberator or Pilgrim one), so the bracelet lines are for later.",
+    "Bow of Blessing and Precision add Critical Hit while they're up: count them toward the 50% crit cap before you add Death.",
+    "Check your Combat Speed against the 88.1% Gale Arrow step before you add Time.",
+    "Swap the statues to Space once you reach the Accuracy cap: Pantheon presets are free to switch.",
+    "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion on the Market.",
+    "Start saving Phantasmal Fragments early: Zikel's Apparition costs 14,000, and players run short after buying Stigma Shards and Daevanion crystals."
+  ],
+  "sources": [
+    {"title": "Aion 2 Maps: Pantheon stats", "url": "https://aion2maps.com/guides/pantheon-stats/", "note": "Pieces and points, the Death-statue setup, what each piece is worth to a Ranger, kanonxo's top three and the PvP Endurance swap."},
+    {"title": "Aion 2 Maps: Ranger", "url": "https://aion2maps.com/guides/ranger/", "note": "Bracelet lines (Time and Wisdom, then Destruction and Illusion; Death or Justice fifth) and the crit cap under Precision and Bow of Blessing."},
+    {"title": "Aion 2 Maps: Accuracy and Crit", "url": "https://aion2maps.com/guides/accuracy-and-crit/", "note": "Accuracy cancels Block and Parry; the 50% crit cap; crit and Accuracy against players."},
+    {"title": "GuideMMO: Ranger guide (French)", "url": "https://guidemmo.com/guide-ranger-aion-2/", "note": "Abyssal Bracelet lines with Death or Freedom last, crit before Accuracy, 33% Cooldown Reduction target, the 88.1% Combat Speed step."},
+    {"title": "AION2 Vault: Ranger gear", "url": "https://aion2vault.com/builds/ranger/gear/", "note": "Allyria's deity stat order (Wisdom, Destruction, Time, Death, Illusion, Justice, Freedom, Space, Life, Destiny) and J0EI on Wisdom."},
+    {"title": "AION2 Tierlist: Ranger build (top 100 Global)", "url": "https://aion2tierlist.com/builds/ranger", "note": "Top 100 Rangers' bracelets (no Abyssal Bracelets) and Arcana, 22 Oct 2026."},
+    {"title": "Game8: Deadshot Ranger PvE build", "url": "https://game8.co/games/Aion-2/archives/626143", "note": "Pantheon priority Destruction, Illusion, Death, Space, Time; Zikel's colossus with Bakarma, Kibelisk, Asahr's Mirror and Notun."},
+    {"title": "Game8: DPS Ranger PvP build", "url": "https://game8.co/games/Aion-2/archives/631924", "note": "The same Pantheon for PvP."},
+    {"title": "Metabot: Ranger builds", "url": "https://metabot.gg/en/aion-2/classes/ranger/build", "note": "Average deity stats of 1,559 top Global Rangers in launch week (Freedom 24.5, Space 17.7)."},
+    {"title": "Wakayashi: Pantheon guide (German)", "url": "https://wakayashi.gg/aion2/aion-2-pantheon-guide-schnell-einfach-mehr-cp", "note": "Wisdom and Illusion artworks first, Bakarma, saving for Zikel's colossus."},
+    {"title": "aion2-meta: Ranger (Korean top-player data)", "url": "https://aion2-meta.com/guides/ranger/", "note": "AION2CAL, 12 Oct 2026: bracelet lines, Accuracy on jewellery and Arcana of top Korean PvE and PvP Rangers.", "region": "KR"},
+    {"title": "Inven: Ranger bracelet, Time or Justice", "url": "https://www.inven.co.kr/board/aion2/6450/14893", "note": "A Korean Ranger's bracelet lines and the Combat Speed step.", "region": "KR"},
+    {"title": "Inven: PvP Ranger bracelet, Death or Justice", "url": "https://www.inven.co.kr/board/aion2/6450/15170", "note": "PvP bracelet lines: Time, Freedom, Life, Illusion, Destruction.", "region": "KR"},
+    {"title": "Inven: MP after the Mirror of Vigor", "url": "https://www.inven.co.kr/board/aion2/6450/20324", "note": "Running out of MP without the Mirror of Magic.", "region": "KR"}
+  ],
+  "disagree": "Freedom or Space: Aion 2 Maps leaves it open and Game8 takes Space. This page takes Freedom in PvE until the Accuracy cap, because a Ranger hits from the front, GuideMMO and Aion 2 Maps both build Accuracy on gear until the cap[kr], and Korean top Rangers stack it[/kr]. Game8 ranks Destruction and Illusion first and leaves Wisdom off, and Game8 and Wakayashi put Kibelisk (no Death) in a statue slot. This page follows Aion 2 Maps, GuideMMO and AION2 Vault, which put Wisdom first, and keeps Death on all four statues; a Ranger already crit-capped outside Bow of Blessing could take Kibelisk instead. For the fifth bracelet line, Aion 2 Maps takes Death or Justice and GuideMMO Death or Freedom."
+}
