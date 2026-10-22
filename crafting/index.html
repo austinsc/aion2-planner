@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crafting Planner</title>
+<meta name="description" content="Crafting for AION 2 Global: proficiency 1 to 100 for each of the five crafts, what unlocks when, success rates, the Dragon Lord gear ladder, materials, and what alts need.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../shared/planner.css">
+<style>
+.brand .gem{width:44px;height:44px;border-radius:8px;border:1px solid var(--gold-dim);box-shadow:0 0 0 2px var(--bg);display:grid;place-items:center;background:var(--panel2);color:var(--gold2);flex:none}
+.bar{position:relative;height:10px;border-radius:999px;background:var(--panel2);border:1px solid var(--line2);overflow:visible}
+.bar i{position:absolute;inset:0 auto 0 0;border-radius:999px;background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+.bar b{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--warn)}
+.xpin{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.9rem;color:var(--muted)}
+.xpin input{width:6em;padding:5px 8px;border-radius:6px;border:1px solid var(--line2);background:var(--panel2)}
+.steps li{cursor:default}
+.list li.got .lvbadge{opacity:.6}
+.card{align-content:start}
+</style>
+</head>
+<body>
+<nav class="site" id="site" aria-label="Planners"></nav>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <span class="gem" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7L3 15l3 3 8-8M3 21h10"/></svg></span>
+    <div><h1>Crafting Planner</h1><p class="sub">AION 2 Global · five crafts, proficiency 1 to 100 · what unlocks when, and the road to Dragon Lord gear</p></div>
+  </div>
+  <div class="lvl">
+    <button class="btn" id="lvDown" aria-label="Proficiency down">−</button>
+    <div class="read"><span class="eyebrow" id="lvCraft">Proficiency</span><output id="lvOut" for="lvRange">1</output></div>
+    <button class="btn" id="lvUp" aria-label="Proficiency up">+</button>
+    <input type="range" id="lvRange" min="1" max="100" value="1" aria-label="Current proficiency">
+    <span class="save" id="saveState">Loading…</span>
+  </div>
+</div></header>
+
+<nav class="tabs" aria-label="Sections"><div class="wrap" role="tablist">
+  <button class="tab" role="tab" data-tab="now" aria-selected="true">Now</button>
+  <button class="tab" role="tab" data-tab="route">Route</button>
+  <button class="tab" role="tab" data-tab="table">Proficiency 1–100</button>
+  <button class="tab" role="tab" data-tab="gear">Dragon Lord gear</button>
+  <button class="tab" role="tab" data-tab="mats">Materials</button>
+  <button class="tab" role="tab" data-tab="alts">Alts &amp; trading</button>
+  <button class="tab" role="tab" data-tab="src">Sources</button>
+</div></nav>
+
+<main><div class="wrap">
+  <section class="panel on" id="p-now" role="tabpanel"></section>
+  <section class="panel" id="p-route" role="tabpanel"></section>
+  <section class="panel" id="p-table" role="tabpanel"></section>
+  <section class="panel" id="p-gear" role="tabpanel"></section>
+  <section class="panel" id="p-mats" role="tabpanel"></section>
+  <section class="panel" id="p-alts" role="tabpanel"></section>
+  <section class="panel" id="p-src" role="tabpanel"></section>
+  <p class="foot">Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation. Data compiled 21 Oct 2026 for the Global launch build; see the Sources tab. Numbers can change with patches; the in-game window wins.</p>
+</div></main>
+<script src="../shared/site.js"></script>
+<script src="data.js"></script>
+<script src="crafting.js"></script>
+</body>
+</html>

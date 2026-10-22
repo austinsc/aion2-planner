@@ -1,0 +1,35 @@
+# Notice and attribution
+
+This is an unofficial fan project. It is not affiliated with, endorsed by or sponsored by NCSOFT Corporation.
+
+AION is a registered trademark of NCSOFT Corporation. All rights to the game and its artwork are reserved by NCSOFT.
+
+## Game artwork (not covered by the MIT license)
+
+| Asset | Location | Owner | Obtained from |
+|---|---|---|---|
+| Skill, passive and stigma icons for all eight classes (about 35 files per class, named by skill id) | `<class>-planner/icons/` | (c) NCSOFT Corporation | [Metabot](https://metabot.gg/en/aion-2/skills), served at `metabot.gg/web/aion2/skills/<id>.webp` |
+| Manastone, Soulstone and Theostone icons (12 stone types and 17 Theostone effects) | `shared/stone-icons/` | (c) NCSOFT Corporation | [Metabot](https://metabot.gg/en/aion-2/godstones), served at `metabot.gg/web/aion2/items/<name>.webp` |
+| Daevanion node frames: common, rare, legend, unique, start | `shared/sprites/` | (c) NCSOFT Corporation | [Wikily](https://wikily.gg/aion-2/daevanion/sorcerer/nezekan), game UI sprites `ut_fwindow_daevanion_node_*_sprite.png` |
+
+These files are included only to identify skills and board nodes in a non-commercial reference tool. The MIT license in `LICENSE` does not apply to them. If you reuse this repository, you are responsible for any rights you need for this artwork. If NCSOFT or an owner asks for removal, the files will be removed.
+
+## Data sources
+
+Game numbers and recommendations were compiled on 18 Oct 2026 from the sources below. The text and arithmetic in the planner are re-expressed and checked against the game's level and skill point tables.
+
+- [Aion 2 Maps class guides](https://aion2maps.com/guides/classes/) (one per class, for example [Sorcerer](https://aion2maps.com/guides/sorcerer/)): levelling stepper, Specialties, 45 build, stigma plan, macro and numbered Daevanion routes.
+- [Metabot](https://metabot.gg/en/aion-2/skills): skill unlock levels, cooldowns, MP costs and ranges.
+- [Wikily](https://wikily.gg/aion-2/daevanion/sorcerer/nezekan): Daevanion board layouts and node grades.
+- Ariel, Marchutan and Yustiel Daevanion boards: [Aion2 Atlas](https://aion2atlas.app/daevanion-board/) (layouts, from the Korean and Taiwanese client) and [NC's 21 October 2026 patch notes](https://aion2.plaync.com/en-us/board/update/view?articleId=6ad85be86cfe4756db5b8e92) (how its crystals are earned).
+- Crafting: [Aion 2 Maps](https://aion2maps.com/guides/crafting/) (including its [success-rate note](https://aion2maps.com/guides/research/systems/crafting-odds/)), [Metabot](https://metabot.gg/en/aion-2/guides/crafting-guide) and [Questlog](https://questlog.gg/aion-2/en/table/mastery-levels/crafting) (the proficiency XP table).
+- Essence Extraction: [Questlog](https://questlog.gg/aion-2/en/table/mastery-levels/gathering) (client data: XP table, points, node gauges), [Wikily](https://wikily.gg/aion-2/gathering), [Metabot](https://metabot.gg/en/aion-2/gathering), [Aion 2 Maps](https://aion2maps.com/gathering/), [AION2 Vault](https://aion2vault.com/builds/essence-extraction/), [Fextralife](https://aion2.wiki.fextralife.com/Gathering) and the other guides listed on the page's Sources tab.
+- [Fextralife AION 2 wiki](https://aion2.wiki.fextralife.com/Level_Progression) and [Questlog](https://questlog.gg/aion-2/en/table/character-levels): skill, Daevanion and Stigma points per level.
+- Pantheon tab: the pieces, points and drop sources come from [Aion 2 Maps' Pantheon stats guide](https://aion2maps.com/guides/pantheon-stats/), checked against the Global item data on [AION2 Hub](https://aion2hub.com/database/items/514330003), [Metabot](https://metabot.gg/en/aion-2) and [Game8](https://game8.co/). Each class's presets cite at least three sites, listed on its tab: across the eight classes these include Aion 2 Maps, the [AION 2 Tier List](https://aion2tierlist.com/) (what the top 100 Global players wear), [AION2 Vault](https://aion2vault.com/), [Aion2 Guides](https://aion2-guides.info/), [Metaroad](https://metaroad.gg/), [GameWith](https://gamewith.ai/), [GamerBlurb](https://gamerblurb.com/), [GamesFuze](https://gamesfuze.com/), [Skycoach](https://skycoach.gg/), [SolAshur](https://solashur.com/), [GuideMMO](https://guidemmo.com/), [Wakayashi](https://wakayashi.gg/), [Daeva Guides](https://daevaguides.com/), kanonxo's PvE guide (Google Doc), Th3Ruthless's [Cleric guide](https://clericguideaion2global.netlify.app/), Evripides' [Spiritmaster guide](https://aion2-elementalist-guide.netlify.app/), creators on YouTube, and the Korean [Aion2 Meta](https://aion2-meta.com/) data, [Inven](https://www.inven.co.kr/) boards and [Vortex Gaming](https://vortexgaming.io/) summaries (marked Korea-only).
+- Stones tab: [Metabot Theostone guide](https://metabot.gg/en/aion-2/guides/theostone-guide) and [Manastone guide](https://metabot.gg/en/aion-2/guides/manastone-guide) (all 51 Theostones with exact tooltips, slot counts, the stat pool and odds, crafting), [Aion 2 Maps Manastones and Theostones](https://aion2maps.com/guides/manastones/) and each class's Gear tab (stone priority), and the [AION 2 Tier List Theostone tier list](https://aion2tierlist.com/guides/aion-2-theostone-tier-list) (what the top 100 players of each class run, 20 Oct 2026).
+- PvP & alt builds tab: each build in `classes/<class>.builds.json` cites at least three different sites, listed on the tab with what each contributed. Across the eight classes these are [Aion 2 Maps](https://aion2maps.com/guides/classes/) (PvP tabs), [Aion2 Guides](https://aion2-guides.info/), [Aion2 Meta](https://aion2-meta.com/), [Metabot](https://metabot.gg/en/aion-2), [AION2 Vault](https://aion2vault.com/), [Aion2 Atlas](https://aion2atlas.app/), [Aion2 Data](https://aion2data.com/), [AION 2 Tier List](https://aion2tierlist.com/), [aion2.run](https://aion2.run/), [Aion2 Builds](https://aion2builds.org/), [Game8](https://game8.co/), [GamerBlurb](https://gamerblurb.com/), [ExpCarry](https://expcarry.com/), [GameWith](https://gamewith.ai/), [Fextralife](https://aion2.wiki.fextralife.com/), [Metaroad](https://metaroad.gg/), [GuideMMO](https://guidemmo.com/), [Wakayashi](https://wakayashi.gg/), [SolAshur](https://solashur.com/), [Gamers Together](https://gamerstogether.cz/), [Skycoach](https://skycoach.gg/), [games.gg](https://games.gg/), [GamesFuze](https://gamesfuze.com/), [AOEAH](https://aoeah.com/), [OSLink](https://oslink.io/), [Vortex Gaming](https://vortexgaming.io/), Th3Ruthless's [Cleric guide](https://clericguideaion2global.netlify.app/), Evripides' [Spiritmaster guide](https://aion2-elementalist-guide.netlify.app/), and the Korean boards [Inven](https://www.inven.co.kr/), [FMKorea](https://www.fmkorea.com/) and [DCInside](https://gall.dcinside.com/) (marked Korea-only where the advice differs from Global).
+- [Metabot Daevanion guide](https://metabot.gg/en/aion-2/guides/daevanion-guide) and [Aion2Vault](https://aion2vault.com/builds/sorcerer/daevanion/): board rules and node costs.
+
+## Fonts
+
+The page loads Cinzel and Barlow / Barlow Condensed from Google Fonts at view time. Both families are licensed under the SIL Open Font License 1.1.

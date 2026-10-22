@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AION 2 Planner</title>
+<meta name="description" content="Levelling planners for every AION 2 Global class, level by level from 1 to 45, a skill macro guide and an Essence Extraction levelling guide.">
+<link rel="icon" href="sorcerer-planner/icons/15060000.webp">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="shared/planner.css">
+<style>
+.hero{padding-block:34px 8px;display:grid;gap:10px}
+.hero h1{font-size:clamp(1.6rem,4vw,2.3rem);color:var(--gold2)}
+.hero p{color:var(--muted);max-width:720px}
+.sect{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;margin-top:10px}
+.classes{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.cc{display:grid;grid-template-columns:52px 1fr;gap:6px 12px;align-content:start;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel);color:var(--fg);text-decoration:none;transition:border-color .15s,transform .15s}
+.cc:hover{border-color:var(--gold);transform:translateY(-2px)}
+.cc img{width:52px;height:52px;border-radius:8px;border:1px solid var(--gold-dim);grid-row:span 2}
+.cc h2{font-size:1.05rem}
+.cc .role{font-family:var(--font-cond);font-weight:600;letter-spacing:.08em;text-transform:uppercase;font-size:.72rem;color:var(--muted)}
+.cc .build{grid-column:1/-1;font-family:var(--font-cond);font-weight:600;color:var(--gold2)}
+.cc p{grid-column:1/-1;color:var(--muted);font-size:.9rem}
+.cc .prog{grid-column:1/-1;font-size:.8rem;color:var(--ok);min-height:1.2em}
+.cc.wide{grid-column:1/-1;grid-template-columns:52px 1fr}
+.gico{width:52px;height:52px;border-radius:8px;border:1px solid var(--gold-dim);grid-row:span 2;display:grid;place-items:center;background:var(--panel2);color:var(--gold2)}
+.what{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.what div{padding:12px 14px;border-left:3px solid var(--gold-dim);background:var(--panel);border-radius:0 8px 8px 0;font-size:.9rem;color:var(--muted)}
+.what b{display:block;color:var(--fg);font-family:var(--font-cond);letter-spacing:.04em}
+</style>
+</head>
+<body>
+<nav class="site" id="site" aria-label="Planners"></nav>
+<main><div class="wrap">
+  <section class="hero">
+    <span class="eyebrow">AION 2 Global · compiled 18 Oct 2026</span>
+    <h1>AION 2 Planner</h1>
+    <p>Pick your class for an exact levelling plan: skill points to spend, Specialties to take, Daevanion crystals to buy and Stigmas to slot, level by level from 1 to 45, then the build, Stigma plan and macro for 45. Your progress is saved in this browser, per class.</p>
+  </section>
+  <div class="sect"><h2>Classes</h2><span class="eyebrow">8 planners</span></div>
+  <div class="classes">
+    <a class="cc" href="gladiator-planner/index.html"><img src="gladiator-planner/icons/11170000.webp" alt="">
+      <h2>Gladiator</h2><span class="role">Melee DPS</span>
+      <span class="build">PvE Overhead Slam</span><p>Melee DPS and off-tank. Hold Keen Strike and a Rending Blow macro; Overhead Slam on its own key.</p><span class="prog" data-store="gladiator-planner"></span></a>
+    <a class="cc" href="templar-planner/index.html"><img src="templar-planner/icons/12240000.webp" alt="">
+      <h2>Templar</h2><span class="role">Tank</span>
+      <span class="build">PvE Judgment tank</span><p>Shield tank. Taunt holds the boss, a three-line Judgment macro does the work, Punishment charged by hand.</p><span class="prog" data-store="templar-planner"></span></a>
+    <a class="cc" href="assassin-planner/index.html"><img src="assassin-planner/icons/13350000.webp" alt="">
+      <h2>Assassin</h2><span class="role">Melee DPS</span>
+      <span class="build">PvE Heart Gore</span><p>Melee burst DPS from behind. Hold Quick Slice and a three-skill Insignia Explosion macro.</p><span class="prog" data-store="assassin-planner"></span></a>
+    <a class="cc" href="ranger-planner/index.html"><img src="ranger-planner/icons/14010000.webp" alt="">
+      <h2>Ranger</h2><span class="role">Ranged DPS</span>
+      <span class="build">PvE Deadshot</span><p>Ranged bow DPS from 20 m. Charged Deadshot on its own key, a two-line arrow macro.</p><span class="prog" data-store="ranger-planner"></span></a>
+    <a class="cc" href="sorcerer-planner/index.html"><img src="sorcerer-planner/icons/15060000.webp" alt="">
+      <h2>Sorcerer</h2><span class="role">Magic DPS</span>
+      <span class="build">PvE Hellfire</span><p>Ranged magic DPS. Charged Hellfire on its own key, a short fire and frost macro.</p><span class="prog" data-store="sorc-planner"></span></a>
+    <a class="cc" href="spiritmaster-planner/index.html"><img src="spiritmaster-planner/icons/16100000.webp" alt="">
+      <h2>Spiritmaster</h2><span class="role">Magic DPS · spirits</span>
+      <span class="build">PvE Elemental Fusion</span><p>Ranged pet caster. Three spirits and Elemental Fusion on a two-line macro, Cold Shock held.</p><span class="prog" data-store="spiritmaster-planner"></span></a>
+    <a class="cc" href="cleric-planner/index.html"><img src="cleric-planner/icons/17350000.webp" alt="">
+      <h2>Cleric</h2><span class="role">Healer</span>
+      <span class="build">PvE Condemnation</span><p>Healer who deals damage between heals. Two held keys, Condemnation crits, Bolt charged by hand.</p><span class="prog" data-store="cleric-planner"></span></a>
+    <a class="cc" href="chanter-planner/index.html"><img src="chanter-planner/icons/18100000.webp" alt="">
+      <h2>Chanter</h2><span class="role">Support</span>
+      <span class="build">PvE Dark Crush</span><p>Melee support. A one-line Dark Crush macro, mantras always on, party heals and buffs by hand.</p><span class="prog" data-store="chanter-planner"></span></a>
+  </div>
+  <div class="sect"><h2>Guides</h2><span class="eyebrow">macros, crafting and gathering</span></div>
+  <div class="classes">
+    <a class="cc" href="macros/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></span>
+      <h2>Macro Guide</h2><span class="role">Combat</span>
+      <span class="build">Set up the in-game skill macro</span><p>How the macro and basic-attack cancelling work, the setup in game step by step, what goes in it, and every class at a glance.</p></a>
+    <a class="cc" href="crafting/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4l6 6-3 3-6-6z"/><path d="M11 7L3 15l3 3 8-8M3 21h10"/></svg></span>
+      <h2>Crafting</h2><span class="role">Professions</span>
+      <span class="build">Five crafts, proficiency 1 to 100</span><p>What each craft makes and unlocks, success rates, the Dragon Lord ladder to item level 102, materials, and what your alts need.</p><span class="prog" data-store="crafting-planner" data-kind="craft"></span></a>
+    <a class="cc" href="essence-extraction/index.html"><span class="gico" aria-hidden="true"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12l4 6-10 12L2 9z"/><path d="M2 9h20M9 3l3 18 3-18"/></svg></span>
+      <h2>Essence Extraction</h2><span class="role">Gathering profession</span>
+      <span class="build">Proficiency 1 to 100, fastest route</span><p>Which ore, plants and gems to gather at each proficiency, where they grow, and how to get past each gate.</p><span class="prog" data-store="essence-planner" data-kind="prof"></span></a>
+  </div>
+  <div class="sect"><h2>What each planner has</h2></div>
+  <div class="what">
+    <div><b>Now</b>The current level's skill points, what to hold back, new skills, Specialty picks and Daevanion nodes.</div>
+    <div><b>Levels 1–45</b>The whole route in one table, with points, crystals and unlocks. Tick levels off as you go.</div>
+    <div><b>Daevanion</b>All five boards with numbered routes, the crystal schedule while levelling and the route after 45.</div>
+    <div><b>Build at 45, Stigmas, Macro</b>The reset order for your points, the four Stigmas and how to set up the macro.</div>
+  </div>
+  <p class="foot">Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation. Skill icons and Daevanion node frames are game art &copy; NCSOFT Corporation, sourced via Metabot and Wikily. Numbers can change with patches; the in-game tooltip wins. Code and text: <a href="https://github.com/austinsc/aion2-planner/blob/main/LICENSE">MIT</a> · <a href="https://github.com/austinsc/aion2-planner/blob/main/NOTICE.md">notice and attribution</a> · <a href="https://github.com/austinsc/aion2-planner">source</a>.</p>
+</div></main>
+<script src="shared/site.js"></script>
+<script>
+siteMenu('home', '');
+document.querySelectorAll('[data-store]').forEach(el => {
+  try {
+    const s = JSON.parse(localStorage.getItem(el.dataset.store) || 'null');
+    if (s && s.level) el.textContent = el.dataset.kind === 'craft' ? `${s.craft || 'Crafting'} ${s.level} of 100` : el.dataset.kind === 'prof' ? `You are at proficiency ${s.level} of 100` : `You are at level ${s.level} · ${Object.keys(s.done || {}).length} of 45 levels done`;
+  } catch (e) {}
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AION 2 Macro Guide</title>
+<meta name="description" content="How the AION 2 in-game skill macro works, how to set it up step by step, what to put in it, how basic-attack cancelling works, and the macro setup for every class.">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="../shared/planner.css">
+<style>
+.brand .gem{width:44px;height:44px;border-radius:8px;border:1px solid var(--gold-dim);box-shadow:0 0 0 2px var(--bg);display:grid;place-items:center;background:var(--panel2);color:var(--gold2);flex:none}
+.toc{display:flex;flex-wrap:wrap;gap:8px}
+.toc a{text-decoration:none}
+section[id]{scroll-margin-top:80px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px}
+.facts div{padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--panel2)}
+.facts b{display:block;font-family:var(--font-cond);letter-spacing:.06em;text-transform:uppercase;font-size:.72rem;color:var(--muted);margin-bottom:2px}
+.facts span{font-weight:600}
+/* hotkey stack + macro loop diagram */
+.howfig{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:18px;align-items:start}
+@media (max-width:760px){ .howfig{grid-template-columns:1fr} }
+.hk{display:grid;gap:6px;padding:12px;border:1px solid var(--gold-dim);border-radius:10px;background:var(--panel2)}
+.hk .slot{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;border:1px dashed var(--line2);color:var(--muted);font-size:.9rem}
+.hk .slot.main{border-style:solid;border-color:var(--gold);color:var(--fg);background:color-mix(in srgb, var(--gold) 12%, var(--panel))}
+.hk .slot i{font-style:normal;font-family:var(--font-cond);font-weight:700;color:var(--gold2);min-width:3.6em}
+.loop{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.loop .stp{padding:8px 12px;border-radius:8px;border:1px solid var(--line2);background:var(--panel2);font-family:var(--font-cond);font-weight:600}
+.loop .stp small{display:block;font-weight:500;color:var(--muted);font-family:var(--font-body)}
+.loop .ar{color:var(--gold-dim);font-weight:700}
+.loop .back{flex-basis:100%;font-size:.85rem;color:var(--muted)}
+/* cancel timeline */
+.tl{display:grid;gap:10px}
+.tl .row{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center}
+@media (max-width:560px){ .tl .row{grid-template-columns:1fr} }
+.tl .lab{font-family:var(--font-cond);font-weight:600;font-size:.9rem}
+.tl .bar{display:flex;height:26px;border-radius:6px;overflow:hidden;border:1px solid var(--line2)}
+.tl .bar span{display:grid;place-items:center;font-family:var(--font-cond);font-weight:700;font-size:.7rem;letter-spacing:.06em;color:#14100a;min-width:0;overflow:hidden}
+.tl .s{background:var(--gold);flex:3}
+.tl .r{background:color-mix(in srgb, var(--muted) 35%, var(--panel2));color:var(--muted)!important;flex:2}
+.tl .a{background:var(--ok);flex:.8}
+.tl .e{background:var(--warn);flex:.8}
+.tl .pad{flex:2;background:transparent}
+.legend i{border-radius:3px}
+/* class cards */
+.ccards{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:14px}
+.mc{display:grid;gap:10px;padding:14px;border:1px solid var(--line);border-radius:10px;background:var(--panel);min-width:0}
+.mc header{display:flex;align-items:center;gap:10px}
+.mc header img{width:40px;height:40px;border-radius:8px;border:1px solid var(--gold-dim)}
+.mc header h3{font-size:1rem}
+.mc header small{display:block;color:var(--muted);font-family:var(--font-cond);font-weight:600}
+.mc .hold{display:flex;flex-wrap:wrap;gap:6px}
+.mc .hold .chip{font-size:.8rem}
+.mc .hold .chip img{width:18px;height:18px;border-radius:4px}
+.mc .line{display:grid;gap:4px}
+.mc .line .tag{font-family:var(--font-cond);font-weight:600;letter-spacing:.06em;text-transform:uppercase;font-size:.7rem;color:var(--gold2)}
+.mc ol{display:flex;flex-wrap:wrap;gap:6px;margin:0;padding:0;list-style:none}
+.mc ol li{display:inline-flex;align-items:center;gap:6px;padding:3px 9px 3px 3px;border-radius:999px;border:1px solid var(--line2);background:var(--panel2);font-family:var(--font-cond);font-weight:600;font-size:.82rem}
+.mc ol li b{width:1.5em;height:1.5em;border-radius:50%;display:grid;place-items:center;background:var(--gold);color:#1a1408;font-size:.75rem}
+.mc ol li img{width:20px;height:20px;border-radius:4px}
+.mc a.go{justify-self:start}
+td b{color:var(--fg)}
+</style>
+</head>
+<body>
+<nav class="site" id="site" aria-label="Planners"></nav>
+<header class="top"><div class="wrap">
+  <div class="brand">
+    <span class="gem" aria-hidden="true"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 10h.01M10 10h.01M14 10h.01M18 10h.01M7 14h10"/></svg></span>
+    <div><h1>Macro Guide</h1><p class="sub">AION 2 Global · how the in-game skill macro works, how to set it up, and what each class puts in it</p></div>
+  </div>
+</div></header>
+
+<main><div class="wrap">
+  <div class="card gold">
+    <header><h2>In short</h2><span class="eyebrow">updated 18 Oct 2026</span></header>
+    <p class="note">Bind the Macro key, put the one or two hotkeys you spam into the macro, and hold the Macro key together with left click. The macro keeps your main skills firing; left click weaves basic attacks between them, and each basic attack cuts off the skill's recovery animation so the next skill starts sooner. Buffs, movement and charge skills stay out of it.</p>
+    <div class="facts">
+      <div><b>Macro keys</b><span>One, unbound by default</span></div>
+      <div><b>Macros</b><span>One per skill preset</span></div>
+      <div><b>Skills per hotkey</b><span>Up to 4, bottom one first</span></div>
+      <div><b>Delay per step</b><span>10 ms (10 – 9,900 ms)</span></div>
+    </div>
+    <nav class="toc" aria-label="On this page">
+      <a class="pill ghost" href="#how">How it works</a><a class="pill ghost" href="#setup">Set it up</a><a class="pill ghost" href="#what">What goes in it</a><a class="pill ghost" href="#cancel">Basic-attack cancel</a><a class="pill ghost" href="#classes">Your class</a><a class="pill ghost" href="#fix">If it is not working</a>
+    </nav>
+  </div>
+
+  <section class="card" id="how">
+    <header><h2>How it works</h2></header>
+    <div class="howfig">
+      <div>
+        <p class="eyebrow" style="margin-bottom:6px">One hotkey, up to four skills</p>
+        <div class="hk">
+          <div class="slot"><i>Slot 4</i>fills a gap</div>
+          <div class="slot"><i>Slot 3</i>fills a gap</div>
+          <div class="slot"><i>Slot 2</i>fills a gap</div>
+          <div class="slot main"><i>Bottom</i>your main skill: fires whenever it is ready</div>
+        </div>
+      </div>
+      <div>
+        <p class="eyebrow" style="margin-bottom:6px">The macro, while you hold its key</p>
+        <div class="loop">
+          <span class="stp">Step 1<small>a hotkey</small></span><span class="ar">→ 10 ms →</span>
+          <span class="stp">Step 2<small>another hotkey</small></span><span class="ar">→ 10 ms →</span>
+          <span class="stp">Step 1 again…</span>
+          <span class="back">It keeps retrying each step in turn until you let go. A step fires whatever on that hotkey is ready.</span>
+        </div>
+      </div>
+    </div>
+    <ul class="when">
+      <li><span class="who"><b>A step is a hotkey</b></span><span class="why">Each step points at one of your quick-slot hotkeys, not at a skill, so it fires every skill stacked on that key: the bottom one when it is ready, the others in between.</span></li>
+      <li><span class="who"><b>Priorities, not a script</b></span><span class="why">The macro moves on while it retries, so the order is not guaranteed. A step listed twice comes up twice as often.</span></li>
+      <li><span class="who"><b>Your presses win</b></span><span class="why">Press any skill while holding the Macro key and it fires straight away. You never need to let go.</span></li>
+      <li><span class="who"><b>One per preset</b></span><span class="why">Each skill preset keeps its own macro, and switching preset stops the one that is running.</span></li>
+      <li><span class="who"><b>Built for cancelling</b></span><span class="why">NC added it to make basic-attack cancels easier: it handles the skills while you hold left click for the basic attacks.</span></li>
+    </ul>
+  </section>
+
+  <section class="card" id="setup">
+    <header><h2>Set it up in game</h2><span class="eyebrow">about five minutes, once per preset</span></header>
+    <ol class="steps">
+      <li class="ph0"><span class="n">1</span><span><b>Bind the Macro key</b><small>Settings → Key Settings → General → Gameplay → Macro. It is unbound by default. A mouse side button is the usual choice, but in the AION 1 control mode mouse buttons do not work as the Macro key, so use a keyboard key there.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">2</span><span><b>Stack your hotkeys</b><small>Open the Skills window (K) and use its quick-slot grid. Put the skills you spam together on one hotkey, up to four, with your main damage skill at the bottom.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">3</span><span><b>Build the macro</b><small>Skills window → Macro (top right) → Add Macro, then pick a hotkey for the step. A new step starts as the basic attack: change it, or you get extra basic attacks and fewer skills.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">4</span><span><b>Set the delay</b><small>10 ms on each step. On a slower PC, try 15–20 and compare on a training dummy.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">5</span><span><b>Leave Skill Queue on</b><small>Settings → Combat → Controls → General Control Mode Settings → Skill Queue. It is on by default and gave more damage in testing.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">6</span><span><b>Repeat on every preset you use</b><small>For example a boss preset and a trash preset, each with its own skill levels, Stigmas and macro. You cannot switch presets while a Stigma is cooling down.</small></span><span class="cost"></span></li>
+      <li class="ph0"><span class="n">7</span><span><b>Test it</b><small>On a training dummy, hold left click and the Macro key together. Each successful cancel shows a black silhouette on your character.</small></span><span class="cost"></span></li>
+    </ol>
+  </section>
+
+  <section class="card" id="what">
+    <header><h2>What goes in it, and what you press yourself</h2></header>
+    <div class="tscroll"><table><thead><tr><th>Where</th><th>What</th><th>Why</th></tr></thead><tbody>
+      <tr><td><b>In the macro</b></td><td>The one or two hotkeys you spam non-stop</td><td class="muted">Every extra step costs hits.</td></tr>
+      <tr><td><b>Held with it</b></td><td>Left click, the basic attack</td><td class="muted">As a macro step it fires once a cycle; held, it cancels after every skill.</td></tr>
+      <tr><td><b>By hand</b></td><td>Buffs, Stigma buffs, movement and burst skills</td><td class="muted">In the macro a buff fires whenever it is ready, trash included, and lowers your hit count.</td></tr>
+      <tr><td><b>Its own held key</b></td><td>Charge skills: Hellfire, Punishment, Deadshot and the like</td><td class="muted">The macro fires them at the first charge stage; holding their own key charges them fully.</td></tr>
+    </tbody></table></div>
+    <ul class="fix">
+      <li><b>Do not stack two main damage skills, or two skills with the same cooldown, on one hotkey.</b> They block each other.</li>
+      <li><b>A buff step before your main step can cost hits.</b> Keep buffs out, or put them in a second line at most.</li>
+      <li><b>A held skill key repeats, but slower than a macro step.</b> There is no hold-to-repeat setting. If a held key stops firing in a long fight, let go and hold it again.</li>
+      <li><b>Farming:</b> you can add the basic attack as a step so one held key does everything.</li>
+    </ul>
+  </section>
+
+  <section class="card" id="cancel">
+    <header><h2>Basic-attack cancel</h2><span class="eyebrow">why you hold left click</span></header>
+    <p class="note">Every skill ends in a recovery animation. A basic attack right after the skill cuts that animation off, so the next skill starts sooner and more skills fit into a fight.</p>
+    <div class="tl" aria-label="Three timelines: skill then wait, skill plus basic attack, and mashing both">
+      <div class="row"><span class="lab">Skill, then wait</span><div class="bar"><span class="s">SKILL</span><span class="r">RECOVERY</span><span class="s">SKILL</span><span class="r">RECOVERY</span><span class="s">SKILL</span></div></div>
+      <div class="row"><span class="lab">Skill + basic attack</span><div class="bar"><span class="s">SKILL</span><span class="a">AA</span><span class="s">SKILL</span><span class="a">AA</span><span class="s">SKILL</span><span class="a">AA</span><span class="s">SKILL</span></div></div>
+      <div class="row"><span class="lab">Mashing both</span><div class="bar"><span class="s">SKILL</span><span class="a">AA</span><span class="s">SKILL</span><span class="e">LOST</span><span class="r">RECOVERY</span><span class="s">SKILL</span></div></div>
+    </div>
+    <div class="legend"><span><i style="background:var(--gold)"></i>Skill</span><span><i style="background:var(--ok)"></i>Basic attack that cancels</span><span><i style="background:var(--warn)"></i>Basic attack eaten by the next input</span><span>Widths are illustrative</span></div>
+    <p class="note"><b>By hand:</b> press the skill, then left click within about 0.05–0.1 s, and treat the pair as one input. Mashing both buttons gets about half your basic attacks eaten. Every skill has a minimum cancel time, and high ping eats into the window. Holding left click with the Macro key does all of this for you.</p>
+  </section>
+
+  <section class="card" id="classes">
+    <header><h2>Your class's setup</h2><span class="eyebrow">the boss setup from each planner</span></header>
+    <p class="note">Each "line" is one stacked hotkey added as one macro step; skills are numbered in firing order. Open a planner's Macro tab for what to press by hand, the trash preset and fixes.</p>
+    <div class="ccards">
+      <article class="mc">
+        <header><img src="../gladiator-planner/icons/11170000.webp" alt=""><div><h3>Gladiator</h3><small>PvE Overhead Slam</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../gladiator-planner/icons/11020000.webp" alt=""><b>Keen Strike</b></span><span class="chip"><b>Macro key</b></span><span class="chip">its own key: <img src="../gladiator-planner/icons/11170000.webp" alt=""><b>Overhead Slam</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Rending Blow line</span><ol><li><b>1</b><img src="../gladiator-planner/icons/11280000.webp" alt="">Sword Aura Rampage</li><li><b>2</b><img src="../gladiator-planner/icons/11390000.webp" alt="">Rage Burst</li><li><b>3</b><img src="../gladiator-planner/icons/11100000.webp" alt="">Ruinous Blow</li><li><b>4</b><img src="../gladiator-planner/icons/11010000.webp" alt="">Rending Blow</li></ol></div>
+        <a class="pill go" href="../gladiator-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../templar-planner/icons/12240000.webp" alt=""><div><h3>Templar</h3><small>PvE Judgment tank</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../templar-planner/icons/12010000.webp" alt=""><b>Vicious Strike</b></span><span class="chip"><b>Macro key</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Judgment line</span><ol><li><b>1</b><img src="../templar-planner/icons/12240000.webp" alt="">Judgment</li><li><b>2</b><img src="../templar-planner/icons/12350000.webp" alt="">Warding Strike</li><li><b>3</b><img src="../templar-planner/icons/12100000.webp" alt="">Shield Smite</li><li><b>4</b><img src="../templar-planner/icons/12040000.webp" alt="">Pummel</li></ol></div><div class="line"><span class="tag">Entry 2 · Annihilate line</span><ol><li><b>5</b><img src="../templar-planner/icons/12300000.webp" alt="">Annihilate</li><li><b>6</b><img src="../templar-planner/icons/12070000.webp" alt="">Doom Shield</li></ol></div><div class="line"><span class="tag">Entry 3 · Buff line</span><ol><li><b>7</b><img src="../templar-planner/icons/12450000.webp" alt="">Battlefield Banner</li><li><b>8</b><img src="../templar-planner/icons/12230000.webp" alt="">Noble Armor</li></ol></div>
+        <a class="pill go" href="../templar-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../assassin-planner/icons/13350000.webp" alt=""><div><h3>Assassin</h3><small>PvE Heart Gore</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../assassin-planner/icons/13010000.webp" alt=""><b>Quick Slice</b></span><span class="chip"><b>Macro key</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Insignia Explosion line</span><ol><li><b>1</b><img src="../assassin-planner/icons/13130000.webp" alt="">Insignia Explosion</li><li><b>2</b><img src="../assassin-planner/icons/13350000.webp" alt="">Heart Gore</li><li><b>3</b><img src="../assassin-planner/icons/13100000.webp" alt="">Savage Roar</li></ol></div>
+        <a class="pill go" href="../assassin-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../ranger-planner/icons/14010000.webp" alt=""><div><h3>Ranger</h3><small>PvE Deadshot</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../ranger-planner/icons/14020000.webp" alt=""><b>Snipe</b></span><span class="chip"><b>Macro key</b></span><span class="chip">its own key: <img src="../ranger-planner/icons/14010000.webp" alt=""><b>Deadshot</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Damage line</span><ol><li><b>1</b><img src="../ranger-planner/icons/14110000.webp" alt="">Gale Arrow</li><li><b>2</b><img src="../ranger-planner/icons/14130000.webp" alt="">Snare Shot</li><li><b>3</b><img src="../ranger-planner/icons/14360000.webp" alt="">Explosive Arrow</li></ol></div><div class="line"><span class="tag">Entry 2 · Drill Dart line</span><ol><li><b>4</b><img src="../ranger-planner/icons/14050000.webp" alt="">Drill Dart</li><li><b>5</b><img src="../ranger-planner/icons/14080000.webp" alt="">Burst Arrow</li><li><b>6</b><img src="../ranger-planner/icons/14340000.webp" alt="">Tempest Shot</li></ol></div>
+        <a class="pill go" href="../ranger-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../sorcerer-planner/icons/15060000.webp" alt=""><div><h3>Sorcerer</h3><small>PvE Hellfire</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../sorcerer-planner/icons/15210000.webp" alt=""><b>Flame Arrow</b></span><span class="chip"><b>Macro key</b></span><span class="chip">its own key: <img src="../sorcerer-planner/icons/15060000.webp" alt=""><b>Hellfire</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Damage line</span><ol><li><b>1</b><img src="../sorcerer-planner/icons/15280000.webp" alt="">Bittercold Wind</li><li><b>2</b><img src="../sorcerer-planner/icons/15050000.webp" alt="">Blaze</li><li><b>3</b><img src="../sorcerer-planner/icons/15040000.webp" alt="">Firestorm</li><li><b>4</b><img src="../sorcerer-planner/icons/15310000.webp" alt="">Wish of Concentration</li></ol></div><div class="line"><span class="tag">Entry 2 · Shackles</span><ol><li><b>5</b><img src="../sorcerer-planner/icons/15110000.webp" alt="">Winter&#x27;s Shackles</li></ol></div>
+        <a class="pill go" href="../sorcerer-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../spiritmaster-planner/icons/16100000.webp" alt=""><div><h3>Spiritmaster</h3><small>PvE Elemental Fusion</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../spiritmaster-planner/icons/16010000.webp" alt=""><b>Cold Shock</b></span><span class="chip"><b>Macro key</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Damage line</span><ol><li><b>1</b><img src="../spiritmaster-planner/icons/16150000.webp" alt="">Jointstrike: Corrode</li><li><b>2</b><img src="../spiritmaster-planner/icons/16140000.webp" alt="">Jointstrike: Curse</li><li><b>3</b><img src="../spiritmaster-planner/icons/16330000.webp" alt="">Dimensional Control</li><li><b>4</b><img src="../spiritmaster-planner/icons/16040000.webp" alt="">Combustion</li></ol></div><div class="line"><span class="tag">Entry 2 · Spirit line</span><ol><li><b>5</b><img src="../spiritmaster-planner/icons/16300000.webp" alt="">Elemental Fusion</li><li><b>6</b><img src="../spiritmaster-planner/icons/16110000.webp" alt="">Summon: Water Spirit</li><li><b>7</b><img src="../spiritmaster-planner/icons/16130000.webp" alt="">Summon: Earth Spirit</li><li><b>8</b><img src="../spiritmaster-planner/icons/16100000.webp" alt="">Summon: Fire Spirit</li></ol></div>
+        <a class="pill go" href="../spiritmaster-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../cleric-planner/icons/17350000.webp" alt=""><div><h3>Cleric</h3><small>PvE Condemnation</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../cleric-planner/icons/17010000.webp" alt=""><b>Earth&#x27;s Retribution</b></span><span class="chip"><b>Macro key</b></span><span class="chip">By hand · its own key: <img src="../cleric-planner/icons/17060000.webp" alt=""><b>Bolt</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Damage line</span><ol><li><b>1</b><img src="../cleric-planner/icons/17430000.webp" alt="">Prayer of Amplification</li><li><b>2</b><img src="../cleric-planner/icons/17400000.webp" alt="">Earth Punishment</li><li><b>3</b><img src="../cleric-planner/icons/17350000.webp" alt="">Condemnation</li><li><b>4</b><img src="../cleric-planner/icons/17070000.webp" alt="">Chain of Torment</li></ol></div><div class="line"><span class="tag">Entry 2 · Mark line</span><ol><li><b>5</b><img src="../cleric-planner/icons/17080000.webp" alt="">Debilitating Mark</li><li><b>6</b><img src="../cleric-planner/icons/17090000.webp" alt="">Light of Regeneration</li><li><b>7</b><img src="../cleric-planner/icons/17040000.webp" alt="">Judgment Thunder</li></ol></div>
+        <a class="pill go" href="../cleric-planner/index.html#macro">Full setup →</a>
+      </article>
+      <article class="mc">
+        <header><img src="../chanter-planner/icons/18100000.webp" alt=""><div><h3>Chanter</h3><small>PvE Dark Crush</small></div></header>
+        <div class="hold"><span class="chip">left click: <img src="../chanter-planner/icons/18010000.webp" alt=""><b>Onslaught</b></span><span class="chip">right click: <b>the macro</b></span></div>
+        <div class="line"><span class="tag">Entry 1 · Dark Crush line</span><ol><li><b>1</b><img src="../chanter-planner/icons/18100000.webp" alt="">Dark Crush</li><li><b>2</b><img src="../chanter-planner/icons/18290000.webp" alt="">Spinning Strike</li><li><b>3</b><img src="../chanter-planner/icons/18060000.webp" alt="">Impactful Crush</li><li><b>4</b><img src="../chanter-planner/icons/18040000.webp" alt="">Incandescent Blow</li></ol></div>
+        <a class="pill go" href="../chanter-planner/index.html#macro">Full setup →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="card" id="fix">
+    <header><h2>If it is not working</h2></header>
+    <div class="tscroll"><table><thead><tr><th>What you see</th><th>Likely cause</th><th>Fix</th></tr></thead><tbody>
+      <tr><td><b>The Macro key does nothing</b></td><td>A mouse button bound in the AION 1 control mode</td><td>Bind a keyboard key, or switch control mode.</td></tr>
+      <tr><td><b>The macro stopped after a preset swap</b></td><td>Each preset has its own macro; swapping stops it</td><td>Set it up on every preset and hold the key again.</td></tr>
+      <tr><td><b>A buff went off on trash</b></td><td>It is in the macro</td><td>Take it out and press it yourself.</td></tr>
+      <tr><td><b>Low hit count on the dummy</b></td><td>Too many steps, buffs inside, or a delay that does not suit your PC</td><td>Cut to one or two steps, move buffs out, try 15–20 ms.</td></tr>
+      <tr><td><b>A charge skill hits weakly</b></td><td>The macro fires it at the first stage</td><td>Put it on its own key and hold it.</td></tr>
+      <tr><td><b>Extra basic attacks, fewer skills</b></td><td>A step still set to the basic attack (the default)</td><td>Change or delete that step.</td></tr>
+      <tr><td><b>Basic attacks stop while holding</b></td><td>Alt held, or Alt combinations bound on other keys</td><td>Do not bind skills to Alt combinations.</td></tr>
+      <tr><td><b>Skills fire out of order</b></td><td>Expected: the list is a set of priorities</td><td>Nothing to fix.</td></tr>
+      <tr><td><b>Pressed buffs lag, or basic attacks get eaten</b></td><td>Skill Queue</td><td>Most setups run it on; test both ways.</td></tr>
+      <tr><td><b>No black silhouettes</b></td><td>Left click is not held with the Macro key</td><td>Hold both.</td></tr>
+    </tbody></table></div>
+  </section>
+
+  <section class="card">
+    <header><h3>In-game macro or mouse software?</h3></header>
+    <p class="note">Many guides from the Korean and Taiwanese release add mouse-software sequences or rapid-fire on top of the macro. Measured against those setups, the in-game macro alone came out between about 5% below and 7% above, and a repeated test found no difference. The planners on this site use only the in-game macro. Anything outside the game is covered by NC's rules: read the AION 2 Global operation policy before you use it.</p>
+  </section>
+
+  <section class="card">
+    <header><h3>Sources</h3><span class="eyebrow">compiled 18 Oct 2026</span></header>
+    <ol class="src">
+      <li><a href="https://aion2maps.com/guides/auto-attack-cancel-and-macros/" target="_blank" rel="noopener">Aion 2 Maps: Auto-attack cancel and macros</a>: the setup steps, macro behaviour, limits and fixes, drawn from NC's Korean update notes on the skill macro (Jan, May and Jul 2026), the Global game client, and Korean players' guides.</li>
+      <li><a href="https://aion2maps.com/guides/classes/" target="_blank" rel="noopener">Aion 2 Maps class guides</a>: each class's macro, via the planners on this site.</li>
+    </ol>
+    <p class="note">Settings paths are from the Global launch build; menu names can move with patches.</p>
+  </section>
+  <p class="foot">Unofficial fan tool, not affiliated with or endorsed by NCSOFT. AION is a trademark of NCSOFT Corporation. Skill icons are game art &copy; NCSOFT Corporation, sourced via Metabot.</p>
+</div></main>
+<script src="../shared/site.js"></script>
+<script>siteMenu('macros', '../');</script>
+</body>
+</html>
