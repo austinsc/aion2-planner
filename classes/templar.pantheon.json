@@ -1,0 +1,98 @@
+{
+  "summary": "A tank still builds damage first, because Judgment's damage is your threat; the Templar twists are Space statues, since every Block fires Fury's party buff, and Destiny for Endurance, which no boss can pierce. The PvP preset leans on Endurance, and a damage preset covers the second Templar who isn't holding the boss.",
+  "presets": [
+    {
+      "name": "PvE tank",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Wisdom", "why": "Smite on Judgment, which carries most of your damage and threat; lower MP costs for Pummel. First for Aion 2 Guides (SolAshur) and Metaroad."},
+        {"stat": "Time", "why": "Combat Speed: more hits, more Judgment windows, more threat."},
+        {"stat": "Destruction", "why": "Attack Increase. Taunt's threat spike scales with your damage."},
+        {"stat": "Space", "why": "Block: every Block gives the party Fury's +12% PvE Damage Boost and takes about half off the hit. Move Speed for pulls."},
+        {"stat": "Illusion", "why": "Cooldown Reduction: more Judgment windows (SolAshur and Leonis call it important)."},
+        {"stat": "Destiny", "why": "Endurance halves a hit, and bosses have no Endurance Penetration; MP too."},
+        {"stat": "Justice", "why": "Defense and Perfect chance; the colossus already gives plenty."},
+        {"stat": "Life", "why": "HP and Regeneration; more HP also helps you stay above 70% for Primal Vigor's +150 PvE Attack."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "kibelisk"],
+      "statueWhy": "The Space set: Transcendent Bakarma, Asahr's Mirror, Fortress Guardian Notun and Kibelisk give 42 Space. Kibelisk (bind all 61 teleport points) has no Death, and that suits a Templar best of all classes: Judgment always crits, so Death only helps your other skills. Gatekeeper Pinopi or Furious Feruk (Death and Space 8) keep more Death if you prefer.",
+      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition-destiny", "n": 2}, {"id": "expedition-life", "n": 2}, {"id": "elite-destiny", "n": 5}, {"id": "elite-life", "n": 2}],
+      "artworkWhy": "Keep Wisdom and Illusion on all twelve; their third stat is fixed, and eight of the twelve carry Destiny. That is the version a tank wants: Endurance halves a hit, against Regeneration's 20% back, and SolAshur buys toward Endurance for the long game.",
+      "bracelets": ["Wisdom", "Time", "Destruction", "Illusion", "Space", "Justice"],
+      "braceletWhy": "The four damage lines first, as in Aion 2 Maps' and Metaroad's lists.[kr] Korea's top PvE Templars keep the same four (94 to 100%).[/kr] For a fifth, Aion 2 Maps splits between Justice and Space; this page takes Space for Block.",
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (Nightmare shop, 14,000 Phantasmal Fragments) gives the same three stats at 45 and is the realistic one. The artworks are the Elyos set; Asmodians have no Life elite artworks and fill three slots with Epic ones."
+    },
+    {
+      "name": "PvP",
+      "mode": "PvP",
+      "priority": [
+        {"stat": "Time", "why": "Combat Speed and Smite Resist. Aion 2 Guides swaps Illusion for Time in PvP."},
+        {"stat": "Destiny", "why": "Endurance halves a hit: a Templar wins long fights, not fast ones."},
+        {"stat": "Space", "why": "Block, the Templar's main defence for SolAshur (rank 1 in Global's 1v1 arena), and Move Speed to stay on kiting players."},
+        {"stat": "Freedom", "why": "Accuracy counts against players (PvE Accuracy doesn't), so your stuns and Punishment land; Evasion too."},
+        {"stat": "Wisdom", "why": "Smite still deals 1.5x against players."},
+        {"stat": "Illusion", "why": "Endurance Penetration against other tanks, and shorter cooldowns on Executing Blade and Doom Shield."},
+        {"stat": "Life", "why": "HP for Noble Armor and your HP absorbs to work from, and Regeneration."},
+        {"stat": "Destruction", "why": "Attack Increase, and Perfect Resist."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "kibelisk"],
+      "statueWhy": "The same Space set: 42 Space for Block and Move Speed, with 22 Freedom from Bakarma and Kibelisk and 20 more from the Compass of Vigor for Accuracy.",
+      "artworks": [{"id": "gartua", "n": 1}, {"id": "nahma-artwork", "n": 1}, {"id": "pvp-artwork", "n": 2}, {"id": "expedition-destiny", "n": 2}, {"id": "elite-destiny", "n": 5}, {"id": "elite-life", "n": 1}],
+      "artworkWhy": "The Endurance swap Aion 2 Maps describes for PvP: Guardian Lord Nahma's artwork and the two PvP artworks (Argo, and Ardus Shrine or Impetusium) replace the two Life Expedition artworks and one Life elite artwork. Destiny rises from 33 to 46 for 12 Wisdom.[kr] Korea's top PvP Templars take the Destiny Arcana card even in a Vigor set (89%).[/kr]",
+      "bracelets": ["Time", "Destiny", "Space", "Freedom", "Wisdom", "Illusion"],
+      "braceletWhy": "Time first, then the survival lines that make a Templar hard to kill, then Accuracy and damage. No source gives Global PvP bracelet lines yet.",
+      "note": "Guardian Lord Nahma is the PvP colossus too. Keep this as a second Pantheon preset beside the PvE one."
+    },
+    {
+      "name": "Damage",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Wisdom", "why": "Smite on Judgment, and lower MP costs for Pummel (Skycoach)."},
+        {"stat": "Time", "why": "Combat Speed: Skycoach's damage build likes Time and Illusion most."},
+        {"stat": "Destruction", "why": "Attack Increase, first in Leonis' order."},
+        {"stat": "Illusion", "why": "Cooldown Reduction: more Judgment windows."},
+        {"stat": "Death", "why": "Critical Hit for everything but Judgment, which always crits, up to the 50% cap."},
+        {"stat": "Freedom", "why": "Accuracy, one of the damage Templar's core three stats, until the cap."},
+        {"stat": "Destiny", "why": "MP and Endurance; most good artworks carry it."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "eternity"],
+      "statueWhy": "The four best-grade statues, for the most Death (42). When someone else holds the boss you're rarely hit, so Block seldom fires Fury, and with two Templars only one Fury counts anyway; Artifact of Eternity adds Freedom in place of Kibelisk.",
+      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition-destiny", "n": 2}, {"id": "expedition-life", "n": 2}, {"id": "elite-destiny", "n": 5}, {"id": "elite-life", "n": 2}],
+      "artworkWhy": "All twelve keep Wisdom and Illusion, the damage stats; their Destiny or Life doesn't add damage.",
+      "bracelets": ["Wisdom", "Time", "Destruction", "Illusion", "Justice", "Freedom"],
+      "braceletWhy": "The four damage lines, then Justice for Perfect chance, or Freedom while bosses still parry you.",
+      "note": "For the damage-leaning Templar in the builds (a second Templar, farming groups). Skycoach's damage build ranks Destruction, Time, Space, Wisdom and Illusion; Leonis (via AION2 Vault) the same five."
+    }
+  ],
+  "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Freedom (Compass of Vigor), Justice (Bell of Vigor) and Wisdom (Mirror of Magic), 20 each at Unique: four Vigor cards for Primal Vigor's +150 PvE Attack. Time and Wisdom are top stats; Justice and Life are tank stats, and Freedom gives Accuracy. Most top Global Templars trade the Justice Bell for Destruction: 83% wear the Chalice of Vigor, 75% the Bell of Magic and 56% the Mirror of Magic. AION2 Tierlist suggests the Parchment of Magic for a tank, for Destiny's MP and Endurance, and it suits the PvP preset's Endurance artworks.[kr] Korea's top Templars wear the Destiny Parchment in PvE (95%) and PvP (89%), and the Destruction Bell (97% and 92%).[/kr] Few take the Chalice of Magic (Space) over Time's Combat Speed.",
+  "tips": [
+    "No top-100 Global Templar wears an Abyssal Bracelet yet (they wear the Ascension Bracelet with a Liberator or Pilgrim one), so the bracelet lines are for later.",
+    "Every Block gives you and your party Fury's PvE Damage Boost for 20 s, so Block is a damage stat for a tank. Top Global Templars also put Block on weapon and accessory manastones.",
+    "Bosses have no Endurance Penetration: the Endurance chance on your stat sheet is the real chance a boss hit does half damage.",
+    "Kibelisk costs nothing but travel: bind all 61 teleport points on your map.",
+    "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion on the Market; Krao and Ferocious Horn Den add Destiny. Their Hard Expedition versions (Heroic, 5 of each) are better still.",
+    "[kr]A Korean Templar's speed-run setting stacks Space everywhere (Death and Space statues, Space on both bracelets, Space Arcana) for Move Speed while pulling.[/kr]"
+  ],
+  "sources": [
+    {"title": "Aion 2 Maps: Pantheon stats", "url": "https://aion2maps.com/guides/pantheon-stats/", "note": "Pieces and points, the Death-statue setup, the PvP Endurance artwork swap and Nahma as the PvP colossus."},
+    {"title": "Aion 2 Maps: Templar, Gear and Arcana tabs", "url": "https://aion2maps.com/guides/templar/", "note": "Bracelet lines (Time, Wisdom, Destruction, Illusion, then Justice or Space), Fury on every Block, Arcana versions and their Pantheon stats."},
+    {"title": "Aion 2 Maps: Tanking", "url": "https://aion2maps.com/guides/tanking/", "note": "Taunt's threat scales with your damage; Block rules for Templars."},
+    {"title": "Aion 2 Guides: Templar", "url": "https://aion2-guides.info/en/templar/", "note": "SolAshur's Pantheon order: Wisdom first, Space for Block, then Illusion (PvE) or Time (PvP); Block and Endurance late."},
+    {"title": "SolAshur: Templar Global build guide", "url": "https://solashur.com/builds/aion2-templar-global-build-guide.html", "note": "A rank 1 arena Templar's Pantheon stats (Illusion, Space and Time; Destiny for an Endurance build; Life for quick returns); Block as the main defensive stat."},
+    {"title": "Metaroad: Templar PvE tank build", "url": "https://metaroad.gg/aion2/build-guides/templar-pve-tank-build", "note": "Wisdom and Illusion as the Templar's stats; bracelet lines Destruction, Time, Wisdom, Illusion; Judgment always crits (updated 21 Oct 2026)."},
+    {"title": "Skycoach: Templar class guide", "url": "https://skycoach.gg/blog/aion-2/articles/templar-guide", "note": "Damage build Pantheon: Destruction, Time, Space, Wisdom, Illusion; Wisdom for Pummel's MP."},
+    {"title": "AION2 Vault: Templar gear", "url": "https://aion2vault.com/builds/templar/gear/", "note": "Leonis' deity stat order (Destruction, Time, Space, Wisdom, Illusion) and two Abyssal Bracelets as his end goal."},
+    {"title": "AION2 Tierlist: Templar build (top 100 Global)", "url": "https://aion2tierlist.com/builds/templar", "note": "Top 100 Templars' bracelets (no Abyssal Bracelets), Arcana and Block manastones, 22 Oct 2026."},
+    {"title": "AION2 Tierlist: Arcana build guide", "url": "https://aion2tierlist.com/guides/aion-2-arcana-build-guide", "note": "The Parchment of Magic's Destiny helps a tank."},
+    {"title": "Game8: Judgment Templar PvE build", "url": "https://game8.co/games/Aion-2/archives/626144", "note": "Pantheon priority Time, Life, Freedom, Justice for survival; Zikel's colossus, Kibelisk among the statues (updated 16 Oct 2026)."},
+    {"title": "Game8: Tank Templar PvP build", "url": "https://game8.co/games/Aion-2/archives/631349", "note": "The same Pantheon setup and priority for PvP."},
+    {"title": "kanonxo: Aion 2 PvE Guide (Google Doc)", "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/", "note": "Bosses have no Endurance Penetration; bracelet lines including Space; Judgment as most of a Templar's damage."},
+    {"title": "aion2-meta: Templar (Korean top-player data)", "url": "https://aion2-meta.com/guides/templar/", "note": "AION2CAL, 12 Oct 2026: bracelet lines and Arcana of top Korean PvE and PvP Templars.", "region": "KR"},
+    {"title": "Inven: a Templar's speed-run setting", "url": "https://www.inven.co.kr/board/aion2/6438/11712", "note": "Death and Space statues, Space bracelets and Arcana for a PvE run.", "region": "KR"},
+    {"title": "Vortex Gaming: Templar PvE setting (summary of a Korean video)", "url": "https://vortexgaming.io/postdetail/977999", "note": "Life, Destiny and Wisdom artworks first; Illusion, Life and Destiny ones for PvP.", "region": "KR"}
+  ],
+  "disagree": "Damage or survival stats: Game8 (copied by Deltia's Gaming) ranks Time, Life, Freedom and Justice for the tank. Aion 2 Guides (SolAshur), Metaroad, Skycoach and Leonis put Wisdom, Time, Destruction and Illusion first, and this page follows them: a Templar's threat comes from its damage. Space or Freedom: SolAshur, Aion 2 Guides and Leonis take Space, and Fury makes Block worth more to a Templar than to anyone.[kr] Aion 2 Maps notes Block builds weren't judged worth it in raids on the Asian release.[/kr] Game8 lists Freedom; this page uses Freedom only for the damage preset. Destiny or Life: SolAshur and AION2 Tierlist favour Destiny for Endurance, Game8 Life.[kr] The Korean video takes both.[/kr] Bracelets: every list keeps the four damage lines; for the fifth, Aion 2 Maps splits between Justice and Space."
+}

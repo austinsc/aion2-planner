@@ -1,0 +1,248 @@
+{
+  "summary": "The common damage setup (the best Death statues, twelve Wisdom and Illusion artworks), with Gladiator twists: you hit bosses from the front, where they parry, so Accuracy (Freedom) matters until it's capped, and Destiny's MP suits the class that runs out of MP first. The PvP preset turns the statues to Freedom.",
+  "presets": [
+    {
+      "name": "PvE",
+      "mode": "PvE",
+      "priority": [
+        {
+          "stat": "Wisdom",
+          "why": "Smite doubles a hit, and lower MP costs feed the class that runs dry first. Top of every list (kanonxo, Ulfhednar, Metaroad)."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed. Overhead Slam gains hits in steps (85.6%, then above 127.6%), so check where your next step is."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, a multiplier on all your Attack."
+        },
+        {
+          "stat": "Death",
+          "why": "Critical Hit up to the 50% boss cap: crits cut Lunge Stance's cooldowns and refund Rending Blow's MP."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy until the cap: you stand in front of the boss, and every parried hit is lost damage."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction, worth least to a Gladiator, but every good artwork carries it anyway."
+        },
+        {
+          "stat": "Destiny",
+          "why": "MP and Endurance: most of the good artworks carry it."
+        },
+        {
+          "stat": "Justice",
+          "why": "Perfect chance and Defense: the fifth bracelet line."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "asahr",
+        "notun",
+        "eternity"
+      ],
+      "statueWhy": "The four best-grade statues, for the most Death (42): crits matter to a Gladiator up to the 50% cap. Artifact of Eternity is the only Epic statue with Freedom, and the Compass of Vigor adds 20 more. If bosses still parry you, Dream Fragment and Fafnir's Poison Blood (Death and Freedom 8) in place of Asahr's Mirror and Notun add 16 Freedom for 4 Death and 20 Space; drop them again once you're capped.",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "The Wisdom and Illusion pieces decide this, and their third stat is fixed: eight of the twelve carry Destiny, which suits a Gladiator. Its MP feeds the class that runs dry first (Rending Blow is the heaviest drain until 16), and its Endurance halves a boss hit, which no boss can pierce. Life adds nothing to damage.",
+      "bracelets": [
+        "Wisdom",
+        "Destruction",
+        "Time",
+        "Illusion",
+        "Justice",
+        "Freedom"
+      ],
+      "braceletWhy": "Wisdom, Destruction, Time and Illusion fill the four lines in Aion 2 Maps' and Metaroad's lists.[kr] Korea's top PvE Gladiators keep exactly these four (99 to 100%).[/kr] A fifth to keep: Justice, or Freedom while bosses still parry you.",
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (Nightmare shop, 14,000 Phantasmal Fragments) gives the same three stats at 45 and is the realistic one. Elyos can fill all twelve slots with pieces that carry both Wisdom and Illusion: Gartua, the four Expedition artworks and seven elite and boss ones. Asmodians have four elite and boss pieces with both (no Life ones) and fill three slots with Epic ones."
+    },
+    {
+      "name": "PvP",
+      "mode": "PvP",
+      "priority": [
+        {
+          "stat": "Time",
+          "why": "Combat Speed, and Smite Resist against the other player's Smite."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy counts against players (PvE Accuracy doesn't), and players Block and Evade far more than bosses."
+        },
+        {
+          "stat": "Wisdom",
+          "why": "Smite still deals 1.5x against players."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, and Perfect Resist."
+        },
+        {
+          "stat": "Death",
+          "why": "Crit is far from the cap against players; it also pierces Regeneration."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Endurance Penetration against tanks and Endurance builds; shorter cooldowns on Mocking Blade and Aerial Snare."
+        },
+        {
+          "stat": "Destiny",
+          "why": "Endurance halves a hit: the Bruiser wins by outlasting the burst."
+        },
+        {
+          "stat": "Life",
+          "why": "HP, which also raises Defiance's 20% heal, and Regeneration."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "fafnir",
+        "dream"
+      ],
+      "statueWhy": "Every statue with Freedom and Death: Transcendent Bakarma, Artifact of Eternity, Fafnir's Poison Blood (Nightmare shop, 5,000 Phantasmal Fragments) and Dream Fragment give 38 Freedom and keep 38 Death. Templars and Clerics block and Assassins evade, and Accuracy answers both.[kr] Korea's top PvP Gladiators pick the Freedom Arcana card over the Death one (80% to 19%), the reverse of PvE.[/kr]",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "Smite builds keep their Wisdom artworks in PvP, so this is the PvE set; its eight Destiny pieces give Endurance, which halves a hit, where Life's Regeneration gives back 20% of one.",
+      "bracelets": [
+        "Time",
+        "Freedom",
+        "Wisdom",
+        "Destruction",
+        "Illusion",
+        "Death"
+      ],
+      "braceletWhy": "Time and Freedom first, then the damage lines. No source gives Global PvP bracelet lines yet, so this follows the PvP stat lists of Aion 2 Guides and Aion 2 Maps.",
+      "note": "For a tankier Endurance preset, swap the two Life Expedition artworks and one Life elite artwork for Guardian Lord Nahma's artwork and the two PvP artworks (Argo and Ardus Shrine or Impetusium): Aion 2 Maps notes PvP Endurance builds do this, while Smite builds keep Wisdom. Guardian Lord Nahma's colossus is the PvP colossus too."
+    }
+  ],
+  "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Freedom (Compass of Vigor), Destruction (Bell of Magic) and Wisdom (Mirror of Magic), 20 each at Unique. Time, Destruction and Wisdom are your top three damage stats, and the Compass of Vigor's Freedom adds to your statues' Accuracy: Aion 2 Guides takes it for that reason. Once bosses stop parrying you, the Compass of Magic (Death) is the better card. Metaroad goes further and takes the Parchment and Compass of Magic, for Destiny's MP and Death's crits, both of which feed the Gladiator's MP loop, and completes the Magic Armor set. Among Global's top 100 Gladiators, 94% wear the Chalice of Vigor, 88% the Bell of Magic and 75% the Parchment of Vigor.[kr] Korea's top Gladiators wear the Death Compass in PvE (83%) but the Freedom one in PvP (80%), and in PvP 68% take the Bell of Vigor (Justice) over Destruction.[/kr]",
+  "tips": [
+    "No top-100 Global Gladiator wears an Abyssal Bracelet yet (they wear the Ascension Bracelet with a Liberator or Pilgrim one), so the bracelet lines are for later.",
+    "Before you swap statues for Freedom, check whether bosses still parry you: Accuracy does nothing past its cap, and your stat sheet undercounts it, because conditional bonuses such as PvE Accuracy and Zikel's Blessing's +100 aren't shown.",
+    "Keep Death on every statue until you're at the 50% crit cap against Expedition and Transcendence bosses. Overhead Slam crits every time with its specialty, so your crit is mainly for Rending Blow, Crushing Wave and the filler.",
+    "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion on the Market; Krao and Ferocious Horn Den add Destiny. Their Hard Expedition versions (Heroic, 5 of each) are better still.",
+    "Short on MP? Destiny artworks and Wisdom both help, before you move gear lines to MP.",
+    "Save Phantasmal Fragments: Zikel's Apparition costs 14,000 and Fortress Guardian Notun 8,000. The 5,000-fragment Fafnir's Poison Blood is only worth it for a Freedom (PvP) set."
+  ],
+  "sources": [
+    {
+      "title": "Aion 2 Maps: Pantheon stats",
+      "url": "https://aion2maps.com/guides/pantheon-stats/",
+      "note": "Pieces and points, the Death-statue setup, kanonxo's Wisdom, Time and Destruction ranking, and the PvP Endurance swap."
+    },
+    {
+      "title": "Aion 2 Maps: Gladiator, Gear and Arcana tabs",
+      "url": "https://aion2maps.com/guides/gladiator/",
+      "note": "Bracelet lines (Wisdom, Destruction, Time, Illusion, then Justice), the Arcana versions and their Pantheon stats, Overhead Slam's Combat Speed steps, the crit cap and Hard Expedition artworks."
+    },
+    {
+      "title": "Aion 2 Maps: Accuracy and Crit",
+      "url": "https://aion2maps.com/guides/accuracy-and-crit/",
+      "note": "Accuracy cancels Block and Parry one for one; the stat sheet undercounts; Accuracy against players."
+    },
+    {
+      "title": "Metaroad: Gladiator PvE DPS build",
+      "url": "https://metaroad.gg/aion2/build-guides/gladiator-pve-dps-build",
+      "note": "Wisdom, Destruction and Time first, Freedom if you're short on Accuracy, Illusion after; bracelet lines; Parchment and Compass of Magic for the MP loop (updated 21 Oct 2026)."
+    },
+    {
+      "title": "Aion 2 Guides: Gladiator",
+      "url": "https://aion2-guides.info/en/gladiator/",
+      "note": "Ulfhednar's stats (Wisdom, Time, Destruction, plus some Accuracy because bosses parry you), the Freedom Compass for Accuracy, Gladiators never needing cooldown reduction, Accuracy for PvP."
+    },
+    {
+      "title": "AION2 Tierlist: Gladiator build (top 100 Global)",
+      "url": "https://aion2tierlist.com/builds/gladiator",
+      "note": "Top 100 Gladiators' bracelets (no Abyssal Bracelets) and Arcana, 22 Oct 2026."
+    },
+    {
+      "title": "AION2 Vault: Gladiator gear",
+      "url": "https://aion2vault.com/builds/gladiator/gear/",
+      "note": "Ulfhednar's Pantheon stats: Wisdom, Time, Destruction, Illusion an optional fourth."
+    },
+    {
+      "title": "Game8: Ruinous Blow Gladiator PvE build",
+      "url": "https://game8.co/games/Aion-2/archives/617444",
+      "note": "Pantheon priority Destruction, Illusion, Death, Space, Time; Zikel's colossus and Kibelisk in a statue slot."
+    },
+    {
+      "title": "Game8: Tank DPS Gladiator PvP build",
+      "url": "https://game8.co/games/Aion-2/archives/631894",
+      "note": "Same PvP priority, with five Magic Arcana cards (Space, Destiny, Death, Destruction, Wisdom)."
+    },
+    {
+      "title": "Metabot: Gladiator builds",
+      "url": "https://metabot.gg/en/aion-2/classes/gladiator/build",
+      "note": "Average deity stats of 1,681 top Global Gladiators at launch (Freedom 24, Space 17, the same as Templars')."
+    },
+    {
+      "title": "kanonxo: Aion 2 PvE Guide (Google Doc)",
+      "url": "https://docs.google.com/document/d/11u4wLCG1WfL-xSka2Aze0rI9vYRa7mq3N3Gp1bt0AWY/",
+      "note": "Bracelet lines by a top Global Gladiator; Accuracy, Parry and the 80% cap; bosses have no Endurance Penetration."
+    },
+    {
+      "title": "aion2-meta: Gladiator (Korean top-player data)",
+      "url": "https://aion2-meta.com/guides/gladiator/",
+      "note": "AION2CAL, 12 Oct 2026: bracelet lines and Arcana of top Korean PvE and PvP Gladiators.",
+      "region": "KR"
+    },
+    {
+      "title": "Inven: Nightmare tickets and the Pantheon statue setting (Roah)",
+      "url": "https://www.inven.co.kr/board/aion2/6444/565",
+      "note": "Space and Death statues for everyone, since Move Speed is felt more than Accuracy.",
+      "region": "KR"
+    },
+    {
+      "title": "Inven: recommended artworks for Smite (Roah)",
+      "url": "https://www.inven.co.kr/board/aion2/6444/1076",
+      "note": "Artwork ranking for melee damage, Life versions over Destiny ones.",
+      "region": "KR"
+    }
+  ],
+  "disagree": "Freedom or Space on the statues: Aion 2 Guides and Metaroad tell Gladiators to add Accuracy (Freedom) while bosses still parry them. Game8 ranks Space instead and puts Kibelisk (no Death) in a statue slot. Since the only Epic statues with Death carry Space, this page keeps the best-grade set in PvE and takes the Freedom statues for PvP, or for PvE while you're under the Accuracy cap.[kr] Roah's Korean statue guide takes Death and Space statues for every class.[/kr] Illusion: Game8 ranks it second and every bracelet list keeps it fourth, but Aion 2 Guides says a Gladiator never needs cooldown reduction. This page keeps it on bracelets, where nothing better competes. Destiny or Life: Metaroad's Magic cards favour Destiny for MP, and three in four top Global Gladiators still wear the Life Parchment, mostly for its skill lines and the Vigor set.[kr] Roah ranks Life artworks above Destiny ones for melee.[/kr] This page follows Destiny for the MP. Metabot's launch-week averages show no Gladiator pattern: they match the Templar's almost point for point."
+}
