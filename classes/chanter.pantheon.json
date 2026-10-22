@@ -1,0 +1,120 @@
+{
+  "summary": "The PvE preset is the common damage setup: the best statues, which already lean Space, twelve Wisdom and Illusion artworks, and Time, Destruction, Wisdom and Illusion on the bracelets. For a Chanter, Death and Freedom are worth less than usual. Dark Crush crits on every hit, and most of your boss damage lands from behind, where Block and Parry don't apply. Justice's Perfect chance is the extra line Chanters take. The PvP preset leans Freedom for Accuracy so the stun chain lands; the support preset leans Space.",
+  "presets": [
+    {
+      "name": "PvE (Dark Crush)",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Wisdom", "why": "Smite doubles a hit. Aion 2 Maps puts Double Chance first for Chanters, and few other Global sources give it."},
+        {"stat": "Time", "why": "Combat Speed, kanonxo's S-tier stat: more Dark Crush and Piercing Strike in each Power of the Storm window."},
+        {"stat": "Destruction", "why": "Attack Increase, a multiplier on all your Attack."},
+        {"stat": "Illusion", "why": "Cooldown Reduction for Power of the Storm, Marchutan's Wrath and Recuperation."},
+        {"stat": "Justice", "why": "Perfect chance, which Chanter gear already stacks; Defense too."},
+        {"stat": "Death", "why": "Low: Dark Crush crits on hit, Inspiring Spell and Undefeated Mantra add crit, and crit adds nothing past 50% on Expedition and Transcendence bosses."},
+        {"stat": "Freedom", "why": "Accuracy, but only below your content's cap: hits from behind skip the boss's Block and Parry."},
+        {"stat": "Space", "why": "Move Speed: no damage."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "eternity"],
+      "statueWhy": "The highest-point set every class uses: 42 Death, 32 Space and 22 Freedom. A Chanter gets less from both Death and Freedom than other damage classes, so nothing here is worth chasing. Once you're at the crit cap, Kibelisk (Freedom and Space, no Death) in place of Artifact of Eternity costs no damage; Game8's Chanter set runs it.",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-destiny", "n": 2},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-destiny", "n": 5},
+        {"id": "elite-life", "n": 2}
+      ],
+      "artworkWhy": "Every one has Wisdom and Illusion (49 of each), which is what counts. Destiny or Life comes with the piece (33 Destiny, 21 Life here) and neither adds damage. Destiny's MP is mildly useful, since Onslaught's MP return is what keeps a Chanter casting.",
+      "bracelets": ["Time", "Destruction", "Wisdom", "Illusion", "Justice", "Death"],
+      "braceletWhy": "Time, Destruction, Wisdom and Illusion; sources dispute their order, and all four are near-universal. Fifth line Justice for Perfect, or Death while you're under the crit cap.[kr] Korean Chanters drop Death or Freedom for Justice and Space now that the Sanctuary's crit and Accuracy targets are low, and some swap Illusion for Justice too.[/kr]",
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (14,000 Phantasmal Fragments in the Nightmare shop) gives the same three stats at 45 and is the realistic target. Asmodians: Divine Ansas and Phantasm Kasia (the two Life elite pieces) are Elyos-only, so take them through a rift or the Market, or use more Kaira or Epic pieces."
+    },
+    {
+      "name": "Support",
+      "mode": "PvE and PvP",
+      "priority": [
+        {"stat": "Illusion", "why": "Cooldown Reduction for Recuperation, Healing Touch, Impeding Authority and Power of the Storm."},
+        {"stat": "Time", "why": "Combat Speed for the whole kit."},
+        {"stat": "Wisdom", "why": "MP cost cut, and Smite for the damage you still deal."},
+        {"stat": "Life", "why": "HP and Regeneration: you are in melee range."},
+        {"stat": "Space", "why": "Block and Move Speed for staying alive and repositioning."},
+        {"stat": "Destiny", "why": "MP pool, and Endurance."},
+        {"stat": "Destruction", "why": "Attack Increase raises your heals and shields along with your damage."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "kibelisk"],
+      "statueWhy": "A support has little use for Death's crit, so Kibelisk replaces Artifact of Eternity: 42 Space for Block and Move Speed, 22 Freedom for Evasion and some Accuracy. Gerod (Nightmare shop) has the same points.[kr] Korean Chanters who play group PvP run Block and Regeneration.[/kr]",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-destiny", "n": 2},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-destiny", "n": 5},
+        {"id": "elite-life", "n": 2}
+      ],
+      "artworkWhy": "The same twelve: Illusion and Wisdom are a support's best stats anyway, and their Destiny (33) and Life (21) help here.",
+      "bracelets": ["Illusion", "Time", "Wisdom", "Life", "Space", "Destiny"],
+      "braceletWhy": "Illusion first for cooldowns, then Time and Wisdom; Life, Space and Destiny for survival.",
+      "note": "For the planner's Support Healer: dungeons with no Cleric and notXeon's group-fight bar. No source gives a Pantheon setup for support Chanters; this follows the stats the support build's skills use."
+    },
+    {
+      "name": "PvP (Stun Chain)",
+      "mode": "PvP",
+      "priority": [
+        {"stat": "Freedom", "why": "Accuracy: your stuns and Dark Crush have to land, and Block and Evasion builds are common in PvP. Evasion as a bonus."},
+        {"stat": "Time", "why": "Combat Speed, and Smite Resist against Wisdom builds."},
+        {"stat": "Illusion", "why": "Cooldowns for Marchutan's Wrath and the stun skills, and Endurance Penetration against Templars and other Chanters."},
+        {"stat": "Life", "why": "HP and Regeneration (recover 20% of a hit)."},
+        {"stat": "Death", "why": "Regeneration Penetration against Clerics and other Chanters, who often build Regeneration."},
+        {"stat": "Destruction", "why": "Attack Increase for the Dark Crush burst."},
+        {"stat": "Wisdom", "why": "Smite still deals 1.5x against players."},
+        {"stat": "Destiny", "why": "Endurance, but every player's Illusion pierces it; only worth it fully built."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "eternity", "dream", "fafnir"],
+      "statueWhy": "The Freedom set: 38 Freedom for Accuracy and 38 Death for Regeneration Penetration, at the cost of Space (12). Dream Fragment comes from the level-22 quest and Fafnir's Poison Blood costs 5,000 Phantasmal Fragments, so it's cheap to keep beside the PvE one.[kr] Korean Chanters who play alone pair Accuracy with Regeneration; those in groups take Block instead, which is the support preset's statues.[/kr]",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-life", "n": 2},
+        {"id": "nahma-artwork", "n": 1},
+        {"id": "pvp-artwork", "n": 2},
+        {"id": "elite-destiny", "n": 4}
+      ],
+      "artworkWhy": "Keep most of the Wisdom (37) for Smite, and swap three slots for Guardian Lord Nahma's and the two PvP artworks: 50 Illusion, 34 Life and 34 Destiny. Life for Regeneration rather than a full Destiny set, which only pays once Endurance is built high.[kr] A Korean PvP Chanter recommends Regeneration because so many bracelet, Arcana and artwork lines carry Life, and calls Endurance worth it only with a full-Destiny Pantheon.[/kr]",
+      "bracelets": ["Freedom", "Time", "Illusion", "Life", "Destruction", "Death"],
+      "braceletWhy": "Freedom and Time first, then Illusion and Life.[kr] A Korean PvP Chanter's bracelets: Destruction, Destiny, Life, Freedom, Illusion and Time.[/kr]",
+      "note": "For duels, the arena and small fights. Pantheon presets switch for free, so keep this beside the PvE one."
+    }
+  ],
+  "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Freedom (Compass of Vigor), Destruction (Bell of Magic) and Wisdom (Mirror of Magic), 20 each at Unique. The Compass's alternative, the Compass of Magic, gives Death, which a Chanter needs least, so the Vigor version's Freedom costs little even once you're at the Accuracy cap. The Mirror is a real split: Magic gives Wisdom (Smite and MP), Vigor gives Illusion (cooldowns), and Global players favour Vigor. Among 403 geared Global Chanters on questlog (AION2 Vault): Chalice of Vigor 51%, Parchment of Vigor 48%, Compass of Vigor 45%, Mirror of Vigor 43%, and Bell of Magic 37% against Bell of Vigor 12%. Among Global's top 100: Chalice of Vigor 91%, Bell of Magic 85%, Parchment of Vigor 66%. The support preset suits the Mirror of Vigor's Illusion.[kr] Top Korean Chanters use the Mirror of Magic (92%) and Compass of Magic (83%) in PvE, and the Compass of Vigor (74%) and Bell of Vigor's Justice (64%) in PvP.[/kr]",
+  "tips": [
+    "No top-100 Global Chanter wears an Abyssal Bracelet yet (all wear the Ascension Bracelet, with a Pilgrim or Liberator one), so the bracelet lines are for later.",
+    "Count Dark Crush's crit on hit, Inspiring Spell and Undefeated Mantra toward the 50% boss crit cap before adding Death; GamerBlurb warns against overinvesting in crit on a Chanter.",
+    "Stay behind the boss: Chanters deal about 63% of their boss damage from there, where Block and Parry don't apply, so you need less Accuracy than a Ranger.",
+    "Keep the PvP statues (Artifact of Eternity, Dream Fragment, Fafnir's Poison Blood and Bakarma) as a second Pantheon preset: they're cheap and swap for free.",
+    "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion.",
+    "Save Phantasmal Fragments for Zikel's Apparition (14,000)."
+  ],
+  "sources": [
+    {"title": "Aion 2 Maps: Pantheon stats", "url": "https://aion2maps.com/guides/pantheon-stats/", "note": "Pieces and points, the common Death-statue setup, kanonxo's top three, the PvP Endurance and Regeneration swap."},
+    {"title": "Aion 2 Maps: Chanter", "url": "https://aion2maps.com/guides/chanter/", "note": "Bracelet lines (Time, Destruction, Wisdom, Illusion; Justice or Death fifth), Double Chance first, the 50% crit cap on bosses, 63% of boss damage from behind, Perfect Chance on gear, the Compass and Mirror alternatives."},
+    {"title": "Aion 2 Maps: Accuracy and Crit", "url": "https://aion2maps.com/guides/accuracy-and-crit/", "note": "Attacks from behind skip Block and Parry, and crit 3 to 10 points more often."},
+    {"title": "AION2 Vault: Chanter gear", "url": "https://aion2vault.com/builds/chanter/gear/", "note": "Arcana shares of 403 geared Global Chanters (Mirror of Vigor 43%, Bell of Magic 37%) and mourasb's and desolo's card sets."},
+    {"title": "AION2 Vault: Chanter PvP build", "url": "https://aion2vault.com/builds/chanter/pvp/", "note": "notXeon's stun chain and what it needs to land."},
+    {"title": "AION2 Tierlist: Chanter build (top 100 Global)", "url": "https://aion2tierlist.com/builds/chanter", "note": "Top 100 Global Chanters on 22 Oct 2026: no Abyssal Bracelets; Chalice of Vigor 91%, Bell of Magic 85%, Parchment of Vigor 66%."},
+    {"title": "Metabot: Chanter build stats", "url": "https://metabot.gg/en/aion-2/classes/chanter/build", "note": "Average deity stats of 1,560 top Global Chanters (Freedom 24.6, Space 17.8, Death 34.9): the same shape as other classes so far."},
+    {"title": "GameWith: Chanter build stats (Latin America)", "url": "https://gamewith.ai/aion2/en/build-stats/la/chanter", "note": "Deity stat averages and maximums of 360 top LATAM Chanters."},
+    {"title": "Game8: Dark Crush Chanter PvE build", "url": "https://game8.co/games/Aion-2/archives/626177", "note": "Pantheon priority Destruction, Illusion, Death, Space, Time; Zikel's colossus with Bakarma, Kibelisk, Asahr's Mirror and Notun."},
+    {"title": "Game8: Support DPS Chanter PvP build", "url": "https://game8.co/games/Aion-2/archives/631452", "note": "The same Pantheon and priority for PvP."},
+    {"title": "Daeva Guides: Chanter", "url": "https://daevaguides.com/en/chanter/", "note": "couga54's Pantheon order (Wisdom, Space, Illusion in PvE; Time in PvP) and the Vigor and Magic card mix of top Global Chanters."},
+    {"title": "GamerBlurb: Chanter build guide (Global)", "url": "https://gamerblurb.com/guides/aion-2-chanter-build-guide-pve-pvp-leveling-global", "note": "Stat priorities per role, and the warning against overinvesting in Critical Hit."},
+    {"title": "aion2-meta: Chanter (Korean top-player data)", "url": "https://aion2-meta.com/guides/chanter/", "note": "AION2CAL, 12 to 16 Oct 2026: bracelet lines of 622 top Korean PvE Chanters (Time, Destruction, Wisdom 100%, Illusion 99%) and Arcana use in PvE and PvP.", "region": "KR"},
+    {"title": "Inven: 9/17 Chanter optimisation guide (BBANGHOBBANG)", "url": "https://www.inven.co.kr/board/aion2/6451/22932", "note": "Bracelets: Justice and Space over Freedom and Death; Illusion 51 and Wisdom 101 as the realistic Pantheon peak.", "region": "KR"},
+    {"title": "BBANGHOBBANG: Chanter optimisation (YouTube, Korean)", "url": "https://www.youtube.com/watch?v=3sdplN_vesA", "note": "The video of the Inven guide above.", "region": "KR"},
+    {"title": "Inven: Chanter's top setting (Chanter board)", "url": "https://www.inven.co.kr/board/aion2/6451/14940", "note": "Crit loses value once Dark Crush crits on hit; Max Attack and Perfect first, Justice in place of Illusion on the bracelet.", "region": "KR"},
+    {"title": "Inven: Chanter PvP settings (Chanter board)", "url": "https://www.inven.co.kr/board/aion2/6451/14998", "note": "Group PvP: Block and Regeneration; solo: Accuracy and Regeneration; Endurance only with a full-Destiny Pantheon.", "region": "KR"},
+    {"title": "Inven: PvP setting for spenders (Chanter board)", "url": "https://www.inven.co.kr/board/aion2/6451/14629", "note": "Endurance and Regeneration PvP Chanter: bracelets Destruction, Destiny, Life, Freedom, Illusion and Time; Destiny on the Arcana.", "region": "KR"},
+    {"title": "Inven: Chanter bracelet options (Chanter board)", "url": "https://www.inven.co.kr/board/aion2/6451/20265", "note": "Destruction, Time, Wisdom, Illusion, Death and Space, or Justice in place of Death.", "region": "KR"}
+  ],
+  "disagree": "Sources split on the order of the four damage stats and on what comes next. kanonxo (via Aion 2 Maps) ranks Wisdom, Time and Destruction above the rest; Game8 ranks Destruction, Illusion, Death, Space and Time for both PvE and PvP; couga54 (Daeva Guides) puts Space second, after Wisdom. Bracelet orders differ but always hold Time, Destruction, Wisdom and Illusion. The Mirror splits between Wisdom (Magic) and Illusion (Vigor). Global players lean Vigor, top Korean ones Magic. Statues differ only in the fourth slot: Game8 runs Kibelisk, Aion 2 Maps a fourth Death statue. This page keeps the damage order for the planner's Dark Crush build, puts Justice above Death and Freedom because a Chanter needs them least, and uses Space and Freedom sets for the support and PvP presets.[kr] Korean Chanters already take Justice and Space over Freedom and Death on bracelets.[/kr] Global players show no class difference yet: top Global Chanters average the same Freedom and Space as other classes."
+}

@@ -1,0 +1,123 @@
+{
+  "summary": "The PvE preset is the common damage setup: the best statues, which already lean Space, and twelve Wisdom and Illusion artworks. Two things differ for a Cleric. Illusion matters more than usual, because no Global source reaches the cooldown cut Chain of Torment and Earth Punishment want. Death matters less, because Condemnation always crits on a burning target. The healer and PvP presets trade Death for Space: a Cleric carries a shield, and Empyrean Lords' Benediction heals on every Block.",
+  "presets": [
+    {
+      "name": "PvE (Condemnation)",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Wisdom", "why": "Smite doubles a hit, and the MP cut helps a class that casts all fight. kanonxo's top damage stat."},
+        {"stat": "Illusion", "why": "Cooldown Reduction. Chain of Torment only stays up nonstop from about 33%, and Global's sources add up to about 23% at most, so it never caps."},
+        {"stat": "Time", "why": "Combat Speed, one of kanonxo's top three.[kr] Korean Clerics report their Combat Speed caps at about 94%, lower than other classes, and stop adding Time once there.[/kr]"},
+        {"stat": "Destruction", "why": "Attack Increase, a multiplier on your damage and, through Healing Enhancement, your healing."},
+        {"stat": "Freedom", "why": "Accuracy until your content's cap: Condemnation only resets on a crit that lands."},
+        {"stat": "Death", "why": "Critical Hit for your other skills. Condemnation under Earth Punishment, and Bolt with its crit pick, already crit."},
+        {"stat": "Justice", "why": "Perfect chance and Defense, once the lines above are covered."},
+        {"stat": "Destiny", "why": "MP. Useful only if you weave Judgment Thunder and still run dry."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "eternity"],
+      "statueWhy": "The highest-point set every class uses: 42 Death, 32 Space and 22 Freedom. Artifact of Eternity is the one Freedom piece, and it keeps some Accuracy for Condemnation's resets. Space's Block also counts for a Cleric, who carries a shield.[kr] Korean Clerics put Space ahead of Freedom and Death once their Accuracy and crit are at the dungeon's target, and many now run Block sets in PvE too.[/kr] Kibelisk in place of Eternity is that swap: 10 Death for 10 Space.",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-destiny", "n": 2},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-destiny", "n": 5},
+        {"id": "elite-life", "n": 2}
+      ],
+      "artworkWhy": "Every one has Wisdom and Illusion (49 of each), which is what counts. Destiny or Life comes with the piece: the set gives 33 Destiny and 21 Life, and neither adds damage. Destiny's MP is the more useful for a Cleric on the Magic Armor cards.",
+      "bracelets": ["Time", "Wisdom", "Illusion", "Destruction", "Freedom", "Justice"],
+      "braceletWhy": "The same four as every damage build, with Illusion ahead of Destruction because it never caps for a Cleric. Fifth line Freedom if you're short on Accuracy, otherwise Justice.[kr] Korean Cleric guides now take Justice and Space over Freedom and Death once the Sanctuary's Accuracy and crit targets are met.[/kr]",
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (14,000 Phantasmal Fragments in the Nightmare shop) gives the same three stats at 45 and is the realistic target. Asmodians: Divine Ansas and Phantasm Kasia (the two Life elite pieces) are Elyos-only, so take them through a rift or the Market, or use more Kaira or Epic pieces."
+    },
+    {
+      "name": "Healer",
+      "mode": "PvE",
+      "priority": [
+        {"stat": "Illusion", "why": "Cooldown Reduction: Salvation, Yustiel's Power and your heals come back sooner.[kr] Korean Clerics in the Sanctuary say high cooldown reduction keeps the party alive.[/kr]"},
+        {"stat": "Wisdom", "why": "MP cost cut for constant healing, and Smite for the damage you still deal."},
+        {"stat": "Time", "why": "Combat Speed: faster casts."},
+        {"stat": "Space", "why": "Block, for surviving the hits aimed at you; your shield rolls Block before Parry."},
+        {"stat": "Life", "why": "HP and Regeneration. GamesFuze names Wisdom and Life a healer's two deity stats."},
+        {"stat": "Destiny", "why": "MP pool, and Endurance."},
+        {"stat": "Justice", "why": "Defense (the colossus already gives a lot)."},
+        {"stat": "Destruction", "why": "Attack Increase still raises your heals through Healing Enhancement."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "kibelisk"],
+      "statueWhy": "A healer has no use for Death's crit, so Kibelisk (Freedom and Space, no Death) replaces Artifact of Eternity: 42 Space for Block and Move Speed, 22 Freedom for Evasion and the Accuracy your Condemnation still needs. Gerod (Nightmare shop, 8,000 fragments) has the same points if you haven't bound every teleport point yet.",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-destiny", "n": 2},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-destiny", "n": 5},
+        {"id": "elite-life", "n": 2}
+      ],
+      "artworkWhy": "The same twelve: Illusion and Wisdom are a healer's two best stats anyway. Their Destiny (33) and Life (21) both help here, unlike in the damage preset.",
+      "bracelets": ["Illusion", "Wisdom", "Time", "Life", "Space", "Destiny"],
+      "braceletWhy": "Illusion and Wisdom first, then Time. After that the defensive lines: Life, Space, Destiny.",
+      "note": "For the planner's Full-support dungeon healer. In a stable party the PvE preset is fine: your heals scale with Attack, so damage stats don't cost healing.[kr] A Korean PvE guide adds that HP stats don't raise a Cleric's healing either.[/kr]"
+    },
+    {
+      "name": "PvP (Block and Regeneration)",
+      "mode": "PvP",
+      "priority": [
+        {"stat": "Illusion", "why": "Cooldown Reduction for Salvation and your cleanses, and Endurance Penetration against Templars and Chanters."},
+        {"stat": "Space", "why": "Block. Empyrean Lords' Benediction heals you on each Block, and your shield gives Block before Parry."},
+        {"stat": "Life", "why": "HP and Regeneration (recover 20% of a hit); bracelets, Arcana and artworks have many Life lines."},
+        {"stat": "Time", "why": "Combat Speed, and Smite Resist against Wisdom builds."},
+        {"stat": "Freedom", "why": "Accuracy: an evaded Condemnation doesn't reset. Th3Ruthless puts Accuracy first for offensive PvP."},
+        {"stat": "Death", "why": "Regeneration Penetration against other Clerics and Chanters."},
+        {"stat": "Destiny", "why": "Endurance, but every player's Illusion pierces it, so it needs heavy investment to matter."}
+      ],
+      "colossus": "nahma-colossus",
+      "statues": ["bakarma", "asahr", "notun", "kibelisk"],
+      "statueWhy": "Max Space (42) for Block, with 32 Death left for Regeneration Penetration and 22 Freedom for Accuracy. Th3Ruthless's rule is to commit to Block or Evasion, not split; a Cleric's shield makes Block the natural one.[kr] Korean PvP Clerics run Block and Regeneration sets (Block 5,000 to 6,500) and take Space wherever they can.[/kr]",
+      "artworks": [
+        {"id": "gartua", "n": 1},
+        {"id": "expedition-life", "n": 2},
+        {"id": "elite-life", "n": 2},
+        {"id": "nahma-artwork", "n": 1},
+        {"id": "pvp-artwork", "n": 2},
+        {"id": "elite-dil", "n": 4}
+      ],
+      "artworkWhy": "The Life pieces plus the PvP ones without Wisdom: 50 Illusion, 50 Life, 34 Destiny and 21 Wisdom. Life rather than Destiny, because half-built Endurance is pierced by everyone's Illusion while Regeneration also heals.[kr] One Korean Block Cleric filled every artwork slot with Life.[/kr]",
+      "bracelets": ["Illusion", "Space", "Life", "Time", "Freedom", "Destiny"],
+      "braceletWhy": "Illusion, Space and Life first.[kr] Korean Block Clerics keep Space, Life, Destiny, Illusion and Time, and some add Justice.[/kr] For a damage duel, Freedom moves up for Accuracy.",
+      "note": "For both PvP builds (the duelist and group support). A Cleric who duels for kills can keep the PvE artworks instead: Smite still hits for 1.5x on players. Pantheon presets switch for free."
+    }
+  ],
+  "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Death (Compass of Magic), Destruction (Bell of Magic) and Illusion (Mirror of Vigor), 20 each at Unique. Illusion on the Mirror suits a Cleric, whose cooldowns never cap; the Compass of Magic's Death is the weakest, since Condemnation's crits are already sure. The alternatives swap one stat each: Compass of Vigor (Freedom, for Accuracy) and Mirror of Magic (Wisdom). Creators' picks overlap (AION2 Vault): MrRosaPony takes Life, Wisdom, Illusion and Time; Lucia Time, Illusion, Space and Destruction; Th3Ruthless Destruction, Wisdom, Time and Justice, plus Freedom if short on Accuracy; BoredAF as much Illusion as possible. A Block healer can take the Chalice of Magic for Space in place of Time. Among Global's top 100 Clerics, 91% wear the Chalice of Vigor, 81% the Bell of Magic and 73% the Parchment of Vigor.[kr] Top Korean Clerics run the Compass of Magic (83%) and Mirror of Magic (86%) in PvE, and the Compass of Vigor and Bell of Vigor (Justice) in PvP (about 69% each).[/kr]",
+  "tips": [
+    "No top-100 Global Cleric wears an Abyssal Bracelet yet (all wear the Ascension Bracelet, with a Pilgrim or Liberator one), so the bracelet lines are for later.",
+    "Count Earth Punishment's sure crits before adding Death: Condemnation already crits on a burning target.",
+    "Illusion is safe to stack: Global's other Cooldown Reduction (Talisra wings, two Nezekan nodes, a title) tops out near 23%, short of the ~33% Chain of Torment wants.[kr] On Korea's longer-running servers, where 33% is reachable, Clerics stop at about 32.6 to 33.4% so Chain of Torment and Earth Punishment don't recast too often.[/kr]",
+    "Keep a Block preset (Kibelisk in place of Artifact of Eternity) next to the damage one: presets switch for free, and Kibelisk only needs every teleport point bound.",
+    "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion.",
+    "Save Phantasmal Fragments for Zikel's Apparition (14,000); MrRosaPony has a video on clearing it early."
+  ],
+  "sources": [
+    {"title": "Aion 2 Maps: Pantheon stats", "url": "https://aion2maps.com/guides/pantheon-stats/", "note": "Pieces and points, the common Death-statue setup, kanonxo's top three, the PvP Endurance and Regeneration swap."},
+    {"title": "Aion 2 Maps: Cleric", "url": "https://aion2maps.com/guides/cleric/", "note": "Bracelet lines (Time and Wisdom first, Freedom or Justice fifth), Global's ~23% Cooldown Reduction ceiling against Chain of Torment's ~33%, Condemnation's sure crits, the Magic Armor MP refill."},
+    {"title": "Aion 2 Maps: Accuracy and Crit", "url": "https://aion2maps.com/guides/accuracy-and-crit/", "note": "Shield users (Cleric, Templar) roll Block before Parry; attacks from behind skip Block and Parry."},
+    {"title": "Th3Ruthless: AION 2 Cleric Guide (Global)", "url": "https://clericguideaion2global.netlify.app/", "note": "Stat priorities per build: Accuracy first in offensive PvP, Block or Evasion but not both, Empyrean Lords' Benediction's Block heal, the ~33.4% Cooldown Reduction reference."},
+    {"title": "AION2 Vault: Cleric gear", "url": "https://aion2vault.com/builds/cleric/gear/", "note": "Creators' Arcana deity picks (MrRosaPony, Lucia, Th3Ruthless, BoredAF), MrRosaPony's bracelet lines (Illusion, Time, Wisdom, Destruction), 3 Vigor plus 2 Magic cards."},
+    {"title": "AION2 Tierlist: Cleric build (top 100 Global)", "url": "https://aion2tierlist.com/builds/cleric", "note": "Top 100 Global Clerics on 22 Oct 2026: no Abyssal Bracelets; Chalice of Vigor 91%, Bell of Magic 81%, Parchment of Vigor 73%."},
+    {"title": "Metabot: Cleric build stats", "url": "https://metabot.gg/en/aion-2/classes/cleric/build", "note": "Average deity stats of 1,560 top Global Clerics (Freedom 24.2, Space 17.4, Wisdom 5): the same shape as damage classes so far."},
+    {"title": "GameWith: Cleric build stats (Latin America)", "url": "https://gamewith.ai/aion2/en/build-stats/la/cleric", "note": "Deity stat averages and maximums of 360 top LATAM Clerics (Space up to 45, Freedom up to 54)."},
+    {"title": "Game8: Condemnation Cleric PvE build", "url": "https://game8.co/games/Aion-2/archives/626195", "note": "Pantheon priority Time, Justice, Life, Destiny, Illusion; Zikel's colossus with Bakarma, Kibelisk, Asahr's Mirror and Notun."},
+    {"title": "Game8: Support Cleric PvP build", "url": "https://game8.co/games/Aion-2/archives/631965", "note": "The same Pantheon and priority for PvP."},
+    {"title": "GamesFuze: Cleric build", "url": "https://gamesfuze.com/guides/aion-2-cleric-build-best-healer-skills-stigmas-and-gear-dungeons-pvp/", "note": "Healer: Wisdom and Life; damage or hybrid: Destruction and Death."},
+    {"title": "Daeva Guides: Cleric", "url": "https://daevaguides.com/en/cleric/", "note": "couga54's Pantheon order (Wisdom, Space, Illusion in PvE; Time in PvP) and his Arcana deity picks."},
+    {"title": "MrRosaPony: Zikel Nightmare Boss Guide, Unlock Best Colossus ASAP (YouTube)", "url": "https://www.youtube.com/watch?v=dpZTnFHjKTM", "note": "A Global Cleric creator on getting Zikel's Apparition early (title only)."},
+    {"title": "aion2-meta: Cleric (Korean top-player data)", "url": "https://aion2-meta.com/guides/cleric/", "note": "AION2CAL, 12 to 16 Oct 2026: bracelet lines of 813 top Korean PvE Clerics (Time and Illusion 100%, Destruction and Wisdom 99%) and Arcana use in PvE and PvP.", "region": "KR"},
+    {"title": "Inven: 9/24 Cleric PvE optimisation guide (BBANGHOBBANG)", "url": "https://www.inven.co.kr/board/aion2/6452/29213", "note": "Bracelets: Justice and Space over Freedom and Death; Illusion 51 and Wisdom 101 as the realistic Pantheon peak; Cleric Combat Speed cap at 94.4%; 32.6% cooldown target.", "region": "KR"},
+    {"title": "Inven: PvE Block sets and crafted gear (Cleric board)", "url": "https://www.inven.co.kr/board/aion2/6452/29246", "note": "Why Block suits Clerics in PvE: weak passives, a Block line on the weapon, Space averaging high.", "region": "KR"},
+    {"title": "Inven: Cooldown reduction 33.4% with Illusion (Cleric board)", "url": "https://www.inven.co.kr/board/aion2/6452/28211", "note": "A Cleric at 33.2% after taking all the Illusion the Pantheon gives.", "region": "KR"},
+    {"title": "Inven: Cleric PvP Block and Regeneration setting", "url": "https://www.inven.co.kr/board/aion2/6452/19778", "note": "Pantheon, Arcana and bracelets on Space, Life, Destiny and Illusion, plus Time.", "region": "KR"},
+    {"title": "Inven: Block Clerics, read this (Cleric board)", "url": "https://www.inven.co.kr/board/aion2/6452/20118", "note": "Every artwork slot on Life; Space +12 from Bakarma pushing Block past 5,000.", "region": "KR"},
+    {"title": "Inven: Block over 6,500? (Cleric board)", "url": "https://www.inven.co.kr/board/aion2/6452/28171", "note": "Accuracy still matters because an evaded Condemnation doesn't reset; Death pierces Regeneration.", "region": "KR"},
+    {"title": "Inven: Destruction or Justice on the bracelet? (Cleric board)", "url": "https://www.inven.co.kr/board/aion2/6452/26272", "note": "A shared PvE and PvP bracelet that keeps Space for Block.", "region": "KR"},
+    {"title": "김호러 Horror: Cleric, Illusion or Wisdom? Artwork tips (YouTube, Korean)", "url": "https://www.youtube.com/watch?v=LSv2rBbHJv0", "note": "Title only: the Illusion-or-Wisdom question for Cleric artworks.", "region": "KR"}
+  ],
+  "disagree": "Sources split three ways on a Cleric's deity stats. The damage view (kanonxo via Aion 2 Maps, Th3Ruthless, MrRosaPony's bracelets) wants Wisdom, Time, Destruction and Illusion. Game8 ranks Time, Justice, Life, Destiny and Illusion for both its PvE and PvP Cleric, and GamesFuze names Wisdom and Life for a healer. couga54 (Daeva Guides) puts Space second, after Wisdom. Statue sets also differ: Game8 runs Kibelisk where Aion 2 Maps keeps a fourth Death statue. This page follows the damage view for the planner's Condemnation build, moves Illusion up because a Cleric's cooldowns never cap on Global, and uses the Space-heavy Kibelisk set for the healer and PvP presets.[kr] Korean Clerics are further along: they take Justice and Space over Freedom and Death on bracelets, and run Block sets even in PvE.[/kr] Global players haven't shown a class difference yet: top Global Clerics average the same Freedom and Space as other classes."
+}
