@@ -1,79 +1,251 @@
 {
-  "summary": "The common damage setup (four Death statues, twelve Wisdom and Illusion artworks), with one Assassin twist: you hit from behind, where Block and Parry don't apply, so the statues take Space, not Freedom, in PvE. The PvP preset turns them to Freedom, because Accuracy and Evasion both count against players.",
+  "summary": "The common damage setup (Death on every statue, twelve Wisdom and Illusion artworks), with one Assassin twist: you hit from behind, where Block and Parry don't apply, so the PvE statues are the ones that pair Death with Space. The PvP preset uses the Death and Freedom statues, because Accuracy and Evasion both count against players.",
   "presets": [
     {
       "name": "PvE",
       "mode": "PvE",
       "priority": [
-        {"stat": "Wisdom", "why": "Smite doubles a hit. It is the top damage stat in every guide, and Global has few other Double Chance sources."},
-        {"stat": "Destruction", "why": "Attack Increase, a multiplier on all your Attack."},
-        {"stat": "Time", "why": "Combat Speed, but only up to the next hit-count step: hits come in steps, so test on the training dummy."},
-        {"stat": "Illusion", "why": "Cooldown Reduction brings Illusive Clone and Swift Contract back sooner."},
-        {"stat": "Death", "why": "Critical Hit up to the cap. Heart Gore fires only after a crit."},
-        {"stat": "Justice", "why": "Perfect chance, the best leftover once the four above are on your bracelets."},
-        {"stat": "Space", "why": "Move Speed to get and stay behind the boss."},
-        {"stat": "Freedom", "why": "Last: Accuracy only beats Block and Parry, and hits from behind skip both."}
+        {
+          "stat": "Wisdom",
+          "why": "Smite doubles a hit. It is the top damage stat in every guide, and Global has few other Double Chance sources."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, a multiplier on all your Attack."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed, but only up to the next hit-count step: hits come in steps, so test on the training dummy."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction brings Illusive Clone and Swift Contract back sooner."
+        },
+        {
+          "stat": "Death",
+          "why": "Critical Hit up to the cap. Heart Gore fires only after a crit."
+        },
+        {
+          "stat": "Justice",
+          "why": "Perfect chance, the best leftover once the four above are on your bracelets."
+        },
+        {
+          "stat": "Space",
+          "why": "Move Speed to get and stay behind the boss."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Last: Accuracy only beats Block and Parry, and hits from behind skip both."
+        }
       ],
       "colossus": "nahma-colossus",
-      "statues": ["bakarma", "asahr", "eternity", "notun"],
-      "statueStat": "Space",
-      "statueWhy": "Your hits from behind ignore the boss's Block and Parry, so Freedom's Accuracy is wasted. Space's Move Speed helps you reach the back after every turn or dodge.",
-      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 4}, {"id": "elite-unique", "n": 7}],
-      "artworkStat": "Destiny",
-      "artworkWhy": "Neither adds damage. Destiny's MP suits a class whose Arcana set is chosen partly for its MP refill; take Life if you keep dying.",
-      "bracelets": ["Wisdom", "Time", "Destruction", "Illusion", "Justice", "Death"],
+      "statues": [
+        "bakarma",
+        "asahr",
+        "notun",
+        "story-statue"
+      ],
+      "statueWhy": "The Space-leaning set: Bakarma, Asahr's Mirror and Notun each pair Death with Space, and Teina or Grisilla (or a 5,000-fragment Nightmare Death and Space statue, which is no better) fills the fourth slot. Your hits from behind ignore the boss's Block and Parry, so Freedom's Accuracy is wasted, while Space's Move Speed gets you back behind after every turn or dodge. The Rare fourth piece costs 2 Death against the Epic Artifact of Eternity, which brings Freedom instead of Space; take Eternity if you're short of the crit cap and don't care about Move Speed. The set totals 40 Death, 40 Space and 12 Freedom.",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "Take every Wisdom and Illusion artwork you can: neither Destiny nor Life adds damage. Every Unique artwork with both Wisdom and Illusion has a fixed third stat, so no set is all Destiny or all Life: Krao, Ferocious Horn Den and the five Destiny elite pieces add Destiny, Vakron Sky Island, Draupnir, Divine Ansas and Phantasm Kasia add Life, and Gartua adds both (33 Destiny and 21 Life in all). Asmodians have four of the Destiny elite pieces (Kaira, Guruta, Shylak, Newbold) and no Life ones of their own: they fill the last three slots with Epic Wisdom and Illusion artworks, or buy Divine Ansas and Phantasm Kasia on the Market or reach them through a rift.",
+      "bracelets": [
+        "Wisdom",
+        "Time",
+        "Destruction",
+        "Illusion",
+        "Justice",
+        "Death"
+      ],
       "braceletWhy": "Wisdom, Time, Destruction and Illusion on every guide's list. For a fifth line, Justice, or Death while you're under the crit cap.[kr] A Korean PvE guide (30 Sep 2026) drops Freedom and Death altogether, since the newest sanctuary's Accuracy and crit targets are low, and takes Justice and Space.[/kr]",
-      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (Nightmare shop, 14,000 Phantasmal Fragments) gives the same three stats at 45 and is the realistic one. The artworks are the Elyos set (Gartua, the four Expedition pieces and seven elite and boss pieces); Asmodians have four elite and boss pieces and fill three slots with Epic ones."
+      "note": "Guardian Lord Nahma's colossus is rarely sold; Zikel's Apparition (Nightmare shop, 14,000 Phantasmal Fragments) gives the same three stats at 45 and is the realistic one. The artworks are the Elyos set."
     },
     {
       "name": "PvP",
       "mode": "PvP",
       "priority": [
-        {"stat": "Time", "why": "Combat Speed: more hits inside your stun chain."},
-        {"stat": "Freedom", "why": "Accuracy counts against players (PvE Accuracy doesn't), and Evasion helps once they turn on you."},
-        {"stat": "Death", "why": "Crit lands far less often on players (about 29% in one duel test), so it is far from the cap; it also pierces Regeneration."},
-        {"stat": "Illusion", "why": "Cooldown Reduction, and Endurance Penetration against half-damage procs."},
-        {"stat": "Wisdom", "why": "Smite still deals 1.5x against players."},
-        {"stat": "Destruction", "why": "Attack Increase."},
-        {"stat": "Life", "why": "HP and Regeneration: you fight in melee range."}
+        {
+          "stat": "Time",
+          "why": "Combat Speed: more hits inside your stun chain."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy counts against players (PvE Accuracy doesn't), and Evasion helps once they turn on you."
+        },
+        {
+          "stat": "Death",
+          "why": "Crit lands far less often on players (about 29% in one duel test), so it is far from the cap; it also pierces Regeneration."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction, and Endurance Penetration against half-damage procs."
+        },
+        {
+          "stat": "Wisdom",
+          "why": "Smite still deals 1.5x against players."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase."
+        },
+        {
+          "stat": "Life",
+          "why": "HP and Regeneration: you fight in melee range."
+        }
       ],
       "colossus": "nahma-colossus",
-      "statues": ["bakarma", "asahr", "eternity", "notun"],
-      "statueStat": "Freedom",
-      "statueWhy": "Against players Accuracy offsets their Evasion as well as their Block, and your own Evasion helps you live.[kr] Korean PvP Assassins have mostly moved from Evasion to Accuracy builds.[/kr]",
-      "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 4}, {"id": "elite-unique", "n": 7}],
-      "artworkStat": "Life",
-      "artworkWhy": "Smite builds keep their Wisdom artworks in PvP, so only the version changes: Life for HP. Destiny's Endurance is the other choice, but every player's artworks give Illusion, which pierces it.",
-      "bracelets": ["Time", "Freedom", "Illusion", "Wisdom", "Destruction", "Death", "Life"],
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "The Freedom-leaning set: Bakarma, Artifact of Eternity, Dream Fragment and Fafnir's Poison Blood each pair Death with Freedom (38 Death, 38 Freedom, 12 Space). Against players Accuracy offsets their Evasion as well as their Block, and your own Evasion helps you live. The two Rare pieces cost 4 Death against the Space-leaning Epic ones (Asahr's Mirror and Notun); keep the two sets in separate Pantheon presets.[kr] Korean PvP Assassins have mostly moved from Evasion to Accuracy builds.[/kr]",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "The same artworks as PvE: Smite builds keep their Wisdom pieces in PvP, and the fixed mix brings 21 Life (HP and Regeneration) and 33 Destiny (Endurance) with them. Asmodians have four of the Destiny elite pieces (Kaira, Guruta, Shylak, Newbold) and no Life ones of their own: they fill the last three slots with Epic Wisdom and Illusion artworks, or buy Divine Ansas and Phantasm Kasia on the Market or reach them through a rift.",
+      "bracelets": [
+        "Time",
+        "Freedom",
+        "Illusion",
+        "Wisdom",
+        "Destruction",
+        "Death",
+        "Life"
+      ],
       "braceletWhy": "Time and Freedom first, then the damage lines.[kr] Korean top-ranked Assassins were seen taking Freedom over Death on bracelets (Inven, Oct 2026).[/kr]",
-      "note": "For a tankier Endurance preset, swap three Wisdom artworks for Guardian Lord Nahma's artwork and the two PvP artworks (Argo and Ardus Shrine or Impetusium), and use Destiny. Players do this mainly on tanks; no source recommends it for Assassins."
+      "note": "For a tankier Endurance preset, swap the two Life expedition pieces and one elite piece for Guardian Lord Nahma's artwork and the two PvP artworks (Argo, and Ardus Shrine or Impetusium), which carry Illusion, Destiny and Life but no Wisdom. Players do this mainly on tanks; no source recommends it for Assassins."
     }
   ],
   "arcana": "The planner's cards give Time (Chalice of Vigor), Life (Parchment of Vigor), Freedom (Compass of Vigor), Destruction (Bell of Magic) and Wisdom (Mirror of Magic), up to 20 each. Time, Destruction and Wisdom are three of your four damage stats. Life adds none, and Freedom adds little in PvE since your hits from behind skip Block, which is why some guides take the Compass of Magic for Death instead (the planner's alternative). Against players the Compass of Vigor's Freedom is the right one.[kr] Korean top players wear the Compass of Magic in PvE (86%) and the Compass of Vigor in PvP (76%).[/kr] Among Global's top 100 Assassins, 93% wear the Chalice of Vigor, 84% the Bell of Magic and 70% the Parchment of Vigor.",
   "tips": [
     "No top-100 Global Assassin wears an Abyssal Bracelet yet (they wear the Ascension Bracelet with a Liberator or Pilgrim one), so the bracelet lines are for later.",
     "Combat Speed comes in steps: a Korean test hit exactly as often at 100.6% as at 110.6%. Find your next step on the dummy before you stack Time.",
-    "Keep every statue with Death until you're crit-capped: Heart Gore fires only after a crit.",
+    "Keep Death on every statue until you're crit-capped: Heart Gore fires only after a crit. Kibelisk and Gerod (Freedom and Space, no Death) only fill a slot until then.",
     "Fill all twelve artwork slots first. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion on the Market.",
     "Start saving Phantasmal Fragments early: Zikel's Apparition costs 14,000, and players run short after buying Stigma Shards and Daevanion crystals.",
-    "Pantheon presets are free to switch: keep a Freedom-statue PvP preset beside the Space one."
+    "Pantheon presets are free to switch: keep the Death and Freedom statues in a PvP preset beside the Death and Space ones. The 5,000-fragment Nightmare statues are Rare, no better than the quest ones; Notun (8,000) is the one worth buying."
   ],
   "sources": [
-    {"title": "Aion 2 Maps: Pantheon stats", "url": "https://aion2maps.com/guides/pantheon-stats/", "note": "Pieces and points, the Death-statue setup, kanonxo's Wisdom, Time and Destruction ranking, and the PvP Endurance swap."},
-    {"title": "Aion 2 Maps: Assassin", "url": "https://aion2maps.com/guides/assassin/", "note": "Bracelet lines (Wisdom first, then Time, Destruction, Illusion; Justice or Death fifth), Accuracy can wait from behind, crit cap and Heart Gore."},
-    {"title": "Aion 2 Maps: Accuracy and Crit", "url": "https://aion2maps.com/guides/accuracy-and-crit/", "note": "Attacks from behind skip Block and Parry; Accuracy and crit against players."},
-    {"title": "AION2 Tierlist: Arcana build guide", "url": "https://aion2tierlist.com/guides/aion-2-arcana-build-guide", "note": "Skip the Compass of Vigor on an Assassin: Accuracy is wasted from behind."},
-    {"title": "AION2 Tierlist: Assassin build (top 100 Global)", "url": "https://aion2tierlist.com/builds/assassin", "note": "Top 100 Assassins' bracelets (no Abyssal Bracelets) and Arcana, 22 Oct 2026."},
-    {"title": "GuideMMO: Assassin guide (French)", "url": "https://guidemmo.com/guide-assassin-aion-2/", "note": "Artworks for Wisdom, Destruction, Time and Illusion; Abyssal Bracelet lines with Death or Justice last."},
-    {"title": "AION2 Vault: Assassin gear", "url": "https://aion2vault.com/builds/assassin/gear/", "note": "21% of 287 public Global Assassins wear an Abyssal Bracelet; bracelet lines Time, Destruction, Wisdom, Illusion."},
-    {"title": "Game8: Heart Gore Assassin build", "url": "https://game8.co/games/Aion-2/archives/616882", "note": "Pantheon priority Destruction, Illusion, Death, Space, Time; Zikel's colossus."},
-    {"title": "Game8: DPS Assassin PvP build", "url": "https://game8.co/games/Aion-2/archives/631912", "note": "PvP Pantheon with Kibelisk in place of a Death statue."},
-    {"title": "Metabot: Assassin builds", "url": "https://metabot.gg/en/aion-2/classes/assassin/build", "note": "Average deity stats of 1,560 top Global Assassins in launch week (Freedom 24, Space 17)."},
-    {"title": "Wakayashi: Pantheon guide (German)", "url": "https://wakayashi.gg/aion2/aion-2-pantheon-guide-schnell-einfach-mehr-cp", "note": "Wisdom and Illusion artworks first, Bakarma, saving for Zikel's colossus."},
-    {"title": "aion2-meta: Assassin (Korean top-player data)", "url": "https://aion2-meta.com/guides/assassin/", "note": "AION2CAL, 12 Oct 2026: bracelet lines and Arcana of top Korean PvE and PvP Assassins.", "region": "KR"},
-    {"title": "Inven: Assassin PvE optimisation guide (BBANGHOBBANG)", "url": "https://www.inven.co.kr/board/aion2/6449/24247", "note": "Bracelets without Freedom and Death in PvE; Justice and Space instead.", "region": "KR"},
-    {"title": "Inven: Assassin Combat Speed step test", "url": "https://www.inven.co.kr/board/aion2/6449/23965", "note": "Hit counts at different Combat Speeds.", "region": "KR"},
-    {"title": "Inven: Freedom instead of Death on bracelets", "url": "https://www.inven.co.kr/board/aion2/6449/24339", "note": "Top rankers' bracelets.", "region": "KR"}
+    {
+      "title": "Aion 2 Maps: Pantheon stats",
+      "url": "https://aion2maps.com/guides/pantheon-stats/",
+      "note": "Pieces and points, the Death-statue setup, kanonxo's Wisdom, Time and Destruction ranking, and the PvP Endurance swap."
+    },
+    {
+      "title": "Aion 2 Maps: Assassin",
+      "url": "https://aion2maps.com/guides/assassin/",
+      "note": "Bracelet lines (Wisdom first, then Time, Destruction, Illusion; Justice or Death fifth), Accuracy can wait from behind, crit cap and Heart Gore."
+    },
+    {
+      "title": "Aion 2 Maps: Accuracy and Crit",
+      "url": "https://aion2maps.com/guides/accuracy-and-crit/",
+      "note": "Attacks from behind skip Block and Parry; Accuracy and crit against players."
+    },
+    {
+      "title": "AION2 Tierlist: Arcana build guide",
+      "url": "https://aion2tierlist.com/guides/aion-2-arcana-build-guide",
+      "note": "Skip the Compass of Vigor on an Assassin: Accuracy is wasted from behind."
+    },
+    {
+      "title": "AION2 Tierlist: Assassin build (top 100 Global)",
+      "url": "https://aion2tierlist.com/builds/assassin",
+      "note": "Top 100 Assassins' bracelets (no Abyssal Bracelets) and Arcana, 22 Oct 2026."
+    },
+    {
+      "title": "GuideMMO: Assassin guide (French)",
+      "url": "https://guidemmo.com/guide-assassin-aion-2/",
+      "note": "Artworks for Wisdom, Destruction, Time and Illusion; Abyssal Bracelet lines with Death or Justice last."
+    },
+    {
+      "title": "AION2 Vault: Assassin gear",
+      "url": "https://aion2vault.com/builds/assassin/gear/",
+      "note": "21% of 287 public Global Assassins wear an Abyssal Bracelet; bracelet lines Time, Destruction, Wisdom, Illusion."
+    },
+    {
+      "title": "Game8: Heart Gore Assassin build",
+      "url": "https://game8.co/games/Aion-2/archives/616882",
+      "note": "Pantheon priority Destruction, Illusion, Death, Space, Time; Zikel's colossus."
+    },
+    {
+      "title": "Game8: DPS Assassin PvP build",
+      "url": "https://game8.co/games/Aion-2/archives/631912",
+      "note": "PvP Pantheon with Kibelisk in place of a Death statue."
+    },
+    {
+      "title": "Metabot: Assassin builds",
+      "url": "https://metabot.gg/en/aion-2/classes/assassin/build",
+      "note": "Average deity stats of 1,560 top Global Assassins in launch week (Freedom 24, Space 17)."
+    },
+    {
+      "title": "Wakayashi: Pantheon guide (German)",
+      "url": "https://wakayashi.gg/aion2/aion-2-pantheon-guide-schnell-einfach-mehr-cp",
+      "note": "Wisdom and Illusion artworks first, Bakarma, saving for Zikel's colossus."
+    },
+    {
+      "title": "aion2-meta: Assassin (Korean top-player data)",
+      "url": "https://aion2-meta.com/guides/assassin/",
+      "note": "AION2CAL, 12 Oct 2026: bracelet lines and Arcana of top Korean PvE and PvP Assassins.",
+      "region": "KR"
+    },
+    {
+      "title": "Inven: Assassin PvE optimisation guide (BBANGHOBBANG)",
+      "url": "https://www.inven.co.kr/board/aion2/6449/24247",
+      "note": "Bracelets without Freedom and Death in PvE; Justice and Space instead.",
+      "region": "KR"
+    },
+    {
+      "title": "Inven: Assassin Combat Speed step test",
+      "url": "https://www.inven.co.kr/board/aion2/6449/23965",
+      "note": "Hit counts at different Combat Speeds.",
+      "region": "KR"
+    },
+    {
+      "title": "Inven: Freedom instead of Death on bracelets",
+      "url": "https://www.inven.co.kr/board/aion2/6449/24339",
+      "note": "Top rankers' bracelets.",
+      "region": "KR"
+    }
   ],
   "disagree": "Space or Freedom: Aion 2 Maps leaves it open. Game8 and the Korean guide take Space, and AION2 Tierlist and Aion 2 Maps say Accuracy is wasted from behind. This page follows them in PvE and uses Freedom in PvP. Metabot's launch-week averages show Global Assassins with more Freedom than Space (24 to 17), probably from default picks and the Compass of Vigor. Game8 ranks Destruction and Illusion first and leaves Wisdom off, and Game8 and Wakayashi put Kibelisk (no Death) in a statue slot. This page follows Aion 2 Maps, GuideMMO and AION2 Vault, which put Wisdom first and keep Death on all four statues. On the fifth bracelet line, Aion 2 Maps and GuideMMO take Justice or Death.[kr] The Korean guide takes Justice and Space.[/kr]"
 }
