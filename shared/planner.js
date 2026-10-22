@@ -296,6 +296,14 @@ function renderBuild(){
 /* ---------------- BUILDS (PvP and alternates) ---------------- */
 // DATA.builds (classes/<class>.builds.json): a PvP build and popular alternates, each from several sources.
 let buildPick = null;
+// Shared helpers for the written tabs. Region markup: [kr]...[/kr] or [tw]...[/tw] in text, "region" on an item;
+// the site's Global-only switch hides them.
+const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch(e) { return ''; } };
+const list = (arr, f) => arr && arr.length ? `<ul class="list">${arr.map(f).join('')}</ul>` : '<p class="empty">—</p>';
+const tag = r => `<span class="nonglobal-tag">${esc(String(r).toUpperCase())}</span>`;
+const rt = s => esc(s || '').replace(/\[(kr|tw)\]([\s\S]*?)\[\/\1\]/g, (m, r, t) => `<span class="nonglobal">${t.match(/^[\s,;:]*/)[0]}${tag(r)}${t.replace(/^[\s,;:]*/, '')}</span>`);
+const whole = s => /^\[(kr|tw)\][\s\S]*\[\/\1\]$/.test((s || '').trim());
+const ng = on => on ? ' class="nonglobal"' : '';
 function renderBuilds(){
   const el = $('#p-builds'); if (!el) return;
   const B0 = DATA.builds;
@@ -305,12 +313,6 @@ function renderBuilds(){
   try { buildPick = buildPick || sessionStorage.getItem(STORE + '-build'); } catch(e){}
   const b = B.builds.find(x => x.id === buildPick) || B.builds[0];
   const nameTag = n => SK[n] ? skTag(n, 'sm') : `<span class="sk"><span class="nm">${esc(n)}</span></span>`;
-  const host = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch(e) { return ''; } };
-  const list = (arr, f) => arr && arr.length ? `<ul class="list">${arr.map(f).join('')}</ul>` : '<p class="empty">—</p>';
-  const tag = r => `<span class="nonglobal-tag">${esc(String(r).toUpperCase())}</span>`;
-  const rt = s => esc(s || '').replace(/\[(kr|tw)\]([\s\S]*?)\[\/\1\]/g, (m, r, t) => `<span class="nonglobal">${t.match(/^[\s,;:]*/)[0]}${tag(r)}${t.replace(/^[\s,;:]*/, '')}</span>`);
-  const whole = s => /^\[(kr|tw)\][\s\S]*\[\/\1\]$/.test((s || '').trim());
-  const ng = on => on ? ' class="nonglobal"' : '';
   let h = `<div class="card gold"><header><h2>PvP and alternate builds</h2><span class="eyebrow">${B.builds.length} builds · pick one</span></header>
     <p class="note">${rt(B.intro || "The main PvE build is the one the rest of this planner follows. These are the other builds players run, each checked against several sources.")}</p>
     <div class="bpicks">${B.builds.map(x => `<button class="bpick ${x.id === b.id ? 'on' : ''}" data-build="${esc(x.id)}"><span class="mode mode-${esc(x.mode.replace(/ and /, '-').toLowerCase())}">${esc(x.mode)}</span><b>${esc(x.name)}</b><small>${esc(x.role)}</small></button>`).join('')}</div></div>`;
@@ -414,6 +416,74 @@ function renderArcana(){
     [...new Set(A.cards.map(c => c.stat))].map(st => `<tr><td><b>${esc(st)}</b></td><td class="muted">${esc((PANTHEON[st] || [''])[0])}</td><td>${esc((PANTHEON[st] || []).slice(1).join(' · '))}</td><td class="muted">${esc(A.cards.filter(c => c.stat === st).map(c => c.card).join(', '))}</td></tr>`).join('') +
     `</tbody></table></div><p class="note">The other versions: Chalice and Parchment come in both sets too; the Compass of Vigor carries Freedom and of Magic Death, the Bell Justice or Destruction, and the Mirror Illusion or Wisdom. For damage, sources rank Wisdom, Time and Destruction highest.</p></div>`;
   $('#p-arcana').innerHTML = h;
+}
+/* ---------------- PANTHEON ---------------- */
+// PANTHEON_BASE (shared/pantheon.js) holds the ten deity stats and every piece; DATA.pantheon
+// (classes/<class>.pantheon.json) the class's presets. Totals add the Pantheon screen, the Arcana cards at Unique
+// (20 points each) and the bracelet lines at their 13-point average, against the 200-point cap.
+let panPick = null;
+const PAN_CARD = 20, PAN_LINE = 13, PAN_CAP = 200;
+const short = t => (t || '').split(' (')[0];
+function panTotals(pr){
+  const PB = PANTHEON_BASE, P = Object.fromEntries(PB.pieces.map(p => [p.id, p]));
+  const rows = Object.fromEntries(PB.stats.map(st => [st.name, { screen: 0, arcana: 0, brace: 0 }]));
+  const add = (id, n, pick) => { const p = P[id]; if (!p) return;
+    Object.entries(p.stats).forEach(([k, v]) => rows[k].screen += v * n);
+    if (p.either && rows[pick]) rows[pick].screen += p.eitherPts * n; };
+  add(pr.colossus, 1);
+  (pr.statues || []).forEach(id => add(id, 1, pr.statueStat));
+  (pr.artworks || []).forEach(a => add(a.id, a.n || 1, pr.artworkStat));
+  ((DATA.arcana || {}).cards || []).forEach(c => { if (rows[c.stat]) rows[c.stat].arcana += PAN_CARD; });
+  (pr.bracelets || []).forEach(st => { if (rows[st]) rows[st].brace += PAN_LINE; });
+  return rows;
+}
+function renderPantheon(){
+  const el = $('#p-pantheon'); if (!el) return;
+  if (typeof PANTHEON_BASE === 'undefined') { el.innerHTML = ''; return; }
+  const PB = PANTHEON_BASE, P = Object.fromEntries(PB.pieces.map(p => [p.id, p])), ST = Object.fromEntries(PB.stats.map(s => [s.name, s]));
+  const D = DATA.pantheon;
+  const statTag = n => `<span class="chip"><b>${esc(n)}</b> <span class="muted">${esc((ST[n] || {}).deity || '')}</span></span>`;
+  const pts = (p, pick) => Object.entries(p.stats).map(([k, v]) => `${k} ${v}`).concat(p.either ? [`${pick && p.either.includes(pick) ? pick : p.either.join(' or ')} ${p.eitherPts}`] : []).join(' · ');
+  const pieceLi = (p, n, pick) => `<li style="align-items:flex-start"><span class="lvbadge">${esc(p.grade)}</span><span style="flex:1 1 220px;min-width:0"><b>${esc(p.name)}</b>${n > 1 ? ` <span class="chip">× ${n}</span>` : ''}<small class="muted" style="display:block">${esc(pts(p, pick))}</small><small style="display:block">${esc(p.from)}${p.trade ? ' · tradeable' : ''}</small></span></li>`;
+  let h = '';
+  if (D && D.presets && D.presets.length) {
+    const presets = D.presets.filter(x => !(GO() && x.region));
+    try { panPick = panPick || sessionStorage.getItem(STORE + '-pan'); } catch(e){}
+    const pr = presets.find(x => x.name === panPick) || presets[0];
+    const T = panTotals(pr), pri = (pr.priority || []).map(x => x.stat);
+    const order = PB.stats.map(s => s.name).sort((a, b) => (pri.includes(a) ? pri.indexOf(a) : 99) - (pri.includes(b) ? pri.indexOf(b) : 99) || (T[b].screen + T[b].arcana + T[b].brace) - (T[a].screen + T[a].arcana + T[a].brace));
+    h += `<div class="card gold"><header><h2>Pantheon</h2><span class="eyebrow">${presets.length} preset${presets.length > 1 ? 's' : ''} · pick one</span></header>
+      <p class="note">${rt(D.summary)}</p>
+      ${presets.length > 1 ? `<div class="bpicks">${presets.map(x => `<button class="bpick ${x === pr ? 'on' : ''}" data-pan="${esc(x.name)}"><span class="mode mode-${esc(x.mode.replace(/ and /, '-').toLowerCase())}">${esc(x.mode)}</span><b>${esc(x.name)}</b></button>`).join('')}</div>` : ''}</div>`;
+    h += `<div class="grid2 bgrid"><div class="card"><header><h3>Stats to aim for</h3><span class="eyebrow">${esc(pr.name)} · best first</span></header><ol class="order">` +
+      (pr.priority || []).map((x, i) => `<li${ng(whole(x.why))}><span class="o">${i + 1}</span><span class="skills" style="display:grid;gap:2px">${statTag(x.stat)}<small>${rt(x.why)}</small></span><span class="to"><b class="num">${Math.min(PAN_CAP, T[x.stat].screen + T[x.stat].arcana + T[x.stat].brace)}</b></span></li>`).join('') + `</ol>
+      ${pr.note ? `<p class="note">${rt(pr.note)}</p>` : ''}</div>
+      <div class="bcol"><div class="card"><header><h3>Colossus</h3><span class="eyebrow">1 slot</span></header><ul class="list">${P[pr.colossus] ? pieceLi(P[pr.colossus], 1) : ''}</ul></div>
+      <div class="card"><header><h3>Statues</h3><span class="eyebrow">4 slots${pr.statueStat ? ` · ${esc(pr.statueStat)} version` : ''}</span></header><ul class="list">${(pr.statues || []).map(id => P[id] ? pieceLi(P[id], 1, pr.statueStat) : '').join('')}</ul>${pr.statueWhy ? `<p class="note">${rt(pr.statueWhy)}</p>` : ''}</div></div>
+      <div class="bcol"><div class="card"><header><h3>Artworks</h3><span class="eyebrow">12 slots${pr.artworkStat ? ` · ${esc(pr.artworkStat)} version` : ''}</span></header><ul class="list">${(pr.artworks || []).map(a => P[a.id] ? pieceLi(P[a.id], a.n || 1, pr.artworkStat) : '').join('')}</ul>${pr.artworkWhy ? `<p class="note">${rt(pr.artworkWhy)}</p>` : ''}</div>
+      <div class="card"><header><h3>Abyssal Bracelet lines</h3><span class="eyebrow">keep these, best first</span></header><div class="chips">${(pr.bracelets || []).map(statTag).join('')}</div>${pr.braceletWhy ? `<p class="note">${rt(pr.braceletWhy)}</p>` : ''}</div></div></div>`;
+    h += `<div class="card"><header><h3>What this preset adds up to</h3><span class="eyebrow">${PAN_CAP} points a stat at most · 0.1% of both effects a point</span></header><div class="tscroll"><table><thead><tr><th>Stat</th><th>Pantheon screen</th><th>Arcana</th><th>Bracelets</th><th>Total</th><th>Gives</th></tr></thead><tbody>` +
+      order.map(n => { const r = T[n], tot = r.screen + r.arcana + r.brace, c = Math.min(PAN_CAP, tot), pc = (c / 10).toFixed(1).replace(/\.0$/, '');
+        return `<tr${pri.includes(n) ? '' : ' class="muted"'}><td><b>${esc(n)}</b> <small class="muted">${esc(ST[n].deity)}</small></td><td class="num">${r.screen || '—'}</td><td class="num">${r.arcana || '—'}</td><td class="num">${r.brace || '—'}</td><td class="num"><b>${tot}</b>${tot > PAN_CAP ? ` <small class="muted">(${PAN_CAP} count)</small>` : ''}</td><td>${tot ? `+${pc}% ${esc(short(ST[n].e1))} · +${pc}% ${esc(short(ST[n].e2))}` : ''}</td></tr>`; }).join('') +
+      `</tbody></table></div><p class="note">Arcana counts this class's five cards at Unique (${PAN_CARD} points each, ${((DATA.arcana || {}).cards || []).map(c => c.stat).join(', ') || 'none listed'}). Bracelet lines roll 9 to 17; this counts ${PAN_LINE}, their average. The Monolith's feather turn-ins add 5 or 6 of every stat per map on top.</p></div>`;
+    if (D.arcana || (D.tips && D.tips.length)) h += `<div class="grid2">${D.arcana ? `<div class="card"><header><h3>With your Arcana</h3></header><p class="note">${rt(D.arcana)}</p></div>` : ''}${D.tips && D.tips.length ? `<div class="card"><header><h3>Tips</h3></header><ul class="fix">${D.tips.map(x => `<li${ng(whole(x))}>${rt(x)}</li>`).join('')}</ul></div>` : ''}</div>`;
+    if (D.sources && D.sources.length) h += `<div class="card"><header><h3>Sources for these presets</h3><span class="eyebrow">${new Set(D.sources.filter(x => !(GO() && x.region)).map(x => host(x.url))).size} sites</span></header><ol class="src">` +
+      D.sources.map(x => `<li${ng(x.region)}>${x.region ? tag(x.region) : ''}<a href="${esc(x.url)}" target="_blank" rel="noopener">${esc(x.title)}</a> <span class="muted">(${esc(host(x.url))})</span>${x.note ? `: ${rt(x.note)}` : ''}</li>`).join('') + `</ol>
+      ${D.disagree ? `<p class="note"><b>Where sources disagree:</b> ${rt(D.disagree)}</p>` : ''}</div>`;
+  } else h += `<div class="card gold"><header><h2>Pantheon</h2></header><p class="empty">No class presets yet; the pieces and stats below are the same for every class.</p></div>`;
+  // The shared reference: the ten stats, the slots and every piece.
+  h += `<div class="card"><header><h3>The ten deity stats</h3><span class="eyebrow">each one stat with two effects</span></header><div class="tscroll"><table><thead><tr><th>Stat</th><th>Deity</th><th>Effect 1</th><th>Effect 2</th></tr></thead><tbody>` +
+    PB.stats.map(s => `<tr><td><b>${esc(s.name)}</b></td><td class="muted">${esc(s.deity)}</td><td>${esc(s.e1)}</td><td>${esc(s.e2)}</td></tr>`).join('') + `</tbody></table></div>
+    <ul class="list" style="font-size:.9rem">${PB.rules.map(r => `<li><span>${esc(r)}</span></li>`).join('')}</ul></div>`;
+  h += `<div class="grid2"><div class="card"><header><h3>Getting the pieces</h3><span class="eyebrow">in this order</span></header><ol class="order">${PB.order.map((x, i) => `<li><span class="o">${i + 1}</span><span class="skills"><span>${esc(x)}</span></span></li>`).join('')}</ol>
+      <p class="note">${esc(PB.faction)}</p><p class="note">${esc(PB.value)}</p></div>
+    <div class="card"><header><h3>Other places they come from</h3></header><ul class="list">${PB.other.map(o => `<li style="align-items:flex-start"><b>${esc(o.name)}</b><span class="note" style="flex:1 1 220px">${esc(o.text)}</span></li>`).join('')}</ul>
+      <div class="tscroll"><table><thead><tr><th>Slot</th><th>How many</th><th>Stats</th><th>Points by grade</th></tr></thead><tbody>${PB.slots.map(x => `<tr><td><b>${esc(x.name)}</b></td><td class="num">${x.count}</td><td>${esc(x.stats)}</td><td class="muted">${esc(x.points)}</td></tr>`).join('')}</tbody></table></div></div></div>`;
+  h += `<div class="card"><header><h3>Every piece worth a slot</h3><span class="eyebrow">best first in each slot</span></header>` +
+    PB.slots.map(sl => `<details${sl.slot === 'artwork' ? '' : ' open'}><summary><b>${esc(sl.name)}</b> <span class="muted">(${PB.pieces.filter(p => p.slot === sl.slot).length})</span></summary><ul class="list">${PB.pieces.filter(p => p.slot === sl.slot).map(p => pieceLi(p, 1)).join('')}</ul></details>`).join('') +
+    `<p class="note">Sources: ${PB.refs.map(r => `<a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a> (${esc(r.what)})`).join('; ')}.</p></div>`;
+  el.innerHTML = h;
+  el.querySelectorAll('[data-pan]').forEach(x => x.onclick = () => { panPick = x.dataset.pan; try { sessionStorage.setItem(STORE + '-pan', panPick); } catch(e){} renderPantheon(); });
 }
 /* ---------------- STONES ---------------- */
 // Manastones, Soulstones and Theostones. STONES (shared/stones.js) holds the facts; DATA.stones (<class>-planner/stones.js) the class advice.
@@ -551,7 +621,7 @@ function renderSrc(){
   <p class="note">${esc(TXT.src || '')}</p></div>`;
 }
 /* ---------------- tabs & level ---------------- */
-const TABS = ['now','levels','skills','daev','build','builds','stig','arcana','macro','stones','src'];
+const TABS = ['now','levels','skills','daev','build','builds','stig','arcana','pantheon','macro','stones','src'];
 function showTab(id){
   document.querySelectorAll('.tab').forEach(t => t.setAttribute('aria-selected', t.dataset.tab === id));
   document.querySelectorAll('.panel').forEach(p => p.classList.toggle('on', p.id === 'p-' + id));
@@ -564,7 +634,7 @@ $('#lvUp').onclick = () => setLevel(state.level + 1);
 $('#lvRange').oninput = e => setLevel(+e.target.value);
 function renderAll(){
   $('#lvOut').value = state.level; $('#lvRange').value = state.level;
-  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderBuilds(); renderStig(); renderArcana(); renderMacro(); renderStones();
+  renderNow(); renderLevels(); renderSkills(); renderDaev(); renderBuild(); renderBuilds(); renderStig(); renderArcana(); renderPantheon(); renderMacro(); renderStones();
 }
 if (typeof siteMenu === 'function') siteMenu(META.cls, '../');
 window.addEventListener('globalonly', () => renderAll());

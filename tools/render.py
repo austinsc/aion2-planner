@@ -46,11 +46,28 @@ def merge(cls):
     bp = os.path.join(ROOT, 'classes', f'{cls}.builds.json')
     if os.path.exists(bp):
         data['builds'] = json.load(open(bp))
+    pp = os.path.join(ROOT, 'classes', f'{cls}.pantheon.json')
+    if os.path.exists(pp):
+        data['pantheon'] = json.load(open(pp))
     for k in ('azphelPhases',):
         if k in g:
             data[k] = g[k]
     check(cls, data)
     return data
+
+
+def markup_problems(what, o):
+    """Region markup in text: [kr]...[/kr] or [tw]...[/tw], not nested."""
+    def strings(o):
+        if isinstance(o, dict): return [s for v in o.values() for s in strings(v)]
+        if isinstance(o, list): return [s for v in o for s in strings(v)]
+        return [o] if isinstance(o, str) else []
+    bad = []
+    for t in strings(o):
+        rest = re.sub(r'\[(kr|tw)\][^\[]*?(?:\[(?!/?(?:kr|tw)\])[^\[]*?)*\[/\1\]', '', t)
+        if re.search(r'\[/?(kr|tw)\]', rest):
+            bad.append((what + ' region markup', t[:80]))
+    return bad
 
 
 def check(cls, d):
@@ -94,15 +111,12 @@ def check(cls, d):
             for x in [b] + b.get('sources', []):
                 if x.get('region') not in (None, 'KR', 'TW'):
                     bad.append((where, f"region must be KR or TW, not {x.get('region')!r}"))
-        # Region markup in text: [kr]...[/kr] or [tw]...[/tw], not nested.
-        def strings(o):
-            if isinstance(o, dict): return [s for v in o.values() for s in strings(v)]
-            if isinstance(o, list): return [s for v in o for s in strings(v)]
-            return [o] if isinstance(o, str) else []
-        for t in strings(B):
-            rest = re.sub(r'\[(kr|tw)\][^\[]*?(?:\[(?!/?(?:kr|tw)\])[^\[]*?)*\[/\1\]', '', t)
-            if re.search(r'\[/?(kr|tw)\]', rest):
-                bad.append(('builds region markup', t[:80]))
+        bad += markup_problems('builds', B)
+    P = d.get('pantheon')
+    if P:
+        import render_pantheon
+        bad += render_pantheon.check_class(P, render_pantheon.load_base())
+        bad += markup_problems('pantheon', P)
     if bad:
         raise SystemExit(f'{cls}: problems {bad}')
 

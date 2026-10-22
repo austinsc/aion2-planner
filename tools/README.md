@@ -74,3 +74,30 @@ The Stones tab has its own small step: `python3 tools/render_stones.py` writes `
 `mode` is `PvE`, `PvP` or `PvE and PvP`.
 
 Korea- or Taiwan-only content is hidden by the site's **Global only** switch (in the menu bar, on by default). Mark it in text as `[kr]...[/kr]` or `[tw]...[/tw]`; a string that is wholly marked hides its whole list item. A source or a build that is Korea/Taiwan only takes `"region": "KR"` or `"region": "TW"`. `render.py` checks the markers pair up and counts only sources without a region toward the three sites, so every build still shows three with the switch on. Daevanion boards whose `own` starts with "Korea" (Marchutan and Yustiel) are hidden the same way.
+
+## The Pantheon files
+
+The **Pantheon** tab shows the ten deity stats, the pieces for each slot and the class's setup. `tools/pantheon_base.json` holds the shared facts: the stats, slots, every piece (with an `id`, slot, grade, fixed `stats` and, for pieces that come in two versions, `either` and `eitherPts`), where pieces drop, the order to get them and the sources. `python3 tools/render_pantheon.py` writes it to `shared/pantheon.js`.
+
+`classes/<class>.pantheon.json` holds the class's advice; `render.py` merges it into `data.js` and checks it against the base file:
+
+```json
+{
+  "summary": "One or two sentences.",
+  "presets": [{
+    "name": "PvE", "mode": "PvE",
+    "priority": [{"stat": "Wisdom", "why": "One line"}],
+    "colossus": "nahma-colossus",
+    "statues": ["bakarma", "asahr", "eternity", "notun"], "statueStat": "Space", "statueWhy": "Why Space or Freedom",
+    "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 11}], "artworkStat": "Destiny", "artworkWhy": "Why Destiny or Life",
+    "bracelets": ["Wisdom", "Time", "Destruction", "Illusion"], "braceletWhy": "The Abyssal Bracelet lines to keep, best first",
+    "note": "Anything else about this preset."
+  }],
+  "arcana": "How the class's Arcana cards add to its deity stats.",
+  "tips": ["One tip per line"],
+  "sources": [{"title": "Site: page", "url": "https://...", "note": "What it contributed"}],
+  "disagree": "Where the sources split, and what this page follows."
+}
+```
+
+A preset needs exactly one colossus, four statues and twelve artworks (`n` counts). `statueStat` and `artworkStat` pick the version of pieces that have an `either`. `mode` is `PvE`, `PvP` or `PvE and PvP`. The tab adds up each preset's points (with the Arcana cards at Unique, 20 each, and the bracelet lines at their 13-point average) against the 200-point cap. Korea/Taiwan-only text uses the same `[kr]`/`[tw]` markup and `region` field as the builds file, and the three-site rule is the same.
