@@ -1,0 +1,309 @@
+{
+  "summary": "The Sorcerer uses the common Pantheon: the best colossus, four Death statues and twelve Wisdom and Illusion artworks. In PvE it keeps the four statues with the most Death, which lean Space, because Element Enhancement and Robe of Flame already give it Accuracy. When choosing which artworks to get first, it favours the Destiny ones, because its damage passives switch off when MP runs low.",
+  "presets": [
+    {
+      "name": "PvE (Hellfire)",
+      "mode": "PvE",
+      "priority": [
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction means more Hellfires. Aion 2 Maps puts it first on the Sorcerer's bracelet."
+        },
+        {
+          "stat": "Wisdom",
+          "why": "Smite, the best damage stat per point, plus a lower MP cost that keeps the MP-gated passives on."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, a multiplier on all your damage."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed: faster casts and charges."
+        },
+        {
+          "stat": "Death",
+          "why": "Critical Hit up to the 50% boss cap. Metaroad says Sorcerers run short of crit before Accuracy."
+        },
+        {
+          "stat": "Destiny",
+          "why": "MP. Robe of Earth's Critical Hit needs 50% MP or more, and Grace of Enhancement's +20% PvE Damage Boost needs 25%."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "asahr",
+        "notun",
+        "eternity"
+      ],
+      "statueWhy": "These are the four statues with the most Death (42), plus 32 Space and 22 Freedom. Death matters because a Sorcerer runs short of crit before Accuracy (Metaroad): Element Enhancement adds 200 Accuracy at Stigma level 5, and Robe of Flame adds more. Freedom's Accuracy does nothing past the cap, so there's no reason to trade Death away for it. If you're still under the Accuracy cap, Dream Fragment and Fafnir's Poison Blood (Death and Freedom) can replace Asahr's Mirror and Notun.",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "An Elyos player can fill all twelve slots with Wisdom and Illusion artworks. Seven of them carry Destiny and four carry Life, plus Gartua's with both, so the Destiny or Life lean only decides which to get first. A Sorcerer gets the Destiny ones first: Krao, Ferocious Horn Den, Kaira and the Destiny elites. Half of its damage passives depend on MP (aion2-guides.info), Destiny adds MP and Endurance, and Game8 lists Destiny among the Sorcerer's Pantheon stats.",
+      "bracelets": [
+        "Illusion",
+        "Wisdom",
+        "Destruction",
+        "Time"
+      ],
+      "braceletWhy": "Aion 2 Maps and Metaroad agree on these four. Illusion comes first for more Hellfires, though some builds put Time first. Spare line: Death while you're short of crit, Freedom while you're short of Accuracy.[kr] Top Korean Sorcerers keep the same four lines (AION2 Meta).[/kr]",
+      "note": "Asmodians have four Destiny elite or boss artworks and can get the two Life ones (Divine Ansas, Phantasm Kasia) only through a rift or the Market, so they fill those slots with Epic Wisdom and Illusion artworks. Until you have Guardian Lord Nahma's colossus, Zikel's Apparition holds the slot."
+    },
+    {
+      "name": "PvP (Smite)",
+      "mode": "PvP",
+      "priority": [
+        {
+          "stat": "Wisdom",
+          "why": "Smite does 1.5x against players. A Smite setup keeps the Wisdom artworks."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed, plus Smite Resist against other Smite builds."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction for your defensive Stigmas and control, plus Endurance Penetration."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy counts against players (PvE Accuracy doesn't), and your roots and freezes have to land. Also adds Evasion."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, plus Perfect Resist."
+        },
+        {
+          "stat": "Death",
+          "why": "Regeneration Penetration against Life builds, plus Critical Hit."
+        },
+        {
+          "stat": "Life",
+          "why": "HP, which GamerBlurb ranks above MP for a PvP Sorcerer."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "The Freedom-leaning set: 38 Death, 38 Freedom and 12 Space. Only Artifact of Eternity, Dream Fragment and Fafnir's Poison Blood pair Death with Freedom. Against players, Accuracy and Evasion both matter, and GamerBlurb puts Accuracy first in the Sorcerer's PvP stats.[kr] A Korean PvP guide asks for at least 2,500 Accuracy, PvP Accuracy included.[/kr]",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        }
+      ],
+      "artworkWhy": "The same twelve as PvE: a Smite set keeps Wisdom and Illusion on every artwork. The four Life ones (Vakron Sky Island, Draupnir, Divine Ansas, Phantasm Kasia) add HP, which GamerBlurb ranks above MP for a PvP Sorcerer.",
+      "bracelets": [
+        "Time",
+        "Illusion",
+        "Destruction",
+        "Wisdom"
+      ],
+      "braceletWhy": "The PvE four.[kr] Korean PvP Sorcerers always keep Time, Illusion and Destruction, then add Wisdom for a Smite set. Others take Death or Freedom, Life, Justice, or Destiny for an Endurance set (Inven).[/kr]",
+      "note": "Save it as a second Pantheon preset beside the PvE one. No Global source publishes a Sorcerer PvP Pantheon, so this is the PvE layout moved toward Accuracy and HP.[kr] A Korean PvP guide rates Smite with damage tolerance as the top setup (Inven).[/kr]"
+    },
+    {
+      "name": "PvP (Endurance)",
+      "mode": "PvP",
+      "priority": [
+        {
+          "stat": "Destiny",
+          "why": "Endurance: a chance to take half damage, countered only by Illusion."
+        },
+        {
+          "stat": "Life",
+          "why": "HP and Regeneration: you recover 20% of the damage taken."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction, plus Endurance Penetration against other Endurance builds."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed and Smite Resist."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy to land control, plus Evasion."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "The same Freedom-leaning set as the Smite preset, because Accuracy still decides whether your control lands.[kr] Korean Abyss Sorcerers build Accuracy, HP, Life and Endurance together (Inven).[/kr]",
+      "artworks": [
+        {
+          "id": "nahma-artwork",
+          "n": 1
+        },
+        {
+          "id": "pvp-artwork",
+          "n": 2
+        },
+        {
+          "id": "elite-dil",
+          "n": 1
+        },
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        }
+      ],
+      "artworkWhy": "Every artwork here carries Destiny (Endurance). Guardian Lord Nahma's, the two PvP artworks and Researcher Setram's give Illusion, Destiny and Life with no Wisdom. The rest are the Destiny ones with Wisdom and Illusion. Aion 2 Maps says Endurance builds make this swap and Smite builds keep Wisdom. Asmodians have four elites without Wisdom (Axios, Barthien, Karuka, Vishwada) and can use them in place of Destiny elites.",
+      "bracelets": [
+        "Destiny",
+        "Life",
+        "Time",
+        "Illusion"
+      ],
+      "braceletWhy": "Endurance and HP first, then Time and Illusion.[kr] A Korean Sorcerer's Abyss setup keeps Life and Destiny on the bracelets and in the Pantheon (Inven).[/kr]",
+      "note": "Parchment of Magic adds 20 Destiny in place of the Parchment of Vigor's Life. This preset gives up most of your Smite.[kr] Korean Abyss Sorcerers pair it with Accuracy and HP (Inven).[/kr]"
+    }
+  ],
+  "arcana": "The usual set adds 20 each to Time, Life, Illusion, Death and Destruction at Unique: Chalice, Parchment and Mirror of Vigor, with the Compass and Bell of Magic. So the cards cover part of the Sorcerer's Illusion and Death, and its Wisdom comes only from artworks and bracelets. Each swap changes a Pantheon stat. Compass of Vigor turns Death into Freedom, for while you're short of Accuracy. Mirror of Magic turns Illusion into Wisdom, once you have about 35% Cooldown Reduction without it. Parchment of Magic turns Life into Destiny. AION2 Meta finds Parchment of Magic on 30% of top Global Sorcerers, against 30% of Gladiators and 22% of Rangers, so casters don't favour it more than melee classes do. Among Global's top 100 Sorcerers, 89% wear the Chalice of Vigor, 83% the Bell of Magic and 69% the Parchment of Vigor (AION2 Tierlist).",
+  "tips": [
+    "Abyssal Bracelets aren't on Global yet. They drop only from Eternal Ludra, which has been removed since launch, and all of the top 100 Sorcerers wear the Ascension Bracelet. Roll the bracelet lines above once Ludra returns.",
+    "Fill all twelve artwork slots before you chase the colossus. Aion 2 Maps estimates twelve Wisdom and Illusion artworks add more damage than Guardian Lord Nahma's colossus.",
+    "Replace the starter Wisdom, Destiny and Life artworks (Silent Dartan, Soul Ruler Kashapa, Urugugu, Fire Temple and the like) first. They have no Illusion, the Sorcerer's top Pantheon stat.",
+    "Wisdom is the one deity stat that adds both damage and MP: each point cuts MP cost by 0.1%. If you still run dry, the Arcana fixes are the Mirror of Magic (20 Wisdom) and the Parchment of Magic (20 Destiny).",
+    "Kibelisk, Gerod and the other Freedom and Space statues have no Death. They fit only once you're at the 50% crit cap against bosses, and the 5,000-fragment Nightmare statues are Rare, no better than the quest ones."
+  ],
+  "sources": [
+    {
+      "title": "Aion 2 Maps: Pantheon stats",
+      "url": "https://aion2maps.com/guides/pantheon-stats/",
+      "note": "The pieces and where they drop, the Space or Freedom split, the Endurance PvP artwork swap, and what each piece is worth"
+    },
+    {
+      "title": "Aion 2 Maps: Sorcerer (Gear and Pantheon tabs)",
+      "url": "https://aion2maps.com/guides/sorcerer/",
+      "note": "Bracelet lines with Illusion first, every Arcana card's deity stat and when to swap it, and Robe of Earth and Grace of Enhancement working only above 50% and 25% MP"
+    },
+    {
+      "title": "Aion 2 Maps: Accuracy and Crit",
+      "url": "https://aion2maps.com/guides/accuracy-and-crit/",
+      "note": "Element Enhancement's +200 Accuracy at level 5 against Flame Blessing's +100, the 50% crit cap, and Accuracy counting in PvP"
+    },
+    {
+      "title": "Metaroad: Sorcerer PvE DPS build (updated 21 Oct 2026)",
+      "url": "https://metaroad.gg/aion2/build-guides/sorcerer-pve-dps-build",
+      "note": "Illusion, Wisdom, Destruction and Time bracelets, Illusion and Wisdom artworks, the three-stat Bakarma statue, and a Sorcerer being short of crit rather than Accuracy"
+    },
+    {
+      "title": "AION2 Meta: Sorcerer guide (KR and Global data, 17 Oct 2026)",
+      "url": "https://aion2-meta.com/guides/sorcerer/",
+      "note": "Top Korean Sorcerers' bracelet lines, and how many top Global players wear each Arcana card (Parchment of Magic 30%, about the same as melee classes)"
+    },
+    {
+      "title": "AION2 Tierlist: what the top 100 Sorcerers run (22 Oct 2026)",
+      "url": "https://aion2tierlist.com/builds/sorcerer",
+      "note": "Arcana shares among the top 100 Global Sorcerers, and Ascension, Pilgrim and Liberator bracelets with no Abyssal Bracelet"
+    },
+    {
+      "title": "MetaBot: Sorcerer build",
+      "url": "https://metabot.gg/en/aion-2/classes/sorcerer/build",
+      "note": "Average deity stats of 1,559 top Global Sorcerers (Freedom 24, Space 17)"
+    },
+    {
+      "title": "MetaBot: Abyssal Bracelet",
+      "url": "https://metabot.gg/en/aion-2/items/abyssal-bracelet",
+      "note": "It drops only from Eternal Ludra, with Wisdom and Destiny among its random lines"
+    },
+    {
+      "title": "MetaBot: stats",
+      "url": "https://metabot.gg/en/aion-2/stats",
+      "note": "Wisdom's MP cost cut and Destiny's MP per point, and the 60% caps on MP cost and Cooldown Reduction"
+    },
+    {
+      "title": "Game8: Hellfire Sorcerer PvE build (16 Oct 2026)",
+      "url": "https://game8.co/games/Aion-2/archives/626191",
+      "note": "Pantheon setup (Zikel's Apparition, Bakarma, Kibelisk, Asahr's Mirror and Notun, Gartua's and the elite and Expedition artworks), with Destruction, Destiny and Death as the Sorcerer's Pantheon stats"
+    },
+    {
+      "title": "aion2-guides.info: Sorcerer",
+      "url": "https://aion2-guides.info/en/sorcerer/",
+      "note": "Half the Sorcerer's damage bonuses depend on MP: more crit above 50%, 20% more damage above 25%"
+    },
+    {
+      "title": "GamerBlurb: Sorcerer build guide (Global)",
+      "url": "https://gamerblurb.com/guides/aion-2-sorcerer-build-guide-pve-pvp-and-leveling-global",
+      "note": "PvP stat order with Accuracy first and HP before MP"
+    },
+    {
+      "title": "Inven (Korean): Sorcerer PvE guide (updated 15 Jan 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6453/66",
+      "region": "KR",
+      "note": "Bakarma plus any Death, Space or Freedom statues, Wisdom artworks for Smite, and Compass of Vigor or Magic"
+    },
+    {
+      "title": "Inven (Korean): Sorcerer PvP notes (updated 22 Sep 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6453/2763",
+      "region": "KR",
+      "note": "PvP bracelet lines, the Smite set against Endurance and Regeneration sets, and an Accuracy target"
+    },
+    {
+      "title": "Inven (Korean): Sorcerer Abyss gear setup (12 May 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6453/11827",
+      "region": "KR",
+      "note": "Accuracy, HP and Endurance, with Life and Destiny on the bracelets and in the Pantheon"
+    }
+  ],
+  "disagree": "Statues: Aion 2 Maps calls Space against Freedom a split. Each statue has a fixed second stat, and the four with the most Death lean Space. Metaroad says Sorcerers run short of crit before Accuracy, and the class's default Compass of Magic (Death) agrees, so the PvE preset keeps those four and the PvP presets switch to the Freedom ones. MetaBot's averages show slightly more Freedom (24) than Space (17) on top Sorcerers, the same as on Spiritmasters. Game8 puts Kibelisk (no Death) in one slot, and its Asmodian layout uses Urugugu, Fire Temple and three elite artworks without Wisdom (Barthien, Karuka, Vishwada). This page prefers Epic Wisdom and Illusion artworks to those for PvE.[kr] An older Korean PvE guide asks only for Wisdom on the artworks and leaves the statue stat open.[/kr] Colossus: Metaroad names colossi with Wisdom in place of Justice (Kaisinel's Illusion, Tyrant Tassin, Ascended Atheron). Global has only three, all with Justice. PvP: no Global source publishes a Sorcerer PvP Pantheon.[kr] Korean players split between a Smite set and an Endurance set with Life and Destiny, so both are shown.[/kr]"
+}

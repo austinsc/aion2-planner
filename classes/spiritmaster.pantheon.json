@@ -1,0 +1,316 @@
+{
+  "summary": "The Spiritmaster uses the common Pantheon with two changes from its own guides. Its statues lean Freedom, because it gets less built-in Accuracy than a Sorcerer. Its artworks put Illusion first and favour the Life ones over Destiny. For PvP, the Global guide builds on Life (Regeneration) and Justice (Perfect) rather than Smite.",
+  "presets": [
+    {
+      "name": "PvE",
+      "mode": "PvE",
+      "priority": [
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction. Evripides calls it a must and Metaroad says to prioritise it."
+        },
+        {
+          "stat": "Wisdom",
+          "why": "Smite, which Evripides calls the strongest offensive stat. Global gives the Spiritmaster few other sources of it."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed, the first bracelet line for Evripides and Metaroad."
+        },
+        {
+          "stat": "Destruction",
+          "why": "Attack Increase, a multiplier on all your damage."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy. Evripides' rule is to always carry some, and Flame Blessing adds only 100."
+        },
+        {
+          "stat": "Death",
+          "why": "Critical Hit up to the 50% boss cap."
+        },
+        {
+          "stat": "Life",
+          "why": "HP and Regeneration, the fourth artwork stat both guides prefer."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "Evripides and Metaroad both rank the statue stats Freedom, Death, Space. Only Artifact of Eternity, Dream Fragment and Fafnir's Poison Blood pair Death with Freedom, so with Bakarma this set gives 38 Death and 38 Freedom. It trades 4 Death for 16 Freedom against the most-Death set. Flame Blessing gives 100 Accuracy, half of the Sorcerer's Element Enhancement. Once you're at the Accuracy cap, Asahr's Mirror and Notun (Death and Space) replace the two Rare statues for 42 Death.",
+      "artworks": [
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        }
+      ],
+      "artworkWhy": "An Elyos player can fill all twelve slots with Wisdom and Illusion artworks: seven with Destiny, four with Life and Gartua's with both. So the Life over Destiny ranking from Evripides and Metaroad only decides which to get first: Vakron Sky Island, Draupnir, Divine Ansas and Phantasm Kasia. Our reading: the Water Spirit and Cold Shock refill your MP, so Destiny's MP adds little.",
+      "bracelets": [
+        "Time",
+        "Destruction",
+        "Wisdom",
+        "Illusion"
+      ],
+      "braceletWhy": "Evripides and Metaroad keep these four in this order. Aion 2 Maps lists the same four with Wisdom first. For a fifth line (Philosopher's Stone), Evripides takes Justice; Aion 2 Maps says Death if you're short of crit, Freedom if you're short of Accuracy.[kr] Top Korean Spiritmasters keep the same four (AION2 Meta).[/kr]",
+      "note": "Evripides' 'all twelve with Illusion and Wisdom' is best in slot. Asmodians have four Destiny elite or boss artworks and reach the two Life ones only through a rift or the Market. Until then, Epic Wisdom and Illusion artworks fill those slots. Until you have Guardian Lord Nahma's colossus, Zikel's Apparition holds the slot, as in both guides' builds."
+    },
+    {
+      "name": "PvP (Regeneration)",
+      "mode": "PvP",
+      "priority": [
+        {
+          "stat": "Life",
+          "why": "HP and Regeneration (recover 20% of damage taken). It is Evripides' first PvP artwork stat."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction for Proxy, Seize Magic and Defiance, plus Endurance Penetration."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed and Smite Resist. It is the first PvP bracelet line."
+        },
+        {
+          "stat": "Justice",
+          "why": "Perfect, and Defense. Evripides says an orb's wide damage range makes the Spiritmaster lean on Perfect, not Smite, in PvP."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy so Fear and Curse land, plus Evasion. It is the first statue stat."
+        },
+        {
+          "stat": "Death",
+          "why": "Regeneration Penetration against other Life builds."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "The same Freedom-leaning set. Evripides keeps the Freedom, Death, Space order in both PvP builds, PvP Accuracy is what lands your control, and Flame Blessing (+100 Accuracy) leaves the PvP Stigma bar.",
+      "artworks": [
+        {
+          "id": "nahma-artwork",
+          "n": 1
+        },
+        {
+          "id": "pvp-artwork",
+          "n": 2
+        },
+        {
+          "id": "elite-dil",
+          "n": 1
+        },
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-life",
+          "n": 2
+        },
+        {
+          "id": "elite-life",
+          "n": 2
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 1
+        }
+      ],
+      "artworkWhy": "Evripides ranks the PvP artwork stats Life, Illusion, Wisdom, Destiny. Guardian Lord Nahma's, the two PvP artworks and Researcher Setram's give Illusion and Life (and Destiny) with no Wisdom. Then come the four Life artworks with Wisdom, and Destiny ones fill the last three. Asmodians have four elites without Wisdom (Axios, Barthien, Karuka, Vishwada), which can replace the Life and Destiny elites.",
+      "bracelets": [
+        "Time",
+        "Justice",
+        "Life",
+        "Illusion"
+      ],
+      "braceletWhy": "Evripides' PvP lines, with Destruction as the fifth (Philosopher's Stone) line.",
+      "note": "Evripides' PvP Arcana are all five Vigor cards: Time, Life, Freedom, Justice (Bell of Vigor) and Illusion (Mirror of Vigor). That stacks the same stats as this Pantheon.[kr] A Korean PvP guide also maxes Justice for Perfect, because orbs have the widest damage range (Inven).[/kr]"
+    },
+    {
+      "name": "PvP (Endurance)",
+      "mode": "PvP",
+      "priority": [
+        {
+          "stat": "Destiny",
+          "why": "Endurance: a chance to take half damage, countered only by Illusion."
+        },
+        {
+          "stat": "Life",
+          "why": "HP and Regeneration as the second defensive layer."
+        },
+        {
+          "stat": "Illusion",
+          "why": "Cooldown Reduction, plus Endurance Penetration against other Endurance builds."
+        },
+        {
+          "stat": "Time",
+          "why": "Combat Speed and Smite Resist."
+        },
+        {
+          "stat": "Justice",
+          "why": "Perfect and Defense."
+        },
+        {
+          "stat": "Freedom",
+          "why": "Accuracy to land Fear and Curse."
+        }
+      ],
+      "colossus": "nahma-colossus",
+      "statues": [
+        "bakarma",
+        "eternity",
+        "dream",
+        "fafnir"
+      ],
+      "statueWhy": "The same Freedom-leaning set as the other PvP preset.",
+      "artworks": [
+        {
+          "id": "nahma-artwork",
+          "n": 1
+        },
+        {
+          "id": "pvp-artwork",
+          "n": 2
+        },
+        {
+          "id": "elite-dil",
+          "n": 1
+        },
+        {
+          "id": "gartua",
+          "n": 1
+        },
+        {
+          "id": "expedition-destiny",
+          "n": 2
+        },
+        {
+          "id": "elite-destiny",
+          "n": 5
+        }
+      ],
+      "artworkWhy": "Every artwork here carries Destiny (Endurance). It shares the four no-Wisdom pieces and Gartua's with the Regeneration preset, and takes the Destiny ones with Wisdom for the rest. Aion 2 Maps says Endurance builds swap Wisdom artworks for these.[kr] Korean PvP Spiritmasters put Destiny on the Arcana, Pantheon, pet and bracelets, and keep Life as the backup (Inven).[/kr]",
+      "bracelets": [
+        "Destiny",
+        "Life",
+        "Time",
+        "Illusion"
+      ],
+      "braceletWhy": "Endurance and HP first, then Time and Illusion.[kr] Korean players say a PvP Spiritmaster needs Life and Destiny on the bracelets, and one swapped a Ludra bracelet's Death line for Life (Inven).[/kr]",
+      "note": "Parchment of Magic gives 20 Destiny in place of the Parchment of Vigor's Life.[kr] One Korean player aimed for about 66% Endurance and 46% Regeneration (Inven, March).[/kr] No Global guide publishes this preset."
+    }
+  ],
+  "arcana": "The usual set adds 20 each to Time, Life, Freedom, Destruction and Wisdom at Unique: Chalice, Parchment and Compass of Vigor, with the Bell and Mirror of Magic. The Sorcerer's cards bring Death and Illusion instead, so a Spiritmaster gets its Freedom and Wisdom partly from the cards. Freedom statues push its Accuracy further. Evripides rates the Mirror of Vigor swap (Illusion for Wisdom) as just as good. Among Global's top 100 Spiritmasters, 93% wear the Chalice of Vigor, 88% the Bell of Magic and 71% the Parchment of Vigor (AION2 Tierlist). AION2 Meta finds Parchment of Magic (Destiny) on 24% of top Global Spiritmasters, close to the Ranger's 22%. In PvP, Evripides runs five Vigor cards, trading Destruction and Wisdom for Justice and Illusion.",
+  "tips": [
+    "Abyssal Bracelets aren't on Global yet. They drop only from Eternal Ludra, which has been removed since launch, and all of the top 100 Spiritmasters wear the Ascension Bracelet. The bracelet lines are for when Ludra returns.",
+    "Illusion comes first, so an Epic Wisdom and Illusion artwork beats a starter one (Silent Dartan, Soul Ruler Kashapa, Urugugu, Fire Temple and the like), which has Wisdom, Destiny and Life but no Illusion.",
+    "Fill all twelve artwork slots before you chase Guardian Lord Nahma's colossus. Aion 2 Maps estimates twelve Wisdom and Illusion artworks add more damage than the colossus.",
+    "Keep the PvP setup in its own Pantheon preset. It gives up Wisdom, which is your PvE damage.",
+    "Death pays only until the 50% crit cap, and statues without it (Kibelisk, Gerod, Mirror of Desire) give Freedom and Space instead. In PvP, Death also brings Regeneration Penetration, so keep Death statues there even when you're capped."
+  ],
+  "sources": [
+    {
+      "title": "Evripides: Spirit Master guide, Global edition (3 Oct 2026)",
+      "url": "https://aion2-elementalist-guide.netlify.app/global/",
+      "note": "The Pantheon stat order for each build (statues Freedom, Death, Space; PvE artworks Illusion, Wisdom, Life, Destiny; PvP artworks Life first), bracelet lines, Arcana sets, the Accuracy rule and the reliance on Perfect"
+    },
+    {
+      "title": "Metaroad: Spiritmaster PvE build (updated 21 Oct 2026)",
+      "url": "https://metaroad.gg/aion2/build-guides/spiritmaster-pve-build",
+      "note": "Illusion then Wisdom, Zikel's Apparition, the statue and artwork stat orders, and Time, Destruction, Wisdom and Illusion bracelets"
+    },
+    {
+      "title": "Aion 2 Maps: Pantheon stats",
+      "url": "https://aion2maps.com/guides/pantheon-stats/",
+      "note": "The pieces and where they drop, the Space or Freedom split, the Endurance PvP artwork swap, and what each piece is worth"
+    },
+    {
+      "title": "Aion 2 Maps: Spiritmaster (Gear and Pantheon tabs)",
+      "url": "https://aion2maps.com/guides/spiritmaster/",
+      "note": "Bracelet lines and the fifth line, every Arcana card's deity stat, and the Water Spirit's MP refill"
+    },
+    {
+      "title": "Aion 2 Maps: Accuracy and Crit",
+      "url": "https://aion2maps.com/guides/accuracy-and-crit/",
+      "note": "Flame Blessing's +100 Accuracy against the Sorcerer's +200, the 50% crit cap, and Accuracy counting in PvP"
+    },
+    {
+      "title": "AION2 Tierlist: what the top 100 Spiritmasters run (22 Oct 2026)",
+      "url": "https://aion2tierlist.com/builds/spiritmaster",
+      "note": "Arcana shares among the top 100 Global Spiritmasters, and no Abyssal Bracelet among them"
+    },
+    {
+      "title": "AION2 Meta: Spiritmaster guide (KR and Global data)",
+      "url": "https://aion2-meta.com/guides/spiritmaster/",
+      "note": "Top Korean Spiritmasters' bracelet lines, and the Global share of each Arcana card"
+    },
+    {
+      "title": "MetaBot: Spiritmaster build",
+      "url": "https://metabot.gg/en/aion-2/classes/spiritmaster/build",
+      "note": "Average deity stats of 1,560 top Global Spiritmasters (Freedom 25, Space 18)"
+    },
+    {
+      "title": "MetaBot: Abyssal Bracelet",
+      "url": "https://metabot.gg/en/aion-2/items/abyssal-bracelet",
+      "note": "It drops only from Eternal Ludra"
+    },
+    {
+      "title": "Game8: Fire Spirit Spiritmaster PvE build (16 Oct 2026)",
+      "url": "https://game8.co/games/Aion-2/archives/626151",
+      "note": "A Pantheon layout with Kibelisk in one statue slot, with Wisdom, Destruction and Destiny as the Spiritmaster's Pantheon stats"
+    },
+    {
+      "title": "GamerBlurb: Spiritmaster build guide (Global)",
+      "url": "https://gamerblurb.com/guides/aion-2-spiritmaster-build-guide-pve-pvp-leveling-global",
+      "note": "The Water Spirit and Cold Shock keeping MP stable"
+    },
+    {
+      "title": "Inven (Korean): Spiritmaster PvP guide (8 Aug 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6454/9148",
+      "region": "KR",
+      "note": "Justice for Perfect on orbs, and the split between a Perfect and Accuracy set and a cheaper Smite set"
+    },
+    {
+      "title": "Inven (Korean): Spiritmaster PvP Endurance, HP and Status Resist set (11 Mar 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6454/4294",
+      "region": "KR",
+      "note": "Life valued for both HP and Regeneration, and a Ludra bracelet's Death line swapped for Life"
+    },
+    {
+      "title": "Inven (Korean): Endurance or Regeneration for Spiritmasters (16 Mar 2026)",
+      "url": "https://www.inven.co.kr/board/aion2/6454/4414",
+      "region": "KR",
+      "note": "Destiny on the Arcana, Pantheon, pet and bracelets, with Life as the backup, and Endurance and Regeneration targets"
+    }
+  ],
+  "disagree": "Statues: Evripides and Metaroad put Freedom first. Aion 2 Maps calls Space against Freedom a split, and since each statue has a fixed second stat, choosing Freedom costs 4 Death against the most-Death set. Game8 fills one slot with Kibelisk (Freedom and Space, no Death). This page follows the two Spiritmaster guides. Artworks: both guides rank Life above Destiny. Game8 names Destiny among the Spiritmaster's Pantheon stats, and its Asmodian layout uses Urugugu, Fire Temple and three elites without Wisdom. Its stat order (Destruction, Illusion, Death, Space, Time) is the one it shows for every class. Bracelets: Aion 2 Maps lists Wisdom first, Evripides and Metaroad list Time first. Colossus: Metaroad's colossi with Wisdom in place of Justice aren't on Global, which has three, all with Justice. PvP: Evripides' Global guide builds on Life and Perfect.[kr] Korean Spiritmasters more often put Endurance (Destiny) first with Life as the backup, or run a cheaper Smite set (Inven).[/kr] This page shows both the Regeneration and the Endurance setups."
+}
