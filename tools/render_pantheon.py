@@ -50,6 +50,9 @@ def check_class(d, base):
         for slot, ids in used.items():
             if len(ids) != SLOTS[slot]:
                 bad.append((where, f'{SLOTS[slot]} {slot} slot(s) needed, has {len(ids)}'))
+            for i in set(ids):
+                if pieces.get(i, {}).get('max') and ids.count(i) > pieces[i]['max']:
+                    bad.append((where, f"{i}: {ids.count(i)} used, only {pieces[i]['max']} exist"))
             for i in ids:
                 p = pieces.get(i)
                 if not p: bad.append((where, f'unknown piece {i}')); continue

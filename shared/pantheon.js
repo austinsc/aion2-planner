@@ -63,32 +63,35 @@ const PANTHEON_BASE = {
   }
  ],
  "rules": [
-  "Each point gives 0.1% of both of its stat's effects, the same rate as the primary attributes: 10 Wisdom is 1% Smite, 1 Destruction 0.1% Attack Increase.",
-  "Each deity stat counts at most 200 points.",
+  "Each point gives 0.1% of both of its stat's effects, the same rate as the primary attributes: 10 Wisdom is 1% Smite, 1 Destruction 0.1% Attack Increase. (The item database shows each point as 10 internal units on each of the two effects.)",
+  "Each deity stat counts at most 200 points; anything over the cap is wasted.",
   "Endurance and Regeneration are countered only by their own Penetration (Illusion and Death).",
   "Points come from the Pantheon screen (1 colossus, 4 statues, 12 artworks), the Abyssal Bracelets, every Arcana card, and the Monolith feather turn-ins (5 or 6 of each deity stat per map).",
-  "The Pantheon screen keeps presets, so a PvP set can sit beside the PvE one."
+  "The Pantheon screen keeps presets, so a PvP set can sit beside the PvE one.",
+  "Every piece's points are fixed by the piece: there is one version of each colossus, statue and artwork, so the second stat of a statue, or whether an artwork has Destiny or Life, depends on which piece you take, not on a roll.",
+  "The Pantheon unlocks with the 2nd Ascension quest, The One Who Hears the Voice (level 22).",
+  "Each piece fills one slot, so a group of artworks gives at most as many slots as it has pieces (shown as \"up to\")."
  ],
  "slots": [
   {
    "slot": "colossus",
    "name": "Colossus",
    "count": 1,
-   "stats": "Destruction, Justice and Time (the story ones: Justice and Time)",
+   "stats": "Destruction, Justice and Time (the story ones: Justice and Time only)",
    "points": "Heroic 55, Unique 45, Rare 35 to each"
   },
   {
    "slot": "statue",
    "name": "Statues",
    "count": 4,
-   "stats": "Death, Freedom and Space only",
+   "stats": "Death, Freedom and Space only: Unique ones all three, Epic and Rare ones two, Common ones one",
    "points": "Unique 12, Epic 10, Rare 8, Common 6 to each"
   },
   {
    "slot": "artwork",
    "name": "Artworks",
    "count": 12,
-   "stats": "Wisdom and Illusion, often with Destiny or Life",
+   "stats": "Two or three of Wisdom, Illusion, Destiny and Life (Gartua's all four)",
    "points": "Heroic 5, Unique 4, Epic 3, Rare 2 to each"
   }
  ],
@@ -118,7 +121,7 @@ const PANTHEON_BASE = {
     "Time": 55
    },
    "trade": true,
-   "from": "Guardian Lord Nahma, a Lower Reshanta world boss: 25% a kill"
+   "from": "Guardian Lord Nahma, a Lower Reshanta world boss (level 65; its Enraged level-80 form drops it too): 25% a kill"
   },
   {
    "id": "zikel-colossus",
@@ -153,7 +156,8 @@ const PANTHEON_BASE = {
     "Freedom": 12,
     "Space": 12
    },
-   "from": "Achievement: 10 Draupnir Conquest clears"
+   "from": "Achievement: 10 Draupnir Conquest clears",
+   "max": 1
   },
   {
    "id": "asahr",
@@ -161,29 +165,11 @@ const PANTHEON_BASE = {
    "slot": "statue",
    "grade": "Epic",
    "stats": {
-    "Death": 10
+    "Death": 10,
+    "Space": 10
    },
-   "either": [
-    "Space",
-    "Freedom"
-   ],
-   "eitherPts": 10,
-   "from": "The 4th Ascension quest, The One Who Witnesses the Nightmare (level 45)"
-  },
-  {
-   "id": "eternity",
-   "name": "Artifact of Eternity",
-   "slot": "statue",
-   "grade": "Epic",
-   "stats": {
-    "Death": 10
-   },
-   "either": [
-    "Space",
-    "Freedom"
-   ],
-   "eitherPts": 10,
-   "from": "The 3rd Ascension quest, The One Who Dreams (level 32)"
+   "from": "The 4th Ascension quest, The One Who Witnesses the Nightmare (level 45)",
+   "max": 1
   },
   {
    "id": "notun",
@@ -191,44 +177,23 @@ const PANTHEON_BASE = {
    "slot": "statue",
    "grade": "Epic",
    "stats": {
-    "Death": 10
+    "Death": 10,
+    "Space": 10
    },
-   "either": [
-    "Space",
-    "Freedom"
-   ],
-   "eitherPts": 10,
-   "from": "Nightmare shop: 8,000 Phantasmal Fragments after stage 10 of Fortress Guardian Notun (suggested item level 2,300)"
+   "from": "Nightmare shop: 8,000 Phantasmal Fragments, one per character, after stage 10 of Fortress Guardian Notun (suggested item level 2,300)",
+   "max": 1
   },
   {
-   "id": "dream",
-   "name": "Dream Fragment",
+   "id": "eternity",
+   "name": "Artifact of Eternity",
    "slot": "statue",
-   "grade": "Rare",
+   "grade": "Epic",
    "stats": {
-    "Death": 8
+    "Death": 10,
+    "Freedom": 10
    },
-   "either": [
-    "Space",
-    "Freedom"
-   ],
-   "eitherPts": 8,
-   "from": "The 2nd Ascension quest, The One Who Hears the Voice (level 22)"
-  },
-  {
-   "id": "story-statue",
-   "name": "Teina / Grisilla",
-   "slot": "statue",
-   "grade": "Rare",
-   "stats": {
-    "Death": 8
-   },
-   "either": [
-    "Space",
-    "Freedom"
-   ],
-   "eitherPts": 8,
-   "from": "Story quest: Time Takes Its Toll (Elyos, Verteron, level 43) or Contaminated Sacred Tree (Asmodians, Altgard, level 30)"
+   "from": "The 3rd Ascension quest, The One Who Dreams (level 32)",
+   "max": 1
   },
   {
    "id": "kibelisk",
@@ -239,7 +204,68 @@ const PANTHEON_BASE = {
     "Freedom": 10,
     "Space": 10
    },
-   "from": "Achievement: bind every teleport point on your map (61). No Death."
+   "from": "Achievement: bind every teleport point on your map (61). No Death.",
+   "max": 1
+  },
+  {
+   "id": "gerod",
+   "name": "Gerod",
+   "slot": "statue",
+   "grade": "Epic",
+   "stats": {
+    "Freedom": 10,
+    "Space": 10
+   },
+   "from": "Nightmare shop: 8,000 Phantasmal Fragments, one per character. No Death.",
+   "max": 1
+  },
+  {
+   "id": "dream",
+   "name": "Dream Fragment",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Death": 8,
+    "Freedom": 8
+   },
+   "from": "The 2nd Ascension quest, The One Who Hears the Voice (level 22)",
+   "max": 1
+  },
+  {
+   "id": "story-statue",
+   "name": "Teina / Grisilla",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Death": 8,
+    "Space": 8
+   },
+   "from": "Story quest: Time Takes Its Toll (Elyos, Verteron, level 43) or Contaminated Sacred Tree (Asmodians, Altgard, level 30)",
+   "max": 1
+  },
+  {
+   "id": "nightmare-death-space",
+   "name": "Gatekeeper Pinopi or Furious Feruk",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Death": 8,
+    "Space": 8
+   },
+   "from": "Nightmare shop: 5,000 Phantasmal Fragments each, one per character. Two separate statues with the same points.",
+   "max": 2
+  },
+  {
+   "id": "fafnir",
+   "name": "Fafnir's Poison Blood",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Death": 8,
+    "Freedom": 8
+   },
+   "from": "Nightmare shop: 5,000 Phantasmal Fragments, one per character",
+   "max": 1
   },
   {
    "id": "desire",
@@ -250,7 +276,42 @@ const PANTHEON_BASE = {
     "Freedom": 8,
     "Space": 8
    },
-   "from": "Achievement: 10 Fire Temple Conquest clears. No Death."
+   "from": "Achievement: 10 Fire Temple Conquest clears. No Death.",
+   "max": 1
+  },
+  {
+   "id": "giselle",
+   "name": "Wraith Giselle",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Freedom": 8,
+    "Space": 8
+   },
+   "from": "Nightmare shop: 5,000 Phantasmal Fragments, one per character. No Death.",
+   "max": 1
+  },
+  {
+   "id": "wings",
+   "name": "Sealing Wings / Glorious Wings",
+   "slot": "statue",
+   "grade": "Rare",
+   "stats": {
+    "Freedom": 8,
+    "Space": 8
+   },
+   "from": "Crafted by conversion, once per character: 140 Statue Scraps (Day Illusion Wings for Elyos, Night Illusion Wings for Asmodians), which Verteron's or Altgard's sealed dungeons pay (2 each, 20 from the advanced one). No Death.",
+   "max": 1
+  },
+  {
+   "id": "common-statue",
+   "name": "Torn Forbidden Bookcase / Urd",
+   "slot": "statue",
+   "grade": "Common",
+   "stats": {
+    "Death": 6
+   },
+   "from": "Story quest: Questionable Methods (Elyos, level 22) or An Invitation to the Past: Part 2 (Asmodians, level 30). Only until you have four better ones."
   },
   {
    "id": "gartua",
@@ -264,11 +325,39 @@ const PANTHEON_BASE = {
     "Life": 5
    },
    "trade": true,
-   "from": "The field boss Gartua (Elyos: Eternal, Verteron; Asmodians: Immortal, Altgard): 25% a kill, or 20,000 Artwork Scraps"
+   "from": "The field boss Gartua (Elyos: Eternal, Verteron; Asmodians: Immortal, Altgard; level 51): 25% a kill, or 20,000 Artwork Scraps",
+   "max": 1
+  },
+  {
+   "id": "ludra",
+   "name": "Abyssal Ludra",
+   "slot": "artwork",
+   "grade": "Heroic",
+   "stats": {
+    "Wisdom": 5,
+    "Illusion": 5,
+    "Destiny": 5
+   },
+   "from": "Achievement: 3 Ludra clears. The raid has been removed on Global since launch.",
+   "max": 1
+  },
+  {
+   "id": "nahma-artwork",
+   "name": "Guardian Lord Nahma (artwork)",
+   "slot": "artwork",
+   "grade": "Heroic",
+   "stats": {
+    "Illusion": 5,
+    "Destiny": 5,
+    "Life": 5
+   },
+   "trade": true,
+   "from": "Guardian Lord Nahma, Lower Reshanta. A PvP Endurance artwork: no Wisdom.",
+   "max": 1
   },
   {
    "id": "expedition",
-   "name": "Expedition artworks (Krao, Vakron Sky Island, Draupnir, Ferocious Horn Den)",
+   "name": "Expedition artworks (Krao and Ferocious Horn Den with Destiny; Vakron Sky Island and Draupnir with Life)",
    "slot": "artwork",
    "grade": "Unique",
    "stats": {
@@ -281,11 +370,39 @@ const PANTHEON_BASE = {
    ],
    "eitherPts": 4,
    "trade": true,
-   "from": "The Expedition of the same name in Conquest: 0.75% a final-boss reward, 0.25% a mid-boss reward. The cheapest Unique artworks on the Market."
+   "from": "The Expedition of the same name in Conquest: about 0.75 to 0.9% a final-boss reward, 0.25 to 0.3% a mid-boss reward. The cheapest Unique artworks on the Market. Each piece has one fixed third stat: pick the pieces that match the version you want."
+  },
+  {
+   "id": "expedition-destiny",
+   "name": "Expedition artworks with Destiny (Krao, Ferocious Horn Den)",
+   "slot": "artwork",
+   "grade": "Unique",
+   "stats": {
+    "Wisdom": 4,
+    "Illusion": 4,
+    "Destiny": 4
+   },
+   "trade": true,
+   "from": "Krao Cave or Ferocious Horn Den in Conquest: about 0.75 to 0.9% a final-boss reward",
+   "max": 2
+  },
+  {
+   "id": "expedition-life",
+   "name": "Expedition artworks with Life (Vakron Sky Island, Draupnir)",
+   "slot": "artwork",
+   "grade": "Unique",
+   "stats": {
+    "Wisdom": 4,
+    "Illusion": 4,
+    "Life": 4
+   },
+   "trade": true,
+   "from": "Vakron Sky Island or Draupnir in Conquest: about 0.75 to 0.9% a final-boss reward. Draupnir's also drops at 25% from the level-80 Middle Reshanta world bosses (Executioner Dramos, Ravager Marakha, Turncoat Ducal).",
+   "max": 2
   },
   {
    "id": "elite-unique",
-   "name": "Elite and boss artworks (Watcher or Executor Kaira; Elyos: Sentinel K'nash, Black Tentacle Lawa, Centurion Demiros, Divine Ansas, Phantasm Kasia, Forest Warrior Aullamu; Asmodians: Drakan Battalion Weapon Guruta, Sharp Shylak, Desecrator Newbold)",
+   "name": "Elite and boss artworks (Destiny: Watcher or Executor Kaira; Elyos: Sentinel K'nash, Black Tentacle Lawa, Centurion Demiros, Forest Warrior Aullamu; Asmodians: Drakan Battalion Weapon Guruta, Sharp Shylak, Desecrator Newbold. Life: Elyos: Divine Ansas, Phantasm Kasia)",
    "slot": "artwork",
    "grade": "Unique",
    "stats": {
@@ -298,18 +415,62 @@ const PANTHEON_BASE = {
    ],
    "eitherPts": 4,
    "trade": true,
-   "from": "The elite or boss of the same name: 25% a kill, or 5,000 Artwork Scraps"
+   "from": "The elite or boss of the same name: 25% a kill, or 5,000 of your side's Artwork Scraps (all but Kaira, a Lower Reshanta boss). Each piece has one fixed third stat: eight carry Destiny, only Elyos' Divine Ansas and Phantasm Kasia carry Life."
   },
   {
-   "id": "epic-wi",
-   "name": "Epic artworks (Elyos: Chaser Taulo, Harvest Manager Moshav, Scholar Aulla, Cantas Valley, Ellun River Midstream; Asmodians: Veteran Shujakan, Dredgion Crash Site, Quai Campsite)",
+   "id": "elite-destiny",
+   "name": "Elite and boss artworks with Destiny (Watcher or Executor Kaira; Elyos: Sentinel K'nash, Black Tentacle Lawa, Centurion Demiros, Forest Warrior Aullamu; Asmodians: Drakan Battalion Weapon Guruta, Sharp Shylak, Desecrator Newbold)",
    "slot": "artwork",
-   "grade": "Epic",
+   "grade": "Unique",
    "stats": {
-    "Wisdom": 3,
-    "Illusion": 3
+    "Wisdom": 4,
+    "Illusion": 4,
+    "Destiny": 4
    },
-   "from": "Elites (25% a kill, or 1,000 Artwork Scraps) or the Festival Shop (2,000 Centuryroot Tokens, bound)"
+   "trade": true,
+   "from": "The elite or boss of the same name: 25% a kill, or 5,000 Artwork Scraps (Kaira only from the Lower Reshanta bosses)",
+   "max": 5
+  },
+  {
+   "id": "elite-life",
+   "name": "Elite artworks with Life (Elyos: Divine Ansas, Phantasm Kasia)",
+   "slot": "artwork",
+   "grade": "Unique",
+   "stats": {
+    "Wisdom": 4,
+    "Illusion": 4,
+    "Life": 4
+   },
+   "trade": true,
+   "from": "The Verteron elite of the same name: 25% a kill, or 5,000 Elyos Artwork Scraps. Asmodians reach them through a rift or the Market.",
+   "max": 2
+  },
+  {
+   "id": "pvp-artwork",
+   "name": "PvP artworks (Argo, Ardus Shrine for Elyos, Impetusium for Asmodians)",
+   "slot": "artwork",
+   "grade": "Unique",
+   "stats": {
+    "Illusion": 4,
+    "Destiny": 4,
+    "Life": 4
+   },
+   "from": "Argo in the Abyss (Argo, the Spirit King or Executor Argo, Lower Reshanta), or the Festival Shop (10,000 Centuryroot Tokens, bound). No Wisdom.",
+   "max": 2
+  },
+  {
+   "id": "elite-dil",
+   "name": "Elite artworks without Wisdom (Elyos: Researcher Setram; Asmodians: Specter Archon Axios, Executioner Barthien, Visionary Karuka, Dark Shadow Vishwada)",
+   "slot": "artwork",
+   "grade": "Unique",
+   "stats": {
+    "Illusion": 4,
+    "Destiny": 4,
+    "Life": 4
+   },
+   "trade": true,
+   "from": "The elite of the same name: 25% a kill, or 5,000 Artwork Scraps. The same points as the PvP artworks: no Wisdom.",
+   "max": 5
   },
   {
    "id": "starter-wdl",
@@ -324,6 +485,47 @@ const PANTHEON_BASE = {
    "from": "Field bosses in Verteron and Altgard (25% a kill, or 5,000 scraps), Executor Tamasa in Lower Reshanta (bound), or Urugugu Canyon and Fire Temple in Conquest. No Illusion."
   },
   {
+   "id": "epic-wi",
+   "name": "Epic artworks (Elyos: Chaser Taulo, Harvest Manager Moshav, Scholar Aulla, Cantas Valley, Ellun River Midstream; Asmodians: Veteran Shujakan, Dredgion Crash Site, Quai Campsite)",
+   "slot": "artwork",
+   "grade": "Epic",
+   "stats": {
+    "Wisdom": 3,
+    "Illusion": 3
+   },
+   "from": "Elites (25% a kill, or 1,000 Artwork Scraps) or the Festival Shop (2,000 Centuryroot Tokens, bound, one per character)"
+  },
+  {
+   "id": "epic-w",
+   "name": "Epic artworks with Wisdom but no Illusion (Destiny: Elyos' Verteron Fortress Ruins; Asmodians' Deceiver Trid, Blue Wave Kelpina, Sanctum Outpost. Life: Asmodians' High Overseer Nutah, Special Operations Leader Linx)",
+   "slot": "artwork",
+   "grade": "Epic",
+   "stats": {
+    "Wisdom": 3
+   },
+   "either": [
+    "Destiny",
+    "Life"
+   ],
+   "eitherPts": 3,
+   "from": "Elites (25% a kill, or 1,000 Artwork Scraps) or the Festival Shop (2,000 Centuryroot Tokens, bound, one per character). Each piece has one fixed second stat."
+  },
+  {
+   "id": "epic-i",
+   "name": "Epic artworks with Illusion but no Wisdom (Destiny: Shugo Alchemist, Shulak; Elyos: Kusan the Mad Gladiator, Ritualist Garshim, Pilgrim's Ridge, Tolbas Forest; Asmodians: Moslan Forest, Calderon Canyon. Life: Elyos: Dawn Legion Base, Ellun River Marsh; Asmodians: Predator Garsan, Advisor Resana, Safe Haven, Nameless Cemetery)",
+   "slot": "artwork",
+   "grade": "Epic",
+   "stats": {
+    "Illusion": 3
+   },
+   "either": [
+    "Destiny",
+    "Life"
+   ],
+   "eitherPts": 3,
+   "from": "Elites (25% a kill, or 1,000 Artwork Scraps), the Festival Shop (2,000 Centuryroot Tokens, bound, one per character) or, for Shulak, the battle pass. Each piece has one fixed second stat."
+  },
+  {
    "id": "starter-rare",
    "name": "Rare artworks (Artisan Alchemist; Asmodians: Berserker Vargor, Black Warrior Aed)",
    "slot": "artwork",
@@ -332,64 +534,57 @@ const PANTHEON_BASE = {
     "Wisdom": 2,
     "Illusion": 2
    },
-   "from": "The quest [Upgrade] Alchemy Specialty Skill at Alchemy proficiency 50, or elites (200 scraps)"
+   "from": "The crafting quest [Upgrade] Alchemy Specialty Skill (both factions, bound), or elites (25% a kill, or 200 scraps)"
   },
   {
-   "id": "nahma-artwork",
-   "name": "Guardian Lord Nahma (artwork)",
+   "id": "rare-w",
+   "name": "Rare artworks with Wisdom but no Illusion (Destiny: Artisan Armorsmith, Artisan Essence Extractor; Elyos' Kernon of the West. Life: Elyos' Blooming Korin, Bodyguard Teegant)",
    "slot": "artwork",
-   "grade": "Heroic",
+   "grade": "Rare",
    "stats": {
-    "Illusion": 5,
-    "Destiny": 5,
-    "Life": 5
+    "Wisdom": 2
    },
-   "trade": true,
-   "from": "Guardian Lord Nahma, Lower Reshanta. A PvP Endurance artwork: no Wisdom."
-  },
-  {
-   "id": "pvp-artwork",
-   "name": "PvP artworks (Argo, Ardus Shrine for Elyos, Impetusium for Asmodians)",
-   "slot": "artwork",
-   "grade": "Unique",
-   "stats": {
-    "Illusion": 4,
-    "Destiny": 4,
-    "Life": 4
-   },
-   "from": "Argo in the Abyss, or the Festival Shop (10,000 Centuryroot Tokens, bound). No Wisdom."
-  },
-  {
-   "id": "ludra",
-   "name": "Abyssal Ludra",
-   "slot": "artwork",
-   "grade": "Heroic",
-   "stats": {
-    "Wisdom": 5,
-    "Illusion": 5,
-    "Destiny": 5
-   },
-   "from": "Achievement: 3 Ludra clears. The raid has been removed on Global since launch."
+   "either": [
+    "Destiny",
+    "Life"
+   ],
+   "eitherPts": 2,
+   "from": "The crafting quests [Upgrade] Armorsmithing / Essence Extraction Specialty Skill (both factions, bound), or Verteron elites (25% a kill, or 200 scraps). Only to fill empty slots early."
   }
  ],
  "order": [
-  "The level-45 Ascension quest leaves you with a story colossus and four statues with Death.",
-  "Fill all twelve artwork slots: any piece on the list beats an empty slot. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion.",
-  "Transcendent Bakarma and Fortress Guardian Notun replace your two Rare statues, and Zikel's Apparition the story colossus.",
+  "The level-45 Ascension quest leaves you with a story colossus and four statues with Death (Teina or Grisilla, Dream Fragment, Artifact of Eternity and Asahr's Mirror).",
+  "Fill all twelve artwork slots: any piece on the list beats an empty slot. The Krao, Vakron Sky Island, Draupnir and Ferocious Horn Den artworks are the cheapest Unique ones with both Wisdom and Illusion; Krao and Ferocious Horn Den add Destiny, the other two Life.",
+  "Transcendent Bakarma and Fortress Guardian Notun replace your two Rare statues, and Zikel's Apparition the story colossus. The 5,000-fragment Nightmare statues (Gatekeeper Pinopi, Furious Feruk, Fafnir's Poison Blood) are Rare, no better than the quest ones.",
   "Over time: the elite and boss artworks, then Gartua's artwork and Guardian Lord Nahma's colossus."
  ],
- "faction": "Each faction has its own elites, field bosses, scrap recipes and Festival Shop. From their own sources Elyos can fill all twelve artwork slots with Heroic or Unique pieces that have both Wisdom and Illusion (49 of each); Asmodians have nine and fill three with Epic ones (46 of each). The other side's pieces are reachable through a rift.",
+ "faction": "Each faction has its own elites, field bosses, scrap recipes and Festival Shop. From their own sources Elyos can fill all twelve artwork slots with Heroic or Unique pieces that have both Wisdom and Illusion (49 of each); Asmodians have nine and fill three with Epic ones (46 of each). Of the Unique elite artworks with both, only Elyos' Divine Ansas and Phantasm Kasia carry Life; every other one carries Destiny. The other side's pieces are reachable through a rift.",
  "value": "For a Ranger's damage, Guardian Lord Nahma's colossus is worth about 5.7%, each Heroic or Unique Wisdom and Illusion artwork about 0.6 to 0.8% and an Epic one about 0.5% (so twelve artworks add more than the colossus), and a statue about 0.5% for its Death while you are under the crit cap. Destiny and Life add no damage, and Freedom's Accuracy helps only under the Accuracy cap.",
  "refs": [
   {
    "title": "Aion 2 Maps: Pantheon stats",
    "url": "https://aion2maps.com/guides/pantheon-stats/",
-   "what": "the slots and points by grade, every piece and where it drops (from the Global client), the faction split, what each piece is worth, and the stat effects"
+   "what": "the slots and points by grade, the pieces and where they drop, the Ascension-quest statues, the faction split, what each piece is worth, and the stat effects"
   },
   {
    "title": "AION2 Hub: item database (for example Guardian Lord Nahma's colossus)",
    "url": "https://aion2hub.com/database/items/514330003",
-   "what": "per-piece deity points from the Global client and the 200-point cap per stat"
+   "what": "every colossus, statue and artwork's fixed deity points from the Global client (one version per piece), its faction and source, and the 200-point cap per stat"
+  },
+  {
+   "title": "AION2 Hub: conversion recipes",
+   "url": "https://aion2hub.com/tools/conversion",
+   "what": "the 50 Pantheon recipes: artworks from Artwork Scraps (20,000, 5,000, 1,000 or 200) and the Sealing / Glorious Wings statues from 140 Statue Scraps"
+  },
+  {
+   "title": "MetaBot: AION 2 item database (for example Artwork: Quai Campsite)",
+   "url": "https://metabot.gg/en/aion-2/items/artwork-quai-campsite-bound",
+   "what": "drop rates, Nightmare and Festival shop prices and limits, and quest sources for each piece"
+  },
+  {
+   "title": "Game8: List of All Pantheon Decorations",
+   "url": "https://game8.co/games/Aion-2/archives/613941",
+   "what": "the Global roster of colossi, statues and artworks, and the Pantheon unlocking with the 2nd Ascension quest"
   },
   {
    "title": "kanonxo: Aion 2 PvE Guide (Google Doc), as summarised by Aion 2 Maps",

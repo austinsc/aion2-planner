@@ -88,8 +88,8 @@ The **Pantheon** tab shows the ten deity stats, the pieces for each slot and the
     "name": "PvE", "mode": "PvE",
     "priority": [{"stat": "Wisdom", "why": "One line"}],
     "colossus": "nahma-colossus",
-    "statues": ["bakarma", "asahr", "eternity", "notun"], "statueStat": "Space", "statueWhy": "Why Space or Freedom",
-    "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition", "n": 11}], "artworkStat": "Destiny", "artworkWhy": "Why Destiny or Life",
+    "statues": ["bakarma", "asahr", "notun", "eternity"], "statueWhy": "Why these statues (each has a fixed Death, Space or Freedom mix)",
+    "artworks": [{"id": "gartua", "n": 1}, {"id": "expedition-destiny", "n": 2}], "artworkWhy": "Why these artworks (Destiny or Life)",
     "bracelets": ["Wisdom", "Time", "Destruction", "Illusion"], "braceletWhy": "The Abyssal Bracelet lines to keep, best first",
     "note": "Anything else about this preset."
   }],
@@ -100,4 +100,4 @@ The **Pantheon** tab shows the ten deity stats, the pieces for each slot and the
 }
 ```
 
-A preset needs exactly one colossus, four statues and twelve artworks (`n` counts). `statueStat` and `artworkStat` pick the version of pieces that have an `either`. `mode` is `PvE`, `PvP` or `PvE and PvP`. The tab adds up each preset's points (with the Arcana cards at Unique, 20 each, and the bracelet lines at their 13-point average) against the 200-point cap. Korea/Taiwan-only text uses the same `[kr]`/`[tw]` markup and `region` field as the builds file, and the three-site rule is the same.
+A preset needs exactly one colossus, four statues and twelve artworks (`n` counts), and can't use more of a piece than its `max`. Every piece has fixed stats; a few group entries (such as `expedition`) mix Destiny and Life pieces, and a preset that uses one sets `artworkStat` to say which it counts. Prefer the exact ids (`expedition-destiny`, `elite-life` and so on). `mode` is `PvE`, `PvP` or `PvE and PvP`. The tab adds up each preset's points (with the Arcana cards at Unique, 20 each, and the bracelet lines at their 13-point average) against the 200-point cap. Korea/Taiwan-only text uses the same `[kr]`/`[tw]` markup and `region` field as the builds file, and the three-site rule is the same.
